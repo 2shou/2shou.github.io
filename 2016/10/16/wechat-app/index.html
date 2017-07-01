@@ -1,0 +1,810 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="微信,微信小程序,移动互联网," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="忽如一夜春风来。国内开发者圈最近的热门话题莫过于微信的小程序，也很合理，当下没有任何一个APP能达到微信这种万人瞩目的量级。当我们的睡前最后一眼和醒来第一眼都给了她的时候，如张小龙所说，微信已经成为了一个生活方式。而微信的小程序最直观的联想就是一个搭载在微信里的App Store，这意味着一个覆盖6亿人口的大市场裂开了一个新的流量入口，这对所有开发者来说好比获得了一次重新洗牌的机会。错过了苹果Ap">
+<meta name="keywords" content="微信,微信小程序,移动互联网">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序，不可不知的一二三四">
+<meta property="og:url" content="http://guoze.me/2016/10/16/wechat-app/index.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="忽如一夜春风来。国内开发者圈最近的热门话题莫过于微信的小程序，也很合理，当下没有任何一个APP能达到微信这种万人瞩目的量级。当我们的睡前最后一眼和醒来第一眼都给了她的时候，如张小龙所说，微信已经成为了一个生活方式。而微信的小程序最直观的联想就是一个搭载在微信里的App Store，这意味着一个覆盖6亿人口的大市场裂开了一个新的流量入口，这对所有开发者来说好比获得了一次重新洗牌的机会。错过了苹果Ap">
+<meta property="og:updated_time" content="2017-07-01T15:34:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="微信小程序，不可不知的一二三四">
+<meta name="twitter:description" content="忽如一夜春风来。国内开发者圈最近的热门话题莫过于微信的小程序，也很合理，当下没有任何一个APP能达到微信这种万人瞩目的量级。当我们的睡前最后一眼和醒来第一眼都给了她的时候，如张小龙所说，微信已经成为了一个生活方式。而微信的小程序最直观的联想就是一个搭载在微信里的App Store，这意味着一个覆盖6亿人口的大市场裂开了一个新的流量入口，这对所有开发者来说好比获得了一次重新洗牌的机会。错过了苹果Ap">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://guoze.me/2016/10/16/wechat-app/"/>
+
+
+
+
+
+  <title>微信小程序，不可不知的一二三四 | 建造者说</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-54995139-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">建造者说</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">总在造着什么的路上</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/2016/10/16/wechat-app/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">微信小程序，不可不知的一二三四</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-16T11:01:02+08:00">
+                2016-10-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/product/" itemprop="url" rel="index">
+                    <span itemprop="name">产品控</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2016/10/16/wechat-app/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>忽如一夜春风来。国内开发者圈最近的热门话题莫过于微信的小程序，也很合理，当下没有任何一个APP能达到微信这种万人瞩目的量级。当我们的睡前最后一眼和醒来第一眼都给了她的时候，如张小龙所说，微信已经成为了一个生活方式。而<strong>微信的小程序最直观的联想就是一个搭载在微信里的App Store</strong>，这意味着一个覆盖6亿人口的大市场裂开了一个新的流量入口，这对所有开发者来说好比获得了一次重新洗牌的机会。错过了苹果App Store的你，还舍得再次错过微信App Store吗？</p>
+<p>幻想总是美好的，但是当我去仔细研读微信小程序的文档，又发现我们都误解了微信的本意，或者说，小程序的出发点本来就不是为了取代或重建App Store，正如文档的第一句所说的，这只是一种<strong>新的开放能力</strong>。</p>
+<a id="more"></a>
+<h1 id="小程序不能做游戏和直播"><a href="#小程序不能做游戏和直播" class="headerlink" title="小程序不能做游戏和直播"></a>小程序不能做游戏和直播</h1><p>在苹果App Store畅销榜上最吸睛的就是游戏和直播类应用（前40名35个游戏，5个直播），结合微信的天然传播能力完全有出现新爆品的可能性。然而「微信小程序平台运营规范」却赫然写着：</p>
+<blockquote>
+<p>3.4 微信小程序的服务范围需与实际填写的类目和标签一致，也需和自身所提供的服务一致，且不应超出小程序平台的类目库范围。如游戏、直播、虚拟物品购买功能等均尚未开放。</p>
+</blockquote>
+<p>个人猜测这个规定的背后有两方面的考虑：</p>
+<p>一是与苹果的交锋与妥协，小程序的诞生必然会分流App Store的关注，而抢走App Store收入最大头的游戏和直播，无异于虎口夺食，苹果是万万不敢答应的，从小道消息传出的由「应用号」改名叫「小程序」也是类似的道理。</p>
+<p>二是出于用户体验的考虑，我相信微信OS（像某个段子说的，微信将来会占用50G空间）并不是张小龙的目标，事实上<strong>微信也不需要成为一个OS，微信的核心始终是一个社交工具</strong>。而游戏和直播，与社交都有一个共同的特点，就是花时间，用户的时间被游戏和直播带走了，必然社交的关注度就会有所降低，最终受伤的是微信本身。当然，从技术角度出发，设备性能、网络条件和缓存空间的限制也不可能放任游戏和直播在微信体系的生长，这会影响到微信使用的流畅程度。</p>
+<h1 id="小程序的大小被严格限制"><a href="#小程序的大小被严格限制" class="headerlink" title="小程序的大小被严格限制"></a>小程序的大小被严格限制</h1><blockquote>
+<p>小程序源码打包后的大小限制为1M，单次通过网络传输的数据最大也是1M。</p>
+</blockquote>
+<p>1M也就是十张高品质压缩图片的大小，与App Store动辄上百M的应用相比，小程序还真是「小得可怜」。而单次网络请求的数据量限制也决定了热更新只能采取小碎步快跑的方式。微信小程序对于大小的限制说明<strong>微信并不希望大家去开发很重的小程序，也不希望小程序加载庞大的资源文件</strong>。以目前的4G网络，1M的小程序大约只需要3-5秒即可加载完毕，真正做到来了就用，用完就走。如果加上坊间流传的20个小程序的限制，那么小程序不算网络加载的话只会给微信带来额外的20M左右的负担。<strong>小程序是真正的「小」程序，是为开发者提供一种新的连接用户的能力，而不是喧宾夺主、自成体系</strong>。</p>
+<h1 id="小程序无法实现单页的分享"><a href="#小程序无法实现单页的分享" class="headerlink" title="小程序无法实现单页的分享"></a>小程序无法实现单页的分享</h1><p>小程序由于没有包含WebView控件，开发者无法在小程序内部打开一个网页（<strong>所有的网络通信只能在客户端与预设域名之间进行</strong>），既然如此，任何一个微信小程序的页面都无法以一个标准的资源标识符（比如URL）代表，自然也就无法分享。之前某科技媒体评论到，像今日头条这类的资讯浏览类需求适合用小程序实现，当时我就呵呵了，要知道以内容传播为核心的产品分享向来是不可或缺的一环。之所以这么设计，我想是因为微信已经拥有了一个超乎强大的以内容传播为核心的体系 – 公众号。<strong>由公众号提供资讯，由小程序提供服务，不存在谁取代谁，两者相辅相成</strong>。</p>
+<h1 id="小程序的推送需要用户激活"><a href="#小程序的推送需要用户激活" class="headerlink" title="小程序的推送需要用户激活"></a>小程序的推送需要用户激活</h1><blockquote>
+<p>当用户在小程序内部提交过表单或者完成过支付后，可允许开发者向用户在7天内推送1条预设模板的信息。</p>
+</blockquote>
+<p>一如既往，微信对于打扰用户的行为是深恶痛绝的；体现在小程序上，就是<strong>只有用户想起你才去用你，用户没想你不能主动去唤醒他</strong>。相比于苹果APNS没有明确频率限制的推送，简直天差地别。如果你的产品是需要用户高频率、高互动、高粘性的，就不太适合以小程序为载体。毕竟，你不可能被允许在微信内部再造一个微信。</p>
+<h1 id="关于小程序的小知识"><a href="#关于小程序的小知识" class="headerlink" title="关于小程序的小知识"></a>关于小程序的小知识</h1><ol>
+<li>小程序并不是H5，而是一种类似React Native的技术，微信将小程序的标记语言翻译为iOS或安卓指令，执行效率类比原生APP。</li>
+<li>官方明确不允许小程序内部推荐其他小程序，ByeBye to 小程序导航/小程序推荐/小程序搜索。</li>
+<li>小程序可以通过二维码和搜索进入，当然，诱导分享仍然会被强力管控。</li>
+<li>同时打开页面最多5个，不适合做太深层级页面的交互。</li>
+<li>小程序不支持cookie，同时账号体系只能使用微信的。</li>
+</ol>
+<h1 id="小程序是另一次洗牌的机会吗？"><a href="#小程序是另一次洗牌的机会吗？" class="headerlink" title="小程序是另一次洗牌的机会吗？"></a>小程序是另一次洗牌的机会吗？</h1><p>我觉得不是。</p>
+<p>从08年Jobs发布iPhone起，智能手机的销量以指数级增长；到14年10月，移动端的流量全面超过PC端，移动互联网的春风带来了上一次洗牌的机会，有的人被赶下牌桌了（像百度），也有的人牢牢抓住机会狠狠赢了几把。但仔细一想，移动互联网的窗口期可分为三个阶段：</p>
+<ol>
+<li><strong>新的服务</strong>。手机和PC相比具有便携性、多传感器和随时在线的特性，对这部分特性的深挖造就了第一波的窗口期，像陌陌（利用了地理位置）、Instagram（利用了相机）、荔枝FM（利用了麦克风）、微信支付（利用了指纹传感器），这些APP所提供的服务，在PC端都很难实现，或者会大打折扣。</li>
+<li><strong>新的场景</strong>。随着智能手机的进一步普及，人们越来越懒得开电脑，干脆用手机去使用和PC上相同的服务。于是移动端的搜索流量超过了PC端、移动端的购物量超过了PC端、移动端的阅读量超过了PC端、端游也一步步向手游转移。</li>
+<li><strong>新的用户</strong>。当千元机成为市场的主流，当通信资费相对生活成本的比重快速下降，原本离互联网很远的人群（三线城市的居民、中低收入者、老人，比如我爸妈十多年都没学会电脑怎么开机，现在微信已经能用得比我还6了）也逐步被纳入到移动互联网的体系之中，这创造了一个新的增量市场。像快手这种向增量人群提供细分服务的APP开始崭露头角。</li>
+</ol>
+<p>而微信的小程序，这三点哪里都不占：植根于移动端之上，并不能提供超越原生APP的能力，相反有所阉割；也并没有创造新的场景或机会。这一局里最有利的，仍然是那些已经在牌桌上的人，他们拿着现有的牌，大胆走向新的赌局。</p>
+<p>但是，<strong>如果开发者立足于微信自身，利用好这一种新的开放能力，想方设法服务好微信的用户，强化实体与用户之间的连接，而不是去颠覆什么，虽然洗牌遥不可及，还是能有多几张牌可打的</strong>。</p>
+<p>不管怎么说，这至少会是前端工程师的春天，继React Native之后的又一重磅消息，连我都想去学JavaScript呢。</p>
+<blockquote>
+<p><strong>广告</strong>：2shou试用过国内外超过10个的主机服务商，Linode是综合评价最高的一个。如果你恰好需要云主机，<a href="https://www.linode.com/?r=17162ba138024f02c4025b904db1f520077da915" target="_blank" rel="external">这是一个邀请链接</a>，让你获得额外的10美元优惠。</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="http://7u2obl.com1.z0.glb.clouddn.com/images/qr-code.jpg" alt="2shou wechat" style="width: 200px; max-width: 100%;"/>
+    <div>更多精彩内容，欢迎关注微信公众号「极客思享」</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/微信/" rel="tag"># 微信</a>
+          
+            <a href="/tags/微信小程序/" rel="tag"># 微信小程序</a>
+          
+            <a href="/tags/移动互联网/" rel="tag"># 移动互联网</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/09/unsexy-apple/" rel="next" title="最性感的那一口已被咬掉，剩下的将就吃吧">
+                <i class="fa fa-chevron-left"></i> 最性感的那一口已被咬掉，剩下的将就吃吧
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/24/engineering-culture/" rel="prev" title="我眼中的工程师文化">
+                我眼中的工程师文化 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7u2obl.com1.z0.glb.clouddn.com/images/avatar.jpg"
+               alt="2shou" />
+          <p class="site-author-name" itemprop="name">2shou</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">57</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">86</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/2shou" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-guo-ze" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhangguoze" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序不能做游戏和直播"><span class="nav-number">1.</span> <span class="nav-text">小程序不能做游戏和直播</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序的大小被严格限制"><span class="nav-number">2.</span> <span class="nav-text">小程序的大小被严格限制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序无法实现单页的分享"><span class="nav-number">3.</span> <span class="nav-text">小程序无法实现单页的分享</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序的推送需要用户激活"><span class="nav-number">4.</span> <span class="nav-text">小程序的推送需要用户激活</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于小程序的小知识"><span class="nav-number">5.</span> <span class="nav-text">关于小程序的小知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序是另一次洗牌的机会吗？"><span class="nav-number">6.</span> <span class="nav-text">小程序是另一次洗牌的机会吗？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

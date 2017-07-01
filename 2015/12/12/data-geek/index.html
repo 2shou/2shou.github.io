@@ -1,0 +1,798 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="大数据," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="对于数据岗位的员工，互联网公司颇有些不同的称谓，像统计工程师、大数据工程师、数据分析师、算法工程师、数据科学家等，每一种之间的技能差距简直是风马牛不相及。但我觉得，数据岗位的需求千变万化，真正能通过数据解决问题的人，不仅要通晓两到三种岗位的技能，而且要深刻理解数据方法论，能将数据玩弄于鼓掌之中，这种人我称之为数据极客。好比武侠小说中的绝顶高手，杀人已不需要用剑，剑意就能杀人于无形。数据极客都需要具">
+<meta name="keywords" content="大数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="4个小例子告诉你：如何成为一名数据极客">
+<meta property="og:url" content="http://guoze.me/2015/12/12/data-geek/index.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="对于数据岗位的员工，互联网公司颇有些不同的称谓，像统计工程师、大数据工程师、数据分析师、算法工程师、数据科学家等，每一种之间的技能差距简直是风马牛不相及。但我觉得，数据岗位的需求千变万化，真正能通过数据解决问题的人，不仅要通晓两到三种岗位的技能，而且要深刻理解数据方法论，能将数据玩弄于鼓掌之中，这种人我称之为数据极客。好比武侠小说中的绝顶高手，杀人已不需要用剑，剑意就能杀人于无形。数据极客都需要具">
+<meta property="og:updated_time" content="2017-07-01T15:34:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="4个小例子告诉你：如何成为一名数据极客">
+<meta name="twitter:description" content="对于数据岗位的员工，互联网公司颇有些不同的称谓，像统计工程师、大数据工程师、数据分析师、算法工程师、数据科学家等，每一种之间的技能差距简直是风马牛不相及。但我觉得，数据岗位的需求千变万化，真正能通过数据解决问题的人，不仅要通晓两到三种岗位的技能，而且要深刻理解数据方法论，能将数据玩弄于鼓掌之中，这种人我称之为数据极客。好比武侠小说中的绝顶高手，杀人已不需要用剑，剑意就能杀人于无形。数据极客都需要具">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://guoze.me/2015/12/12/data-geek/"/>
+
+
+
+
+
+  <title>4个小例子告诉你：如何成为一名数据极客 | 建造者说</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-54995139-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">建造者说</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">总在造着什么的路上</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/2015/12/12/data-geek/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">4个小例子告诉你：如何成为一名数据极客</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-12T18:17:17+08:00">
+                2015-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/data/" itemprop="url" rel="index">
+                    <span itemprop="name">数据控</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2015/12/12/data-geek/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>对于数据岗位的员工，互联网公司颇有些不同的称谓，像统计工程师、大数据工程师、数据分析师、算法工程师、数据科学家等，每一种之间的技能差距简直是风马牛不相及。但我觉得，数据岗位的需求千变万化，真正能通过数据解决问题的人，不仅要通晓两到三种岗位的技能，而且要深刻理解数据方法论，能将数据玩弄于鼓掌之中，这种人我称之为<code>数据极客</code>。好比武侠小说中的绝顶高手，杀人已不需要用剑，剑意就能杀人于无形。数据极客都需要具备哪些能力？懂数据的人会怎么去思考和解决问题？我想举我自身遇到的4个小例子来说明。<br><a id="more"></a></p>
+<h1 id="懂得创造数据"><a href="#懂得创造数据" class="headerlink" title="懂得创造数据"></a>懂得创造数据</h1><p>在大部分人的常识里，数据是客观存在的，既不会递增，也不会消减。所有当他们绘制报表、展开分析、构建模型时，很容易遭遇的瓶颈是<code>没有数据</code>，俗话说，巧妇难为无米之炊。真实的状况却是：数据是无穷无尽的，哪怕有时我们与数据之间的距离很远，就像远在天边的繁星，「手可摘星辰」只是一个传说，但经过大气层的折射我们却能时刻感受到它们的光辉。不仅光会折射，数据同样也会折射。举一个小例子：</p>
+<blockquote>
+<p>实习生Q跑来问我：「Boss赶着要大厅发言的数据去对付投资人，但是后台碍于发言的数据量级太大，一直都没有保存，无论数据库还是日志系统都没有记录。」</p>
+<p>我想了一下，问：「客户端进入大厅页面的事件一直都有监控，可以用那个数据替代吗？」</p>
+<p>「但是这个数据并不精确，因为进入大厅的并不完全转化为发言。」</p>
+<p>「是的，虽然不十分精确，但可以暂时用这个数据近似。然后，好友添加的数据一定程度也能反映大厅发言的热度，因为之前的统计显示，70%的好友关系产生来自于大厅。哦，对了，你有没有关注大厅界面的发送按钮的事件统计？这会是一个更为精确的替代数据。」</p>
+</blockquote>
+<p>这就是一个数据有无到有被创造出来的例子。虽然原始数据没有保存，但是数据极客的任务就是通过其他可能被获取的数据逼近原始数据，从而还原一个较为真实的状况。如果没有数据能够成为一个罢工的借口，那么我相信恐怕90%的数据极客都得失业了。但反过来，如果不是对业务对数据的采集都了如指掌，同样没办法快速实现这种变数据的戏法。</p>
+<h1 id="数据是立体的"><a href="#数据是立体的" class="headerlink" title="数据是立体的"></a>数据是立体的</h1><p>20世纪初，毕加索兴起了立体主义的绘画潮流，追求以许多组合的碎片形态去描写对象物，并将其置于同一个画面之中，物体的各个角度交错叠放创造出了一个多维的迷人空间。这和理想的数据展示多么相似：客观存在的问题经过多维度的数据解读，被展现在一个二维的平面上，让读者即便只站在一个角度，也能看到这个问题在所有角度上的表现。再举一个小例子（是的，这个例子完全与数据岗位无关，是一个来自客户端工程师的困扰）：</p>
+<blockquote>
+<p>W是U公司负责海外业务的安卓工程师，最近盯的是视频播放的项目，有次闲聊的时候说起，最近做了好几个底层库的性能优化，但从指标上看却没有明显提升，每次向老大汇报的时候总是心虚。</p>
+<p>「性能优化的指标是怎么统计的？」</p>
+<p>「海外业务的网络状况普遍不好，所以我们最关注的是视频页面的加载时间，统计的是从页面打开到视频完全加载的时间差，取所有用户的均值。」</p>
+<p>「这个指标似乎不那么全面，如果一个用户等待的时间过长，他有可能提前关闭页面，是否有统计过关闭页面的数据？还有，看过这个时间差的分布状况么？如果性能优化有针对一些特殊的客户端（比如型号、CPU、内存），有没有看过特殊客户端下的指标有没有提升？」</p>
+<p>我默想W的下次汇报一定会大肆耀武扬威一番，嘿嘿。</p>
+</blockquote>
+<p>这就是数据的魔力所在。通过层层剖析，始终能找到与问题相关的有区分度的数据，再通过数据的变化去定位到问题的发生原因或者发展趋势，给出不容置疑的结论。所以，在解决任何问题之前（也不限于数据岗位），你都必须先构建起一套立体化的数据监控体系，来强有力的印证你的方案是有效的。</p>
+<h1 id="厌恶抽样"><a href="#厌恶抽样" class="headerlink" title="厌恶抽样"></a>厌恶抽样</h1><p>无论是做推荐系统、精准营销还是反欺诈，都会遇到一个现实的问题：如何检测一个模型的实际效果？在观察指标之余，抽取一小部分的标记用户，观察他们的行为模式，人为去验证这个模型的准确率，是一个必要的环节。但是抽样如果用得泛滥了，就不是补药而是毒药了。再举个小例子：</p>
+<blockquote>
+<p>G是团队的新人，有阵子我看他没日没夜的加班，忍不住过问了几句，看是不是最近业务上碰到了什么瓶颈。一问下来有点啼笑皆非：原来G正在负责一个反欺诈模型的建设，需要一些黑标签，他从所有用户中抽取了好几个特征用户群，然后从每个用户群中再抽样一批用户，通过日志观察是否有欺诈行为，这么一来就耗掉了两天的时间。</p>
+</blockquote>
+<p>抽样是一种从局部看整体的方法，在抽样之上，你还要有对整体的把控。比如像G的做法就不符合数据极客的行为指南，既然可以通过日志观察到用户的行为特征，你就应该先把这种行为特征转化为可用的统计指标（比如识别欺诈，完全可以用收益相关的指标），再计算这几个用户群的均值特征，这样对比下来一目了然，而且省时省力。</p>
+<h1 id="善用工具"><a href="#善用工具" class="headerlink" title="善用工具"></a>善用工具</h1><p>感谢谷歌创造了这个时代最廉价的<code>数据核武器</code> - Hadoop（当然，如果Spark的bug再少一些，我会考虑把AMPLab放到谷歌的前面），数据的规模对大部分企业而言已经是一个无需顾虑的问题。但是数据极客不会满足于会用工具的层次，理解工具的原理，灵活的使用工具，使工具变得更加顺手，才能真正达到「善」用工具的境界。再举一个小例子：</p>
+<blockquote>
+<p>Z博士刚毕业不久，一腔热血要把高大上的机器学习算法用到我们的推荐系统上，但是第一次的运算结果居然要8个小时才能跑完，远远达不到产品团队的更新要求。于是老大鼓动我去协助Z提升整个环节的效率，我们一起在白板上梳理了整个计算的流程，我发现有好几处都是浪费资源降低效率的做法：原始数据由单机做一次处理再上传到Hadoop、多个MapReduce其实可以合并为一个、甚至Hadoop的参数也可以根据机器的性能稍做调整：加大节点数、加大Map和Reduce环节的可用内存、添加压缩以减少节点间传输的时间。稍作改造，运算时间便只剩下了原来的四分之一。</p>
+</blockquote>
+<p>说到这里，你也许会觉得数据极客也没什么巧妙，他们的方法论，和一切工作的方法论没什么不同，都会要多用脑子、多用工具、多种角度看待问题。既然如此，我可要恭喜你，你已经完全懂得了数据的妙用，而我一直以为，懂点数据，会对人的工作和生活大有助益。</p>
+<blockquote>
+<p><strong>广告</strong>：2shou试用过国内外超过10个的主机服务商，Linode是综合评价最高的一个。如果你恰好需要云主机，<a href="https://www.linode.com/?r=17162ba138024f02c4025b904db1f520077da915" target="_blank" rel="external">这是一个邀请链接</a>，让你获得额外的10美元优惠。</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="http://7u2obl.com1.z0.glb.clouddn.com/images/qr-code.jpg" alt="2shou wechat" style="width: 200px; max-width: 100%;"/>
+    <div>更多精彩内容，欢迎关注微信公众号「极客思享」</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/大数据/" rel="tag"># 大数据</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/12/choose-startup/" rel="next" title="馆中窥职：小公司没那么糟糕">
+                <i class="fa fa-chevron-left"></i> 馆中窥职：小公司没那么糟糕
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/12/matplotlib-par-chart/" rel="prev" title="Python绘制精美图表之双柱形图">
+                Python绘制精美图表之双柱形图 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7u2obl.com1.z0.glb.clouddn.com/images/avatar.jpg"
+               alt="2shou" />
+          <p class="site-author-name" itemprop="name">2shou</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">57</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">86</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/2shou" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-guo-ze" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhangguoze" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#懂得创造数据"><span class="nav-number">1.</span> <span class="nav-text">懂得创造数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据是立体的"><span class="nav-number">2.</span> <span class="nav-text">数据是立体的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#厌恶抽样"><span class="nav-number">3.</span> <span class="nav-text">厌恶抽样</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#善用工具"><span class="nav-number">4.</span> <span class="nav-text">善用工具</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

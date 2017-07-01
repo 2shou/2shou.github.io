@@ -1,0 +1,786 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="推荐系统," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="可以说是全拜谷歌吹起了「大数据」这阵春风，近几年业界对于数据挖掘人才的需求持续高涨，而推荐系统一直是数据挖掘岗位的必修课。一联系到数据挖掘，总会给人高深莫测的错觉，以为推荐系统也是数学神童的专属领域。万万没想到，自己并不是数据挖掘科班出身，也谈不上数学功底有多好（本科考高数也就在生死边缘），竟然也操刀了三个业务场景不同、用户规模千差万别、甚至连地域和文化也跨度很大的推荐系统，而且评价指标和用户反馈">
+<meta name="keywords" content="推荐系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="推荐系统从零到一">
+<meta property="og:url" content="http://guoze.me/2016/01/10/recommendation-zero-to-one/index.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="可以说是全拜谷歌吹起了「大数据」这阵春风，近几年业界对于数据挖掘人才的需求持续高涨，而推荐系统一直是数据挖掘岗位的必修课。一联系到数据挖掘，总会给人高深莫测的错觉，以为推荐系统也是数学神童的专属领域。万万没想到，自己并不是数据挖掘科班出身，也谈不上数学功底有多好（本科考高数也就在生死边缘），竟然也操刀了三个业务场景不同、用户规模千差万别、甚至连地域和文化也跨度很大的推荐系统，而且评价指标和用户反馈">
+<meta property="og:updated_time" content="2017-07-01T15:34:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="推荐系统从零到一">
+<meta name="twitter:description" content="可以说是全拜谷歌吹起了「大数据」这阵春风，近几年业界对于数据挖掘人才的需求持续高涨，而推荐系统一直是数据挖掘岗位的必修课。一联系到数据挖掘，总会给人高深莫测的错觉，以为推荐系统也是数学神童的专属领域。万万没想到，自己并不是数据挖掘科班出身，也谈不上数学功底有多好（本科考高数也就在生死边缘），竟然也操刀了三个业务场景不同、用户规模千差万别、甚至连地域和文化也跨度很大的推荐系统，而且评价指标和用户反馈">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://guoze.me/2016/01/10/recommendation-zero-to-one/"/>
+
+
+
+
+
+  <title>推荐系统从零到一 | 建造者说</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-54995139-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">建造者说</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">总在造着什么的路上</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/2016/01/10/recommendation-zero-to-one/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">推荐系统从零到一</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-10T20:37:22+08:00">
+                2016-01-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/data/" itemprop="url" rel="index">
+                    <span itemprop="name">数据控</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2016/01/10/recommendation-zero-to-one/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>可以说是全拜谷歌吹起了「大数据」这阵春风，近几年业界对于数据挖掘人才的需求持续高涨，而推荐系统一直是数据挖掘岗位的必修课。一联系到数据挖掘，总会给人高深莫测的错觉，以为推荐系统也是数学神童的专属领域。万万没想到，自己并不是数据挖掘科班出身，也谈不上数学功底有多好（本科考高数也就在生死边缘），竟然也操刀了三个业务场景不同、用户规模千差万别、甚至连地域和文化也跨度很大的推荐系统，而且评价指标和用户反馈还颇为正面。可见推荐系统没有那么曲高和寡（至少不需要去进修个数学博士，笑），我相信如果一个出色的程序员理解了推荐系统的方法论，那么他就能在短时间内做出一个有实效的能提升平台活跃的推荐系统。<br><a id="more"></a></p>
+<h1 id="推荐系统的本质是行为的关联"><a href="#推荐系统的本质是行为的关联" class="headerlink" title="推荐系统的本质是行为的关联"></a>推荐系统的本质是行为的关联</h1><p>推荐系统的核心是为用户提供个性化的内容。而实现的方式不外乎根据用户的历史行为去预测未来的潜在点击。<strong>一个成功的推荐系统，一般要从两个维度体现它的价值：一是帮助用户发现没接触过但会喜欢的有新鲜感的内容；二是提升平台的点击活跃程度，让长尾内容得到更充分的曝光</strong>。</p>
+<p>如果把推荐系统比做一桌丰盛的菜肴，食材将来自于全平台用户的历史行为，历史行为所表达的是用户对于内容的一种喜好程度，有可能是点击、收藏、下载、评论、点赞等。不管算法选型如何，推荐系统的工作流程是一致的：通过单一用户的历史行为揣摩该用户的喜好，然后搜索全平台的用户行为，根据用户喜好的相关程度对内容进行排序。而排序的标准取决于算法：基于内容（以Item为特征）、基于用户（以User为特征）还是矩阵分解（以矩阵分解后的隐含变量为特征）。所以，推荐系统的本质是关联单一用户与全平台用户的行为，为其找到「臭味相投」的人所喜好的内容，这样就是「协同过滤」中「协同」二字的含义。</p>
+<h1 id="并不是所有场景都需要个性化"><a href="#并不是所有场景都需要个性化" class="headerlink" title="并不是所有场景都需要个性化"></a>并不是所有场景都需要个性化</h1><p>这是最关键但却最容易被忽视的问题。大数据风一来，推荐系统就成了许多Boss眼中包治百病的仙丹妙药，不管三七二十一，一定要在产品前期上线推荐系统。但以我的经验，推荐系统要取得成功，至少要具备以下3个先决条件：</p>
+<ol>
+<li>要有足够大的数据。一个常见的误区是，社区不够活跃，上了推荐系统没准会增加活跃吧？而实际上缺乏数据就很难有精准的推荐（用户关联过于稀疏），自然也不会带来多少可观的点击。</li>
+<li>要有丰富的内容。数据大并不代表内容就足够丰富，点击都集中在少数的内容也是有可能的。推荐系统的鼻祖是亚马逊的图书推荐，有没有人细想过，为什么亚马逊是第一个吃螃蟹的人？当时贝佐斯把书店搬到网上后，发现亚马逊拥有了全世界最多的图书，在一家库存数百万种图书的线上书店里，你根本无法依赖编辑去为顾客推荐新书，所以才有了推荐系统诞生的土壤。事实上，只有内容极大丰富的时候，才可能有被无用户差别排行榜埋没的优质内容，个性化的需求才能出现需求到商业价值的跨越。<strong>如果内容的量级在一万以下，单一的热门排行榜足以满足大部分用户发现内容的需求；一万以上十万以下，分类的热门排行榜足以满足不同喜好用户发现内容的需求，十万以上，推荐系统的必要性才开始凸显</strong>。 </li>
+<li>要有用户分众。数据充分了、内容丰富了，并不代表推荐系统就水到渠成，还得掂量下用户喜好能不能形成产生足够的分众。推荐系统之所以在电商、音乐和社区等领域有成功的应用，主要因素就是这类产品的用户有足够的分众。目标用户越是大而全，分众越明显，推荐的满意度越高。不用看数据，也能猜到淘宝的推荐会比唯品会的效果好太多，因为上淘宝的用户喜好差异度会远大于唯品会。</li>
+</ol>
+<h1 id="推荐系统的步骤"><a href="#推荐系统的步骤" class="headerlink" title="推荐系统的步骤"></a>推荐系统的步骤</h1><h2 id="1-定义目标"><a href="#1-定义目标" class="headerlink" title="1. 定义目标"></a>1. 定义目标</h2><p>凡事要有成效都必须坚持目标导向，如果一个项目的成果不能被准确衡量，那么前景注定是危险的。推荐系统长期都是为提升平台的活跃度而生的，与团队的商业价值目标是一致的，但短期内两者或许会有冲突：<strong>平台的展示位置有限，推荐系统上马后会分流掉热门内容的点击量，而商业价值往往要建立于热门内容之上</strong>。所以上马之前一定要与负责确定商业价值的人协商（也许你的CEO、也许是市场团队的头儿），在推荐系统的设计中兼顾到一部分的商业价值目标。关于推荐的评价指标，个人建议可包括下列选项：推荐系统覆盖的内容数量、推荐内容的点击率（A/B测试）、推荐系统上线前后的内容产生量（对于UGC平台）、推荐系统上线前后TOP100内容的变化，同时也要留意推荐内容区域的浏览行为数据（推荐系统本来就是个离产品很近的事），比如停留时间、点击的频次、翻页的频次。</p>
+<p>有的平台会在推荐结果的下方提供用户的反馈按钮，但是我建议这种反馈听听就好，不必当真，主要还是看实际的数据表现。用户反馈总是会过分的积极，容易让人忘乎所以。</p>
+<h2 id="2-深入业务"><a href="#2-深入业务" class="headerlink" title="2. 深入业务"></a>2. 深入业务</h2><p>做数据的如果不了解业务，基本就废掉了。我的习惯是做推荐系统之前一定要把产品玩熟用坏，尽量获取更多的用户、内容和行为的数据。打个比方，用QQ邮箱的和用Gmail邮箱注册的用户肯定有些不一样，对不？除了收集数据，熟悉推荐的业务场景（行话叫「推荐的上下文」）也很重要，事实上推荐算法的选型也会受业务场景的影响，比如以物推物的场景就更适合内容特征的算法，一个一个接连展现的可以考虑加入点随机性，首页推荐列表应该多放新内容。</p>
+<h2 id="3-算法选型"><a href="#3-算法选型" class="headerlink" title="3. 算法选型"></a>3. 算法选型</h2><p>既然推荐系统的本质是行为的关联，那么协同过滤（这里把矩阵分解也算协同过滤的一种）都是在利用关联的信息，通常都会比基于内容的推荐效果要好。不过现实中<strong>单一的算法都很难获得很高的准确率，适当结合内容自身的属性有助于提升推荐的满意度</strong>，举个例子，服饰电商平台中Item的品牌信息对购买者就很关键（所有女人都懂的，对不？），如果能建立起一个User的品牌偏好，或者进一步讲，品牌与品牌之间的关联度，那么爆表的推荐质量简直是手到擒来。如果平台原有的行为数据就是关联很稀疏的，协同过滤就很难发挥所长，这时基于内容的推荐就有用武之地了。</p>
+<h2 id="4-冷启动与负样本"><a href="#4-冷启动与负样本" class="headerlink" title="4. 冷启动与负样本"></a>4. 冷启动与负样本</h2><p>冷启动可分为User的冷启动和Item的冷启动，如果是要对一个新内容推荐相关的其他内容，那么可以多多利用内容特征的相似度；如果是对一个新用户推荐，可以利用起社交网络的信息（比如该用户的QQ好友的喜好）；或者推随机的热门内容，再评估用户的点击快速调整（实时推荐的好处出来了）；最后的办法也只有给新用户一个表达自己喜好的界面了。</p>
+<p>协同过滤是基于统计的算法，并不需要负样本的信息，但如果采取了机器学习的算法，训练的过程是需要负样本的。<strong>大部分产品设计的时候不会提供用户的负反馈入口，用户无法表达对某个内容的厌恶，也就是现实数据并不存在负样本</strong>。但是负样本其实是可被创造的，我常用的一种做法是选择热门的但没有产生用户喜好的样本，因为平台的热门内容往往有更高的曝光率，用户反复看到但没产生点击，那就潜在的表达了一种厌恶。</p>
+<p>一直觉得推荐系统是个业界十分特殊的场景，站在了通往技术、数据、产品和商业四条岔路的交叉口。所以做推荐系统是一个锻炼程序员综合能力的好活，而事实上高深算法是推荐系统中最次要的部分，对于数据和产品敏感的技术人更容易取得成功。</p>
+<blockquote>
+<p><strong>广告</strong>：2shou试用过国内外超过10个的主机服务商，Linode是综合评价最高的一个。如果你恰好需要云主机，<a href="https://www.linode.com/?r=17162ba138024f02c4025b904db1f520077da915" target="_blank" rel="external">这是一个邀请链接</a>，让你获得额外的10美元优惠。</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="http://7u2obl.com1.z0.glb.clouddn.com/images/qr-code.jpg" alt="2shou wechat" style="width: 200px; max-width: 100%;"/>
+    <div>更多精彩内容，欢迎关注微信公众号「极客思享」</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/推荐系统/" rel="tag"># 推荐系统</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/27/large-scale-server/" rel="next" title="非典型的千万用户后台之路">
+                <i class="fa fa-chevron-left"></i> 非典型的千万用户后台之路
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/24/busy-programmer/" rel="prev" title="程序员你为什么这么忙？">
+                程序员你为什么这么忙？ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7u2obl.com1.z0.glb.clouddn.com/images/avatar.jpg"
+               alt="2shou" />
+          <p class="site-author-name" itemprop="name">2shou</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">57</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">86</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/2shou" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-guo-ze" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhangguoze" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#推荐系统的本质是行为的关联"><span class="nav-number">1.</span> <span class="nav-text">推荐系统的本质是行为的关联</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#并不是所有场景都需要个性化"><span class="nav-number">2.</span> <span class="nav-text">并不是所有场景都需要个性化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推荐系统的步骤"><span class="nav-number">3.</span> <span class="nav-text">推荐系统的步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-定义目标"><span class="nav-number">3.1.</span> <span class="nav-text">1. 定义目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-深入业务"><span class="nav-number">3.2.</span> <span class="nav-text">2. 深入业务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-算法选型"><span class="nav-number">3.3.</span> <span class="nav-text">3. 算法选型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-冷启动与负样本"><span class="nav-number">3.4.</span> <span class="nav-text">4. 冷启动与负样本</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

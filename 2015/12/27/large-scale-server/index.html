@@ -1,0 +1,790 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="服务器,后台,高并发,缓存," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="三年前，原本我只是个不学无术的数据小码农，空有一腔热情；而当时公司也处在艰难的转型期，旧产品不见起色，新产品前途未卜。想见着也不可能用这么小的数据玩出花来，而新产品的数据也不是一时半会能成规模。还是本着最大限度学习的心思，鼓足勇气和老板提换岗，要去扛后台开发的大旗，最大程度参与到产品的一线去。一个小决定，换来的是整整半年的不眠之夜，眼见着第1个用户到第500万个用户，眼见着1台到4台再到10台服务">
+<meta name="keywords" content="服务器,后台,高并发,缓存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="非典型的千万用户后台之路">
+<meta property="og:url" content="http://guoze.me/2015/12/27/large-scale-server/index.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="三年前，原本我只是个不学无术的数据小码农，空有一腔热情；而当时公司也处在艰难的转型期，旧产品不见起色，新产品前途未卜。想见着也不可能用这么小的数据玩出花来，而新产品的数据也不是一时半会能成规模。还是本着最大限度学习的心思，鼓足勇气和老板提换岗，要去扛后台开发的大旗，最大程度参与到产品的一线去。一个小决定，换来的是整整半年的不眠之夜，眼见着第1个用户到第500万个用户，眼见着1台到4台再到10台服务">
+<meta property="og:updated_time" content="2017-07-01T15:34:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="非典型的千万用户后台之路">
+<meta name="twitter:description" content="三年前，原本我只是个不学无术的数据小码农，空有一腔热情；而当时公司也处在艰难的转型期，旧产品不见起色，新产品前途未卜。想见着也不可能用这么小的数据玩出花来，而新产品的数据也不是一时半会能成规模。还是本着最大限度学习的心思，鼓足勇气和老板提换岗，要去扛后台开发的大旗，最大程度参与到产品的一线去。一个小决定，换来的是整整半年的不眠之夜，眼见着第1个用户到第500万个用户，眼见着1台到4台再到10台服务">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://guoze.me/2015/12/27/large-scale-server/"/>
+
+
+
+
+
+  <title>非典型的千万用户后台之路 | 建造者说</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-54995139-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">建造者说</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">总在造着什么的路上</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/2015/12/27/large-scale-server/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">非典型的千万用户后台之路</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-27T12:09:21+08:00">
+                2015-12-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming/" itemprop="url" rel="index">
+                    <span itemprop="name">技术控</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2015/12/27/large-scale-server/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>三年前，原本我只是个不学无术的数据小码农，空有一腔热情；而当时公司也处在艰难的转型期，旧产品不见起色，新产品前途未卜。想见着也不可能用这么小的数据玩出花来，而新产品的数据也不是一时半会能成规模。还是本着最大限度学习的心思，鼓足勇气和老板提换岗，要去扛后台开发的大旗，最大程度参与到产品的一线去。一个小决定，换来的是整整半年的不眠之夜，眼见着第1个用户到第500万个用户，眼见着1台到4台再到10台服务器，眼见着后台业务由单一的播放到能播放能上传再到有完整的社交交互。从刚开始三天两头崩溃出事故，到最终一点不怕市场的同事搞拉新的活动，什么状况都能做到心中有数、遇事不慌。回头一想吓一大跳：自己并不是后台工程师科班出身，从来对语言和框架的争论无感无力，网络编程的基础知识更是差强人意，但是凭着小米步枪，凭着奇技淫巧，凭着持续思考和不断尝试，居然也能搭建起一个支撑千万级别用户的后台框架。总结那半年，留下了5条事关生死的建议，在这里泣血奉上。</p>
+<a id="more"></a>
+<h1 id="数据的读写是服务器性能的核心"><a href="#数据的读写是服务器性能的核心" class="headerlink" title="数据的读写是服务器性能的核心"></a>数据的读写是服务器性能的核心</h1><p>一个完整的后台服务，组件其实就只分3种：<strong>接入、逻辑和数据</strong>。这好比一家饭店，后台工程师就是开店的老板，客人数量小于1万，服务流程是第一位的，老板们吭哧吭哧忙着写逻辑；1万到10万之间，接入组件的设计会是重中之重：一个店的服务能力有限，老板们忙着多开几个分店，让客人分流，而决定客人到哪一个分店的，就是接入组件；但是用户一旦大于10万，数据的读写能力就决定了这家超级饭店的服务容量，不管开多少个分店，都要保证数据是一致的，读起来又快又准，而写数据不会影响到读的性能。表结构怎么设计，数据库怎么分布（主从、读写分离、分库、分表），缓存怎么选怎么分布，就是老板们最重要的工作（让老板高兴的是，名片也可以改印个高大上的抬头：架构师）。</p>
+<p>一旦用户量过了十万，要再想光靠数据库一部卡车打天下就不太现实了，而缓存（物理存储地在内存，天生比数据库读写性能强）这匹野马的出现就满足了我们对于速度的极致需求。缓存对服务器的架构带来了两个深远的影响：一是热数据和冷数据的分离：热数据访问的人多，缓存挡在前面，为数据库分担巨大的读压力；而热数据从产品的角度也更应获得快速的响应。二是数据一致性的门槛提高，更新数据库的同时必须更新缓存，一旦缓存更新失败，数据库也一定要回滚而保证数据的一致性，不能闹给客人上冷菜的笑话。当然缓存存什么、怎么存，也是大有一番学问，容我下一小节再讲。但缓存的重要性总结一句话：<strong>没有缓存是万万不能的</strong>。无论你是选老马Memcached还是火热的头马Redis，一定要在数据库感受到压力之前上马，并且做好缓存备份和恢复的预案。当然，平安无事你是没办法感受到缓存的好处的，它就像一个平时提醒你吃饭睡觉多喝热水的备胎，只有当她弃你而去之时，你看着服务器哗哗成百倍上涨的响应时间，恨不得找块豆腐一头撞死。</p>
+<h1 id="列表、实体和冗余"><a href="#列表、实体和冗余" class="headerlink" title="列表、实体和冗余"></a>列表、实体和冗余</h1><p>Web时代，由于翻页前后用户出现了界面的切换，用户对于列表本身的变化并不敏感（假如翻页的同时列表新加入了内容，只要保证用户浏览的这个片段没有重复就可以），但是移动端这种滚动列表的设计简直就是所有后台工程师的梦魇（加入用户上拉列表获取更多的同时新加入了内容，那用户会看到相邻两个重复的内容，然后就气炸了，什么破APP！），应对「列表重复」这个难题的方法出一本书都够了。因为这个需求，我们只能放弃了原有的自增ID，采用时间戳作为获取列表片段的方式：简单来讲，就是客户端每次都上报一个当前页最后一个内容的时间戳，服务器再去取比这个时间更旧的若干个内容。这里必须要感谢Redis的作者提供了如此丰富的缓存使用的API，我觉得Redis最出色的一点就是把列表的所有使用场景都设想得很通透。</p>
+<p>实体就是热数据，热数据的缓存有两问：一是存什么？有人会说简单，把整个结构体转化为一个JSON存进去不就得了？但这其实是有问题的，当你的服务器要面对数十万同时到来的用户，可能短短一瞬就要做数以千万计的JSON到结构体之间的来回切换，而这个过程的效率实际上是很不理想的，那么也许你要想一些更快的方案（此处买个关子）。二是怎么存？雪崩效应并不罕见，一旦源数据改变，一时间许多个线程同时去访问更新缓存的API，服务器瞬间堵死，想到后台工程师会因此而失业，我默默加了一个锁。</p>
+<p>小张是端菜的服务员，这次上菜，他要先去凉菜区取个土豆丝、再去荤菜区取个东坡肉、顺到素菜区取个手撕包菜、最后到饮料区再拎两瓶果汁，听起来很低效，对不？这和数据获取的过程是类似的，数据库的表设计首要考虑的是归类，比如用户的信息存一张表，用户和小组的关系再存一张表，那么如果有一个场景需要读用户以及他最后访问过的小组，就得做两次的数据表读取，一旦这个场景频繁出现，适当的数据冗余（把用户最后访问的小组ID加入到用户表的字段中）就能够降低数据库的读取压力。所以<strong>表设计一定一定一定（重要的事情说三遍）要考虑业务场景</strong>。</p>
+<h1 id="异步，是不是真异步？"><a href="#异步，是不是真异步？" class="headerlink" title="异步，是不是真异步？"></a>异步，是不是真异步？</h1><p>有的小盆友跑来问我，我这个服务器框架选的牛啊，异步多线程的，单进程并发一万多轻而易举，怎么还是慢啊？我说，「异步」这个词可不要说得太轻松，底层异步了，流程里的每个步骤是不是异步的呢？数据库读写、缓存读写、外部接口的访问，这些都不能异步吧？既然不是异步，卡在哪里你还不知道呢，还不赶紧打日志。还是说说最令我崩溃的一个案例：某次服务器炸了，打多少次日志都没办法定位到卡住的原因。最后猜是怎么着？竟然是日志组件（Log4j）就不是异步的，打日志这个步骤就卡住了，欲哭无泪。</p>
+<h1 id="日志、监控和有损服务"><a href="#日志、监控和有损服务" class="headerlink" title="日志、监控和有损服务"></a>日志、监控和有损服务</h1><p>一个高级饭店要有厨师，要有大堂经理，要有端盘子的，要有收银的，但千万别忘了还要有保安。他虽然不是饭店成功与否的核心因素，但是如果缺了他，危机时刻就会应付不来。下面这三位哥们就是服务器的保安：日志、监控和有损服务。</p>
+<p>先说日志，日志是很微妙的，打多了不行，影响性能、占据空间，打少了，关键问题排查不出原因。那么哪些是必打的呢？我认为有三点：一是行为的基本属性，无非是何时何地何人，时间、用户ID、IP、版本（存下来除了排错，还可以用来做数据分析）；二是往返的参数，尤其是客户端上报的参数，服务器返回的数据也许会很大，不建议所有都打印，可以打印统计数据，比如返回了多少个小组之类；三是报错信息，底层一定要catch所有的出错信息，并把它打到单独的日志里。</p>
+<p>再说监控，日志是一旦发现了问题帮助我们找出问题的原因的工具，那么什么能帮我们发现问题呢？答案是监控和告警。监控与日志不同，要抓核心的数据，不能多，我建议取三个数据：用户的并发访问数、读取的人均响应时间、写入的人均响应时间，告警的话再加上服务器的崩溃、重启的次数，以及主机性能相关的指标（CPU、内存、硬盘等）。</p>
+<p>「发生这种事，大家都不想的。饿不饿，我给你煮碗面？」，服务器运气不好崩溃了，我便常常用这句TVB的经典台词与小伙伴们调侃。其实无论事前机关算尽，成长期的APP总会遇到服务器出状况的。但是，以我有限的经验，<strong>服务器的问题往往不出在自身，而是它所依赖组件导致的问题</strong>，比如Memcached机器dump、转码服务队列阻塞、或者图片存储空间爆满等等。那么在问题被解决之前，总不能干瞪眼，看着用户投诉一波波来吧？我们会想，对于现在的业务来说，最不能崩溃的场景是什么？比如播放是我们的最基础服务，那我们死也要保证任何外部组件的崩溃都不能影响热门内容的播放，因此我们要把这部分少而重要的热数据加载到内存，以防止外部存储出了什么问题，服务器自己还有碗面吃。真正是，自己的事情自己干，靠天靠地靠祖宗，不算是好汉。</p>
+<h1 id="服务分离与复制"><a href="#服务分离与复制" class="headerlink" title="服务分离与复制"></a>服务分离与复制</h1><p>服务器体系越长越大，我们首要做的事情是分封，儿子长大了，总要给他一块地盘，当个小王，从此自己打拼去。于是数据读写被抽象成服务了，同时对APP和前端负责，做最大的一个王；编码解码抽象成服务了，反正编码解码是给UGC用户提供的，想当明星的人总要等得起；日志存储和解析也抽象成服务了，反正有少许的丢失我们也不介意。表面看来服务器被拆得支离破碎，增加了网络时延，是一笔不划算的生意，但实际上对服务器的稳定性大有助益。为什么？一是大王国被拆成小王国了，定位问题更容易，迁移和复制也更简单，数据读写有压力？没问题！再给两块地盘。二是在整个链条上，任何一个环节都是多点，俗话说，不把鸡蛋都放在一个篮子，任何一台服务器dump都不会要了我们的命。</p>
+<p>细枝末节且不提，总结当时半年内服务器高速发展期留下来的经验，我认为最重要的就是这五点，业务场景不同，服务器的架构和侧重点也肯定会略有差异；不过这五点基本等同于锦囊，等同于基石，等同于保命符，做好了，这饭店生意一定蒸蒸日上。恭喜你，老板！</p>
+<blockquote>
+<p><strong>广告</strong>：2shou试用过国内外超过10个的主机服务商，Linode是综合评价最高的一个。如果你恰好需要云主机，<a href="https://www.linode.com/?r=17162ba138024f02c4025b904db1f520077da915" target="_blank" rel="external">这是一个邀请链接</a>，让你获得额外的10美元优惠。</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="http://7u2obl.com1.z0.glb.clouddn.com/images/qr-code.jpg" alt="2shou wechat" style="width: 200px; max-width: 100%;"/>
+    <div>更多精彩内容，欢迎关注微信公众号「极客思享」</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/服务器/" rel="tag"># 服务器</a>
+          
+            <a href="/tags/后台/" rel="tag"># 后台</a>
+          
+            <a href="/tags/高并发/" rel="tag"># 高并发</a>
+          
+            <a href="/tags/缓存/" rel="tag"># 缓存</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/20/goodbye-2015/" rel="next" title="就这样，再见2015">
+                <i class="fa fa-chevron-left"></i> 就这样，再见2015
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/10/recommendation-zero-to-one/" rel="prev" title="推荐系统从零到一">
+                推荐系统从零到一 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7u2obl.com1.z0.glb.clouddn.com/images/avatar.jpg"
+               alt="2shou" />
+          <p class="site-author-name" itemprop="name">2shou</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">57</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">86</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/2shou" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-guo-ze" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhangguoze" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据的读写是服务器性能的核心"><span class="nav-number">1.</span> <span class="nav-text">数据的读写是服务器性能的核心</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表、实体和冗余"><span class="nav-number">2.</span> <span class="nav-text">列表、实体和冗余</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步，是不是真异步？"><span class="nav-number">3.</span> <span class="nav-text">异步，是不是真异步？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日志、监控和有损服务"><span class="nav-number">4.</span> <span class="nav-text">日志、监控和有损服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务分离与复制"><span class="nav-number">5.</span> <span class="nav-text">服务分离与复制</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

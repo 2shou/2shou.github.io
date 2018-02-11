@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://guoze.me/"/>
-  <updated>2017-12-31T03:58:13.093Z</updated>
+  <updated>2018-02-11T13:04:40.556Z</updated>
   <id>http://guoze.me/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI</title>
+    <link href="http://guoze.me/2018/02/11/ai/"/>
+    <id>http://guoze.me/2018/02/11/ai/</id>
+    <published>2018-02-11T12:49:35.000Z</published>
+    <updated>2018-02-11T13:04:40.556Z</updated>
+    
+    <content type="html"><![CDATA[<p>IT圈现在最火的，莫过于AI和区块链。</p>
+<p>区块链我是真不懂，花了半天读比特币白皮书，还是没明白它对于真实世界的价值。</p>
+<p>AI以前我以为我懂，但它的火热程度还是出乎我的意料，反而让我有点雾里看花起来。</p>
+<a id="more"></a>
+<p>你问AI这一波怎么看？</p>
+<p>我没法看。</p>
+<p>但是你如果问AI会不会统治地球？</p>
+<p>我劝你打开iPhone的Siri，和它正常对话几轮，我保证你会崩溃。</p>
+<p>以前我们做机器学习，先要找Label，也就是靠人工或者后验产生标签数据，然后做各种特征，再建造不同的模型去拟合Label，给个测试集看一下，挺好，上到生产环境再看看指标变化。</p>
+<p>这时如何寻找好的features是机器学习的黑魔法。</p>
+<p>深度学习基于神经网络，原本是机器学习之中后进的算法，后来GPU性能突飞猛进，神经网络由一层变到多层甚至百来层，替代了原本由工程师做的特征部分的工作，目前已验证在诸如图像、棋类或者游戏和少量的文本场景有超出其他算法的性能。</p>
+<p>然后呢？</p>
+<p>也并不是非常的鹅妹子嘤。机器学习的流程和痛点并没有改变，工程师们从原来忙忙碌碌做特征变成忙忙碌碌调神经网络的参数。</p>
+<p>也许有人大言不惭：这是奇点！所有技术的演变都是非线性的，你现在家里那台像无头苍蝇一样的扫地机器人都是未来天网的雏形！</p>
+<p>要这个理论能成立，那么电池技术位于奇点、光速旅行位于奇点、可控核聚变技术也位于奇点。可以把每一种小有进展的复杂技术称之为奇点。</p>
+<p>人工智能并不比它们简单多少。</p>
+<p>这个情况，资本起到些许的加速作用，但不会很大，因为资本是逐利的，不会沉迷于短期不盈利的项目。</p>
+<p>那么你说这是在否认AI的未来吗？</p>
+<p>当然不。</p>
+<p>恰恰相反，我认为AI有非常广阔的未来，人和计算机的结合，是从二战时就开始的大趋势。只是这个进程，远比大多数人想象的要长。</p>
+<p>如果你想投身于AI，就要做好有起有落的心理准备，就像之前神经网络所经历的（详见<a href=""></a>），而不是像腾讯股价的连涨15年。</p>
+<p>对AI，我的态度是：<strong>长期乐观，短期悲观</strong>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;IT圈现在最火的，莫过于AI和区块链。&lt;/p&gt;
+&lt;p&gt;区块链我是真不懂，花了半天读比特币白皮书，还是没明白它对于真实世界的价值。&lt;/p&gt;
+&lt;p&gt;AI以前我以为我懂，但它的火热程度还是出乎我的意料，反而让我有点雾里看花起来。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数据控" scheme="http://guoze.me/categories/data/"/>
+    
+    
+      <category term="人工智能" scheme="http://guoze.me/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>拜拜，2017</title>
@@ -163,11 +209,11 @@
       <category term="职业论" scheme="http://guoze.me/categories/career/"/>
     
     
-      <category term="创业" scheme="http://guoze.me/tags/%E5%88%9B%E4%B8%9A/"/>
-    
       <category term="互联网" scheme="http://guoze.me/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
       <category term="风口" scheme="http://guoze.me/tags/%E9%A3%8E%E5%8F%A3/"/>
+    
+      <category term="创业" scheme="http://guoze.me/tags/%E5%88%9B%E4%B8%9A/"/>
     
   </entry>
   
@@ -261,9 +307,9 @@
       <category term="读而思" scheme="http://guoze.me/categories/reading/"/>
     
     
-      <category term="硅谷" scheme="http://guoze.me/tags/%E7%A1%85%E8%B0%B7/"/>
-    
       <category term="创业" scheme="http://guoze.me/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+      <category term="硅谷" scheme="http://guoze.me/tags/%E7%A1%85%E8%B0%B7/"/>
     
   </entry>
   
@@ -462,11 +508,11 @@
       <category term="数据控" scheme="http://guoze.me/categories/data/"/>
     
     
+      <category term="人工智能" scheme="http://guoze.me/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
       <category term="大数据" scheme="http://guoze.me/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
       <category term="数据挖掘" scheme="http://guoze.me/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
-    
-      <category term="人工智能" scheme="http://guoze.me/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
   </entry>
   
@@ -1015,34 +1061,6 @@
     
     
       <category term="数据挖掘" scheme="http://guoze.me/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用ggplot2同时绘制多个密度图</title>
-    <link href="http://guoze.me/2016/03/09/r-multi-ggplot/"/>
-    <id>http://guoze.me/2016/03/09/r-multi-ggplot/</id>
-    <published>2016-03-09T13:26:29.000Z</published>
-    <updated>2017-07-01T15:34:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>数据码农最躲不过的就是做变量分析，一个个看黑白样本的分布图不过瘾，就想着把所有变量的分布都打印出来，一目了然。话说R最性感的图表库当属<a href="http://ggplot2.org/" target="_blank" rel="external">ggplot2</a>，只是这厮不好伺候，展示这个图虽然只用三行代码，却着实费了一番工夫。话不多说，我知道你们要什么，上当莫！<br><a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; plots &lt;- NULL</div><div class="line">&gt; for(i in colnames(train))&#123; plots[[i]] &lt;- ggplot(train) + geom_density(aes_string(x = i, fill = &apos;is_black&apos;), alpha = 0.5, show.legend = F) + xlab(&quot;&quot;) + ylab(&quot;&quot;); &#125;</div><div class="line">&gt; plot_grid(plotlist = plots)</div></pre></td></tr></table></figure>
-<p>最终效果就是这样的，想来还真有点小酷炫呢！</p>
-<p><img src="http://7u2obl.com1.z0.glb.clouddn.com/images%2Fggplot2.png" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;数据码农最躲不过的就是做变量分析，一个个看黑白样本的分布图不过瘾，就想着把所有变量的分布都打印出来，一目了然。话说R最性感的图表库当属&lt;a href=&quot;http://ggplot2.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ggplot2&lt;/a&gt;，只是这厮不好伺候，展示这个图虽然只用三行代码，却着实费了一番工夫。话不多说，我知道你们要什么，上当莫！&lt;br&gt;
-    
-    </summary>
-    
-      <category term="技术控" scheme="http://guoze.me/categories/programming/"/>
-    
-    
-      <category term="R语言" scheme="http://guoze.me/tags/R%E8%AF%AD%E8%A8%80/"/>
-    
-      <category term="ggplot2" scheme="http://guoze.me/tags/ggplot2/"/>
     
   </entry>
   

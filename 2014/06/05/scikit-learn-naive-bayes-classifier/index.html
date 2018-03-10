@@ -1,0 +1,821 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="分类算法,朴素贝叶斯,scikit-learn," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="朴素贝叶斯（Naive Bayes Classifier）是一种「天真」的算法（假定所有特征发生概率是独立的），同时也是一种简单有效的常用分类算法。关于它的原理，参见朴素贝叶斯分类器的应用。scikit-learn是一个广泛应用的机器学习Python库，它封装了包括朴素贝叶斯在内的若干基础算法。在这篇博客里，我们希望用朴素贝叶斯实现对短文本（新闻标题）的分类。">
+<meta name="keywords" content="分类算法,朴素贝叶斯,scikit-learn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用scikit-learn实现朴素贝叶斯分类器">
+<meta property="og:url" content="http://guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/index.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="朴素贝叶斯（Naive Bayes Classifier）是一种「天真」的算法（假定所有特征发生概率是独立的），同时也是一种简单有效的常用分类算法。关于它的原理，参见朴素贝叶斯分类器的应用。scikit-learn是一个广泛应用的机器学习Python库，它封装了包括朴素贝叶斯在内的若干基础算法。在这篇博客里，我们希望用朴素贝叶斯实现对短文本（新闻标题）的分类。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-07-01T15:34:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用scikit-learn实现朴素贝叶斯分类器">
+<meta name="twitter:description" content="朴素贝叶斯（Naive Bayes Classifier）是一种「天真」的算法（假定所有特征发生概率是独立的），同时也是一种简单有效的常用分类算法。关于它的原理，参见朴素贝叶斯分类器的应用。scikit-learn是一个广泛应用的机器学习Python库，它封装了包括朴素贝叶斯在内的若干基础算法。在这篇博客里，我们希望用朴素贝叶斯实现对短文本（新闻标题）的分类。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/"/>
+
+
+
+
+
+  <title>用scikit-learn实现朴素贝叶斯分类器 | 建造者说</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-54995139-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?55fe062fca0976556582ea6acabf6a89";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">建造者说</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">总在造着什么的路上</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">用scikit-learn实现朴素贝叶斯分类器</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-06-05T22:50:19+08:00">
+                2014-06-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/data/" itemprop="url" rel="index">
+                    <span itemprop="name">数据控</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2014/06/05/scikit-learn-naive-bayes-classifier/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2014/06/05/scikit-learn-naive-bayes-classifier/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>朴素贝叶斯（Naive Bayes Classifier）是一种「天真」的算法（假定所有特征发生概率是独立的），同时也是一种简单有效的常用分类算法。关于它的原理，参见<a href="http://www.ruanyifeng.com/blog/2013/12/naive_bayes_classifier.html" target="_blank" rel="noopener">朴素贝叶斯分类器的应用</a>。<br><a href="http://scikit-learn.org/stable/" target="_blank" rel="noopener">scikit-learn</a>是一个广泛应用的机器学习Python库，它封装了包括<a href="http://scikit-learn.org/stable/modules/naive_bayes.html" target="_blank" rel="noopener">朴素贝叶斯</a>在内的若干基础算法。在这篇博客里，我们希望用朴素贝叶斯实现对短文本（新闻标题）的分类。<br><a id="more"></a><br>朴素贝叶斯属于有监督分类，需要获取一批已标注的数据作为训练和测试分类器的样本。样本的获取，一般通过人工标注或网页抓取的方式。这里先准备好2w条已标注的新闻标题（<strong>共10个标签，每个标签下的样本是均衡的</strong>），并以3：1的比例切分训练集和测试集。文本的格式如下：</p>
+<blockquote>
+<p>娱乐\t组图：刘亦菲短裙秀腿 浓妆变冷艳时髦女</p>
+</blockquote>
+<p>其次，将短文本转化为一个多维向量，这涉及到两个问题：一是分词，由于scikit-learn内置的分词器并不支持中文，所以需要指定一个tokenizer（推荐<a href="https://github.com/fxsjy/jieba" target="_blank" rel="noopener">结巴分词</a>）；二是文本到向量的转化方法，考虑到后续可能加大训练集的数量，而短文本的特征相对稀疏，采用了内存占用率较低、仅计算词频的<code>HashingVectorizer</code>。</p>
+<p>这里要注意两点：</p>
+<ul>
+<li>测试集和训练集只有共用一个<code>vectorizer</code>才能共享<code>vocabulary</code>，避免特征表达不一致的问题。</li>
+<li><code>fit_transform</code>如果用<code>toarray()</code>转化为dense矩阵，计算至少慢两倍以上。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># non_negative=True -- 模型仅包含非负值</span></span><br><span class="line">vectorizer = HashingVectorizer(tokenizer=comma_tokenizer, non_negative=<span class="keyword">True</span>)</span><br><span class="line">train_data = vectorizer.fit_transform(train_words)</span><br><span class="line">test_data = vectorizer.fit_transform(test_words)</span><br></pre></td></tr></table></figure>
+<p>然后，我们创建一个多项式的朴素贝叶斯分类器（适用于离散特征的分类），分别输入训练集的文本和标签（<strong>要求都为numpy矩阵</strong>）进行训练，训练好的分类器再用在测试集文本的分类，以检验分类器的性能。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># alpha -- 模型的平滑参数</span></span><br><span class="line">clf = MultinomialNB(alpha=<span class="number">0.01</span>)</span><br><span class="line">clf.fit(train_data, numpy.asarray(train_tags))</span><br><span class="line">pred = clf.predict(test_data)</span><br></pre></td></tr></table></figure>
+<p>最后，比较分类器的预测结果和测试集的真实标签，得到分类器的准确率和召回率。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m_precision = metrics.precision_score(actual, pred)</span><br><span class="line">m_recall = metrics.recall_score(actual, pred)</span><br></pre></td></tr></table></figure>
+<p>完整代码请见<a href="https://gist.github.com/2shou/b8240ea53d22e1bb4d32" target="_blank" rel="noopener">sci_classifier.py</a>。<br>从测试的结果来看，准确率和召回率均在8成以上，当然，分类器的性能也依赖于输入数据对应不同类别的可识别度是否足够强。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="http://7u2obl.com1.z0.glb.clouddn.com/images/qr-code.jpg" alt="2shou wechat" style="width: 200px; max-width: 100%;"/>
+    <div>更多精彩内容，欢迎关注微信公众号「极客思享」</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/分类算法/" rel="tag"># 分类算法</a>
+          
+            <a href="/tags/朴素贝叶斯/" rel="tag"># 朴素贝叶斯</a>
+          
+            <a href="/tags/scikit-learn/" rel="tag"># scikit-learn</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/04/12/elegance/" rel="next" title="论优雅">
+                <i class="fa fa-chevron-left"></i> 论优雅
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/06/11/mongodb-capped-collection/" rel="prev" title="在MongoDB上踩过的坑（Capped Collection）">
+                在MongoDB上踩过的坑（Capped Collection） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7u2obl.com1.z0.glb.clouddn.com/images/avatar.jpg"
+               alt="2shou" />
+          <p class="site-author-name" itemprop="name">2shou</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">67</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">94</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/2shou" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-guo-ze" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhangguoze" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://2shou-1.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/';
+          this.page.identifier = '2014/06/05/scikit-learn-naive-bayes-classifier/';
+          this.page.title = '用scikit-learn实现朴素贝叶斯分类器';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://2shou-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

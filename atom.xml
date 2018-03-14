@@ -5,9 +5,9 @@
   <subtitle>总在造着什么的路上</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://guoze.me/"/>
+  <link href="http://www.guoze.me/"/>
   <updated>2018-03-13T16:18:15.405Z</updated>
-  <id>http://guoze.me/</id>
+  <id>http://www.guoze.me/</id>
   
   <author>
     <name>2shou</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>为什么我不看好一切基于区块链的信息流分发平台？</title>
-    <link href="http://guoze.me/2018/03/14/blockchain-feeds/"/>
-    <id>http://guoze.me/2018/03/14/blockchain-feeds/</id>
+    <link href="http://www.guoze.me/2018/03/14/blockchain-feeds/"/>
+    <id>http://www.guoze.me/2018/03/14/blockchain-feeds/</id>
     <published>2018-03-13T16:17:02.000Z</published>
     <updated>2018-03-13T16:18:15.405Z</updated>
     
@@ -46,21 +46,21 @@
     
     </summary>
     
-      <category term="技术控" scheme="http://guoze.me/categories/programming/"/>
+      <category term="技术控" scheme="http://www.guoze.me/categories/programming/"/>
     
     
-      <category term="区块链" scheme="http://guoze.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="http://www.guoze.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
-      <category term="信息流" scheme="http://guoze.me/tags/%E4%BF%A1%E6%81%AF%E6%B5%81/"/>
+      <category term="信息流" scheme="http://www.guoze.me/tags/%E4%BF%A1%E6%81%AF%E6%B5%81/"/>
     
-      <category term="Steemit" scheme="http://guoze.me/tags/Steemit/"/>
+      <category term="Steemit" scheme="http://www.guoze.me/tags/Steemit/"/>
     
   </entry>
   
   <entry>
     <title>你所不知道的曾国藩</title>
-    <link href="http://guoze.me/2018/03/10/zeng-guo-fan/"/>
-    <id>http://guoze.me/2018/03/10/zeng-guo-fan/</id>
+    <link href="http://www.guoze.me/2018/03/10/zeng-guo-fan/"/>
+    <id>http://www.guoze.me/2018/03/10/zeng-guo-fan/</id>
     <published>2018-03-10T03:05:37.000Z</published>
     <updated>2018-03-10T03:07:02.919Z</updated>
     
@@ -78,17 +78,17 @@
     
     </summary>
     
-      <category term="读而思" scheme="http://guoze.me/categories/reading/"/>
+      <category term="读而思" scheme="http://www.guoze.me/categories/reading/"/>
     
     
-      <category term="曾国藩" scheme="http://guoze.me/tags/%E6%9B%BE%E5%9B%BD%E8%97%A9/"/>
+      <category term="曾国藩" scheme="http://www.guoze.me/tags/%E6%9B%BE%E5%9B%BD%E8%97%A9/"/>
     
   </entry>
   
   <entry>
     <title>局外人该如何面对「区块链恐慌」？</title>
-    <link href="http://guoze.me/2018/03/06/blockchain-scare/"/>
-    <id>http://guoze.me/2018/03/06/blockchain-scare/</id>
+    <link href="http://www.guoze.me/2018/03/06/blockchain-scare/"/>
+    <id>http://www.guoze.me/2018/03/06/blockchain-scare/</id>
     <published>2018-03-06T15:05:52.000Z</published>
     <updated>2018-03-06T15:07:01.833Z</updated>
     
@@ -105,19 +105,19 @@
     
     </summary>
     
-      <category term="技术控" scheme="http://guoze.me/categories/programming/"/>
+      <category term="技术控" scheme="http://www.guoze.me/categories/programming/"/>
     
     
-      <category term="区块链" scheme="http://guoze.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="http://www.guoze.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
-      <category term="比特币" scheme="http://guoze.me/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+      <category term="比特币" scheme="http://www.guoze.me/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
     
   </entry>
   
   <entry>
     <title>2018年来了，小程序仍然是风口吗？</title>
-    <link href="http://guoze.me/2018/03/04/weapp-2018-chance/"/>
-    <id>http://guoze.me/2018/03/04/weapp-2018-chance/</id>
+    <link href="http://www.guoze.me/2018/03/04/weapp-2018-chance/"/>
+    <id>http://www.guoze.me/2018/03/04/weapp-2018-chance/</id>
     <published>2018-03-04T15:03:36.000Z</published>
     <updated>2018-03-04T15:07:05.197Z</updated>
     
@@ -131,17 +131,17 @@
     
     </summary>
     
-      <category term="技术控" scheme="http://guoze.me/categories/programming/"/>
+      <category term="技术控" scheme="http://www.guoze.me/categories/programming/"/>
     
     
-      <category term="小程序" scheme="http://guoze.me/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="小程序" scheme="http://www.guoze.me/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
     <title>区块链，就当一场大梦罢了</title>
-    <link href="http://guoze.me/2018/02/27/blockchain-big-dream/"/>
-    <id>http://guoze.me/2018/02/27/blockchain-big-dream/</id>
+    <link href="http://www.guoze.me/2018/02/27/blockchain-big-dream/"/>
+    <id>http://www.guoze.me/2018/02/27/blockchain-big-dream/</id>
     <published>2018-02-27T02:43:23.000Z</published>
     <updated>2018-02-27T02:45:56.799Z</updated>
     
@@ -153,19 +153,19 @@
     
     </summary>
     
-      <category term="技术控" scheme="http://guoze.me/categories/programming/"/>
+      <category term="技术控" scheme="http://www.guoze.me/categories/programming/"/>
     
     
-      <category term="区块链" scheme="http://guoze.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="http://www.guoze.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
-      <category term="比特币" scheme="http://guoze.me/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+      <category term="比特币" scheme="http://www.guoze.me/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
     
   </entry>
   
   <entry>
     <title>为什么说区块链的去中心化是个伪命题？</title>
-    <link href="http://guoze.me/2018/02/27/blockchain-decentration/"/>
-    <id>http://guoze.me/2018/02/27/blockchain-decentration/</id>
+    <link href="http://www.guoze.me/2018/02/27/blockchain-decentration/"/>
+    <id>http://www.guoze.me/2018/02/27/blockchain-decentration/</id>
     <published>2018-02-27T02:43:23.000Z</published>
     <updated>2018-03-04T15:04:23.817Z</updated>
     
@@ -183,19 +183,19 @@
     
     </summary>
     
-      <category term="技术控" scheme="http://guoze.me/categories/programming/"/>
+      <category term="技术控" scheme="http://www.guoze.me/categories/programming/"/>
     
     
-      <category term="区块链" scheme="http://guoze.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="http://www.guoze.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
-      <category term="比特币" scheme="http://guoze.me/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+      <category term="比特币" scheme="http://www.guoze.me/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
     
   </entry>
   
   <entry>
     <title>AI</title>
-    <link href="http://guoze.me/2018/02/11/ai/"/>
-    <id>http://guoze.me/2018/02/11/ai/</id>
+    <link href="http://www.guoze.me/2018/02/11/ai/"/>
+    <id>http://www.guoze.me/2018/02/11/ai/</id>
     <published>2018-02-11T12:49:35.000Z</published>
     <updated>2018-02-11T13:04:40.556Z</updated>
     
@@ -209,17 +209,17 @@
     
     </summary>
     
-      <category term="数据控" scheme="http://guoze.me/categories/data/"/>
+      <category term="数据控" scheme="http://www.guoze.me/categories/data/"/>
     
     
-      <category term="人工智能" scheme="http://guoze.me/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+      <category term="人工智能" scheme="http://www.guoze.me/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
   </entry>
   
   <entry>
     <title>拜拜，2017</title>
-    <link href="http://guoze.me/2017/12/31/goodbye-2017/"/>
-    <id>http://guoze.me/2017/12/31/goodbye-2017/</id>
+    <link href="http://www.guoze.me/2017/12/31/goodbye-2017/"/>
+    <id>http://www.guoze.me/2017/12/31/goodbye-2017/</id>
     <published>2017-12-31T03:56:57.000Z</published>
     <updated>2018-02-11T13:05:49.097Z</updated>
     
@@ -235,15 +235,15 @@
     
     </summary>
     
-      <category term="梦中语" scheme="http://guoze.me/categories/thinking/"/>
+      <category term="梦中语" scheme="http://www.guoze.me/categories/thinking/"/>
     
     
   </entry>
   
   <entry>
     <title>青春饭吃完以后</title>
-    <link href="http://guoze.me/2017/12/18/youth-only-sequel/"/>
-    <id>http://guoze.me/2017/12/18/youth-only-sequel/</id>
+    <link href="http://www.guoze.me/2017/12/18/youth-only-sequel/"/>
+    <id>http://www.guoze.me/2017/12/18/youth-only-sequel/</id>
     <published>2017-12-17T16:06:59.000Z</published>
     <updated>2017-12-17T16:08:23.340Z</updated>
     
@@ -256,19 +256,19 @@
     
     </summary>
     
-      <category term="职业论" scheme="http://guoze.me/categories/career/"/>
+      <category term="职业论" scheme="http://www.guoze.me/categories/career/"/>
     
     
-      <category term="程序员" scheme="http://guoze.me/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/"/>
+      <category term="程序员" scheme="http://www.guoze.me/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/"/>
     
-      <category term="中年危机" scheme="http://guoze.me/tags/%E4%B8%AD%E5%B9%B4%E5%8D%B1%E6%9C%BA/"/>
+      <category term="中年危机" scheme="http://www.guoze.me/tags/%E4%B8%AD%E5%B9%B4%E5%8D%B1%E6%9C%BA/"/>
     
   </entry>
   
   <entry>
     <title>如何做一只风口上的兔子？</title>
-    <link href="http://guoze.me/2017/12/17/rabbit-on-waves/"/>
-    <id>http://guoze.me/2017/12/17/rabbit-on-waves/</id>
+    <link href="http://www.guoze.me/2017/12/17/rabbit-on-waves/"/>
+    <id>http://www.guoze.me/2017/12/17/rabbit-on-waves/</id>
     <published>2017-12-16T16:40:44.000Z</published>
     <updated>2017-12-16T16:42:22.108Z</updated>
     
@@ -285,21 +285,21 @@
     
     </summary>
     
-      <category term="职业论" scheme="http://guoze.me/categories/career/"/>
+      <category term="职业论" scheme="http://www.guoze.me/categories/career/"/>
     
     
-      <category term="互联网" scheme="http://guoze.me/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
+      <category term="互联网" scheme="http://www.guoze.me/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
-      <category term="风口" scheme="http://guoze.me/tags/%E9%A3%8E%E5%8F%A3/"/>
+      <category term="风口" scheme="http://www.guoze.me/tags/%E9%A3%8E%E5%8F%A3/"/>
     
-      <category term="创业" scheme="http://guoze.me/tags/%E5%88%9B%E4%B8%9A/"/>
+      <category term="创业" scheme="http://www.guoze.me/tags/%E5%88%9B%E4%B8%9A/"/>
     
   </entry>
   
   <entry>
     <title>为什么“管理的机会”没那么重要？</title>
-    <link href="http://guoze.me/2017/12/03/why-management-not-that-important/"/>
-    <id>http://guoze.me/2017/12/03/why-management-not-that-important/</id>
+    <link href="http://www.guoze.me/2017/12/03/why-management-not-that-important/"/>
+    <id>http://www.guoze.me/2017/12/03/why-management-not-that-important/</id>
     <published>2017-12-03T14:57:05.000Z</published>
     <updated>2017-12-03T14:58:27.651Z</updated>
     
@@ -311,17 +311,17 @@
     
     </summary>
     
-      <category term="职业论" scheme="http://guoze.me/categories/career/"/>
+      <category term="职业论" scheme="http://www.guoze.me/categories/career/"/>
     
     
-      <category term="管理" scheme="http://guoze.me/tags/%E7%AE%A1%E7%90%86/"/>
+      <category term="管理" scheme="http://www.guoze.me/tags/%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>硅谷，五味杂陈的喜剧</title>
-    <link href="http://guoze.me/2017/06/27/silicon-valley-4-season/"/>
-    <id>http://guoze.me/2017/06/27/silicon-valley-4-season/</id>
+    <link href="http://www.guoze.me/2017/06/27/silicon-valley-4-season/"/>
+    <id>http://www.guoze.me/2017/06/27/silicon-valley-4-season/</id>
     <published>2017-06-27T15:40:14.000Z</published>
     <updated>2017-07-01T15:34:53.000Z</updated>
     
@@ -337,19 +337,19 @@
     
     </summary>
     
-      <category term="读而思" scheme="http://guoze.me/categories/reading/"/>
+      <category term="读而思" scheme="http://www.guoze.me/categories/reading/"/>
     
     
-      <category term="创业" scheme="http://guoze.me/tags/%E5%88%9B%E4%B8%9A/"/>
+      <category term="创业" scheme="http://www.guoze.me/tags/%E5%88%9B%E4%B8%9A/"/>
     
-      <category term="硅谷" scheme="http://guoze.me/tags/%E7%A1%85%E8%B0%B7/"/>
+      <category term="硅谷" scheme="http://www.guoze.me/tags/%E7%A1%85%E8%B0%B7/"/>
     
   </entry>
   
   <entry>
     <title>写给懒人的时间管理指南</title>
-    <link href="http://guoze.me/2017/06/21/time-management-handbook/"/>
-    <id>http://guoze.me/2017/06/21/time-management-handbook/</id>
+    <link href="http://www.guoze.me/2017/06/21/time-management-handbook/"/>
+    <id>http://www.guoze.me/2017/06/21/time-management-handbook/</id>
     <published>2017-06-21T15:28:16.000Z</published>
     <updated>2017-07-01T15:34:53.000Z</updated>
     
@@ -365,17 +365,17 @@
     
     </summary>
     
-      <category term="职业论" scheme="http://guoze.me/categories/career/"/>
+      <category term="职业论" scheme="http://www.guoze.me/categories/career/"/>
     
     
-      <category term="时间管理" scheme="http://guoze.me/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+      <category term="时间管理" scheme="http://www.guoze.me/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>人类之所以为人类</title>
-    <link href="http://guoze.me/2017/03/18/brief-history-of-humankind/"/>
-    <id>http://guoze.me/2017/03/18/brief-history-of-humankind/</id>
+    <link href="http://www.guoze.me/2017/03/18/brief-history-of-humankind/"/>
+    <id>http://www.guoze.me/2017/03/18/brief-history-of-humankind/</id>
     <published>2017-03-18T03:50:50.000Z</published>
     <updated>2017-07-01T15:34:53.000Z</updated>
     
@@ -391,17 +391,17 @@
     
     </summary>
     
-      <category term="读而思" scheme="http://guoze.me/categories/reading/"/>
+      <category term="读而思" scheme="http://www.guoze.me/categories/reading/"/>
     
     
-      <category term="人类简史" scheme="http://guoze.me/tags/%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2/"/>
+      <category term="人类简史" scheme="http://www.guoze.me/tags/%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2/"/>
     
   </entry>
   
   <entry>
     <title>数据工业的变革</title>
-    <link href="http://guoze.me/2017/02/25/the-future-of-data-industry/"/>
-    <id>http://guoze.me/2017/02/25/the-future-of-data-industry/</id>
+    <link href="http://www.guoze.me/2017/02/25/the-future-of-data-industry/"/>
+    <id>http://www.guoze.me/2017/02/25/the-future-of-data-industry/</id>
     <published>2017-02-25T02:41:23.000Z</published>
     <updated>2017-07-01T15:34:53.000Z</updated>
     
@@ -415,21 +415,21 @@
     
     </summary>
     
-      <category term="数据控" scheme="http://guoze.me/categories/data/"/>
+      <category term="数据控" scheme="http://www.guoze.me/categories/data/"/>
     
     
-      <category term="人工智能" scheme="http://guoze.me/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+      <category term="人工智能" scheme="http://www.guoze.me/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
-      <category term="大数据" scheme="http://guoze.me/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="大数据" scheme="http://www.guoze.me/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
-      <category term="数据挖掘" scheme="http://guoze.me/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+      <category term="数据挖掘" scheme="http://www.guoze.me/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
   </entry>
   
   <entry>
     <title>深度使用 2016 MacBook Pro是怎样的体验？</title>
-    <link href="http://guoze.me/2016/12/22/macbook-pro-experience/"/>
-    <id>http://guoze.me/2016/12/22/macbook-pro-experience/</id>
+    <link href="http://www.guoze.me/2016/12/22/macbook-pro-experience/"/>
+    <id>http://www.guoze.me/2016/12/22/macbook-pro-experience/</id>
     <published>2016-12-22T15:29:42.000Z</published>
     <updated>2017-07-01T15:34:53.000Z</updated>
     
@@ -446,19 +446,19 @@
     
     </summary>
     
-      <category term="产品控" scheme="http://guoze.me/categories/product/"/>
+      <category term="产品控" scheme="http://www.guoze.me/categories/product/"/>
     
     
-      <category term="苹果" scheme="http://guoze.me/tags/%E8%8B%B9%E6%9E%9C/"/>
+      <category term="苹果" scheme="http://www.guoze.me/tags/%E8%8B%B9%E6%9E%9C/"/>
     
-      <category term="MacBook" scheme="http://guoze.me/tags/MacBook/"/>
+      <category term="MacBook" scheme="http://www.guoze.me/tags/MacBook/"/>
     
   </entry>
   
   <entry>
     <title>新MacBook Pro，迷了路的苹果产品观</title>
-    <link href="http://guoze.me/2016/11/01/macbook-pro-2016/"/>
-    <id>http://guoze.me/2016/11/01/macbook-pro-2016/</id>
+    <link href="http://www.guoze.me/2016/11/01/macbook-pro-2016/"/>
+    <id>http://www.guoze.me/2016/11/01/macbook-pro-2016/</id>
     <published>2016-10-31T16:45:17.000Z</published>
     <updated>2017-07-01T15:34:53.000Z</updated>
     
@@ -472,19 +472,19 @@
     
     </summary>
     
-      <category term="产品控" scheme="http://guoze.me/categories/product/"/>
+      <category term="产品控" scheme="http://www.guoze.me/categories/product/"/>
     
     
-      <category term="苹果" scheme="http://guoze.me/tags/%E8%8B%B9%E6%9E%9C/"/>
+      <category term="苹果" scheme="http://www.guoze.me/tags/%E8%8B%B9%E6%9E%9C/"/>
     
-      <category term="MacBook" scheme="http://guoze.me/tags/MacBook/"/>
+      <category term="MacBook" scheme="http://www.guoze.me/tags/MacBook/"/>
     
   </entry>
   
   <entry>
     <title>我眼中的工程师文化</title>
-    <link href="http://guoze.me/2016/10/24/engineering-culture/"/>
-    <id>http://guoze.me/2016/10/24/engineering-culture/</id>
+    <link href="http://www.guoze.me/2016/10/24/engineering-culture/"/>
+    <id>http://www.guoze.me/2016/10/24/engineering-culture/</id>
     <published>2016-10-24T06:51:51.000Z</published>
     <updated>2017-07-01T15:34:53.000Z</updated>
     
@@ -502,17 +502,17 @@
     
     </summary>
     
-      <category term="职业论" scheme="http://guoze.me/categories/career/"/>
+      <category term="职业论" scheme="http://www.guoze.me/categories/career/"/>
     
     
-      <category term="工程师" scheme="http://guoze.me/tags/%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
+      <category term="工程师" scheme="http://www.guoze.me/tags/%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
     
   </entry>
   
   <entry>
     <title>微信小程序，不可不知的一二三四</title>
-    <link href="http://guoze.me/2016/10/16/wechat-app/"/>
-    <id>http://guoze.me/2016/10/16/wechat-app/</id>
+    <link href="http://www.guoze.me/2016/10/16/wechat-app/"/>
+    <id>http://www.guoze.me/2016/10/16/wechat-app/</id>
     <published>2016-10-16T03:01:02.000Z</published>
     <updated>2017-07-01T15:34:53.000Z</updated>
     
@@ -525,21 +525,21 @@
     
     </summary>
     
-      <category term="产品控" scheme="http://guoze.me/categories/product/"/>
+      <category term="产品控" scheme="http://www.guoze.me/categories/product/"/>
     
     
-      <category term="微信" scheme="http://guoze.me/tags/%E5%BE%AE%E4%BF%A1/"/>
+      <category term="微信" scheme="http://www.guoze.me/tags/%E5%BE%AE%E4%BF%A1/"/>
     
-      <category term="微信小程序" scheme="http://guoze.me/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="微信小程序" scheme="http://www.guoze.me/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
-      <category term="移动互联网" scheme="http://guoze.me/tags/%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91/"/>
+      <category term="移动互联网" scheme="http://www.guoze.me/tags/%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
   </entry>
   
   <entry>
     <title>最性感的那一口已被咬掉，剩下的将就吃吧</title>
-    <link href="http://guoze.me/2016/10/09/unsexy-apple/"/>
-    <id>http://guoze.me/2016/10/09/unsexy-apple/</id>
+    <link href="http://www.guoze.me/2016/10/09/unsexy-apple/"/>
+    <id>http://www.guoze.me/2016/10/09/unsexy-apple/</id>
     <published>2016-10-09T05:24:02.000Z</published>
     <updated>2017-07-01T15:34:53.000Z</updated>
     
@@ -551,10 +551,10 @@
     
     </summary>
     
-      <category term="产品控" scheme="http://guoze.me/categories/product/"/>
+      <category term="产品控" scheme="http://www.guoze.me/categories/product/"/>
     
     
-      <category term="苹果发布会" scheme="http://guoze.me/tags/%E8%8B%B9%E6%9E%9C%E5%8F%91%E5%B8%83%E4%BC%9A/"/>
+      <category term="苹果发布会" scheme="http://www.guoze.me/tags/%E8%8B%B9%E6%9E%9C%E5%8F%91%E5%B8%83%E4%BC%9A/"/>
     
   </entry>
   

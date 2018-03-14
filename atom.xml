@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.guoze.me/"/>
-  <updated>2018-03-13T16:18:15.405Z</updated>
+  <updated>2018-03-14T16:24:01.499Z</updated>
   <id>http://www.guoze.me/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>致敬霍金，致敬每个懵懂少年的物理梦</title>
+    <link href="http://www.guoze.me/2018/03/15/to-hawking/"/>
+    <id>http://www.guoze.me/2018/03/15/to-hawking/</id>
+    <published>2018-03-14T16:23:01.000Z</published>
+    <updated>2018-03-14T16:24:01.499Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天霍老爷子走了，一位朋友在朋友圈发文纪念：<strong>霍金老爷子退休去其它星球度假去了</strong>。我调皮回复：<strong>向其他星球的原住民发出警告：小心来自地球的殖民者</strong>。内心却是百感交集。</p><a id="more"></a><p>以前高中最喜欢的学科就是物理。相较于数学的灵性，物理这种逻辑推演的学问更能让我如鱼得水。那时和其他几个学霸组了个俱乐部，不好好上课，成天给老师挑错，放学后就到观海平台大谈狭义相对论、量子力学和黑洞理论，还大言不惭的对他们传道：伟大物理学家最好的创造往往就诞生在他二十岁左右，我们得抓紧。现在回想，真是脸皮厚得可笑。</p><p>但是，难以想象物理对我们这群荷尔蒙过剩的少年，竟然有如同美丽的异性一般的魅力。</p><p>俱乐部里的另一位同学，爱物理比我爱得激进，高考填志愿时（我们是考前填）志愿表上只填了一行：<em>北大物理系</em>。考完他就卷好铺盖准备复读了，说至少准备抗战三年。最终他成了我们年级的传奇，压线进入了北大物理系，恐怕当时录取他的老师心中也带着不凡的感动。</p><p>前些日子再见，他已经是某美元基金的投资经理了。奔向油腻中年的路上，我们都忘了曾经懵懂的物理梦。</p><p>二十世纪的前半叶，那可真是理论物理的黄金时代。爱因斯坦、居里夫人、海森堡、狄拉克、波尔、费米、薛定谔、普朗克、费曼、波恩、泡利、朗道、奥本海默，当这些人类历史上最聪明的脑袋一起来穷究宇宙的本质，竞相追逐褶褶生辉的文明皇冠上的宝珠，多么美好的时代。谁料到这种盛景，不仅空前，而且绝后。</p><p><img src="http://7u2obl.com1.z0.glb.clouddn.com/15210168496336.jpg" alt=""></p><p>二战之后的物理学进展坠落之快，出乎我们的意料，以至于登月的宇航员发出了这样的感慨：</p><blockquote><p>你承诺我们要殖民火星，却给了我们Facebook。</p></blockquote><p>在这个算法横行的时代，我们也活得越来越像一个算法：<strong>小流量试探 → 获取反馈 → 加大流量比例 → All In → 赢了会所嫩模 or 输了下海干活 → 清零重启</strong>。少问对错是非，没空刨根究底；不管黑猫白猫，随波逐流奔跑。</p><p>斯蒂芬·威廉·霍金，也许是人类历史上最后一个仰望星空的人。</p><p>但至少有个少年，曾经希望如他一般去仰望星空，也无比感谢这位行动不便的智者带给我们的朴素建议：</p><p><strong>无论何时何地，都要对这个世界的本质保持好奇</strong>。</p><p>致敬霍金，致敬少年。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天霍老爷子走了，一位朋友在朋友圈发文纪念：&lt;strong&gt;霍金老爷子退休去其它星球度假去了&lt;/strong&gt;。我调皮回复：&lt;strong&gt;向其他星球的原住民发出警告：小心来自地球的殖民者&lt;/strong&gt;。内心却是百感交集。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="梦中语" scheme="http://www.guoze.me/categories/thinking/"/>
+    
+    
+      <category term="霍金" scheme="http://www.guoze.me/tags/%E9%9C%8D%E9%87%91/"/>
+    
+      <category term="物理学" scheme="http://www.guoze.me/tags/%E7%89%A9%E7%90%86%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>为什么我不看好一切基于区块链的信息流分发平台？</title>
     <link href="http://www.guoze.me/2018/03/14/blockchain-feeds/"/>
     <id>http://www.guoze.me/2018/03/14/blockchain-feeds/</id>
     <published>2018-03-13T16:17:02.000Z</published>
     <updated>2018-03-13T16:18:15.405Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://7u2obl.com1.z0.glb.clouddn.com/15208296102753.png" alt=""></p><p>将区块链与信息流融合，是区块链试图改变<em>古典互联网</em>（此处要加引号）的典型场景之一，又以<em>区块链奇才</em>（此处又要加引号）ByteMaster创立的<strong>Steemit</strong>为代表（国内也有币乎等一系列跟随者。</p><p>首先科普下<strong>Steemit</strong>平台：</p><ul><li>发行<em>Steem</em>代币，其中10%用于奖励创作者</li><li>文章质量越高，收到的赞数越多，作者得到的奖励就越高</li><li>越早给优质文章点赞或留言来支持，也能获得额外的奖励</li><li><em>Steem</em>代币可以转换为<em>Steem Power</em>（可分红，共享每日产出<em>Steem</em>的90%）或<em>Steem Dollar</em>（与美元挂钩的债券）</li></ul><p>相对于<em>古典互联网</em>的信息流分发平台，它的核心立足点有三个：</p><ul><li>不经过信用中介，直接奖励创作者</li><li>平台通过分红获取收益，因此不需要投放广告</li><li>账号层面较强的作弊防御手段</li></ul><p>那么我的问题来了：<strong>区块链与信息流融合的模式，真的就有颠覆性么？</strong></p><a id="more"></a><p>有人说，<strong>这可是区块链、区块链、区块链啊！</strong>亲爱的，遇到区块链就无脑吹这真的好吗？</p><p>坦白说，<strong>除了代币获取与收益转化的部分，我真没有看到区块链对于Steemit运转逻辑的积极影响</strong>。</p><p>它面对的问题<em>古典互联网</em>的信息流平台都要面对，然而引入区块链，依然没有半点改观。</p><p>暂且从<strong>Steemit</strong>的反作弊规则出发：</p><blockquote><p>每个用户都有投反对票的权利（Down Vote），刷赞或没有营养的文章会被群起而攻之。</p><p>避免恶意投反对票：每个用户都有信誉值，信誉值随着用户行为累积；信誉低的人给信誉高的人投Down Vote无效。</p><p>利用Voting Power限制投票的速度。比如，每投一票赞成Voting Power将降低2%，每天Voting Power自动恢复20%。</p></blockquote><p>作为一名与恶意留言斗争了两年的资深反作弊工程师，我笑了：<strong>如果是放在国内，这种等级的反作弊策略只能相当于幼儿园水平</strong>，水军大概有一万种方式来突破用区块链构筑的防线。</p><p>其实<strong>智能合约</strong>也是面同样的困境，无法阻止合约以外的情况发生，而合约以外恰恰才是不法分子会钻空子的地方。</p><p>再谈谈不通过广告获取收益的可行性。</p><p><em>古典互联网</em>的信息流分发平台的商业逻辑可以用如下序列图说明：<strong>平台以广告费创造盈利预期从而获得投资人青睐，提高用户粘性（通过优质内容）有利于提高广告价格，优质内容又依赖于创作者</strong>。平台以自利性驱动着整个链条，这是典型的中心化场景。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">平台-&gt;广告商: 增加曝光</span><br><span class="line">广告商-&gt;平台: 支付广告费</span><br><span class="line">创作者-&gt;平台: 创作内容</span><br><span class="line">平台-&gt;创作者: 扩大影响力</span><br><span class="line">用户-&gt;平台: 获取资讯同时浏览广告</span><br><span class="line">平台-&gt;用户: 鼓励优质内容</span><br><span class="line">投资人-&gt;平台: 得到商业回报</span><br><span class="line">平台-&gt;投资人: 展示盈利预期</span><br></pre></td></tr></table></figure><p>而对应<strong>Steemit</strong>的商业逻辑同样可用如下序列图说明，可见<strong>Steemit得以运转的核心就在于数字货币，而非真实的商业利益</strong>。平台仅仅是数字货币的发行方，缺乏强烈的动机去驱动用户和创作者的规模增长，一旦数字货币的泡沫褪去，这套商业逻辑即将面临巨大的崩溃。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">平台-&gt;创作者: 发行数字货币</span><br><span class="line">创作者-&gt;平台: 创作内容并获取数字货币</span><br><span class="line">用户-&gt;平台: 获取资讯同时获取数字货币</span><br><span class="line">平台-&gt;用户: 发行数字货币</span><br><span class="line">投资人-&gt;平台: 通过数字货币得到商业回报</span><br><span class="line">平台-&gt;投资人: 发行数字货币</span><br></pre></td></tr></table></figure><p>最后一个问题：<em>古典互联网</em>的信息流分发平台不直接奖励创作者真的是问题么？其实你想想下面这三位通过自媒体得到的财富回报就知道了，毕竟这是一个流量随时都可以变成钱的时代啊！</p><p><img src="http://7u2obl.com1.z0.glb.clouddn.com/15209559742930.png" alt=""></p><p>再说了，直接奖励创作者和用户也并不是新鲜事，趣头条早就红红火火做起来了，变现规则之复杂足以让十个<strong>Steemit</strong>都汗颜。</p><p><img src="http://7u2obl.com1.z0.glb.clouddn.com/1751520956162_.pic.jpg" alt="1751520956162_.pi"></p><p>因此，基于区块链的信息流分发平台最核心的三个立足点都经不过推敲，<strong>它注定只是泡沫的一部分，而不是未来的一部分</strong>。</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="http://7u2obl.com1.z0.glb.clouddn.com/15208296102753.png" alt=""></p><p>将区块链与信息流融合，是区块链试图改变<em>古典互联网</em>（此处要加引号）的典型场景之一，又以<em>区块链奇才</em>（此处又要加引号）ByteMaster创立的<strong>Steemit</strong>为代表（国内也有币乎等一系列跟随者。</p><p>首先科普下<strong>Steemit</strong>平台：</p><ul><li>发行<em>Steem</em>代币，其中10%用于奖励创作者</li><li>文章质量越高，收到的赞数越多，作者得到的奖励就越高</li><li>越早给优质文章点赞或留言来支持，也能获得额外的奖励</li><li><em>Steem</em>代币可以转换为<em>Steem Power</em>（可分红，共享每日产出<em>Steem</em>的90%）或<em>Steem Dollar</em>（与美元挂钩的债券）</li></ul><p>相对于<em>古典互联网</em>的信息流分发平台，它的核心立足点有三个：</p><ul><li>不经过信用中介，直接奖励创作者</li><li>平台通过分红获取收益，因此不需要投放广告</li><li>账号层面较强的作弊防御手段</li></ul><p>那么我的问题来了：<strong>区块链与信息流融合的模式，真的就有颠覆性么？</strong></p><a id="more"></a><p>有人说，<strong>这可是区块链、区块链、区块链啊！</strong>亲爱的，遇到区块链就无脑吹这真的好吗？</p><p>坦白说，<strong>除了代币获取与收益转化的部分，我真没有看到区块链对于Steemit运转逻辑的积极影响</strong>。</p><p>它面对的问题<em>古典互联网</em>的信息流平台都要面对，然而引入区块链，依然没有半点改观。</p><p>暂且从<strong>Steemit</strong>的反作弊规则出发：</p><blockquote><p>每个用户都有投反对票的权利（Down Vote），刷赞或没有营养的文章会被群起而攻之。</p><p>避免恶意投反对票：每个用户都有信誉值，信誉值随着用户行为累积；信誉低的人给信誉高的人投Down Vote无效。</p><p>利用Voting Power限制投票的速度。比如，每投一票赞成Voting Power将降低2%，每天Voting Power自动恢复20%。</p></blockquote><p>作为一名与恶意留言斗争了两年的资深反作弊工程师，我笑了：<strong>如果是放在国内，这种等级的反作弊策略只能相当于幼儿园水平</strong>，水军大概有一万种方式来突破用区块链构筑的防线。</p><p>其实<strong>智能合约</strong>也是面同样的困境，无法阻止合约以外的情况发生，而合约以外恰恰才是不法分子会钻空子的地方。</p><p>再谈谈不通过广告获取收益的可行性。</p><p><em>古典互联网</em>的信息流分发平台的商业逻辑可以用如下序列图说明：<strong>平台以广告费创造盈利预期从而获得投资人青睐，提高用户粘性（通过优质内容）有利于提高广告价格，优质内容又依赖于创作者</strong>。平台以自利性驱动着整个链条，这是典型的中心化场景。</p><div id="sequence-0"></div><p>而对应<strong>Steemit</strong>的商业逻辑同样可用如下序列图说明，可见<strong>Steemit得以运转的核心就在于数字货币，而非真实的商业利益</strong>。平台仅仅是数字货币的发行方，缺乏强烈的动机去驱动用户和创作者的规模增长，一旦数字货币的泡沫褪去，这套商业逻辑即将面临巨大的崩溃。</p><div id="sequence-1"></div><p>最后一个问题：<em>古典互联网</em>的信息流分发平台不直接奖励创作者真的是问题么？其实你想想下面这三位通过自媒体得到的财富回报就知道了，毕竟这是一个流量随时都可以变成钱的时代啊！</p><p><img src="http://7u2obl.com1.z0.glb.clouddn.com/15209559742930.png" alt=""></p><p>再说了，直接奖励创作者和用户也并不是新鲜事，趣头条早就红红火火做起来了，变现规则之复杂足以让十个<strong>Steemit</strong>都汗颜。</p><p><img src="http://7u2obl.com1.z0.glb.clouddn.com/1751520956162_.pic.jpg" alt="1751520956162_.pi"></p><p>因此，基于区块链的信息流分发平台最核心的三个立足点都经不过推敲，<strong>它注定只是泡沫的一部分，而不是未来的一部分</strong>。</p><p><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">平台->广告商: 增加曝光广告商->平台: 支付广告费创作者->平台: 创作内容平台->创作者: 扩大影响力用户->平台: 获取资讯同时浏览广告平台->用户: 鼓励优质内容投资人->平台: 得到商业回报平台->投资人: 展示盈利预期</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script><textarea id="sequence-1-code" style="display: none">平台->创作者: 发行数字货币创作者->平台: 创作内容并获取数字货币用户->平台: 获取资讯同时获取数字货币平台->用户: 发行数字货币投资人->平台: 通过数字货币得到商业回报平台->投资人: 发行数字货币</textarea><textarea id="sequence-1-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-1-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-1", options);</script></p>]]></content>
     
     <summary type="html">
     
@@ -288,11 +312,11 @@
       <category term="职业论" scheme="http://www.guoze.me/categories/career/"/>
     
     
+      <category term="创业" scheme="http://www.guoze.me/tags/%E5%88%9B%E4%B8%9A/"/>
+    
       <category term="互联网" scheme="http://www.guoze.me/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
       <category term="风口" scheme="http://www.guoze.me/tags/%E9%A3%8E%E5%8F%A3/"/>
-    
-      <category term="创业" scheme="http://www.guoze.me/tags/%E5%88%9B%E4%B8%9A/"/>
     
   </entry>
   
@@ -340,9 +364,9 @@
       <category term="读而思" scheme="http://www.guoze.me/categories/reading/"/>
     
     
-      <category term="创业" scheme="http://www.guoze.me/tags/%E5%88%9B%E4%B8%9A/"/>
-    
       <category term="硅谷" scheme="http://www.guoze.me/tags/%E7%A1%85%E8%B0%B7/"/>
+    
+      <category term="创业" scheme="http://www.guoze.me/tags/%E5%88%9B%E4%B8%9A/"/>
     
   </entry>
   
@@ -433,14 +457,14 @@
     <published>2016-12-22T15:29:42.000Z</published>
     <updated>2017-07-01T15:34:53.000Z</updated>
     
-    <content type="html"><![CDATA[<p>15寸低配升级512SSD，12月16号拿到的机器，港行。</p><p><strong>总体打分8分，符合预期。</strong></p><p>大半年前就在持币观望新款的MacBook Pro，发布会后的心态基本沿着惊喜 → 失望 → 无奈的轨迹演变，当时满满的吐槽请搜索本公众号旧文：</p><p><a href="http://guoze.me/2016/11/01/macbook-pro-2016/">新MacBook Pro，迷了路的苹果产品观</a></p><p>因为手头的2013款 MacBook Air在多开IDE/Word/Excel/Chrome的时候就会异常卡顿，升级在所难免，而环顾一圈确实也没有旗鼓相当的替代品，中间也关注了第一批的大大小小问题，还是预定了心仪的型号，想着第二批的质量或许靠谱一些。</p><p><strong>吐槽也吐了，该交的苹果税还是得交。</strong></p><a id="more"></a><p>重度使用一周时间，总结如下：</p><p><strong>1. 屏幕</strong></p><p>从air的渣渣屏切换到2880 × 1800还是挺震撼的，广色域手头没有15款的相对比，但第一感觉是色彩更明快了；亮度感人，是真感人，办公室看了一天都掉眼泪了，默默将亮度调低了一半。</p><p><strong>2. 电池</strong></p><p>正常使用3小时，Chrome/微信/两个IDE，电量由100%到75%，感觉能赶上Air满血的水平（10小时）。</p><p><strong>3. TouchID</strong></p><p>满分，每次回到桌前轻抚键盘右上角点亮屏幕的感觉真爽，而且终于可以自在的把账号密码设成宇宙无敌又长又强的了，可惜终端下的「sudo xxx」指令还未有适配。</p><p><strong>4. Touch Bar</strong></p><p>这把暂时用处不大，两个小场景还不错：a. 锁定屏幕；b. 微信连输三个😂的表情很方便。</p><p><strong>5. 蝶式键盘</strong></p><p>这是一款能让你又一次爱上打字的键盘，轻巧又回弹有力，键面大而稳（写了上千行代码/5000字的年终总结，我想我有发言权）。唯独作为Vim党想点Esc的那一刻会有点惆怅。用了两三天再打开旧Air，已心生厌弃。</p><p><strong>6. 性能</strong></p><p>4核 + 16G的配置摆在那，像我这种习惯开20几个Chrome页面的和Air的卡顿简直天渊之别；SSD？反正我装个200多M的APP一闪而过。</p><p><strong>7. 迁移</strong></p><p>TimeMachine一周备份一次到移动硬盘，使用「迁移助理」要先升级到10.2.2（约30分钟），然后120G的备份恢复了将近80分钟。恢复后一切软件正常使用，除了Office显示不能重复激活之外。</p><p><strong>8. Bug</strong></p><p>FileVault花屏/底座不平/键盘不灵敏等等的硬件问题都没遇到（<em>什么？你说有一道不足1cm的小划痕？我又不是处女座！</em>），系统还是有点小瑕疵：一是把快捷方式文件夹里的文件拖动到废纸篓，状态不会更新；二是出现过一次鼠标点击失灵的状况。7天手动重启两次，马马虎虎。</p><p><strong>9. 转接线</strong></p><p>现在用一个USB-C转USB-A的转接头就解决了所有问题。中途用过小米的Hub，转接到单位的1080p显示器后发现挺虚的（不是心虚，是字体虚），就放弃了外接显示屏的方案（这时应该摆出一副果粉的嘴脸：哼！就知道没有显示器能配上她！）</p><blockquote><p>PS：USB-C电源线比前代更粗壮了，加上电源端能拔下来的设计能避免前代普遍存在的老化裂皮现象。</p></blockquote><p>总体上MacBook Pro 2016没超出我的预期，但也不至于让我萌动退货的心思。问我建议？<strong>If you can, buy one, try the newest one, follow the trend.</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>15寸低配升级512SSD，12月16号拿到的机器，港行。</p><p><strong>总体打分8分，符合预期。</strong></p><p>大半年前就在持币观望新款的MacBook Pro，发布会后的心态基本沿着惊喜 → 失望 → 无奈的轨迹演变，当时满满的吐槽请搜索本公众号旧文：</p><p><a href="http://guoze.me/2016/11/01/macbook-pro-2016/" target="_blank" rel="noopener">新MacBook Pro，迷了路的苹果产品观</a></p><p>因为手头的2013款 MacBook Air在多开IDE/Word/Excel/Chrome的时候就会异常卡顿，升级在所难免，而环顾一圈确实也没有旗鼓相当的替代品，中间也关注了第一批的大大小小问题，还是预定了心仪的型号，想着第二批的质量或许靠谱一些。</p><p><strong>吐槽也吐了，该交的苹果税还是得交。</strong></p><a id="more"></a><p>重度使用一周时间，总结如下：</p><p><strong>1. 屏幕</strong></p><p>从air的渣渣屏切换到2880 × 1800还是挺震撼的，广色域手头没有15款的相对比，但第一感觉是色彩更明快了；亮度感人，是真感人，办公室看了一天都掉眼泪了，默默将亮度调低了一半。</p><p><strong>2. 电池</strong></p><p>正常使用3小时，Chrome/微信/两个IDE，电量由100%到75%，感觉能赶上Air满血的水平（10小时）。</p><p><strong>3. TouchID</strong></p><p>满分，每次回到桌前轻抚键盘右上角点亮屏幕的感觉真爽，而且终于可以自在的把账号密码设成宇宙无敌又长又强的了，可惜终端下的「sudo xxx」指令还未有适配。</p><p><strong>4. Touch Bar</strong></p><p>这把暂时用处不大，两个小场景还不错：a. 锁定屏幕；b. 微信连输三个😂的表情很方便。</p><p><strong>5. 蝶式键盘</strong></p><p>这是一款能让你又一次爱上打字的键盘，轻巧又回弹有力，键面大而稳（写了上千行代码/5000字的年终总结，我想我有发言权）。唯独作为Vim党想点Esc的那一刻会有点惆怅。用了两三天再打开旧Air，已心生厌弃。</p><p><strong>6. 性能</strong></p><p>4核 + 16G的配置摆在那，像我这种习惯开20几个Chrome页面的和Air的卡顿简直天渊之别；SSD？反正我装个200多M的APP一闪而过。</p><p><strong>7. 迁移</strong></p><p>TimeMachine一周备份一次到移动硬盘，使用「迁移助理」要先升级到10.2.2（约30分钟），然后120G的备份恢复了将近80分钟。恢复后一切软件正常使用，除了Office显示不能重复激活之外。</p><p><strong>8. Bug</strong></p><p>FileVault花屏/底座不平/键盘不灵敏等等的硬件问题都没遇到（<em>什么？你说有一道不足1cm的小划痕？我又不是处女座！</em>），系统还是有点小瑕疵：一是把快捷方式文件夹里的文件拖动到废纸篓，状态不会更新；二是出现过一次鼠标点击失灵的状况。7天手动重启两次，马马虎虎。</p><p><strong>9. 转接线</strong></p><p>现在用一个USB-C转USB-A的转接头就解决了所有问题。中途用过小米的Hub，转接到单位的1080p显示器后发现挺虚的（不是心虚，是字体虚），就放弃了外接显示屏的方案（这时应该摆出一副果粉的嘴脸：哼！就知道没有显示器能配上她！）</p><blockquote><p>PS：USB-C电源线比前代更粗壮了，加上电源端能拔下来的设计能避免前代普遍存在的老化裂皮现象。</p></blockquote><p>总体上MacBook Pro 2016没超出我的预期，但也不至于让我萌动退货的心思。问我建议？<strong>If you can, buy one, try the newest one, follow the trend.</strong></p>]]></content>
     
     <summary type="html">
     
       &lt;p&gt;15寸低配升级512SSD，12月16号拿到的机器，港行。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;总体打分8分，符合预期。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;大半年前就在持币观望新款的MacBook Pro，发布会后的心态基本沿着惊喜 → 失望 → 无奈的轨迹演变，当时满满的吐槽请搜索本公众号旧文：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://guoze.me/2016/11/01/macbook-pro-2016/&quot;&gt;新MacBook Pro，迷了路的苹果产品观&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://guoze.me/2016/11/01/macbook-pro-2016/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;新MacBook Pro，迷了路的苹果产品观&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;因为手头的2013款 MacBook Air在多开IDE/Word/Excel/Chrome的时候就会异常卡顿，升级在所难免，而环顾一圈确实也没有旗鼓相当的替代品，中间也关注了第一批的大大小小问题，还是预定了心仪的型号，想着第二批的质量或许靠谱一些。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;吐槽也吐了，该交的苹果税还是得交。&lt;/strong&gt;&lt;/p&gt;
     
@@ -533,28 +557,6 @@
       <category term="微信小程序" scheme="http://www.guoze.me/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
       <category term="移动互联网" scheme="http://www.guoze.me/tags/%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>最性感的那一口已被咬掉，剩下的将就吃吧</title>
-    <link href="http://www.guoze.me/2016/10/09/unsexy-apple/"/>
-    <id>http://www.guoze.me/2016/10/09/unsexy-apple/</id>
-    <published>2016-10-09T05:24:02.000Z</published>
-    <updated>2017-07-01T15:34:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>一年一度的果粉夜宴落下帷幕，不出意料的有iPhone7，不出意料的有Apple Watch2，不出意料的没有Macbook。苹果的G点早已被预言家们摸透，可数据依然孤独求败，广告依然精美绝伦。以往也是一场不落，昨晚主动关机早睡，想明白了，半夜看直播和早上看回播有区别吗？我觉得有，早上精神会比较好（笑）。起床后捏起手机，第一件事就是刷刷朋友圈，统计看直播的人数，居然有10个左右，产品、程序员、市场，总有人盯着那张万年不变的蓝底Keynote，找寻各自最爱的那一口苹果。</p><a id="more"></a><p>除了这条密集恐惧症者慎入的表带，这次的苹果夜宴造就了什么话题吗？我想没有。</p><p><img src="http://7u2obl.com1.z0.glb.clouddn.com/images/apple-1.jpg" alt=""></p><p>iPhone6出来那次，我说苹果发布会的正确使用姿势就是，骂骂骂，买买买。现在恐怕连骂的人都没有了，买的人呢，应该还是不会少。</p><p>记忆尤深的是第一次「看」苹果的发布会，还是在念大学那会，和同学一起坐长途火车，乔帮主正拖着病体上台发布第一款iPad，同学如痴如醉的用一格的信号刷cnbeta文字直播，一边反复向我安利「苹果教」。这是人生第一次感受到产品的魔力，居然有人会为万里之外的一款电子产品而兴奋不已。不久之后我也拥有了一部iPad，打开包装后我站在窗边，从各个角度观察每一个小细节（甚至现在还能想起各颗螺丝的位置），看了足足有一个小时，我难以相信这是一款电子产品，在我的心目中这就是艺术品。</p><p><img src="http://7u2obl.com1.z0.glb.clouddn.com/images/apple-2.jpg" alt=""></p><p>之后便追了Jobs的所有发布会录像。那时的发布会简单纯粹，是教主的一言堂：从牛皮纸袋里取出Macbook Air，从牛仔裤口袋里取出iPod Nano，第一次用手指拨动Safari打开网页；那时底下观众的眼神都是真挚的，他们大概都想起了孩提时从袜子里取出圣诞礼物的那一瞬心动。Jobs就是一个时代的魔法师，带着硅谷的现实扭曲力场，变出一个个让人惊叹的好东西来。</p><p><img src="http://7u2obl.com1.z0.glb.clouddn.com/images/apple-3.jpg" alt=""></p><p>可天才多少是与长寿无缘的，Jobs的离开意味着苹果最性感的那一口消失了。Cook只是一个成功的商人，他成功的把苹果发布会从一场交响乐会（<em>Jobs谈起他拜访小泽征尔，问小泽演奏什么乐器，小泽说他演奏整个交响乐团，Jobs自认为就是那个指挥家</em>）演变成一场盛大的Party，我看到马里奥来了，看到Pokeman GO来了，看到Nike来了，很热闹，每个人都很开心，与苹果做生意就意味着能在十亿人的大市场中分一杯羹。可是，主人位已经空了，指挥家已经不在了。即便欢呼声的分贝不减，惊喜的眼神也不见了。</p><p><strong>这是08-16年整个科技圈的悲哀</strong>。智能手机穷尽了这一代人所有的想象力，让才华横溢的年轻人埋头于制作消费用户新鲜感的App之中，而最终99%的App都成为僵尸。<strong>我们进入了一个商业想象力极度贫乏的时代</strong>。当腾讯的股价冲破天际，我问金融圈的同学，打了一个大大的问号，得到的回复是，钱多，资产荒，往大处挤，避险。就连愚蠢的资本都知道想象力的价值，不可替代，以及稀缺。</p><p>钱如此，人又如何？多少去年一腔热血加入创业公司的程序员陆续回流了，大公司屋檐虽低，可楼瓦结实，防风抗雨。</p><p>每当我对创新失去信心，就翻开「浪潮之巅」，里面有无数的小精灵，靠着非凡的想象力与执行力，步步为营，掀翻巨兽，又成为新的巨兽，直到下一个轮回被其他的小精灵击败。浪潮之巅，还真没有人站稳几年。</p><p>苹果足足站了八年，也够本了，原本小众的性感的封闭的苹果，成了烂大街的土豪金，成了中产阶级人手一部，成了全球第一消费品牌。当然，Cook会想，好风光，谁嫌多呢？</p><p>下一个十年，总有新的小精灵涌现，乘着虚拟现实或是人工智能或是太空旅行的春风，要去斗孤独求败的巨兽。尝不到性感的苹果，我想再有机会咬一口蜜桃吃。</p><p>好，我们这就出门，抓小精灵去。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一年一度的果粉夜宴落下帷幕，不出意料的有iPhone7，不出意料的有Apple Watch2，不出意料的没有Macbook。苹果的G点早已被预言家们摸透，可数据依然孤独求败，广告依然精美绝伦。以往也是一场不落，昨晚主动关机早睡，想明白了，半夜看直播和早上看回播有区别吗？我觉得有，早上精神会比较好（笑）。起床后捏起手机，第一件事就是刷刷朋友圈，统计看直播的人数，居然有10个左右，产品、程序员、市场，总有人盯着那张万年不变的蓝底Keynote，找寻各自最爱的那一口苹果。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="产品控" scheme="http://www.guoze.me/categories/product/"/>
-    
-    
-      <category term="苹果发布会" scheme="http://www.guoze.me/tags/%E8%8B%B9%E6%9E%9C%E5%8F%91%E5%B8%83%E4%BC%9A/"/>
     
   </entry>
   

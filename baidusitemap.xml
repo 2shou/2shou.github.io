@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://www.guoze.me/2018/03/15/to-hawking/</loc>
+    <lastmod>2018-03-14T16:24:01.499Z</lastmod>
+    <data>
+        <display>
+        <title>致敬霍金，致敬每个懵懂少年的物理梦</title>
+        <pubTime>2018-03-14T16:23:01.000Z</pubTime>
+        
+        <tag>霍金</tag>
+         
+        <tag>物理学</tag>
+         
+         
+           
+             
+              <breadCrumb title="梦中语" url="http://www.guoze.me/categories/thinking/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.guoze.me/2018/03/14/blockchain-feeds/</loc>
     <lastmod>2018-03-13T16:18:15.405Z</lastmod>
     <data>
@@ -201,11 +223,11 @@
         <title>如何做一只风口上的兔子？</title>
         <pubTime>2017-12-16T16:40:44.000Z</pubTime>
         
+        <tag>创业</tag>
+         
         <tag>互联网</tag>
          
         <tag>风口</tag>
-         
-        <tag>创业</tag>
          
          
            
@@ -260,19 +282,41 @@
 
     
   <url>
-    <loc>http://www.guoze.me/2015/12/12/data-geek/</loc>
+    <loc>http://www.guoze.me/2015/05/28/elasticsearch-http-basic-authentication/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
         <display>
-        <title>4个小例子告诉你：如何成为一名数据极客</title>
-        <pubTime>2015-12-12T10:17:17.000Z</pubTime>
+        <title>为ElasticSearch添加HTTP基本认证</title>
+        <pubTime>2015-05-28T06:43:28.000Z</pubTime>
         
-        <tag>大数据</tag>
+        <tag>ElasticSearch</tag>
+         
+        <tag>安全</tag>
+         
+        <tag>HTTP</tag>
          
          
            
              
-              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
+              <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/2014/04/12/elegance/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>论优雅</title>
+        <pubTime>2014-04-12T15:42:25.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="梦中语" url="http://www.guoze.me/categories/thinking/"/>
           
         </display>
     </data>
@@ -313,48 +357,6 @@
            
              
               <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/2015/05/28/elasticsearch-http-basic-authentication/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>为ElasticSearch添加HTTP基本认证</title>
-        <pubTime>2015-05-28T06:43:28.000Z</pubTime>
-        
-        <tag>ElasticSearch</tag>
-         
-        <tag>安全</tag>
-         
-        <tag>HTTP</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/2014/04/12/elegance/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>论优雅</title>
-        <pubTime>2014-04-12T15:42:25.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="梦中语" url="http://www.guoze.me/categories/thinking/"/>
           
         </display>
     </data>
@@ -469,15 +471,22 @@
     </url>
 
     
+    
   <url>
-    <loc>http://www.guoze.me/2015/01/29/good-recommendation/</loc>
+    <loc>http://www.guoze.me/2015/04/23/hbase-observer-sync-elasticsearch/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
         <display>
-        <title>怎么做好一个推荐系统</title>
-        <pubTime>2015-01-29T06:16:28.000Z</pubTime>
+        <title>通过HBase Observer同步数据到ElasticSearch</title>
+        <pubTime>2015-04-23T05:44:02.000Z</pubTime>
         
-        <tag>推荐系统</tag>
+        <tag>ElasticSearch</tag>
+         
+        <tag>HBase</tag>
+         
+        <tag>Coprocessor</tag>
+         
+        <tag>Observer</tag>
          
          
            
@@ -512,20 +521,16 @@
 
     
   <url>
-    <loc>http://www.guoze.me/2015/04/23/hbase-observer-sync-elasticsearch/</loc>
+    <loc>http://www.guoze.me/2014/12/18/hive-async-python-client/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
         <display>
-        <title>通过HBase Observer同步数据到ElasticSearch</title>
-        <pubTime>2015-04-23T05:44:02.000Z</pubTime>
+        <title>Hive的Python异步客户端</title>
+        <pubTime>2014-12-18T09:12:21.000Z</pubTime>
         
-        <tag>ElasticSearch</tag>
+        <tag>Hive</tag>
          
-        <tag>HBase</tag>
-         
-        <tag>Coprocessor</tag>
-         
-        <tag>Observer</tag>
+        <tag>Python</tag>
          
          
            
@@ -538,40 +543,14 @@
 
     
   <url>
-    <loc>http://www.guoze.me/2015/09/24/be-friend-of-time/</loc>
+    <loc>http://www.guoze.me/2015/01/29/good-recommendation/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
         <display>
-        <title>心智养成，不争朝夕</title>
-        <pubTime>2015-09-24T14:58:29.000Z</pubTime>
+        <title>怎么做好一个推荐系统</title>
+        <pubTime>2015-01-29T06:16:28.000Z</pubTime>
         
-        <tag>把时间当作朋友</tag>
-         
-        <tag>心智</tag>
-         
-        <tag>李笑来</tag>
-         
-         
-           
-             
-              <breadCrumb title="读而思" url="http://www.guoze.me/categories/reading/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/2014/12/18/hive-async-python-client/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hive的Python异步客户端</title>
-        <pubTime>2014-12-18T09:12:21.000Z</pubTime>
-        
-        <tag>Hive</tag>
-         
-        <tag>Python</tag>
+        <tag>推荐系统</tag>
          
          
            
@@ -606,52 +585,6 @@
 
     
   <url>
-    <loc>http://www.guoze.me/2014/12/19/impala-compute-stats/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>Impala的神奇指令「COMPUTE STATS」</title>
-        <pubTime>2014-12-19T07:32:31.000Z</pubTime>
-        
-        <tag>Impala</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/2014/09/25/libshorttext-introduction/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>LibShortText简要入门</title>
-        <pubTime>2014-09-25T15:32:58.000Z</pubTime>
-        
-        <tag>分类算法</tag>
-         
-        <tag>SVM</tag>
-         
-        <tag>支持向量机</tag>
-         
-        <tag>LibShortText</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.guoze.me/2014/08/27/intellij-maven-develop-hadoop/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
@@ -662,32 +595,6 @@
         <tag>Maven</tag>
          
         <tag>IntelliJ</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/2015/12/27/large-scale-server/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>非典型的千万用户后台之路</title>
-        <pubTime>2015-12-27T04:09:21.000Z</pubTime>
-        
-        <tag>服务器</tag>
-         
-        <tag>后台</tag>
-         
-        <tag>高并发</tag>
-         
-        <tag>缓存</tag>
          
          
            
@@ -726,28 +633,6 @@
 
     
   <url>
-    <loc>http://www.guoze.me/2016/11/01/macbook-pro-2016/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>新MacBook Pro，迷了路的苹果产品观</title>
-        <pubTime>2016-10-31T16:45:17.000Z</pubTime>
-        
-        <tag>苹果</tag>
-         
-        <tag>MacBook</tag>
-         
-         
-           
-             
-              <breadCrumb title="产品控" url="http://www.guoze.me/categories/product/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.guoze.me/2015/03/10/logistic-regression-introduction/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
@@ -777,6 +662,95 @@
     </url>
 
     
+  <url>
+    <loc>http://www.guoze.me/2014/12/19/impala-compute-stats/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>Impala的神奇指令「COMPUTE STATS」</title>
+        <pubTime>2014-12-19T07:32:31.000Z</pubTime>
+        
+        <tag>Impala</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/2016/11/01/macbook-pro-2016/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>新MacBook Pro，迷了路的苹果产品观</title>
+        <pubTime>2016-10-31T16:45:17.000Z</pubTime>
+        
+        <tag>苹果</tag>
+         
+        <tag>MacBook</tag>
+         
+         
+           
+             
+              <breadCrumb title="产品控" url="http://www.guoze.me/categories/product/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/2016/12/22/macbook-pro-experience/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>深度使用 2016 MacBook Pro是怎样的体验？</title>
+        <pubTime>2016-12-22T15:29:42.000Z</pubTime>
+        
+        <tag>苹果</tag>
+         
+        <tag>MacBook</tag>
+         
+         
+           
+             
+              <breadCrumb title="产品控" url="http://www.guoze.me/categories/product/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/2014/09/25/libshorttext-introduction/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>LibShortText简要入门</title>
+        <pubTime>2014-09-25T15:32:58.000Z</pubTime>
+        
+        <tag>分类算法</tag>
+         
+        <tag>SVM</tag>
+         
+        <tag>支持向量机</tag>
+         
+        <tag>LibShortText</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://www.guoze.me/2015/12/12/matplotlib-par-chart/</loc>
@@ -794,6 +768,30 @@
            
              
               <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/2015/09/24/be-friend-of-time/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>心智养成，不争朝夕</title>
+        <pubTime>2015-09-24T14:58:29.000Z</pubTime>
+        
+        <tag>把时间当作朋友</tag>
+         
+        <tag>心智</tag>
+         
+        <tag>李笑来</tag>
+         
+         
+           
+             
+              <breadCrumb title="读而思" url="http://www.guoze.me/categories/reading/"/>
           
         </display>
     </data>
@@ -841,30 +839,6 @@
 
     
   <url>
-    <loc>http://www.guoze.me/2015/01/04/python-quick-orm/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>100行代码还你一个Python ORM</title>
-        <pubTime>2015-01-04T09:47:00.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>MySQL</tag>
-         
-        <tag>ORM</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.guoze.me/2015/01/19/python-phantomjs-crawler/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
@@ -877,6 +851,30 @@
         <tag>Python</tag>
          
         <tag>Phantomjs</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/2015/01/04/python-quick-orm/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>100行代码还你一个Python ORM</title>
+        <pubTime>2015-01-04T09:47:00.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>MySQL</tag>
+         
+        <tag>ORM</tag>
          
          
            
@@ -937,19 +935,69 @@
 
     
   <url>
-    <loc>http://www.guoze.me/2016/01/10/recommendation-zero-to-one/</loc>
+    <loc>http://www.guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
         <display>
-        <title>推荐系统从零到一</title>
-        <pubTime>2016-01-10T12:37:22.000Z</pubTime>
+        <title>用scikit-learn实现朴素贝叶斯分类器</title>
+        <pubTime>2014-06-05T14:50:19.000Z</pubTime>
         
-        <tag>推荐系统</tag>
+        <tag>分类算法</tag>
+         
+        <tag>朴素贝叶斯</tag>
+         
+        <tag>scikit-learn</tag>
          
          
            
              
               <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/2015/01/08/scrapy-custom-exporter/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>自定义Scrapy的ItemExporter</title>
+        <pubTime>2015-01-08T07:29:37.000Z</pubTime>
+        
+        <tag>爬虫</tag>
+         
+        <tag>Python</tag>
+         
+        <tag>Scrapy</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/2017/06/27/silicon-valley-4-season/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>硅谷，五味杂陈的喜剧</title>
+        <pubTime>2017-06-27T15:40:14.000Z</pubTime>
+        
+        <tag>硅谷</tag>
+         
+        <tag>创业</tag>
+         
+         
+           
+             
+              <breadCrumb title="读而思" url="http://www.guoze.me/categories/reading/"/>
           
         </display>
     </data>
@@ -975,69 +1023,19 @@
 
     
   <url>
-    <loc>http://www.guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/</loc>
+    <loc>http://www.guoze.me/2016/01/10/recommendation-zero-to-one/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
         <display>
-        <title>用scikit-learn实现朴素贝叶斯分类器</title>
-        <pubTime>2014-06-05T14:50:19.000Z</pubTime>
+        <title>推荐系统从零到一</title>
+        <pubTime>2016-01-10T12:37:22.000Z</pubTime>
         
-        <tag>分类算法</tag>
-         
-        <tag>朴素贝叶斯</tag>
-         
-        <tag>scikit-learn</tag>
+        <tag>推荐系统</tag>
          
          
            
              
               <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/2017/06/27/silicon-valley-4-season/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>硅谷，五味杂陈的喜剧</title>
-        <pubTime>2017-06-27T15:40:14.000Z</pubTime>
-        
-        <tag>创业</tag>
-         
-        <tag>硅谷</tag>
-         
-         
-           
-             
-              <breadCrumb title="读而思" url="http://www.guoze.me/categories/reading/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/2015/01/08/scrapy-custom-exporter/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>自定义Scrapy的ItemExporter</title>
-        <pubTime>2015-01-08T07:29:37.000Z</pubTime>
-        
-        <tag>爬虫</tag>
-         
-        <tag>Python</tag>
-         
-        <tag>Scrapy</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
           
         </display>
     </data>
@@ -1163,6 +1161,26 @@
 
     
   <url>
+    <loc>http://www.guoze.me/2015/05/14/the-hard-thing-about-hard-things/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>你终会选择一种艰难的生活</title>
+        <pubTime>2015-05-14T05:51:47.000Z</pubTime>
+        
+        <tag>创业维艰</tag>
+         
+         
+           
+             
+              <breadCrumb title="读而思" url="http://www.guoze.me/categories/reading/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.guoze.me/2015/01/11/tgrocery-introduction/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
@@ -1186,6 +1204,30 @@
            
              
               <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/2015/03/25/the-success-equation/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>实力、运气与成功</title>
+        <pubTime>2015-03-25T14:41:02.000Z</pubTime>
+        
+        <tag>运气</tag>
+         
+        <tag>实力</tag>
+         
+        <tag>成功</tag>
+         
+         
+           
+             
+              <breadCrumb title="读而思" url="http://www.guoze.me/categories/reading/"/>
           
         </display>
     </data>
@@ -1217,26 +1259,6 @@
 
     
   <url>
-    <loc>http://www.guoze.me/2015/05/14/the-hard-thing-about-hard-things/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>你终会选择一种艰难的生活</title>
-        <pubTime>2015-05-14T05:51:47.000Z</pubTime>
-        
-        <tag>创业维艰</tag>
-         
-         
-           
-             
-              <breadCrumb title="读而思" url="http://www.guoze.me/categories/reading/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.guoze.me/2015/01/31/tornado-log-perday/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
@@ -1258,6 +1280,26 @@
            
              
               <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/2015/09/07/chi-square/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>卡方检验原理及应用</title>
+        <pubTime>2015-09-07T04:49:00.000Z</pubTime>
+        
+        <tag>卡方检验</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
           
         </display>
     </data>
@@ -1305,6 +1347,26 @@
 
     
   <url>
+    <loc>http://www.guoze.me/2017/03/18/brief-history-of-humankind/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>人类之所以为人类</title>
+        <pubTime>2017-03-18T03:50:50.000Z</pubTime>
+        
+        <tag>人类简史</tag>
+         
+         
+           
+             
+              <breadCrumb title="读而思" url="http://www.guoze.me/categories/reading/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.guoze.me/2016/10/16/wechat-app/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
@@ -1322,30 +1384,6 @@
            
              
               <breadCrumb title="产品控" url="http://www.guoze.me/categories/product/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/2015/03/25/the-success-equation/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>实力、运气与成功</title>
-        <pubTime>2015-03-25T14:41:02.000Z</pubTime>
-        
-        <tag>运气</tag>
-         
-        <tag>实力</tag>
-         
-        <tag>成功</tag>
-         
-         
-           
-             
-              <breadCrumb title="读而思" url="http://www.guoze.me/categories/reading/"/>
           
         </display>
     </data>
@@ -1397,26 +1435,6 @@
 
     
   <url>
-    <loc>http://www.guoze.me/2017/03/18/brief-history-of-humankind/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>人类之所以为人类</title>
-        <pubTime>2017-03-18T03:50:50.000Z</pubTime>
-        
-        <tag>人类简史</tag>
-         
-         
-           
-             
-              <breadCrumb title="读而思" url="http://www.guoze.me/categories/reading/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.guoze.me/2016/01/24/busy-programmer/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
@@ -1427,48 +1445,6 @@
         <tag>程序员</tag>
          
         <tag>时间管理</tag>
-         
-         
-           
-             
-              <breadCrumb title="职业论" url="http://www.guoze.me/categories/career/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/2015/09/07/chi-square/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>卡方检验原理及应用</title>
-        <pubTime>2015-09-07T04:49:00.000Z</pubTime>
-        
-        <tag>卡方检验</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/2015/12/12/choose-startup/</loc>
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>馆中窥职：小公司没那么糟糕</title>
-        <pubTime>2015-12-12T10:12:54.000Z</pubTime>
-        
-        <tag>程序员</tag>
-         
-        <tag>职业规划</tag>
          
          
            
@@ -1502,24 +1478,70 @@
     </url>
 
     
-    
-    
   <url>
-    <loc>http://www.guoze.me/2016/12/22/macbook-pro-experience/</loc>
+    <loc>http://www.guoze.me/2015/12/12/data-geek/</loc>
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     <data>
         <display>
-        <title>深度使用 2016 MacBook Pro是怎样的体验？</title>
-        <pubTime>2016-12-22T15:29:42.000Z</pubTime>
+        <title>4个小例子告诉你：如何成为一名数据极客</title>
+        <pubTime>2015-12-12T10:17:17.000Z</pubTime>
         
-        <tag>苹果</tag>
-         
-        <tag>MacBook</tag>
+        <tag>大数据</tag>
          
          
            
              
-              <breadCrumb title="产品控" url="http://www.guoze.me/categories/product/"/>
+              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/2015/12/12/choose-startup/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>馆中窥职：小公司没那么糟糕</title>
+        <pubTime>2015-12-12T10:12:54.000Z</pubTime>
+        
+        <tag>程序员</tag>
+         
+        <tag>职业规划</tag>
+         
+         
+           
+             
+              <breadCrumb title="职业论" url="http://www.guoze.me/categories/career/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
+    <loc>http://www.guoze.me/2015/12/27/large-scale-server/</loc>
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>非典型的千万用户后台之路</title>
+        <pubTime>2015-12-27T04:09:21.000Z</pubTime>
+        
+        <tag>服务器</tag>
+         
+        <tag>后台</tag>
+         
+        <tag>高并发</tag>
+         
+        <tag>缓存</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
           
         </display>
     </data>

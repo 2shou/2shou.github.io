@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.guoze.me/2018/03/21/programmer-pm-comunication/</loc>
+    
+    <lastmod>2018-03-21T15:27:52.811Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.guoze.me/2018/03/18/blockchain-bat/</loc>
     
     <lastmod>2018-03-18T14:22:06.806Z</lastmod>
@@ -107,6 +114,13 @@
   </url>
   
   <url>
+    <loc>http://www.guoze.me/2015/05/28/elasticsearch-http-basic-authentication/</loc>
+    
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.guoze.me/2016/02/15/deep-learning-history/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
@@ -115,27 +129,6 @@
   
   <url>
     <loc>http://www.guoze.me/2015/04/04/elasticsearch-optimization/</loc>
-    
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.guoze.me/2015/05/28/elasticsearch-http-basic-authentication/</loc>
-    
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.guoze.me/2016/06/26/from-school-to-work/</loc>
-    
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.guoze.me/2014/04/12/elegance/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -156,21 +149,7 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2016/10/09/gear-vr-experience/</loc>
-    
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.guoze.me/tags/index.html</loc>
-    
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.guoze.me/2015/01/29/good-recommendation/</loc>
+    <loc>http://www.guoze.me/2016/06/26/from-school-to-work/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -184,14 +163,7 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2014/12/19/impala-compute-stats/</loc>
-    
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.guoze.me/2016/06/26/how-to-google/</loc>
+    <loc>http://www.guoze.me/2016/10/09/gear-vr-experience/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -205,7 +177,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2014/08/27/intellij-maven-develop-hadoop/</loc>
+    <loc>http://www.guoze.me/2015/01/29/good-recommendation/</loc>
+    
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.guoze.me/tags/index.html</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -219,14 +198,28 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/12/27/large-scale-server/</loc>
+    <loc>http://www.guoze.me/2016/06/26/how-to-google/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2014/12/29/libshorttext-setup-script/</loc>
+    <loc>http://www.guoze.me/2014/12/19/impala-compute-stats/</loc>
+    
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.guoze.me/2014/08/27/intellij-maven-develop-hadoop/</loc>
+    
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.guoze.me/2014/09/25/libshorttext-introduction/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -240,7 +233,21 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2014/09/25/libshorttext-introduction/</loc>
+    <loc>http://www.guoze.me/2014/12/29/libshorttext-setup-script/</loc>
+    
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.guoze.me/2015/12/27/large-scale-server/</loc>
+    
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.guoze.me/2016/11/01/macbook-pro-2016/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -261,7 +268,7 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/12/12/matplotlib-par-chart/</loc>
+    <loc>http://www.guoze.me/2014/07/12/blog-rule/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -282,13 +289,6 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/01/04/python-quick-orm/</loc>
-    
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.guoze.me/2015/01/19/python-phantomjs-crawler/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
@@ -303,7 +303,7 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2017/03/18/brief-history-of-humankind/</loc>
+    <loc>http://www.guoze.me/2015/01/04/python-quick-orm/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -317,7 +317,21 @@
   </url>
   
   <url>
+    <loc>http://www.guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/</loc>
+    
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.guoze.me/2016/01/10/recommendation-zero-to-one/</loc>
+    
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.guoze.me/2016/01/24/busy-programmer/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -331,21 +345,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/01/08/scrapy-custom-exporter/</loc>
-    
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/</loc>
-    
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.guoze.me/2015/03/22/spark-dataframe/</loc>
+    
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.guoze.me/2015/01/08/scrapy-custom-exporter/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -373,14 +380,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2014/11/26/svm-knowledge/</loc>
+    <loc>http://www.guoze.me/2015/01/11/tgrocery-introduction/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/05/14/the-hard-thing-about-hard-things/</loc>
+    <loc>http://www.guoze.me/2014/11/26/svm-knowledge/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -394,21 +401,7 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/01/11/tgrocery-introduction/</loc>
-    
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.guoze.me/2014/07/12/blog-rule/</loc>
-    
-    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.guoze.me/2017/06/21/time-management-handbook/</loc>
+    <loc>http://www.guoze.me/2015/05/14/the-hard-thing-about-hard-things/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -416,6 +409,13 @@
   
   <url>
     <loc>http://www.guoze.me/2015/03/25/the-success-equation/</loc>
+    
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.guoze.me/2017/06/21/time-management-handbook/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -436,6 +436,13 @@
   </url>
   
   <url>
+    <loc>http://www.guoze.me/2017/03/18/brief-history-of-humankind/</loc>
+    
+    <lastmod>2017-07-01T15:34:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.guoze.me/2016/10/16/wechat-app/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
@@ -450,7 +457,7 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2016/01/24/busy-programmer/</loc>
+    <loc>http://www.guoze.me/2015/09/07/chi-square/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -464,14 +471,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/12/12/choose-startup/</loc>
+    <loc>http://www.guoze.me/2016/05/14/crawler-attack-defense/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/09/07/chi-square/</loc>
+    <loc>http://www.guoze.me/2015/12/12/choose-startup/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -485,7 +492,7 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2016/05/14/crawler-attack-defense/</loc>
+    <loc>http://www.guoze.me/2014/04/12/elegance/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
@@ -506,7 +513,7 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2016/11/01/macbook-pro-2016/</loc>
+    <loc>http://www.guoze.me/2015/12/12/matplotlib-par-chart/</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     

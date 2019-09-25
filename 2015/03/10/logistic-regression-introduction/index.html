@@ -101,12 +101,12 @@
 <meta property="og:site_name" content="建造者说">
 <meta property="og:description" content="sigmoid函数逻辑回归（Logistic-Regression）是数据挖掘领域的一种基本的回归和分类算法。很长的一段时间里我对逻辑回归的理解仅限于「有逻辑的回归」。直到有次面试一个实习生，跟他聊起正在做的热门电台排行榜，需要把各个指标加权得出的分值映射到(0,1)空间，采用的是最简陋的线性映射方法。他建议我可以用sigmoid函数做，我立时两眼放光，请教起sigmoid函数相对于线性映射的好处">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/roc.png">
-<meta property="og:updated_time" content="2017-07-01T15:34:53.000Z">
+<meta property="og:image" content="http://www.guoze.me/images/roc.png">
+<meta property="og:updated_time" content="2019-09-25T09:58:11.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="逻辑回归碎碎念">
 <meta name="twitter:description" content="sigmoid函数逻辑回归（Logistic-Regression）是数据挖掘领域的一种基本的回归和分类算法。很长的一段时间里我对逻辑回归的理解仅限于「有逻辑的回归」。直到有次面试一个实习生，跟他聊起正在做的热门电台排行榜，需要把各个指标加权得出的分值映射到(0,1)空间，采用的是最简陋的线性映射方法。他建议我可以用sigmoid函数做，我立时两眼放光，请教起sigmoid函数相对于线性映射的好处">
-<meta name="twitter:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/roc.png">
+<meta name="twitter:image" content="http://www.guoze.me/images/roc.png">
 
 
 
@@ -390,7 +390,7 @@
 <h1 id="ROC和AUC"><a href="#ROC和AUC" class="headerlink" title="ROC和AUC"></a>ROC和AUC</h1><p>通常对离线模型的评估可能有多个指标，比如准确率、召回率或者F-Score（准确率和召回率的乘积），但是这些都没有包含预测值的排序信息。设想这样的一种场景，我构建了一个判断人有没有钱的二元分类器，可光知道一个人有没有钱是不够的，我还希望找到最有钱的那几个人，和他们交交朋友。那么对于我们这样一个分类器的场景来说，把最高分值的那几个样本分错显然是更恶劣的，而不是每个样本的正确率都是同等重要的，因此我们需要一个能考虑位置信息的评价指标。AUC也就这样应运而生。</p>
 <p>AUC表达的是，你随机挑选一个正样本和一个负样本，通过离线模型输出的score，正样本大于负样本的概率。直觉上我们可以知道，把一个负样本判断为0.6（假设阈值取0.5），会比把一个负样本判断为0.9，AUC的值要更高些。而如果所有的正样本score都高于0.5，负样本score都低于0.5，那么AUC的值就是1，反之是则0。</p>
 <p>但通过每次枚举一个正样本和负样本的方式来计算AUC显然太慢了，更好的方法是计算ROC曲线的线下面积（已被证实等于AUC的值）。ROC是一条起于<code>(0,0)</code>终于<code>(1,1)</code>的曲线，横轴和纵轴分别代表假正率（意为负样本被识别为正的比例）和真正率（意为正样本被识别出来的比例）。这条曲线越靠近左上角点，AUC的值越高，而如果ROC低于斜对角线，就说明离线模型的性能比完全随机还差（<strong>Oh No!</strong>）。</p>
-<p><img src="http://7u2obl.com1.z0.glb.clouddn.com/images/roc.png" alt="ROC曲线示例"></p>
+<p><img src="/images/roc.png" alt="ROC曲线示例"></p>
 <p>ROC的绘制过程可参考：<a href="http://blog.csdn.net/mytestmy/article/details/24270513" target="_blank" rel="noopener">ROC曲线绘制与AUC计算</a></p>
 <h1 id="特征筛选和多元共线性"><a href="#特征筛选和多元共线性" class="headerlink" title="特征筛选和多元共线性"></a>特征筛选和多元共线性</h1><p>这是两种会影响回归效果的<code>Bad Case</code>：</p>
 <ul>
@@ -662,7 +662,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

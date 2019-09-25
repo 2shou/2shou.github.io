@@ -101,17 +101,17 @@
 <meta property="og:site_name" content="建造者说">
 <meta property="og:description" content="Hadoop开发中需要用到至少不下10个的依赖包，它们相互间的依赖关系比较复杂，不同版本的依赖关系也有所不同，而间接依赖导致的程序错误并不会在运行之前报错，因此确定适合一个版本的依赖包，会耗费相当多的时间。Maven是一个依赖管理和项目构建的工具，它利用惯例组织Java项目的结构，并允许通过简单的配置定义直接依赖，而直接依赖所需的其他依赖则会通过事先定义好的关系列表自动下载，大大节省了开发者本身的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/maven-1.png">
-<meta property="og:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/maven-2.png">
-<meta property="og:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/maven-3.png">
-<meta property="og:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/maven-4.png">
-<meta property="og:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/maven-5.png">
-<meta property="og:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/maven-6.png">
-<meta property="og:updated_time" content="2017-07-01T15:34:53.000Z">
+<meta property="og:image" content="http://www.guoze.me/images/maven-1.png">
+<meta property="og:image" content="http://www.guoze.me/images/maven-2.png">
+<meta property="og:image" content="http://www.guoze.me/images/maven-3.png">
+<meta property="og:image" content="http://www.guoze.me/images/maven-4.png">
+<meta property="og:image" content="http://www.guoze.me/images/maven-5.png">
+<meta property="og:image" content="http://www.guoze.me/images/maven-6.png">
+<meta property="og:updated_time" content="2019-09-25T09:58:11.217Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建IntelliJ+Maven的Hadoop开发环境">
 <meta name="twitter:description" content="Hadoop开发中需要用到至少不下10个的依赖包，它们相互间的依赖关系比较复杂，不同版本的依赖关系也有所不同，而间接依赖导致的程序错误并不会在运行之前报错，因此确定适合一个版本的依赖包，会耗费相当多的时间。Maven是一个依赖管理和项目构建的工具，它利用惯例组织Java项目的结构，并允许通过简单的配置定义直接依赖，而直接依赖所需的其他依赖则会通过事先定义好的关系列表自动下载，大大节省了开发者本身的">
-<meta name="twitter:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/maven-1.png">
+<meta name="twitter:image" content="http://www.guoze.me/images/maven-1.png">
 
 
 
@@ -399,13 +399,13 @@
 </ul>
 <p>Maven在主流的Java IDE上都有插件，Eclipse可通过安装m2eclipse，但这里个人推荐与智能化程度更高、联网更迅速、体验更流畅的IntelliJ IDEA配合，以下就简要介绍IntelliJ IDEA如何使用Maven。（以IntelliJ IDEA 13为例，它自带了Maven的支持，无需安装插件）</p>
 <ol>
-<li><code>New Project -&gt; Maven</code>新建一个Maven项目，在属性栏填写GroupId（项目或组织的唯一标识）和ArtifactId（项目的通用名称）：<br><img src="http://7u2obl.com1.z0.glb.clouddn.com/images/maven-1.png" alt=""></li>
-<li>Next之后填写项目名和项目位置：<br><img src="http://7u2obl.com1.z0.glb.clouddn.com/images/maven-2.png" alt=""></li>
-<li>新建项目之后有弹窗提示，选择自动导入：<br><img src="http://7u2obl.com1.z0.glb.clouddn.com/images/maven-3.png" alt=""></li>
-<li>项目生成后的架构是这样的，我们在src/main/java路径下写项目代码，pom.xml是项目统一的配置文件。<br><img src="http://7u2obl.com1.z0.glb.clouddn.com/images/maven-4.png" alt=""></li>
+<li><code>New Project -&gt; Maven</code>新建一个Maven项目，在属性栏填写GroupId（项目或组织的唯一标识）和ArtifactId（项目的通用名称）：<br><img src="/images/maven-1.png" alt=""></li>
+<li>Next之后填写项目名和项目位置：<br><img src="/images/maven-2.png" alt=""></li>
+<li>新建项目之后有弹窗提示，选择自动导入：<br><img src="/images/maven-3.png" alt=""></li>
+<li>项目生成后的架构是这样的，我们在src/main/java路径下写项目代码，pom.xml是项目统一的配置文件。<br><img src="/images/maven-4.png" alt=""></li>
 <li>因为我们线上用的是Cloudera的Hadoop版本，所以我们需要在pom.xml的project节点下添加一个CDH5的Maven远程依赖仓库（参考<a href="http://www.cloudera.com/content/cloudera-content/cloudera-docs/CDH5/latest/CDH-Version-and-Packaging-Information/cdhvd_cdh5_maven_repo.html" target="_blank" rel="noopener">Using the CDH 5 Maven Repository</a>)</li>
 <li>开发一个普通的Hadoop项目，我们一般需要hadoop-common、hadoop-core两组依赖；如果需要读取HDFS上的文件内容，则需要hadoop-hdfs和hadoop-client另外两组依赖；如果需要读取HBase的数据，则需要再加入hbase-client。（以上均为artifactId，以CDH5.1.0为例）</li>
-<li>IntelliJ IDEA提供了对pom文件非常智能的自动补全和实时查询功能：<br><img src="http://7u2obl.com1.z0.glb.clouddn.com/images/maven-5.png" alt=""><br><img src="http://7u2obl.com1.z0.glb.clouddn.com/images/maven-6.png" alt=""></li>
+<li>IntelliJ IDEA提供了对pom文件非常智能的自动补全和实时查询功能：<br><img src="/images/maven-5.png" alt=""><br><img src="/images/maven-6.png" alt=""></li>
 <li><strong>Let’s Hadoop!</strong></li>
 </ol>
 
@@ -639,7 +639,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

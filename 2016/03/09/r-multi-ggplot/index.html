@@ -101,12 +101,12 @@
 <meta property="og:site_name" content="建造者说">
 <meta property="og:description" content="数据码农最躲不过的就是做变量分析，一个个看黑白样本的分布图不过瘾，就想着把所有变量的分布都打印出来，一目了然。话说R最性感的图表库当属ggplot2，只是这厮不好伺候，展示这个图虽然只用三行代码，却着实费了一番工夫。话不多说，我知道你们要什么，上当莫！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images%2Fggplot2.png">
-<meta property="og:updated_time" content="2017-07-01T15:34:53.000Z">
+<meta property="og:image" content="http://www.guoze.me/images%2Fggplot2.png">
+<meta property="og:updated_time" content="2019-09-25T09:58:11.228Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用ggplot2同时绘制多个密度图">
 <meta name="twitter:description" content="数据码农最躲不过的就是做变量分析，一个个看黑白样本的分布图不过瘾，就想着把所有变量的分布都打印出来，一目了然。话说R最性感的图表库当属ggplot2，只是这厮不好伺候，展示这个图虽然只用三行代码，却着实费了一番工夫。话不多说，我知道你们要什么，上当莫！">
-<meta name="twitter:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images%2Fggplot2.png">
+<meta name="twitter:image" content="http://www.guoze.me/images%2Fggplot2.png">
 
 
 
@@ -388,7 +388,7 @@
         <p>数据码农最躲不过的就是做变量分析，一个个看黑白样本的分布图不过瘾，就想着把所有变量的分布都打印出来，一目了然。话说R最性感的图表库当属<a href="http://ggplot2.org/" target="_blank" rel="noopener">ggplot2</a>，只是这厮不好伺候，展示这个图虽然只用三行代码，却着实费了一番工夫。话不多说，我知道你们要什么，上当莫！<br><a id="more"></a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; plots &lt;- NULL</span><br><span class="line">&gt; for(i in colnames(train))&#123; plots[[i]] &lt;- ggplot(train) + geom_density(aes_string(x = i, fill = &apos;is_black&apos;), alpha = 0.5, show.legend = F) + xlab(&quot;&quot;) + ylab(&quot;&quot;); &#125;</span><br><span class="line">&gt; plot_grid(plotlist = plots)</span><br></pre></td></tr></table></figure>
 <p>最终效果就是这样的，想来还真有点小酷炫呢！</p>
-<p><img src="http://7u2obl.com1.z0.glb.clouddn.com/images%2Fggplot2.png" alt=""></p>
+<p><img src="/images%2Fggplot2.png" alt=""></p>
 
       
     </div>
@@ -620,7 +620,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

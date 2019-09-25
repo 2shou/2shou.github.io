@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="建造者说">
 <meta property="og:description" content="ElasticSearch是一个强大的搜索服务器，基于Apache Lucene的全文搜索引擎开发，具有高性能、分布式和零配置的优点。在当前的项目中，我们希望ES能承担亿级文档的搜索，而ES也证明了即便面对这样的数据规模，也能实现十分迅速的搜索响应。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-01T15:34:53.000Z">
+<meta property="og:updated_time" content="2019-09-25T09:58:11.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ElasticSearch的部署、同步与调优">
 <meta name="twitter:description" content="ElasticSearch是一个强大的搜索服务器，基于Apache Lucene的全文搜索引擎开发，具有高性能、分布式和零配置的优点。在当前的项目中，我们希望ES能承担亿级文档的搜索，而ES也证明了即便面对这样的数据规模，也能实现十分迅速的搜索响应。">
@@ -423,6 +423,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 一般分配主机1/4-1/2的内存</span><br><span class="line">if [ &quot;x$ES_MIN_MEM&quot; = &quot;x&quot; ]; then</span><br><span class="line">    ES_MIN_MEM=12g</span><br><span class="line">fi</span><br><span class="line">if [ &quot;x$ES_MAX_MEM&quot; = &quot;x&quot; ]; then</span><br><span class="line">    ES_MAX_MEM=12g</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">JAVA_OPTS=&quot;$JAVA_OPTS -Xms$&#123;ES_MIN_MEM&#125;&quot;</span><br><span class="line">JAVA_OPTS=&quot;$JAVA_OPTS -Xmx$&#123;ES_MAX_MEM&#125;&quot;</span><br><span class="line"># 线程大小, ES单线程承载的数据量比较大</span><br><span class="line">JAVA_OPTS=&quot;$JAVA_OPTS -Xss128m&quot;</span><br></pre></td></tr></table></figure>
 <p>调优的第二个层面是ES本身的调优，修改<code>./config/elasticsearch.yml</code>文件，关键的项目如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 分片数量，推荐分片数*副本数=集群数量</span><br><span class="line"># 分片会带来额外的分割和合并的损耗，理论上分片数越少，搜索的效率越高</span><br><span class="line">index.number_of_shards: 5</span><br><span class="line"># 锁定内存，不让JVM写入swapping，避免降低ES的性能</span><br><span class="line">bootstrap.mlockall: true</span><br><span class="line"># 缓存类型设置为Soft Reference，只有当内存不够时才会进行回收</span><br><span class="line">index.cache.field.max_size: 50000</span><br><span class="line">index.cache.field.expire: 10m</span><br><span class="line">index.cache.field.type: soft</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -678,7 +679,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

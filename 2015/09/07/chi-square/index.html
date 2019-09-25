@@ -101,13 +101,13 @@
 <meta property="og:site_name" content="建造者说">
 <meta property="og:description" content="卡方检验，或称x2检验，被誉为二十世纪科学技术所有分支中的20大发明之一，它的发明者卡尔·皮尔逊是一位历史上罕见的百科全书式的学者，研究领域涵盖了生物、历史、宗教、哲学、法律。之前做文本分类项目用过卡方值做特征选择（降维），后来听内部培训，另一个部门说他们有用卡方检验做异常用户的检测，于是就想把卡方检验再温习一次，同时把卡方检验和特征选择串起来理解。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/chisquare-1.png">
-<meta property="og:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/chisquare-2.png">
-<meta property="og:updated_time" content="2017-07-01T15:34:53.000Z">
+<meta property="og:image" content="http://www.guoze.me/images/chisquare-1.png">
+<meta property="og:image" content="http://www.guoze.me/images/chisquare-2.png">
+<meta property="og:updated_time" content="2019-09-25T09:58:11.196Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="卡方检验原理及应用">
 <meta name="twitter:description" content="卡方检验，或称x2检验，被誉为二十世纪科学技术所有分支中的20大发明之一，它的发明者卡尔·皮尔逊是一位历史上罕见的百科全书式的学者，研究领域涵盖了生物、历史、宗教、哲学、法律。之前做文本分类项目用过卡方值做特征选择（降维），后来听内部培训，另一个部门说他们有用卡方检验做异常用户的检测，于是就想把卡方检验再温习一次，同时把卡方检验和特征选择串起来理解。">
-<meta name="twitter:image" content="http://7u2obl.com1.z0.glb.clouddn.com/images/chisquare-1.png">
+<meta name="twitter:image" content="http://www.guoze.me/images/chisquare-1.png">
 
 
 
@@ -447,7 +447,7 @@
 </table>
 <p>显然，如果两个变量是独立无关的，那么四格表中的理论值与实际值的差异会非常小。</p>
 <h1 id="x2值的计算"><a href="#x2值的计算" class="headerlink" title="x2值的计算"></a>x2值的计算</h1><p>x2的计算公式为：</p>
-<p><img src="http://7u2obl.com1.z0.glb.clouddn.com/images/chisquare-1.png" alt="x2计算公式"></p>
+<p><img src="/images/chisquare-1.png" alt="x2计算公式"></p>
 <p>其中A为实际值，也就是第一个四格表里的4个数据，T为理论值，也就是理论值四格表里的4个数据。</p>
 <p>x2用于衡量实际值与理论值的差异程度（也就是卡方检验的核心思想），包含了以下两个信息：</p>
 <ul>
@@ -458,7 +458,7 @@
 <h1 id="卡方分布的临界值"><a href="#卡方分布的临界值" class="headerlink" title="卡方分布的临界值"></a>卡方分布的临界值</h1><p>既然已经得到了x2值，我们又怎么知道x2值是否合理？也就是说，怎么知道无关性假设是否可靠？答案是，通过查询卡方分布的临界值表。</p>
 <p>这里需要用到一个<code>自由度</code>的概念，自由度等于<code>V = (行数 - 1) * (列数 - 1)</code>，对四格表，自由度<code>V = 1</code>。</p>
 <p>对<code>V = 1</code>，卡方分布的临界概率是：</p>
-<p><img src="http://7u2obl.com1.z0.glb.clouddn.com/images/chisquare-2.png" alt="卡方分布临界值"></p>
+<p><img src="/images/chisquare-2.png" alt="卡方分布临界值"></p>
 <p>显然<code>10.01 &gt; 7.88</code>，也就是<code>标题是否包含吴亦凡</code>与<code>新闻是否属于娱乐</code>无关的可能性小于0.5%，反过来，就是两者相关的概率大于99.5%。</p>
 <h1 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h1><p>卡方检验的一个典型应用场景是衡量特定条件下的分布是否与理论分布一致，比如：特定用户某项指标的分布与大盘的分布是否差异很大，这时通过临界概率可以合理又科学的筛选异常用户。</p>
 <p>另外，x2值描述了自变量与因变量之间的相关程度：x2值越大，相关程度也越大，所以很自然的可以利用x2值来做降维，保留相关程度大的变量。再回到刚才新闻分类的场景，如果我们希望获取和娱乐类别相关性最强的100个词，以后就按照标题是否包含这100个词来确定新闻是否归属于娱乐类，怎么做？很简单，对娱乐类新闻标题所包含的每个词按上述步骤计算x2值，然后按x2值排序，取x2值最大的100个词。</p>
@@ -716,7 +716,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

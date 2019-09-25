@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="建造者说">
 <meta property="og:description" content="ES的HTTP连接没有提供任何的权限控制措施，一旦部署在公共网络就容易有数据泄露的风险，尤其是加上类似elasticsearch-head这样友好的前端界面，简直让你的数据瞬间裸奔在黑客的眼皮底下。项目上线前做十万伏特的防护当然不现实，但至少，我们不要裸奔，穿一套比基尼吧。而做一个简单的HTTP认证并不需要从头造轮子，elasticsearch-http-basic就提供了针对ES HTTP连接的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-01T15:34:53.000Z">
+<meta property="og:updated_time" content="2019-09-25T09:58:11.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为ElasticSearch添加HTTP基本认证">
 <meta name="twitter:description" content="ES的HTTP连接没有提供任何的权限控制措施，一旦部署在公共网络就容易有数据泄露的风险，尤其是加上类似elasticsearch-head这样友好的前端界面，简直让你的数据瞬间裸奔在黑客的眼皮底下。项目上线前做十万伏特的防护当然不现实，但至少，我们不要裸奔，穿一套比基尼吧。而做一个简单的HTTP认证并不需要从头造轮子，elasticsearch-http-basic就提供了针对ES HTTP连接的">
@@ -449,6 +449,7 @@
 </ul>
 <h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p>ES官方的Python客户端可以通过<code>http_auth</code>配置账号密码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> elasticsearch <span class="keyword">import</span> Elasticsearch</span><br><span class="line">es = Elasticsearch([<span class="string">'localhost'</span>], http_auth=(<span class="string">'your-admin'</span>, <span class="string">'your-password'</span>), port=...)</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -706,7 +707,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

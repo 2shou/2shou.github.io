@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://www.guoze.me/2018/03/14/blockchain-feeds/</loc>
+    <lastmod>2019-09-25T10:47:36.553Z</lastmod>
+    <data>
+        <display>
+        <title>为什么我不看好一切基于区块链的信息流分发平台？</title>
+        <pubTime>2018-03-13T16:17:02.000Z</pubTime>
+        
+        <tag>信息流</tag>
+         
+        <tag>Steemit</tag>
+         
+         
+           
+             
+              <breadCrumb title="区块链" url="http://www.guoze.me/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.guoze.me/2018/04/08/poisonous-chicken-soup/</loc>
     <lastmod>2019-09-25T10:37:09.752Z</lastmod>
     <data>
@@ -566,6 +588,30 @@
 
     
   <url>
+    <loc>http://www.guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/</loc>
+    <lastmod>2019-09-25T09:58:11.231Z</lastmod>
+    <data>
+        <display>
+        <title>用scikit-learn实现朴素贝叶斯分类器</title>
+        <pubTime>2014-06-05T14:50:19.000Z</pubTime>
+        
+        <tag>分类算法</tag>
+         
+        <tag>朴素贝叶斯</tag>
+         
+        <tag>scikit-learn</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.guoze.me/2015/01/14/sae-tornado-experience/</loc>
     <lastmod>2019-09-25T09:58:11.231Z</lastmod>
     <data>
@@ -585,30 +631,6 @@
            
              
               <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/</loc>
-    <lastmod>2019-09-25T09:58:11.231Z</lastmod>
-    <data>
-        <display>
-        <title>用scikit-learn实现朴素贝叶斯分类器</title>
-        <pubTime>2014-06-05T14:50:19.000Z</pubTime>
-        
-        <tag>分类算法</tag>
-         
-        <tag>朴素贝叶斯</tag>
-         
-        <tag>scikit-learn</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
           
         </display>
     </data>
@@ -1562,28 +1584,6 @@
         <pubTime>2018-03-06T15:05:52.000Z</pubTime>
         
         <tag>比特币</tag>
-         
-         
-           
-             
-              <breadCrumb title="区块链" url="http://www.guoze.me/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/2018/03/14/blockchain-feeds/</loc>
-    <lastmod>2019-09-25T09:58:11.193Z</lastmod>
-    <data>
-        <display>
-        <title>为什么我不看好一切基于区块链的信息流分发平台？</title>
-        <pubTime>2018-03-13T16:17:02.000Z</pubTime>
-        
-        <tag>信息流</tag>
-         
-        <tag>Steemit</tag>
          
          
            

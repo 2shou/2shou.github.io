@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.guoze.me/2018/03/14/blockchain-feeds/</loc>
+    
+    <lastmod>2019-09-25T10:47:36.553Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.guoze.me/2018/04/08/poisonous-chicken-soup/</loc>
     
     <lastmod>2019-09-25T10:37:09.752Z</lastmod>
@@ -177,14 +184,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/01/14/sae-tornado-experience/</loc>
+    <loc>http://www.guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/</loc>
     
     <lastmod>2019-09-25T09:58:11.231Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/</loc>
+    <loc>http://www.guoze.me/2015/01/14/sae-tornado-experience/</loc>
     
     <lastmod>2019-09-25T09:58:11.231Z</lastmod>
     
@@ -495,13 +502,6 @@
     <loc>http://www.guoze.me/2018/03/06/blockchain-scare/</loc>
     
     <lastmod>2019-09-25T09:58:11.194Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.guoze.me/2018/03/14/blockchain-feeds/</loc>
-    
-    <lastmod>2019-09-25T09:58:11.193Z</lastmod>
     
   </url>
   

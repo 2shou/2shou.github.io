@@ -4,7 +4,7 @@
 
     
   <url>
-    <loc>http://www.guoze.me/2019/09/26/telent-limited-company/</loc>
+    <loc>http://www.guoze.me/2019/09/26/talent-limited-company/</loc>
     <lastmod>2019-09-26T08:09:44.591Z</lastmod>
     <data>
         <display>
@@ -660,6 +660,30 @@
 
     
   <url>
+    <loc>http://www.guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/</loc>
+    <lastmod>2019-09-25T09:58:11.231Z</lastmod>
+    <data>
+        <display>
+        <title>用scikit-learn实现朴素贝叶斯分类器</title>
+        <pubTime>2014-06-05T14:50:19.000Z</pubTime>
+        
+        <tag>分类算法</tag>
+         
+        <tag>朴素贝叶斯</tag>
+         
+        <tag>scikit-learn</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.guoze.me/2015/01/14/sae-tornado-experience/</loc>
     <lastmod>2019-09-25T09:58:11.231Z</lastmod>
     <data>
@@ -679,30 +703,6 @@
            
              
               <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/</loc>
-    <lastmod>2019-09-25T09:58:11.231Z</lastmod>
-    <data>
-        <display>
-        <title>用scikit-learn实现朴素贝叶斯分类器</title>
-        <pubTime>2014-06-05T14:50:19.000Z</pubTime>
-        
-        <tag>分类算法</tag>
-         
-        <tag>朴素贝叶斯</tag>
-         
-        <tag>scikit-learn</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
           
         </display>
     </data>

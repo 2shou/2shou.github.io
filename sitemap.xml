@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.guoze.me/2019/09/26/telent-limited-company/</loc>
+    
+    <lastmod>2019-09-26T08:09:44.591Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.guoze.me/2019/09/26/hot-winter/</loc>
+    
+    <lastmod>2019-09-26T08:08:04.534Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.guoze.me/2019/09/26/tech-leader/</loc>
+    
+    <lastmod>2019-09-26T08:03:40.561Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.guoze.me/2019/09/26/data-science-future/</loc>
+    
+    <lastmod>2019-09-26T08:01:52.808Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.guoze.me/2018/03/04/weapp-2018-chance/</loc>
     
     <lastmod>2019-09-25T10:50:38.201Z</lastmod>
@@ -44,14 +72,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2016/06/26/youth-only/</loc>
+    <loc>http://www.guoze.me/2017/12/18/youth-only-sequel/</loc>
     
     <lastmod>2019-09-25T09:58:11.249Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2017/12/18/youth-only-sequel/</loc>
+    <loc>http://www.guoze.me/2016/06/26/youth-only/</loc>
     
     <lastmod>2019-09-25T09:58:11.249Z</lastmod>
     
@@ -86,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/01/31/tornado-log-perday/</loc>
+    <loc>http://www.guoze.me/2018/03/15/to-hawking/</loc>
     
     <lastmod>2019-09-25T09:58:11.241Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2018/03/15/to-hawking/</loc>
+    <loc>http://www.guoze.me/2015/01/31/tornado-log-perday/</loc>
     
     <lastmod>2019-09-25T09:58:11.241Z</lastmod>
     
@@ -156,14 +184,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/03/22/spark-dataframe/</loc>
+    <loc>http://www.guoze.me/2015/01/07/spark-log-extract/</loc>
     
     <lastmod>2019-09-25T09:58:11.234Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/01/07/spark-log-extract/</loc>
+    <loc>http://www.guoze.me/2015/03/22/spark-dataframe/</loc>
     
     <lastmod>2019-09-25T09:58:11.234Z</lastmod>
     
@@ -184,14 +212,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/</loc>
+    <loc>http://www.guoze.me/2015/01/14/sae-tornado-experience/</loc>
     
     <lastmod>2019-09-25T09:58:11.231Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/01/14/sae-tornado-experience/</loc>
+    <loc>http://www.guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/</loc>
     
     <lastmod>2019-09-25T09:58:11.231Z</lastmod>
     
@@ -331,14 +359,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2016/06/26/how-to-google/</loc>
+    <loc>http://www.guoze.me/2014/12/19/impala-compute-stats/</loc>
     
     <lastmod>2019-09-25T09:58:11.216Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2014/12/19/impala-compute-stats/</loc>
+    <loc>http://www.guoze.me/2016/06/26/how-to-google/</loc>
     
     <lastmod>2019-09-25T09:58:11.216Z</lastmod>
     
@@ -352,14 +380,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2017/12/31/goodbye-2017/</loc>
+    <loc>http://www.guoze.me/2015/04/23/hbase-observer-sync-elasticsearch/</loc>
     
     <lastmod>2019-09-25T09:58:11.214Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/04/23/hbase-observer-sync-elasticsearch/</loc>
+    <loc>http://www.guoze.me/2017/12/31/goodbye-2017/</loc>
     
     <lastmod>2019-09-25T09:58:11.214Z</lastmod>
     
@@ -450,14 +478,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2015/12/12/data-geek/</loc>
+    <loc>http://www.guoze.me/2016/05/14/crawler-attack-defense/</loc>
     
     <lastmod>2019-09-25T09:58:11.198Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2016/05/14/crawler-attack-defense/</loc>
+    <loc>http://www.guoze.me/2015/12/12/data-geek/</loc>
     
     <lastmod>2019-09-25T09:58:11.198Z</lastmod>
     
@@ -492,14 +520,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2014/07/12/blog-rule/</loc>
+    <loc>http://www.guoze.me/2018/03/06/blockchain-scare/</loc>
     
     <lastmod>2019-09-25T09:58:11.194Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/2018/03/06/blockchain-scare/</loc>
+    <loc>http://www.guoze.me/2014/07/12/blog-rule/</loc>
     
     <lastmod>2019-09-25T09:58:11.194Z</lastmod>
     
@@ -541,14 +569,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/tags/index.html</loc>
+    <loc>http://www.guoze.me/categories/index.html</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/categories/index.html</loc>
+    <loc>http://www.guoze.me/tags/index.html</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     

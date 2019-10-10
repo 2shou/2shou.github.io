@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/youth-only.html</loc>
+    <loc>http://www.guoze.me/youth-only-sequel.html</loc>
     
     <lastmod>2019-09-25T09:58:11.249Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/youth-only-sequel.html</loc>
+    <loc>http://www.guoze.me/youth-only.html</loc>
     
     <lastmod>2019-09-25T09:58:11.249Z</lastmod>
     
@@ -156,14 +156,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/tornado-log-perday.html</loc>
+    <loc>http://www.guoze.me/to-hawking.html</loc>
     
     <lastmod>2019-09-25T09:58:11.241Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/to-hawking.html</loc>
+    <loc>http://www.guoze.me/tornado-log-perday.html</loc>
     
     <lastmod>2019-09-25T09:58:11.241Z</lastmod>
     
@@ -177,14 +177,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/the-success-equation.html</loc>
+    <loc>http://www.guoze.me/the-hard-thing-about-hard-things.html</loc>
     
     <lastmod>2019-09-25T09:58:11.239Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/the-hard-thing-about-hard-things.html</loc>
+    <loc>http://www.guoze.me/the-success-equation.html</loc>
     
     <lastmod>2019-09-25T09:58:11.239Z</lastmod>
     
@@ -205,14 +205,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/svm-introduction.html</loc>
+    <loc>http://www.guoze.me/svm-knowledge.html</loc>
     
     <lastmod>2019-09-25T09:58:11.236Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/svm-knowledge.html</loc>
+    <loc>http://www.guoze.me/svm-introduction.html</loc>
     
     <lastmod>2019-09-25T09:58:11.236Z</lastmod>
     
@@ -296,14 +296,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/python-phantomjs-crawler.html</loc>
+    <loc>http://www.guoze.me/programmer-pm-comunication.html</loc>
     
     <lastmod>2019-09-25T09:58:11.227Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/programmer-pm-comunication.html</loc>
+    <loc>http://www.guoze.me/python-phantomjs-crawler.html</loc>
     
     <lastmod>2019-09-25T09:58:11.227Z</lastmod>
     
@@ -338,14 +338,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/matplotlib-par-chart.html</loc>
+    <loc>http://www.guoze.me/macbook-pro-experience.html</loc>
     
     <lastmod>2019-09-25T09:58:11.222Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/macbook-pro-experience.html</loc>
+    <loc>http://www.guoze.me/matplotlib-par-chart.html</loc>
     
     <lastmod>2019-09-25T09:58:11.222Z</lastmod>
     
@@ -373,14 +373,14 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/libshorttext-introduction.html</loc>
+    <loc>http://www.guoze.me/libshorttext-setup-script.html</loc>
     
     <lastmod>2019-09-25T09:58:11.219Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/libshorttext-setup-script.html</loc>
+    <loc>http://www.guoze.me/libshorttext-introduction.html</loc>
     
     <lastmod>2019-09-25T09:58:11.219Z</lastmod>
     
@@ -485,13 +485,6 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/elasticsearch-http-basic-authentication.html</loc>
-    
-    <lastmod>2019-09-25T09:58:11.201Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.guoze.me/elasticsearch-optimization.html</loc>
     
     <lastmod>2019-09-25T09:58:11.201Z</lastmod>
@@ -499,14 +492,21 @@
   </url>
   
   <url>
-    <loc>http://www.guoze.me/crawler-attack-defense.html</loc>
+    <loc>http://www.guoze.me/elasticsearch-http-basic-authentication.html</loc>
+    
+    <lastmod>2019-09-25T09:58:11.201Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.guoze.me/data-geek.html</loc>
     
     <lastmod>2019-09-25T09:58:11.198Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.guoze.me/data-geek.html</loc>
+    <loc>http://www.guoze.me/crawler-attack-defense.html</loc>
     
     <lastmod>2019-09-25T09:58:11.198Z</lastmod>
     

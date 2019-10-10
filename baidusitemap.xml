@@ -3,6 +3,89 @@
 
 
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   <url>
     <loc>http://www.guoze.me/algorithm-bubble.html</loc>
     <lastmod>2019-10-10T06:18:06.904Z</lastmod>
@@ -452,28 +535,6 @@
 
     
   <url>
-    <loc>http://www.guoze.me/to-hawking.html</loc>
-    <lastmod>2019-09-25T09:58:11.241Z</lastmod>
-    <data>
-        <display>
-        <title>致敬霍金，致敬每个懵懂少年的物理梦</title>
-        <pubTime>2018-03-14T16:23:01.000Z</pubTime>
-        
-        <tag>霍金</tag>
-         
-        <tag>物理学</tag>
-         
-         
-           
-             
-              <breadCrumb title="梦中语" url="http://www.guoze.me/categories/thinking/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.guoze.me/tornado-log-perday.html</loc>
     <lastmod>2019-09-25T09:58:11.241Z</lastmod>
     <data>
@@ -495,6 +556,28 @@
            
              
               <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/to-hawking.html</loc>
+    <lastmod>2019-09-25T09:58:11.241Z</lastmod>
+    <data>
+        <display>
+        <title>致敬霍金，致敬每个懵懂少年的物理梦</title>
+        <pubTime>2018-03-14T16:23:01.000Z</pubTime>
+        
+        <tag>霍金</tag>
+         
+        <tag>物理学</tag>
+         
+         
+           
+             
+              <breadCrumb title="梦中语" url="http://www.guoze.me/categories/thinking/"/>
           
         </display>
     </data>
@@ -620,12 +703,12 @@
 
     
   <url>
-    <loc>http://www.guoze.me/svm-knowledge.html</loc>
+    <loc>http://www.guoze.me/svm-introduction.html</loc>
     <lastmod>2019-09-25T09:58:11.236Z</lastmod>
     <data>
         <display>
-        <title>SVM十问十答</title>
-        <pubTime>2014-11-26T15:20:12.000Z</pubTime>
+        <title>SVM原理简介：最大间隔分类器</title>
+        <pubTime>2014-07-14T05:06:11.000Z</pubTime>
         
         <tag>分类算法</tag>
          
@@ -644,12 +727,12 @@
 
     
   <url>
-    <loc>http://www.guoze.me/svm-introduction.html</loc>
+    <loc>http://www.guoze.me/svm-knowledge.html</loc>
     <lastmod>2019-09-25T09:58:11.236Z</lastmod>
     <data>
         <display>
-        <title>SVM原理简介：最大间隔分类器</title>
-        <pubTime>2014-07-14T05:06:11.000Z</pubTime>
+        <title>SVM十问十答</title>
+        <pubTime>2014-11-26T15:20:12.000Z</pubTime>
         
         <tag>分类算法</tag>
          
@@ -784,6 +867,30 @@
 
     
   <url>
+    <loc>http://www.guoze.me/scikit-learn-naive-bayes-classifier.html</loc>
+    <lastmod>2019-09-25T09:58:11.231Z</lastmod>
+    <data>
+        <display>
+        <title>用scikit-learn实现朴素贝叶斯分类器</title>
+        <pubTime>2014-06-05T14:50:19.000Z</pubTime>
+        
+        <tag>分类算法</tag>
+         
+        <tag>朴素贝叶斯</tag>
+         
+        <tag>scikit-learn</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.guoze.me/sae-tornado-experience.html</loc>
     <lastmod>2019-09-25T09:58:11.231Z</lastmod>
     <data>
@@ -803,30 +910,6 @@
            
              
               <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/scikit-learn-naive-bayes-classifier.html</loc>
-    <lastmod>2019-09-25T09:58:11.231Z</lastmod>
-    <data>
-        <display>
-        <title>用scikit-learn实现朴素贝叶斯分类器</title>
-        <pubTime>2014-06-05T14:50:19.000Z</pubTime>
-        
-        <tag>分类算法</tag>
-         
-        <tag>朴素贝叶斯</tag>
-         
-        <tag>scikit-learn</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
           
         </display>
     </data>
@@ -878,18 +961,16 @@
 
     
   <url>
-    <loc>http://www.guoze.me/python-quick-orm.html</loc>
+    <loc>http://www.guoze.me/r-multi-ggplot.html</loc>
     <lastmod>2019-09-25T09:58:11.228Z</lastmod>
     <data>
         <display>
-        <title>100行代码还你一个Python ORM</title>
-        <pubTime>2015-01-04T09:47:00.000Z</pubTime>
+        <title>使用ggplot2同时绘制多个密度图</title>
+        <pubTime>2016-03-09T13:26:29.000Z</pubTime>
         
-        <tag>Python</tag>
+        <tag>R语言</tag>
          
-        <tag>MySQL</tag>
-         
-        <tag>ORM</tag>
+        <tag>ggplot2</tag>
          
          
            
@@ -902,16 +983,18 @@
 
     
   <url>
-    <loc>http://www.guoze.me/r-multi-ggplot.html</loc>
+    <loc>http://www.guoze.me/python-quick-orm.html</loc>
     <lastmod>2019-09-25T09:58:11.228Z</lastmod>
     <data>
         <display>
-        <title>使用ggplot2同时绘制多个密度图</title>
-        <pubTime>2016-03-09T13:26:29.000Z</pubTime>
+        <title>100行代码还你一个Python ORM</title>
+        <pubTime>2015-01-04T09:47:00.000Z</pubTime>
         
-        <tag>R语言</tag>
+        <tag>Python</tag>
          
-        <tag>ggplot2</tag>
+        <tag>MySQL</tag>
+         
+        <tag>ORM</tag>
          
          
            
@@ -1052,28 +1135,6 @@
 
     
   <url>
-    <loc>http://www.guoze.me/macbook-pro-experience.html</loc>
-    <lastmod>2019-09-25T09:58:11.222Z</lastmod>
-    <data>
-        <display>
-        <title>深度使用 2016 MacBook Pro是怎样的体验？</title>
-        <pubTime>2016-12-22T15:29:42.000Z</pubTime>
-        
-        <tag>苹果</tag>
-         
-        <tag>MacBook</tag>
-         
-         
-           
-             
-              <breadCrumb title="产品控" url="http://www.guoze.me/categories/product/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.guoze.me/matplotlib-par-chart.html</loc>
     <lastmod>2019-09-25T09:58:11.222Z</lastmod>
     <data>
@@ -1089,6 +1150,28 @@
            
              
               <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/macbook-pro-experience.html</loc>
+    <lastmod>2019-09-25T09:58:11.222Z</lastmod>
+    <data>
+        <display>
+        <title>深度使用 2016 MacBook Pro是怎样的体验？</title>
+        <pubTime>2016-12-22T15:29:42.000Z</pubTime>
+        
+        <tag>苹果</tag>
+         
+        <tag>MacBook</tag>
+         
+         
+           
+             
+              <breadCrumb title="产品控" url="http://www.guoze.me/categories/product/"/>
           
         </display>
     </data>
@@ -1268,6 +1351,26 @@
 
     
   <url>
+    <loc>http://www.guoze.me/impala-compute-stats.html</loc>
+    <lastmod>2019-09-25T09:58:11.216Z</lastmod>
+    <data>
+        <display>
+        <title>Impala的神奇指令「COMPUTE STATS」</title>
+        <pubTime>2014-12-19T07:32:31.000Z</pubTime>
+        
+        <tag>Impala</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.guoze.me/how-to-google.html</loc>
     <lastmod>2019-09-25T09:58:11.216Z</lastmod>
     <data>
@@ -1283,26 +1386,6 @@
            
              
               <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/impala-compute-stats.html</loc>
-    <lastmod>2019-09-25T09:58:11.216Z</lastmod>
-    <data>
-        <display>
-        <title>Impala的神奇指令「COMPUTE STATS」</title>
-        <pubTime>2014-12-19T07:32:31.000Z</pubTime>
-        
-        <tag>Impala</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
           
         </display>
     </data>
@@ -1332,6 +1415,24 @@
 
     
   <url>
+    <loc>http://www.guoze.me/goodbye-2017.html</loc>
+    <lastmod>2019-09-25T09:58:11.214Z</lastmod>
+    <data>
+        <display>
+        <title>拜拜，2017</title>
+        <pubTime>2017-12-31T03:56:57.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="梦中语" url="http://www.guoze.me/categories/thinking/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.guoze.me/hbase-observer-sync-elasticsearch.html</loc>
     <lastmod>2019-09-25T09:58:11.214Z</lastmod>
     <data>
@@ -1351,24 +1452,6 @@
            
              
               <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.guoze.me/goodbye-2017.html</loc>
-    <lastmod>2019-09-25T09:58:11.214Z</lastmod>
-    <data>
-        <display>
-        <title>拜拜，2017</title>
-        <pubTime>2017-12-31T03:56:57.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="梦中语" url="http://www.guoze.me/categories/thinking/"/>
           
         </display>
     </data>
@@ -1520,28 +1603,6 @@
 
     
   <url>
-    <loc>http://www.guoze.me/elasticsearch-optimization.html</loc>
-    <lastmod>2019-09-25T09:58:11.201Z</lastmod>
-    <data>
-        <display>
-        <title>ElasticSearch的部署、同步与调优</title>
-        <pubTime>2015-04-04T07:03:25.000Z</pubTime>
-        
-        <tag>ElasticSearch</tag>
-         
-        <tag>搜索</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.guoze.me/elasticsearch-http-basic-authentication.html</loc>
     <lastmod>2019-09-25T09:58:11.201Z</lastmod>
     <data>
@@ -1566,19 +1627,21 @@
 
     
   <url>
-    <loc>http://www.guoze.me/data-geek.html</loc>
-    <lastmod>2019-09-25T09:58:11.198Z</lastmod>
+    <loc>http://www.guoze.me/elasticsearch-optimization.html</loc>
+    <lastmod>2019-09-25T09:58:11.201Z</lastmod>
     <data>
         <display>
-        <title>4个小例子告诉你：如何成为一名数据极客</title>
-        <pubTime>2015-12-12T10:17:17.000Z</pubTime>
+        <title>ElasticSearch的部署、同步与调优</title>
+        <pubTime>2015-04-04T07:03:25.000Z</pubTime>
         
-        <tag>大数据</tag>
+        <tag>ElasticSearch</tag>
+         
+        <tag>搜索</tag>
          
          
            
              
-              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
+              <breadCrumb title="技术控" url="http://www.guoze.me/categories/programming/"/>
           
         </display>
     </data>
@@ -1596,6 +1659,26 @@
         <tag>爬虫</tag>
          
         <tag>反爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据控" url="http://www.guoze.me/categories/data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.guoze.me/data-geek.html</loc>
+    <lastmod>2019-09-25T09:58:11.198Z</lastmod>
+    <data>
+        <display>
+        <title>4个小例子告诉你：如何成为一名数据极客</title>
+        <pubTime>2015-12-12T10:17:17.000Z</pubTime>
+        
+        <tag>大数据</tag>
          
          
            

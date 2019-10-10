@@ -1,0 +1,853 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="比特币," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="科技圈现在都快比得上娱乐圈了，过气的速度以月为计，AI还没火透就眼睁睁要熄灭了，春节前就被各种区块链三点钟群轰炸，似乎再不谈区块链就赶不上时代了。不能免俗，我也关注了一把，趁着假期通读了比特币、以太坊和EOS的白皮书，也花了点小钱当熟悉数字货币的交易流程。至于心情嘛，一是震惊，震惊于中本聪的才华，几乎以一人之力横跨密码学和网络工程，把数字货币从理论变成了现实，更造出了一场这么宏大壮观的社会实验（我">
+<meta name="keywords" content="比特币">
+<meta property="og:type" content="article">
+<meta property="og:title" content="区块链，就当一场大梦罢了">
+<meta property="og:url" content="http://www.guoze.me/blockchain-big-dream.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="科技圈现在都快比得上娱乐圈了，过气的速度以月为计，AI还没火透就眼睁睁要熄灭了，春节前就被各种区块链三点钟群轰炸，似乎再不谈区块链就赶不上时代了。不能免俗，我也关注了一把，趁着假期通读了比特币、以太坊和EOS的白皮书，也花了点小钱当熟悉数字货币的交易流程。至于心情嘛，一是震惊，震惊于中本聪的才华，几乎以一人之力横跨密码学和网络工程，把数字货币从理论变成了现实，更造出了一场这么宏大壮观的社会实验（我">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.guoze.me/images/mining-machine.jpg">
+<meta property="og:updated_time" content="2019-09-25T09:58:11.191Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="区块链，就当一场大梦罢了">
+<meta name="twitter:description" content="科技圈现在都快比得上娱乐圈了，过气的速度以月为计，AI还没火透就眼睁睁要熄灭了，春节前就被各种区块链三点钟群轰炸，似乎再不谈区块链就赶不上时代了。不能免俗，我也关注了一把，趁着假期通读了比特币、以太坊和EOS的白皮书，也花了点小钱当熟悉数字货币的交易流程。至于心情嘛，一是震惊，震惊于中本聪的才华，几乎以一人之力横跨密码学和网络工程，把数字货币从理论变成了现实，更造出了一场这么宏大壮观的社会实验（我">
+<meta name="twitter:image" content="http://www.guoze.me/images/mining-machine.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.guoze.me/blockchain-big-dream.html"/>
+
+
+
+
+
+  <title>区块链，就当一场大梦罢了 | 建造者说</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-54995139-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?55fe062fca0976556582ea6acabf6a89";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">建造者说</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">总在造着什么的路上</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.guoze.me/blockchain-big-dream.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">区块链，就当一场大梦罢了</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-27T10:43:23+08:00">
+                2018-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/区块链/" itemprop="url" rel="index">
+                    <span itemprop="name">区块链</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/blockchain-big-dream.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="blockchain-big-dream.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>科技圈现在都快比得上娱乐圈了，过气的速度以月为计，AI还没火透就眼睁睁要熄灭了，春节前就被各种区块链三点钟群轰炸，似乎再不谈区块链就赶不上时代了。不能免俗，我也关注了一把，趁着假期通读了比特币、以太坊和EOS的白皮书，也花了点小钱当熟悉数字货币的交易流程。至于心情嘛，一是震惊，震惊于中本聪的才华，几乎以一人之力横跨密码学和网络工程，把数字货币从理论变成了现实，更造出了一场这么宏大壮观的社会实验（我想，这并不是他的本意）；二是懊悔，懊悔是必然的，如果那么的句式反复千百遍也不足以掩饰无视比特币的愚蠢，就放佛不久前还把<strong>投资未来</strong>作为技术人的信条放在嘴边，而事实上当一个看不懂的新鲜事物出现之时，下意识的举动却是否定它远离它不愿学习它，而最终的被动接受更显得荒谬；三是冷静，正如一位哥们说的，链圈和币圈是两个截然不同的圈子，链圈聚焦于技术，而币圈聚焦于发财，从区块链目前的技术发展而言，和大数据一样属于婴儿期，这也是为什么中本聪08年提出比特币之后，区块链技术并没有大规模被应用于现实之中的原因。这里我部分同意雕爷的观点，区块链的去中心化导致效率低下（<em>要知道比特币确认一笔交易需要长达十分钟</em>），因为区块链网络的算力都用于对抗欺诈的发生，而在中心化的交易网络之中，这种事情只需要交给第三方比如支付宝。</p>
+<a id="more"></a>
+<p>如果你想学习区块链的基础知识，可以阅读阮一峰的<a href="https://mp.weixin.qq.com/s/ZBKO1xAQIqIHY0JevXm3ew" target="_blank" rel="noopener">区块链入门教程</a>。</p>
+<p>行，再信马由缰写点对区块链的零星想法。</p>
+<h1 id="1、比特币保值么？"><a href="#1、比特币保值么？" class="headerlink" title="1、比特币保值么？"></a>1、比特币保值么？</h1><p>这是我与一位做投资的朋友聊天的时候，我们争论最激烈的话题。过去十年涨幅最大的是什么？很多人以为是房子，实际上书画古玩珠宝钻石等更具稀缺性的商品涨得更凶。比特币的内在价值为零，可无论是收藏品还是脱离了金本位制度的货币，它们的内在价值也几乎为零。那它们的真正价值来源于何处呢？<strong>来源于形成了一个群体的共同想象</strong>。比如钻石是坚贞爱情的象征，比如毕加索的油画是立体主义和超现实主义的象征，这是无可取代的，更是独一无二的。那么比特币是不是数字货币的象征呢？当然是！作为地球上第一种运转起来的数字货币，它是独一无二的。同时比特币约定了上限2100万枚而且挖矿难度随时间递增，天然就是稀缺的投资品属性。</p>
+<p>有位哥们说，比特币是郁金香是钻石，就看故事讲得怎么样了。我反驳：首先比特币的想象要比郁金香更强，因为是未来的一种科技趋势；其次比特币并不能被轻易复制，事实上现在一枚比特币的挖矿成本早已超过了7000美金。</p>
+<p>或者这么说，比特币的基础内在价值就是，<strong>少数极客对数字货币这个未来想象的信仰</strong>。</p>
+<p>PS1：利益相关，我没有持有任何的比特币。</p>
+<p>PS2：这里的比特币不能被其他任意数字货币替代。</p>
+<p>PS3：仅是个人见解，请勿作为投资取向，后果自负。</p>
+<h1 id="2、区块链存在泡沫么？"><a href="#2、区块链存在泡沫么？" class="headerlink" title="2、区块链存在泡沫么？"></a>2、区块链存在泡沫么？</h1><p>当然存在泡沫。连某三线城市的阿姨，抛弃耳机生意购入20余台矿机，昼夜不停的产出比特币，拥抱新技术的速度之快让我自愧不如。</p>
+<p><img src="/images/mining-machine.jpg" alt="春节回乡拍摄的“矿机”"></p>
+<p>相信你也听过了不少大妈炒币的段子。但是！数字货币的投资毕竟是有门槛的，想必要和你妈解释公钥私钥的概念，你都要费好一番口舌。至少从目前（2018年2月）的数据看，这个泡沫还没有发展到顶峰，国内参与ICO的人数不到200万，而A股的活跃投资者早已突破了1.3亿，大部分人仍在数字货币的圈外观望着。</p>
+<p>PS1：泡沫的美妙之处就在于，你永远不知道它什么时候爆裂。</p>
+<p>PS2：仅是个人见解，请勿作为投资取向，后果自负。</p>
+<h1 id="3、区块链的技术价值大不大？"><a href="#3、区块链的技术价值大不大？" class="headerlink" title="3、区块链的技术价值大不大？"></a>3、区块链的技术价值大不大？</h1><p>我认为区块链技术有以下问题导致难以被大规模应用：</p>
+<p>a. 去中心化。去中心化意味着没有惟一的信用中介，也意味着所有交易都是透明的，你和任何人的交易都存在我的钱包之中，我和任何人的交易都要全网广播，经过矿工打包后抵达所有人的钱包。<strong>大量多余的网络通信和存储空间被区块链消耗了</strong>。</p>
+<p>b. 工作量证明。要过滤掉不可信的交易记录，中本聪引入了矿工的概念，矿工其实就相当于网络之中的记账员，负责把交易记录打包为区块，矿工会竞争去暴力破解区块头的随机数，最终赢得记账的比特币奖励，这也是比特币生产出来的惟一方式。<strong>大量多余的计算能力被区块链消耗了</strong>。</p>
+<p>那么问题就非常清晰了，区块链的分布式信任建立的前提是，牺牲了网络的效率，不管是通信、存储还是计算。这也是后来无论以太坊还是EOS的重点改进方向。</p>
+<p>然后我不得不思考两个问题。</p>
+<p><strong>一是对普通人而言，这种分布式的信任重要么？</strong>大部分人并不担心自己的交易数据存储到银行或者支付宝手中，也并不担心虚假交易会发生在自己头上。欺诈存在然而信用中介处理欺诈的成本并不高，至少和区块链带来的额外消耗相比。</p>
+<p><strong>二是在非交易场景，引入区块链技术值得么？</strong>无论是智能合约还是评论防刷，区块链技术的引入确实能解决信任的问题，但同时也意味着原有系统的彻底重构，每个人的公钥私钥怎么生成？什么？为了租个房子我需要下载上百G的交易记录？Are you kidding？</p>
+<h1 id="4、区块链不环保？"><a href="#4、区块链不环保？" class="headerlink" title="4、区块链不环保？"></a>4、区块链不环保？</h1><p>是的，在敲下这行文字的数秒间，我们这个资源匮乏的星球之上，有数以千万的矿机轰鸣，就为了争夺每十分钟生产的25枚虚拟的数字货币。这一点都不环保，听起来还有点可笑。可反过来如果抱着实用主义的观点看待问题，还有许多不环保的现象，比如数以亿记的玩家在虚拟世界之中消耗电能，就为了最后能吃鸡？然后又怎么看待宗教和祭祀？从更高远的层面，人类为了共同的想象和信仰消耗一点电能，也没有什么了不起的。</p>
+<p>好吧，以上都是关于区块链的<strong>迷思</strong>。关于区块链，我也在持续的学习之中，欢迎和我一起探讨，甚至激烈辩论。</p>
+<p><strong>区块链是一场大梦，但是，正是梦，推动了人类的变革与进步，不是么？</strong></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/qr-code.jpg" alt="2shou wechat" style="width: 200px; max-width: 100%;"/>
+    <div>更多精彩内容，欢迎关注微信公众号「极客思享」</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/比特币/" rel="tag"># 比特币</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blockchain-decentration.html" rel="next" title="为什么说区块链的去中心化是个伪命题？">
+                <i class="fa fa-chevron-left"></i> 为什么说区块链的去中心化是个伪命题？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/weapp-2018-chance.html" rel="prev" title="2018年来了，小程序仍然是风口吗？">
+                2018年来了，小程序仍然是风口吗？ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="2shou" />
+          <p class="site-author-name" itemprop="name">2shou</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">81</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">101</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/2shou" target="_blank" rel="external nofollow">GitHub</a>
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-guo-ze" target="_blank" rel="external nofollow">知乎</a>
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhangguoze" target="_blank" rel="external nofollow">微博</a>
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1、比特币保值么？"><span class="nav-number">1.</span> <span class="nav-text">1、比特币保值么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2、区块链存在泡沫么？"><span class="nav-number">2.</span> <span class="nav-text">2、区块链存在泡沫么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3、区块链的技术价值大不大？"><span class="nav-number">3.</span> <span class="nav-text">3、区块链的技术价值大不大？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4、区块链不环保？"><span class="nav-number">4.</span> <span class="nav-text">4、区块链不环保？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://2shou-1.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://www.guoze.me/blockchain-big-dream.html';
+          this.page.identifier = 'blockchain-big-dream.html';
+          this.page.title = '区块链，就当一场大梦罢了';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://2shou-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

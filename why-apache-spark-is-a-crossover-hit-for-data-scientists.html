@@ -1,0 +1,865 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Spark,Scala," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="翻译自：Why Apache Spark is a Crossover Hit for Data Scientists，有删减。 Spark是一个超有潜力的通用数据计算平台，无论是对统计科学家还是数据工程师。">
+<meta name="keywords" content="Spark,Scala">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么Spark将成为数据科学家的统一平台">
+<meta property="og:url" content="http://www.guoze.me/why-apache-spark-is-a-crossover-hit-for-data-scientists.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="翻译自：Why Apache Spark is a Crossover Hit for Data Scientists，有删减。 Spark是一个超有潜力的通用数据计算平台，无论是对统计科学家还是数据工程师。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-25T09:58:11.246Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="为什么Spark将成为数据科学家的统一平台">
+<meta name="twitter:description" content="翻译自：Why Apache Spark is a Crossover Hit for Data Scientists，有删减。 Spark是一个超有潜力的通用数据计算平台，无论是对统计科学家还是数据工程师。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.guoze.me/why-apache-spark-is-a-crossover-hit-for-data-scientists.html"/>
+
+
+
+
+
+  <title>为什么Spark将成为数据科学家的统一平台 | 建造者说</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-54995139-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?55fe062fca0976556582ea6acabf6a89";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">建造者说</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">总在造着什么的路上</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.guoze.me/why-apache-spark-is-a-crossover-hit-for-data-scientists.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">为什么Spark将成为数据科学家的统一平台</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-09-16T16:26:26+08:00">
+                2014-09-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/data/" itemprop="url" rel="index">
+                    <span itemprop="name">数据控</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/why-apache-spark-is-a-crossover-hit-for-data-scientists.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="why-apache-spark-is-a-crossover-hit-for-data-scientists.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><em>翻译自：<a href="http://blog.cloudera.com/blog/2014/03/why-apache-spark-is-a-crossover-hit-for-data-scientists/" target="_blank" rel="noopener">Why Apache Spark is a Crossover Hit for Data Scientists</a>，有删减。</em></p>
+<p><strong>Spark是一个超有潜力的通用数据计算平台，无论是对统计科学家还是数据工程师。</strong><br><a id="more"></a><br>数据科学是一个广阔的领域。我自认是一个数据科学家，但和另外一批数据科学家又有很多的不同。数据科学家通常分为统计科学家和数据工程师两个阵营，而我正处于第二阵营。<br>统计科学家使用交互式的统计工具（比如R）来回答数据中的问题，获得全景的认识。与之相比，数据工程师则更像一名程序员，他们在服务器上编写代码，创建和应用机器学习模型，熟悉C++和Java等系统级语言，经常需要和企业级数据中心的某些组件打交道，比如Hadoop。<br>而有的数据科学家专注于更细的领域，就像精通R但从未听说过Python或者scikit-learn（反之亦然），即便两者都提供了丰富的统计库。</p>
+<h1 id="不完美的统计工具"><a href="#不完美的统计工具" class="headerlink" title="不完美的统计工具"></a>不完美的统计工具</h1><p>如果可以提供一种统一的工具，运行在统一的架构，用统一的语言编程，并可以同时满足统计科学家和数据工程师的需求，那该多好啊。我一开始就精通Java，难道为了研究数据，我就必须去学一种像Python或R的语言？我一直使用传统的数据分析工具，难道为了应对大规模计算，就必须去懂MapReduce？正是统计工具的不完美造就了这种局面：</p>
+<ul>
+<li>R提供了一个丰富的统计分析和机器学习的解释器。但R难以在分布式条件下执行数据的分析和清洗，以便开展其所擅长的数据分析，也不以一种主流的开发语言为人所知。</li>
+<li>Python是一种通用的编程语言，也不乏出色的第三方数据分析库（像Pandas和scikit-learn），但Python也有和R一样的缺陷：只能局限在处理单机能负载的数据量。</li>
+<li>在经典的MapReduce计算框架上开发分布式的机器学习算法是可行的（参考Mahout），但程序员需要从零开始，更别说移植复杂计算的难度。</li>
+<li>为降低复杂计算移植到MapReduce的难度，Crunch提供一个简单的、傻瓜式的Java API，但MapReduce天生决定了它在迭代计算方面是低效的，尽管大多数机器学习算法都需要迭代计算。</li>
+</ul>
+<p>其他的数据科学工具一样无法尽善尽美。基于Java和Hadoop的背景，我开始幻想一个理想的数据科学利器：一个像R和Python的能实现RPEL（读取-估值-打印-循环）的自带统计库函数的命令行解释器，又具备天然的分布式可扩展的属性；拥有像Crunch一样的分布式集合，而且能通过命令行解释器调用。</p>
+<h1 id="Spark的优势"><a href="#Spark的优势" class="headerlink" title="Spark的优势"></a>Spark的优势</h1><p>这就是Spark让我兴奋的原因。大部分人讨论到Spark时，总是注意到将数据驻留内存以提高计算效率的方面（相对MapReduce），但对我来说这根本不是关键。Spark拥有许多的特征，使之真正成为一个融合统计科学和数据工程的交叉点：</p>
+<ul>
+<li>Spark附带了一个机器学习库MLib，虽然只是在初始阶段。</li>
+<li>Spark是用Scala语言编写的，运行在Java虚拟机上，同时也提供像R和Python的命令行解释器。</li>
+<li>对Java程序员，Scala的学习曲线是比较陡峭的，但所幸Scala可以兼容一切的Java库。</li>
+<li>Spark的RDD（弹性分布式数据集），是Crunch开发者熟知的一种数据结构。</li>
+<li>Spark模仿了Scala的集合计算API，对Java和Scala开发者来说耳熟能详，而Python开发者也不难上手，而Scala对统计计算的支持也不错。</li>
+<li>Spark和其底层的Scala语言，并不只是为机器学习而诞生的，除此之外，像数据访问、日志ETL和整合都可以通过API轻松搞定。就像Python，你可以把整个数据计算流程搬到Spark平台上来，而不仅仅是模型拟合和分析。</li>
+<li>在命令行解释器中执行的代码，和编译后运行的效果相同。而且，命令行的输入可以得到实时反馈，你将看到数据透明地在集群间传递与计算。</li>
+</ul>
+<p>Spark和MLib还有待完善：整个项目有不少bug，效率也还有提升的空间，和YARN的整合也存在问题。Spark还没办法提供像R那样丰富的数据分析函数。但Spark已然是世界上最好的数据平台，足以让来自任何背景的数据科学家侧目。</p>
+<h1 id="实战：Stack-Overflow问题的自动标注"><a href="#实战：Stack-Overflow问题的自动标注" class="headerlink" title="实战：Stack Overflow问题的自动标注"></a>实战：Stack Overflow问题的自动标注</h1><p>Stack Overflow是一个著名的软件技术问答平台，在上面提的每个问题有可能被打上若干个短文本的标签，比如<code>java</code>或者<code>sql</code>，我们的目标在于建立一套系统，使用ALS推荐算法，为新问题的标签提供预测和建议。从推荐系统的角度，你可以把问题想象成<code>user</code>，把标签想象成<code>item</code>。<br>首先，从Stack Overflow下载官方提供的截至20140120的问答数据<code>stackoverflow.com-Posts.7z</code>。<br>这是一个能够直接用于分布式计算的bzip格式文件，但在我们的场景下，必须先解压并拷贝到HDFS：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bzcat stackoverflow.com-Posts.7z | hdfs dfs -put - /user/srowen/Posts.xml</span><br></pre></td></tr></table></figure></p>
+<p>解压后的文件大约是24.4GB，包含210万个问题，1800万个回答，总共标注了930万个标签，这些标签排重之后大概是34000个。<br>确认机器安装了Spark之后，输入<code>spark-shell</code>即可打开Scala的REPL环境。首先，我们读取一个存储在HDFS的<code>Posts.xml</code>文件：<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> postsXML = sc.textFile(<span class="string">"hdfs:///user/srowen/Posts.xml"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>这时命令行工具会返回：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">postsXML: org.apache.spark.rdd.RDD[String] = MappedRDD[1] at textFile at :12</span><br></pre></td></tr></table></figure></p>
+<p>显示文本文件已转化为一个String型的RDD，你可以通过调用RDD的函数，实现任意的查询运算。比如统计文件的行数：<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">postsXML.count</span><br></pre></td></tr></table></figure></p>
+<p>这条指令生成大量的输出，显示Spark正在利用分布式的环境计数，最终打印出<code>18066983</code>。<br>下一步，将XML文件的每一行都存入形如<code>（questionID, tag)</code>的元组。得益于Scala的函数式编程的风格，RDD和Scala集合一样可以使用map等方法：<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> postIDTags = postsXML.flatMap &#123; line =&gt;</span><br><span class="line">  <span class="comment">// Matches Id="..." ... Tags="..." in  line</span></span><br><span class="line">  <span class="keyword">val</span> idTagRegex = <span class="string">"Id=\"(\\d+)\".+Tags=\"([^\"]+)\""</span>.r</span><br><span class="line"> </span><br><span class="line">  <span class="comment">// // Finds tags like &lt;TAG&gt; value from above</span></span><br><span class="line">  <span class="keyword">val</span> tagRegex = <span class="string">"&amp;lt;([^&amp;]+)&amp;gt;"</span>.r</span><br><span class="line"> </span><br><span class="line">  <span class="comment">// Yields 0 or 1 matches:</span></span><br><span class="line">  idTagRegex.findFirstMatchIn(line) <span class="keyword">match</span> &#123;</span><br><span class="line">    <span class="comment">// No match -- not a  line</span></span><br><span class="line">    <span class="keyword">case</span> <span class="type">None</span> =&gt; <span class="type">None</span></span><br><span class="line">    <span class="comment">// Match, and can extract ID and tags from m</span></span><br><span class="line">    <span class="keyword">case</span> <span class="type">Some</span>(m) =&gt; &#123;</span><br><span class="line">      <span class="keyword">val</span> postID = m.group(<span class="number">1</span>).toInt</span><br><span class="line">      <span class="keyword">val</span> tagsString = m.group(<span class="number">2</span>)</span><br><span class="line">      <span class="comment">// Pick out just TAG matching group</span></span><br><span class="line">      <span class="keyword">val</span> tags = tagRegex.findAllMatchIn(tagsString).map(_.group(<span class="number">1</span>)).toList</span><br><span class="line">      <span class="comment">// Keep only question with at least 4 tags, and map to (post,tag) tuples</span></span><br><span class="line">      <span class="keyword">if</span> (tags.size &gt;= <span class="number">4</span>) tags.map((postID,_)) <span class="keyword">else</span> <span class="type">None</span></span><br><span class="line">     &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Because of flatMap, individual lists will concatenate</span></span><br><span class="line">  <span class="comment">// into one collection of tuples</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>你会发现这条指令的执行是立即返回的，而不像<code>count</code>一样需要等待，因为到目前为止，Spark并未启动任何主机间的数据变换。<br>ALS的MLib实现必须使用数值ID而非字符串作为惟一标识，而问题的标签数据是字符串格式的，所以需要把字符串哈希成一个非负整数，同时保留非负整数到字符串的映射。这里我们先定义一个哈希函数以便复用。<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nnHash</span></span>(tag: <span class="type">String</span>) = tag.hashCode &amp; <span class="number">0x7FFFFF</span></span><br><span class="line"><span class="keyword">var</span> tagHashes = postIDTags.map(_._2).distinct.map(tag =&gt;(nnHash(tag),tag))</span><br></pre></td></tr></table></figure></p>
+<p>现在把元组转换为ALS计算所需的输入：<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.apache.spark.mllib.recommendation._</span><br><span class="line"><span class="comment">// Convert to Rating(Int,Int,Double) objects</span></span><br><span class="line"><span class="keyword">val</span> alsInput = postIDTags.map(t =&gt; <span class="type">Rating</span>(t._1, nnHash(t._2), <span class="number">1.0</span>))</span><br><span class="line"><span class="comment">// Train model with 40 features, 10 iterations of ALS</span></span><br><span class="line"><span class="keyword">val</span> model = <span class="type">ALS</span>.trainImplicit(alsInput, <span class="number">40</span>, <span class="number">10</span>)</span><br></pre></td></tr></table></figure></p>
+<p>这一步生成特征矩阵，可以被用来预测问题与标签之间的关联。由于目前MLib还处于不完善的状态，没有提供一个recommend的接口来获取建议的标签，我们可以简单定义一个：<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">recommend</span></span>(questionID: <span class="type">Int</span>, howMany: <span class="type">Int</span> = <span class="number">5</span>): <span class="type">Array</span>[(<span class="type">String</span>, <span class="type">Double</span>)] = &#123;</span><br><span class="line">  <span class="comment">// Build list of one question and all items and predict value for all of them</span></span><br><span class="line">  <span class="keyword">val</span> predictions = model.predict(tagHashes.map(t =&gt; (questionID,t._1)))</span><br><span class="line">  <span class="comment">// Get top howMany recommendations ordered by prediction value</span></span><br><span class="line">  <span class="keyword">val</span> topN = predictions.top(howMany)(<span class="type">Ordering</span>.by[<span class="type">Rating</span>,<span class="type">Double</span>](_.rating))</span><br><span class="line">  <span class="comment">// Translate back to tags from IDs</span></span><br><span class="line">  topN.map(r =&gt; (tagHashes.lookup(r.product)(<span class="number">0</span>), r.rating))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>通过上述函数，我们可以获得任意一个问题比如ID为7122697的<code>How to make substring-matching query work fast on a large table?</code>的至少4个标签：<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">recommend(<span class="number">7122697</span>).foreach(println)</span><br></pre></td></tr></table></figure></p>
+<p>推荐结果如下所示：<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(sql,<span class="number">0.17745152481166354</span>)</span><br><span class="line">(database,<span class="number">0.13526622226672633</span>)</span><br><span class="line">(oracle,<span class="number">0.1079428707621154</span>)</span><br><span class="line">(ruby-on-rails,<span class="number">0.06067207312463499</span>)</span><br><span class="line">(postgresql,<span class="number">0.050933613169706474</span>)</span><br></pre></td></tr></table></figure></p>
+<p>注意：</p>
+<ul>
+<li>每次运行得到的结果不尽相同，是因为ALS是从随机解开始迭代的</li>
+<li>如果你希望获得实时性更高的结果，可以在<code>recommend</code>前输入<code>tagHashes = tagHashes.cache</code></li>
+</ul>
+<p>真实的问题标签是<code>postgresql</code>、<code>query-optimization</code>、<code>substring</code>和<code>text-search</code>。不过，预测结果也有一定的合理性（<code>postgresql</code>经常和<code>ruby-on-rails</code>一起出现）。<br>当然，以上的示例还不够优雅和高效，但是，我希望所有来自R的分析师、鼓捣Python的黑客和熟悉Hadoop的开发者，都能从中找到你们熟悉的部分，从而找到一条适合你们的路径去探索Spark，并从中获益。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/qr-code.jpg" alt="2shou wechat" style="width: 200px; max-width: 100%;"/>
+    <div>更多精彩内容，欢迎关注微信公众号「极客思享」</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Spark/" rel="tag"># Spark</a>
+          
+            <a href="/tags/Scala/" rel="tag"># Scala</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/intellij-maven-develop-hadoop.html" rel="next" title="搭建IntelliJ+Maven的Hadoop开发环境">
+                <i class="fa fa-chevron-left"></i> 搭建IntelliJ+Maven的Hadoop开发环境
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/libshorttext-introduction.html" rel="prev" title="LibShortText简要入门">
+                LibShortText简要入门 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="2shou" />
+          <p class="site-author-name" itemprop="name">2shou</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">81</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">101</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/2shou" target="_blank" rel="external nofollow">GitHub</a>
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-guo-ze" target="_blank" rel="external nofollow">知乎</a>
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhangguoze" target="_blank" rel="external nofollow">微博</a>
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#不完美的统计工具"><span class="nav-number">1.</span> <span class="nav-text">不完美的统计工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spark的优势"><span class="nav-number">2.</span> <span class="nav-text">Spark的优势</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实战：Stack-Overflow问题的自动标注"><span class="nav-number">3.</span> <span class="nav-text">实战：Stack Overflow问题的自动标注</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://2shou-1.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://www.guoze.me/why-apache-spark-is-a-crossover-hit-for-data-scientists.html';
+          this.page.identifier = 'why-apache-spark-is-a-crossover-hit-for-data-scientists.html';
+          this.page.title = '为什么Spark将成为数据科学家的统一平台';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://2shou-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

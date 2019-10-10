@@ -1,0 +1,828 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="新近组了个饭局，发现来的各大厂的算法leader，都一副萎靡不振的模样，一问，都忙着筛秋招的简历呢，今年这秋招，投算法的像雪片一样飞过来，大抵高校计算机类的导师，都纷纷转型深度学习了，而候选人也个个刷过比赛，不拿到前几名都不好意思说出来，算法原理更是倒背如流。于是算法岗的面试官都是筛简历筛到老眼昏花，来左边儿一起画个顶会，在你右边再画个Kaggle，繁重的业务之外，面试更是一场接一场，面人面得头痛">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法岗有没有泡沫">
+<meta property="og:url" content="http://www.guoze.me/algorithm-bubble.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="新近组了个饭局，发现来的各大厂的算法leader，都一副萎靡不振的模样，一问，都忙着筛秋招的简历呢，今年这秋招，投算法的像雪片一样飞过来，大抵高校计算机类的导师，都纷纷转型深度学习了，而候选人也个个刷过比赛，不拿到前几名都不好意思说出来，算法原理更是倒背如流。于是算法岗的面试官都是筛简历筛到老眼昏花，来左边儿一起画个顶会，在你右边再画个Kaggle，繁重的业务之外，面试更是一场接一场，面人面得头痛">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-10T06:18:06.904Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="算法岗有没有泡沫">
+<meta name="twitter:description" content="新近组了个饭局，发现来的各大厂的算法leader，都一副萎靡不振的模样，一问，都忙着筛秋招的简历呢，今年这秋招，投算法的像雪片一样飞过来，大抵高校计算机类的导师，都纷纷转型深度学习了，而候选人也个个刷过比赛，不拿到前几名都不好意思说出来，算法原理更是倒背如流。于是算法岗的面试官都是筛简历筛到老眼昏花，来左边儿一起画个顶会，在你右边再画个Kaggle，繁重的业务之外，面试更是一场接一场，面人面得头痛">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.guoze.me/algorithm-bubble.html"/>
+
+
+
+
+
+  <title>算法岗有没有泡沫 | 建造者说</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-54995139-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?55fe062fca0976556582ea6acabf6a89";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">建造者说</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">总在造着什么的路上</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.guoze.me/algorithm-bubble.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">算法岗有没有泡沫</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-10T14:11:34+08:00">
+                2019-10-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/career/" itemprop="url" rel="index">
+                    <span itemprop="name">职业论</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/algorithm-bubble.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="algorithm-bubble.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>新近组了个饭局，发现来的各大厂的算法leader，都一副萎靡不振的模样，一问，都忙着筛秋招的简历呢，今年这秋招，投算法的像雪片一样飞过来，大抵高校计算机类的导师，都纷纷转型深度学习了，而候选人也个个刷过比赛，不拿到前几名都不好意思说出来，算法原理更是倒背如流。于是算法岗的面试官都是筛简历筛到老眼昏花，<em>来左边儿一起画个顶会，在你右边再画个Kaggle</em>，繁重的业务之外，面试更是一场接一场，面人面得头痛欲裂。</p>
+<p>有人说，这是算法岗的泡沫，一触即破，好比回溯几年前的客户端开发，随便上个培训班就可以收割offer了，等风潮一过铁定凉凉。</p>
+<p>面对层出不穷的劝退帖，我嘿然一笑，短期泡沫肯定是存在的，但是放长到十年维度的时间来看，投算法岗有没有问题？我觉得依然是应届生较好的一个选择，理由有三。</p>
+<a id="more"></a>
+<h2 id="存储在云端的数据仍然处于迅速增长之中"><a href="#存储在云端的数据仍然处于迅速增长之中" class="headerlink" title="存储在云端的数据仍然处于迅速增长之中"></a>存储在云端的数据仍然处于迅速增长之中</h2><p>算法的实质，无非就是更高效更精准的实现数据之间的匹配。AI爆火的根本原因，既不在于神经网络的崛起，也不在于分布式计算的普及，而是数据量的暴增使得依赖算法匹配数据成为一个划算的生意。放眼未来，虽然互联网人口的红利已经接近饱和，数据这个基础引擎仍然维持着超过50%的年增长率。这一方面得益于创造内容的门槛被极大拉低，另一方面也说明数据的价值得到了普遍的认同，对数据的收集和利用越发精细。数据越多，处理和提炼数据的复杂度就越高，自然会产生更多更大的算法需求。数据增长的引擎不熄火，持续有数据匹配的需求，就持续有算法岗的空缺。</p>
+<h2 id="算法岗的入门门槛更高"><a href="#算法岗的入门门槛更高" class="headerlink" title="算法岗的入门门槛更高"></a>算法岗的入门门槛更高</h2><p>算法工程师处在研发和研究两个领域的交叉点，难以想象有哪个技术岗位对于学术论文阅读的要求，可与算法岗相匹敌。哪怕撇开学历绩点、学术履历、实践经验等方面的硬性要求，公式的理解和推导仍然是顶级的智力游戏。这就决定了算法岗的入门门槛本来就相对要更高，而随着AI的爆火，越来越多的候选人涌入，算法岗的竞争残酷程度上升了好几个量级，前刷刷题背背西瓜书就能手抓一把好offer的时代一去不复返了。</p>
+<p><strong>但凡竞争激烈的岗位，哪怕不是最优的选择，也肯定是一个较好的选择</strong>。因为能跨越入门门槛的，本来就是智力和勤奋程度更出色的候选人，有机会和更聪明更努力的人一起工作，会对你的职业生涯有非常正向的推动。多年前做高考咨询，有位小朋友问我，A高校专业排名第三但分数较低，B高校专业排名第五但分数较高，该选哪个？我建议去B，因为录取分数决定了同学的智力与勤奋程度，而专业排名更多取决于实验室的研究实力，不是向着留校任教这条路没必要考虑。选择职业也是如此，从前最聪明的学生都在考CFA准备进投行咨询，现在最聪明的学生都在忙着神经网络调参打比赛，本质上是一样的。只要具备追逐泡沫的条件，就应该投身其中，因为全局最优对于应届生的阅历绝对是一个NP难问题，倒不如梯度下降法这类朴素的优化思路来得实际，找准一个方向，先做到极致。我见过顶会可以打牌但最终转型的美女产品经理，也见过连续Top绩效然后转岗做算法的后台开发，都不影响他们华丽转身之后大杀四方。</p>
+<h2 id="算法岗的成长曲线更陡峭"><a href="#算法岗的成长曲线更陡峭" class="headerlink" title="算法岗的成长曲线更陡峭"></a>算法岗的成长曲线更陡峭</h2><p>优秀的算法工程师，必须在数学、编程、数据分析、业务理解四个方面的能力沉淀上都不可有短板，挑战难度更大，学习曲线更陡峭。当然，更陡峭的成长曲线除了意味着只有极少数人能走到顶端，能独当一面的人才永远是一将难求，也意味着技术成长的上限更高周期更长，你不需要在步入职场的五到十年之后就遇到技术成长的瓶颈，只能依靠转管理来延长职业寿命，如果你愿意在技术领域持续精进，算法岗是一个非常好的方向。</p>
+<p>但是，对于有志于算法岗的应届生，我仍然有以下三个求职建议给你们：</p>
+<h2 id="从大平台开始，尽量逼近流量中心"><a href="#从大平台开始，尽量逼近流量中心" class="headerlink" title="从大平台开始，尽量逼近流量中心"></a>从大平台开始，尽量逼近流量中心</h2><p>许多年前互联网的江湖还是后台开发薪资最高，HR习惯用不同量级的DAU对应不同的薪资：千万级别的要比百万级别的差一截，亿级别的那就是江湖罕见的大牛了，如果有愿意动的都是抢着开价。后台开发的技术本身并不是什么奥秘，但随着用户数的上涨，再合理的架构也会遇到各种意料之外的挑战，而解决问题的方法往往充满灵光一现的巧妙，不经历是永远不会知道的。拥有市场上稀缺的经验，是一个职业履历的加分项。算法岗也是类似，你所服务的用户越多，分众越细，算法匹配能产生的额外价值越大；线上对资源和耗时的要求也更加严格，面临算法效果和算法性能的trade off也更加复杂。当选择offer的时候，不妨暂把薪资条件放一边，优先看哪个offer有机会（不一定是现在，也许是未来）去创造服务到更多用户的算法，为长远的职业发展构筑更坚实的基础。</p>
+<h2 id="选择搜索或推荐等与用户关系更密切的领域"><a href="#选择搜索或推荐等与用户关系更密切的领域" class="headerlink" title="选择搜索或推荐等与用户关系更密切的领域"></a>选择搜索或推荐等与用户关系更密切的领域</h2><p>深度学习这一轮的发展，是从图像和语音这类相对通用的领域发起的，面向通用领域的算法工程师，<code>算法味</code>会更浓一些，和学术研究挂钩更紧密一些，具体到工作内容，更多需要独自攻坚某个课题，和产品、运营横向打交道的机会少一些，发展空间偏纵向求深度，当然产出论文的机会更多。<strong>这类岗位更适合目标比较明确、能静下心花很长时间把一个问题搞深搞透的人</strong>。当然，对于算法岗的这一分支，我仍然觉得最合适的做法是先读取相应领域的博士，在学术界积累够做研究的方法论以后再到工业界来。此外，这一类岗位面向通用领域的算法岗，因为业务特殊性不显著，容易出现赢家通吃的局面，给小平台或小团队的生存空间很小，选择平台之时要更加谨慎。其实对于算法岗的候选人，更广袤的天地在于搜索或推荐等和用户息息相关的强业务领域。这类领域没有一招鲜的万金油方法，更多需要埋首于业务之中，从业务目标、数据、特征、算法、策略等多个维度找到最优的结合点，通过实验系统快速试错与提升指标。<strong>这才是大部分优秀算法工程师脱颖而出的残酷丛林，也是更适合普通人升级打怪的成长路径</strong>。</p>
+<h2 id="有机会的话去做在线算法吧！"><a href="#有机会的话去做在线算法吧！" class="headerlink" title="有机会的话去做在线算法吧！"></a>有机会的话去做在线算法吧！</h2><p><strong>在线算法是指它可以以序列化的方式处理输入，也就是说在开始时并不需要已经知道所有的输入</strong>。与离线算法相比，在线算法的链路更长，涉及到多个上下游模块的配合，对计算性能、抽象能力、数据一致性都提出了更高的要求。提供在线算法服务的过程中，需要和工程团队紧密配合，有机会感受到算法和工程在思维模式、能力栈之间的差异，找到算法和工程的最优平衡点，是一个项目能否成功的关键因素，而<strong>感受两种思维方式的碰撞，对算法工程师的工程能力和架构能力的成长大有助益</strong>。在线算法的另一挑战来自线上线下效果不一致的问题，离线AUC提升爆表，一上实验正向寥寥，一曲凉凉送给自己。在线算法牵涉的链路过长，排查起来异常费力，十分考验算法工程师的业务理解能力和问题Debug能力，对于从实验室的空中楼阁步入工业界的钢筋水泥的应届生来说，在线算法是一个能让你快速进入状态的领域。</p>
+<p>最后，祝大家在泡沫中玩得愉快。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/qr-code.jpg" alt="2shou wechat" style="width: 200px; max-width: 100%;"/>
+    <div>更多精彩内容，欢迎关注微信公众号「极客思享」</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/talent-limited-company.html" rel="next" title="才华有限公司">
+                <i class="fa fa-chevron-left"></i> 才华有限公司
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="2shou" />
+          <p class="site-author-name" itemprop="name">2shou</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">81</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">101</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/2shou" target="_blank" rel="external nofollow">GitHub</a>
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhang-guo-ze" target="_blank" rel="external nofollow">知乎</a>
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/zhangguoze" target="_blank" rel="external nofollow">微博</a>
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储在云端的数据仍然处于迅速增长之中"><span class="nav-number">1.</span> <span class="nav-text">存储在云端的数据仍然处于迅速增长之中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法岗的入门门槛更高"><span class="nav-number">2.</span> <span class="nav-text">算法岗的入门门槛更高</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法岗的成长曲线更陡峭"><span class="nav-number">3.</span> <span class="nav-text">算法岗的成长曲线更陡峭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从大平台开始，尽量逼近流量中心"><span class="nav-number">4.</span> <span class="nav-text">从大平台开始，尽量逼近流量中心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择搜索或推荐等与用户关系更密切的领域"><span class="nav-number">5.</span> <span class="nav-text">选择搜索或推荐等与用户关系更密切的领域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有机会的话去做在线算法吧！"><span class="nav-number">6.</span> <span class="nav-text">有机会的话去做在线算法吧！</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://2shou-1.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://www.guoze.me/algorithm-bubble.html';
+          this.page.identifier = 'algorithm-bubble.html';
+          this.page.title = '算法岗有没有泡沫';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://2shou-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

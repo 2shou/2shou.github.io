@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.guoze.me/2019/10/10/algorithm-bubble/</loc>
+    
+    <lastmod>2019-10-10T06:18:06.904Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.guoze.me/2016/01/24/busy-programmer/</loc>
     
     <lastmod>2019-10-10T06:14:01.041Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://www.guoze.me/2015/12/12/choose-startup/</loc>
     
     <lastmod>2019-10-10T06:13:35.488Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.guoze.me/2019/10/10/algorithm-bubble/</loc>
-    
-    <lastmod>2019-10-10T06:12:38.961Z</lastmod>
     
   </url>
   

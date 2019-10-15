@@ -196,9 +196,9 @@
         <title>馆中窥职：小公司没那么糟糕</title>
         <pubTime>2015-12-12T10:12:54.000Z</pubTime>
         
-        <tag>职业规划</tag>
-         
         <tag>程序员</tag>
+         
+        <tag>职业规划</tag>
          
          
            
@@ -867,30 +867,6 @@
 
     
   <url>
-    <loc>http://guoze.me/scikit-learn-naive-bayes-classifier.html</loc>
-    <lastmod>2019-09-25T09:58:11.231Z</lastmod>
-    <data>
-        <display>
-        <title>用scikit-learn实现朴素贝叶斯分类器</title>
-        <pubTime>2014-06-05T14:50:19.000Z</pubTime>
-        
-        <tag>分类算法</tag>
-         
-        <tag>朴素贝叶斯</tag>
-         
-        <tag>scikit-learn</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据控" url="http://guoze.me/categories/data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://guoze.me/sae-tornado-experience.html</loc>
     <lastmod>2019-09-25T09:58:11.231Z</lastmod>
     <data>
@@ -910,6 +886,30 @@
            
              
               <breadCrumb title="技术控" url="http://guoze.me/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://guoze.me/scikit-learn-naive-bayes-classifier.html</loc>
+    <lastmod>2019-09-25T09:58:11.231Z</lastmod>
+    <data>
+        <display>
+        <title>用scikit-learn实现朴素贝叶斯分类器</title>
+        <pubTime>2014-06-05T14:50:19.000Z</pubTime>
+        
+        <tag>分类算法</tag>
+         
+        <tag>朴素贝叶斯</tag>
+         
+        <tag>scikit-learn</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据控" url="http://guoze.me/categories/data/"/>
           
         </display>
     </data>
@@ -1007,28 +1007,6 @@
 
     
   <url>
-    <loc>http://guoze.me/programmer-pm-comunication.html</loc>
-    <lastmod>2019-09-25T09:58:11.227Z</lastmod>
-    <data>
-        <display>
-        <title>给程序员与产品经理的六个沟通锦囊</title>
-        <pubTime>2018-03-21T15:26:08.000Z</pubTime>
-        
-        <tag>程序员</tag>
-         
-        <tag>产品经理</tag>
-         
-         
-           
-             
-              <breadCrumb title="职业论" url="http://guoze.me/categories/career/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://guoze.me/python-phantomjs-crawler.html</loc>
     <lastmod>2019-09-25T09:58:11.227Z</lastmod>
     <data>
@@ -1046,6 +1024,28 @@
            
              
               <breadCrumb title="技术控" url="http://guoze.me/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://guoze.me/programmer-pm-comunication.html</loc>
+    <lastmod>2019-09-25T09:58:11.227Z</lastmod>
+    <data>
+        <display>
+        <title>给程序员与产品经理的六个沟通锦囊</title>
+        <pubTime>2018-03-21T15:26:08.000Z</pubTime>
+        
+        <tag>程序员</tag>
+         
+        <tag>产品经理</tag>
+         
+         
+           
+             
+              <breadCrumb title="职业论" url="http://guoze.me/categories/career/"/>
           
         </display>
     </data>
@@ -1135,6 +1135,28 @@
 
     
   <url>
+    <loc>http://guoze.me/macbook-pro-experience.html</loc>
+    <lastmod>2019-09-25T09:58:11.222Z</lastmod>
+    <data>
+        <display>
+        <title>深度使用 2016 MacBook Pro是怎样的体验？</title>
+        <pubTime>2016-12-22T15:29:42.000Z</pubTime>
+        
+        <tag>苹果</tag>
+         
+        <tag>MacBook</tag>
+         
+         
+           
+             
+              <breadCrumb title="产品控" url="http://guoze.me/categories/product/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://guoze.me/matplotlib-par-chart.html</loc>
     <lastmod>2019-09-25T09:58:11.222Z</lastmod>
     <data>
@@ -1157,12 +1179,12 @@
 
     
   <url>
-    <loc>http://guoze.me/macbook-pro-experience.html</loc>
-    <lastmod>2019-09-25T09:58:11.222Z</lastmod>
+    <loc>http://guoze.me/macbook-pro-2016.html</loc>
+    <lastmod>2019-09-25T09:58:11.221Z</lastmod>
     <data>
         <display>
-        <title>深度使用 2016 MacBook Pro是怎样的体验？</title>
-        <pubTime>2016-12-22T15:29:42.000Z</pubTime>
+        <title>新MacBook Pro，迷了路的苹果产品观</title>
+        <pubTime>2016-10-31T16:45:17.000Z</pubTime>
         
         <tag>苹果</tag>
          
@@ -1202,28 +1224,6 @@
            
              
               <breadCrumb title="数据控" url="http://guoze.me/categories/data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://guoze.me/macbook-pro-2016.html</loc>
-    <lastmod>2019-09-25T09:58:11.221Z</lastmod>
-    <data>
-        <display>
-        <title>新MacBook Pro，迷了路的苹果产品观</title>
-        <pubTime>2016-10-31T16:45:17.000Z</pubTime>
-        
-        <tag>苹果</tag>
-         
-        <tag>MacBook</tag>
-         
-         
-           
-             
-              <breadCrumb title="产品控" url="http://guoze.me/categories/product/"/>
           
         </display>
     </data>
@@ -1351,26 +1351,6 @@
 
     
   <url>
-    <loc>http://guoze.me/impala-compute-stats.html</loc>
-    <lastmod>2019-09-25T09:58:11.216Z</lastmod>
-    <data>
-        <display>
-        <title>Impala的神奇指令「COMPUTE STATS」</title>
-        <pubTime>2014-12-19T07:32:31.000Z</pubTime>
-        
-        <tag>Impala</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据控" url="http://guoze.me/categories/data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://guoze.me/how-to-google.html</loc>
     <lastmod>2019-09-25T09:58:11.216Z</lastmod>
     <data>
@@ -1386,6 +1366,26 @@
            
              
               <breadCrumb title="技术控" url="http://guoze.me/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://guoze.me/impala-compute-stats.html</loc>
+    <lastmod>2019-09-25T09:58:11.216Z</lastmod>
+    <data>
+        <display>
+        <title>Impala的神奇指令「COMPUTE STATS」</title>
+        <pubTime>2014-12-19T07:32:31.000Z</pubTime>
+        
+        <tag>Impala</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据控" url="http://guoze.me/categories/data/"/>
           
         </display>
     </data>

@@ -1,3 +1,4 @@
+http://guoze.me/tech-writing.html
 http://guoze.me/algorithm-bubble.html
 http://guoze.me/talent-limited-company.html
 http://guoze.me/hot-winter.html
@@ -15,8 +16,8 @@ http://guoze.me/blockchain-feeds.html
 http://guoze.me/zeng-guo-fan.html
 http://guoze.me/blockchain-scare.html
 http://guoze.me/weapp-2018-chance.html
-http://guoze.me/blockchain-decentration.html
 http://guoze.me/blockchain-big-dream.html
+http://guoze.me/blockchain-decentration.html
 http://guoze.me/ai.html
 http://guoze.me/goodbye-2017.html
 http://guoze.me/youth-only-sequel.html

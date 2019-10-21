@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>http://guoze.me/tech-writing.html</loc>
+    <lastmod>2019-10-21T03:24:21.119Z</lastmod>
+    <data>
+        <display>
+        <title>技术人为什么该坚持写作？</title>
+        <pubTime>2019-10-21T03:19:11.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="职业论" url="http://guoze.me/categories/career/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://guoze.me/to-hawking.html</loc>
     <lastmod>2019-10-15T05:29:59.654Z</lastmod>
     <data>
@@ -218,9 +236,9 @@
         <title>馆中窥职：小公司没那么糟糕</title>
         <pubTime>2015-12-12T10:12:54.000Z</pubTime>
         
-        <tag>程序员</tag>
-         
         <tag>职业规划</tag>
+         
+        <tag>程序员</tag>
          
          
            
@@ -771,6 +789,30 @@
 
     
   <url>
+    <loc>http://guoze.me/spark-dataframe.html</loc>
+    <lastmod>2019-09-25T09:58:11.234Z</lastmod>
+    <data>
+        <display>
+        <title>Spark DataFrame小试牛刀</title>
+        <pubTime>2015-03-22T12:28:51.000Z</pubTime>
+        
+        <tag>MySQL</tag>
+         
+        <tag>Spark</tag>
+         
+        <tag>DataFrame</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据控" url="http://guoze.me/categories/data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://guoze.me/spark-log-extract.html</loc>
     <lastmod>2019-09-25T09:58:11.234Z</lastmod>
     <data>
@@ -797,30 +839,6 @@
 
     
   <url>
-    <loc>http://guoze.me/spark-dataframe.html</loc>
-    <lastmod>2019-09-25T09:58:11.234Z</lastmod>
-    <data>
-        <display>
-        <title>Spark DataFrame小试牛刀</title>
-        <pubTime>2015-03-22T12:28:51.000Z</pubTime>
-        
-        <tag>MySQL</tag>
-         
-        <tag>Spark</tag>
-         
-        <tag>DataFrame</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据控" url="http://guoze.me/categories/data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://guoze.me/silicon-valley-4-season.html</loc>
     <lastmod>2019-09-25T09:58:11.233Z</lastmod>
     <data>
@@ -828,9 +846,9 @@
         <title>硅谷，五味杂陈的喜剧</title>
         <pubTime>2017-06-27T15:40:14.000Z</pubTime>
         
-        <tag>创业</tag>
-         
         <tag>硅谷</tag>
+         
+        <tag>创业</tag>
          
          
            
@@ -944,16 +962,38 @@
         <title>如何做一只风口上的兔子？</title>
         <pubTime>2017-12-16T16:40:44.000Z</pubTime>
         
+        <tag>创业</tag>
+         
         <tag>互联网</tag>
          
         <tag>风口</tag>
-         
-        <tag>创业</tag>
          
          
            
              
               <breadCrumb title="职业论" url="http://guoze.me/categories/career/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://guoze.me/r-multi-ggplot.html</loc>
+    <lastmod>2019-09-25T09:58:11.228Z</lastmod>
+    <data>
+        <display>
+        <title>使用ggplot2同时绘制多个密度图</title>
+        <pubTime>2016-03-09T13:26:29.000Z</pubTime>
+        
+        <tag>R语言</tag>
+         
+        <tag>ggplot2</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术控" url="http://guoze.me/categories/programming/"/>
           
         </display>
     </data>
@@ -973,28 +1013,6 @@
         <tag>MySQL</tag>
          
         <tag>ORM</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术控" url="http://guoze.me/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://guoze.me/r-multi-ggplot.html</loc>
-    <lastmod>2019-09-25T09:58:11.228Z</lastmod>
-    <data>
-        <display>
-        <title>使用ggplot2同时绘制多个密度图</title>
-        <pubTime>2016-03-09T13:26:29.000Z</pubTime>
-        
-        <tag>R语言</tag>
-         
-        <tag>ggplot2</tag>
          
          
            
@@ -1135,28 +1153,6 @@
 
     
   <url>
-    <loc>http://guoze.me/macbook-pro-experience.html</loc>
-    <lastmod>2019-09-25T09:58:11.222Z</lastmod>
-    <data>
-        <display>
-        <title>深度使用 2016 MacBook Pro是怎样的体验？</title>
-        <pubTime>2016-12-22T15:29:42.000Z</pubTime>
-        
-        <tag>苹果</tag>
-         
-        <tag>MacBook</tag>
-         
-         
-           
-             
-              <breadCrumb title="产品控" url="http://guoze.me/categories/product/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://guoze.me/matplotlib-par-chart.html</loc>
     <lastmod>2019-09-25T09:58:11.222Z</lastmod>
     <data>
@@ -1172,6 +1168,28 @@
            
              
               <breadCrumb title="技术控" url="http://guoze.me/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://guoze.me/macbook-pro-experience.html</loc>
+    <lastmod>2019-09-25T09:58:11.222Z</lastmod>
+    <data>
+        <display>
+        <title>深度使用 2016 MacBook Pro是怎样的体验？</title>
+        <pubTime>2016-12-22T15:29:42.000Z</pubTime>
+        
+        <tag>MacBook</tag>
+         
+        <tag>苹果</tag>
+         
+         
+           
+             
+              <breadCrumb title="产品控" url="http://guoze.me/categories/product/"/>
           
         </display>
     </data>
@@ -1216,9 +1234,9 @@
         <title>新MacBook Pro，迷了路的苹果产品观</title>
         <pubTime>2016-10-31T16:45:17.000Z</pubTime>
         
-        <tag>苹果</tag>
-         
         <tag>MacBook</tag>
+         
+        <tag>苹果</tag>
          
          
            
@@ -1251,12 +1269,12 @@
 
     
   <url>
-    <loc>http://guoze.me/libshorttext-introduction.html</loc>
+    <loc>http://guoze.me/libshorttext-setup-script.html</loc>
     <lastmod>2019-09-25T09:58:11.219Z</lastmod>
     <data>
         <display>
-        <title>LibShortText简要入门</title>
-        <pubTime>2014-09-25T15:32:58.000Z</pubTime>
+        <title>LibShortText的安裝腳本</title>
+        <pubTime>2014-12-29T12:21:00.000Z</pubTime>
         
         <tag>分类算法</tag>
          
@@ -1277,12 +1295,12 @@
 
     
   <url>
-    <loc>http://guoze.me/libshorttext-setup-script.html</loc>
+    <loc>http://guoze.me/libshorttext-introduction.html</loc>
     <lastmod>2019-09-25T09:58:11.219Z</lastmod>
     <data>
         <display>
-        <title>LibShortText的安裝腳本</title>
-        <pubTime>2014-12-29T12:21:00.000Z</pubTime>
+        <title>LibShortText简要入门</title>
+        <pubTime>2014-09-25T15:32:58.000Z</pubTime>
         
         <tag>分类算法</tag>
          
@@ -1649,16 +1667,14 @@
 
     
   <url>
-    <loc>http://guoze.me/crawler-attack-defense.html</loc>
+    <loc>http://guoze.me/data-geek.html</loc>
     <lastmod>2019-09-25T09:58:11.198Z</lastmod>
     <data>
         <display>
-        <title>看不见的攻与防</title>
-        <pubTime>2016-05-14T14:51:34.000Z</pubTime>
+        <title>4个小例子告诉你：如何成为一名数据极客</title>
+        <pubTime>2015-12-12T10:17:17.000Z</pubTime>
         
-        <tag>爬虫</tag>
-         
-        <tag>反爬虫</tag>
+        <tag>大数据</tag>
          
          
            
@@ -1671,14 +1687,16 @@
 
     
   <url>
-    <loc>http://guoze.me/data-geek.html</loc>
+    <loc>http://guoze.me/crawler-attack-defense.html</loc>
     <lastmod>2019-09-25T09:58:11.198Z</lastmod>
     <data>
         <display>
-        <title>4个小例子告诉你：如何成为一名数据极客</title>
-        <pubTime>2015-12-12T10:17:17.000Z</pubTime>
+        <title>看不见的攻与防</title>
+        <pubTime>2016-05-14T14:51:34.000Z</pubTime>
         
-        <tag>大数据</tag>
+        <tag>爬虫</tag>
+         
+        <tag>反爬虫</tag>
          
          
            
@@ -1789,24 +1807,6 @@
 
     
   <url>
-    <loc>http://guoze.me/blockchain-bat.html</loc>
-    <lastmod>2019-09-25T09:58:11.190Z</lastmod>
-    <data>
-        <display>
-        <title>区块链的乌托邦想象 -- 乌有国的微信、淘宝和百度</title>
-        <pubTime>2018-03-18T14:20:57.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="区块链" url="http://guoze.me/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://guoze.me/be-friend-of-time.html</loc>
     <lastmod>2019-09-25T09:58:11.190Z</lastmod>
     <data>
@@ -1824,6 +1824,24 @@
            
              
               <breadCrumb title="读而思" url="http://guoze.me/categories/reading/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://guoze.me/blockchain-bat.html</loc>
+    <lastmod>2019-09-25T09:58:11.190Z</lastmod>
+    <data>
+        <display>
+        <title>区块链的乌托邦想象 -- 乌有国的微信、淘宝和百度</title>
+        <pubTime>2018-03-18T14:20:57.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="区块链" url="http://guoze.me/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
           
         </display>
     </data>

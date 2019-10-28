@@ -75,7 +75,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="卡方检验," />
+  <meta name="keywords" content="程序员, 算法工程师, 职业与创业, 机器学习, 后台开发, 个人成长" />
 
 
 
@@ -93,21 +93,17 @@
 
 
 
-<meta name="description" content="卡方检验，或称x2检验，被誉为二十世纪科学技术所有分支中的20大发明之一，它的发明者卡尔·皮尔逊是一位历史上罕见的百科全书式的学者，研究领域涵盖了生物、历史、宗教、哲学、法律。之前做文本分类项目用过卡方值做特征选择（降维），后来听内部培训，另一个部门说他们有用卡方检验做异常用户的检测，于是就想把卡方检验再温习一次，同时把卡方检验和特征选择串起来理解。">
-<meta name="keywords" content="卡方检验">
+<meta name="description" content="近来有几个好友遇到了职场的转折点，颇有些纠结，时不时就来「骚扰」我一下：  A公司开了一个XXX package的offer，该不该去？ 上级匹配了B公司的薪酬，做了扩大队伍的承诺，该不该留？ C公司给了XXX级别的许诺，可不可以再谈？ ……  我发现大部分技术人做职场转换（包括跳槽或内部转岗），总是盯着明面上的东西，比如薪酬、职级或是职位。固然，真金白银能说明很多问题，愿意付出高薪的公司多半是现">
 <meta property="og:type" content="article">
-<meta property="og:title" content="卡方检验原理及应用">
-<meta property="og:url" content="http://guoze.me/chi-square.html">
+<meta property="og:title" content="怎样才算一份好工作？">
+<meta property="og:url" content="http://guoze.me/good-job.html">
 <meta property="og:site_name" content="建造者说">
-<meta property="og:description" content="卡方检验，或称x2检验，被誉为二十世纪科学技术所有分支中的20大发明之一，它的发明者卡尔·皮尔逊是一位历史上罕见的百科全书式的学者，研究领域涵盖了生物、历史、宗教、哲学、法律。之前做文本分类项目用过卡方值做特征选择（降维），后来听内部培训，另一个部门说他们有用卡方检验做异常用户的检测，于是就想把卡方检验再温习一次，同时把卡方检验和特征选择串起来理解。">
+<meta property="og:description" content="近来有几个好友遇到了职场的转折点，颇有些纠结，时不时就来「骚扰」我一下：  A公司开了一个XXX package的offer，该不该去？ 上级匹配了B公司的薪酬，做了扩大队伍的承诺，该不该留？ C公司给了XXX级别的许诺，可不可以再谈？ ……  我发现大部分技术人做职场转换（包括跳槽或内部转岗），总是盯着明面上的东西，比如薪酬、职级或是职位。固然，真金白银能说明很多问题，愿意付出高薪的公司多半是现">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://guoze.me/images/chisquare-1.png">
-<meta property="og:image" content="http://guoze.me/images/chisquare-2.png">
-<meta property="og:updated_time" content="2019-09-25T09:58:11.196Z">
+<meta property="og:updated_time" content="2019-10-28T02:24:58.831Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="卡方检验原理及应用">
-<meta name="twitter:description" content="卡方检验，或称x2检验，被誉为二十世纪科学技术所有分支中的20大发明之一，它的发明者卡尔·皮尔逊是一位历史上罕见的百科全书式的学者，研究领域涵盖了生物、历史、宗教、哲学、法律。之前做文本分类项目用过卡方值做特征选择（降维），后来听内部培训，另一个部门说他们有用卡方检验做异常用户的检测，于是就想把卡方检验再温习一次，同时把卡方检验和特征选择串起来理解。">
-<meta name="twitter:image" content="http://guoze.me/images/chisquare-1.png">
+<meta name="twitter:title" content="怎样才算一份好工作？">
+<meta name="twitter:description" content="近来有几个好友遇到了职场的转折点，颇有些纠结，时不时就来「骚扰」我一下：  A公司开了一个XXX package的offer，该不该去？ 上级匹配了B公司的薪酬，做了扩大队伍的承诺，该不该留？ C公司给了XXX级别的许诺，可不可以再谈？ ……  我发现大部分技术人做职场转换（包括跳槽或内部转岗），总是盯着明面上的东西，比如薪酬、职级或是职位。固然，真金白银能说明很多问题，愿意付出高薪的公司多半是现">
 
 
 
@@ -143,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://guoze.me/chi-square.html"/>
+  <link rel="canonical" href="http://guoze.me/good-job.html"/>
 
 
 
 
 
-  <title>卡方检验原理及应用 | 建造者说</title>
+  <title>怎样才算一份好工作？ | 建造者说</title>
   
 
 
@@ -297,7 +293,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://guoze.me/chi-square.html">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/good-job.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="2shou">
@@ -314,7 +310,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">卡方检验原理及应用</h2>
+          <h2 class="post-title" itemprop="name headline">怎样才算一份好工作？</h2>
         
 
         <div class="post-meta">
@@ -326,8 +322,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-07T12:49:00+08:00">
-                2015-09-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-28T10:23:22+08:00">
+                2019-10-28
               </time>
             
 
@@ -349,8 +345,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/data/" itemprop="url" rel="index">
-                    <span itemprop="name">数据控</span>
+                  <a href="/categories/career/" itemprop="url" rel="index">
+                    <span itemprop="name">职业论</span>
                   </a>
                 </span>
 
@@ -367,9 +363,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/chi-square.html#comments" itemprop="discussionUrl">
+                <a href="/good-job.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="chi-square.html" itemprop="commentCount"></span>
+                        data-disqus-identifier="good-job.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -399,82 +395,24 @@
       
 
       
-        <p>卡方检验，或称x2检验，被誉为二十世纪科学技术所有分支中的20大发明之一，它的发明者卡尔·皮尔逊是一位历史上罕见的百科全书式的学者，研究领域涵盖了生物、历史、宗教、哲学、法律。之前做文本分类项目用过卡方值做特征选择（降维），后来听内部培训，另一个部门说他们有用卡方检验做异常用户的检测，于是就想把卡方检验再温习一次，同时把卡方检验和特征选择串起来理解。<br><a id="more"></a></p>
-<h1 id="无关性假设"><a href="#无关性假设" class="headerlink" title="无关性假设"></a>无关性假设</h1><p>举个例子，假设我们有一堆新闻标题，需要判断标题中包含某个词（比如<code>吴亦凡</code>）是否与该条新闻的类别归属（比如<code>娱乐</code>）是否有关，我们只需要简单统计就可以获得这样的一个四格表：</p>
-<table>
-<thead>
-<tr>
-<th>组别</th>
-<th>属于<code>娱乐</code></th>
-<th>不属于<code>娱乐</code></th>
-<th>合计</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>不包含<code>吴亦凡</code></td>
-<td>19</td>
-<td>24</td>
-<td>43</td>
-</tr>
-<tr>
-<td>包含<code>吴亦凡</code></td>
-<td>34</td>
-<td>10</td>
-<td>44</td>
-</tr>
-<tr>
-<td>合计</td>
-<td>53</td>
-<td>34</td>
-<td>87</td>
-<td>　</td>
-</tr>
-</tbody>
-</table>
-<p>通过这个四格表我们得到的第一个信息是：<code>标题是否包含吴亦凡</code>确实对<code>新闻是否属于娱乐</code>有统计上的差别，包含<code>吴亦凡</code>的新闻属于<code>娱乐</code>的比例更高，但我们还无法排除这个差别是否由于抽样误差导致。那么首先假设<code>标题是否包含吴亦凡</code>与<code>新闻是否属于娱乐</code>是独立无关的，随机抽取一条新闻标题，属于<code>娱乐</code>类别的概率是：<code>(19 + 34) / (19 + 34 + 24 +10) = 60.9%</code></p>
-<h1 id="理论值四格表"><a href="#理论值四格表" class="headerlink" title="理论值四格表"></a>理论值四格表</h1><p>第二步，根据无关性假设生成新的理论值四格表：</p>
-<table>
-<thead>
-<tr>
-<th>组别</th>
-<th>属于<code>娱乐</code></th>
-<th>不属于<code>娱乐</code></th>
-<th>合计</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>不包含<code>吴亦凡</code></td>
-<td>43 * 0.609 = 26.2</td>
-<td>43 * 0.391 = 16.8</td>
-<td>43</td>
-</tr>
-<tr>
-<td>包含<code>吴亦凡</code></td>
-<td>44 * 0.609 = 26.8</td>
-<td>44 * 0.391 = 17.2</td>
-<td>44</td>
-</tr>
-</tbody>
-</table>
-<p>显然，如果两个变量是独立无关的，那么四格表中的理论值与实际值的差异会非常小。</p>
-<h1 id="x2值的计算"><a href="#x2值的计算" class="headerlink" title="x2值的计算"></a>x2值的计算</h1><p>x2的计算公式为：</p>
-<p><img src="/images/chisquare-1.png" alt="x2计算公式"></p>
-<p>其中A为实际值，也就是第一个四格表里的4个数据，T为理论值，也就是理论值四格表里的4个数据。</p>
-<p>x2用于衡量实际值与理论值的差异程度（也就是卡方检验的核心思想），包含了以下两个信息：</p>
+        <p>近来有几个好友遇到了职场的转折点，颇有些纠结，时不时就来「骚扰」我一下：</p>
 <ul>
-<li>实际值与理论值偏差的绝对大小（由于平方的存在，差异是被放大的）</li>
-<li>差异程度与理论值的相对大小</li>
+<li>A公司开了一个XXX package的offer，该不该去？</li>
+<li>上级匹配了B公司的薪酬，做了扩大队伍的承诺，该不该留？</li>
+<li>C公司给了XXX级别的许诺，可不可以再谈？</li>
+<li>……</li>
 </ul>
-<p>对上述场景可计算x2值为10.01。</p>
-<h1 id="卡方分布的临界值"><a href="#卡方分布的临界值" class="headerlink" title="卡方分布的临界值"></a>卡方分布的临界值</h1><p>既然已经得到了x2值，我们又怎么知道x2值是否合理？也就是说，怎么知道无关性假设是否可靠？答案是，通过查询卡方分布的临界值表。</p>
-<p>这里需要用到一个<code>自由度</code>的概念，自由度等于<code>V = (行数 - 1) * (列数 - 1)</code>，对四格表，自由度<code>V = 1</code>。</p>
-<p>对<code>V = 1</code>，卡方分布的临界概率是：</p>
-<p><img src="/images/chisquare-2.png" alt="卡方分布临界值"></p>
-<p>显然<code>10.01 &gt; 7.88</code>，也就是<code>标题是否包含吴亦凡</code>与<code>新闻是否属于娱乐</code>无关的可能性小于0.5%，反过来，就是两者相关的概率大于99.5%。</p>
-<h1 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h1><p>卡方检验的一个典型应用场景是衡量特定条件下的分布是否与理论分布一致，比如：特定用户某项指标的分布与大盘的分布是否差异很大，这时通过临界概率可以合理又科学的筛选异常用户。</p>
-<p>另外，x2值描述了自变量与因变量之间的相关程度：x2值越大，相关程度也越大，所以很自然的可以利用x2值来做降维，保留相关程度大的变量。再回到刚才新闻分类的场景，如果我们希望获取和娱乐类别相关性最强的100个词，以后就按照标题是否包含这100个词来确定新闻是否归属于娱乐类，怎么做？很简单，对娱乐类新闻标题所包含的每个词按上述步骤计算x2值，然后按x2值排序，取x2值最大的100个词。</p>
+<p>我发现大部分技术人做职场转换（包括跳槽或内部转岗），总是盯着明面上的东西，比如薪酬、职级或是职位。固然，真金白银能说明很多问题，愿意付出高薪的公司多半是现金流不愁且重视基层员工的价值，职级代表了对候选人专业能力的肯定，职位又与你在组织里能发挥的影响力息息相关。</p>
+<p>但是，除了明面的条件，有没有哪些软性的标准能评价一份工作的好坏？想清楚这个问题其实对每个职业人都异常重要，以我自己为例，除了做职场转换时能更精准的评估对方岗位的吸引力，以及对处在当前位置该往哪个方向努力更通透，还能明白自己该为团队创造哪些条件，毕竟明面的条件更多由组织所决定（大笑）。</p>
+<a id="more"></a>
+<p>还好近期读了布赖恩·费瑟斯通豪的「远见：如何规划职业生涯3大阶段」一书中，书中提出的职场燃料的概念让我印象深刻：<strong>充足的职场燃料让我们在后续的职业生涯中所获得的选择空间更大，职业生涯也能走得更远</strong>。职场燃料包括三种，一是可迁移的技能、二是有意义的经验、三是持久的关系。不妨我们就将这三种职场燃料映射到技术人身上，作为评价工作好坏的软性标准。</p>
+<h2 id="工作饱和而紧张，可以沉淀解决通用问题的方法论"><a href="#工作饱和而紧张，可以沉淀解决通用问题的方法论" class="headerlink" title="工作饱和而紧张，可以沉淀解决通用问题的方法论"></a>工作饱和而紧张，可以沉淀解决通用问题的方法论</h2><p>曾经有位朋友从一个清闲的岗位转换到一个忙碌的岗位，别人都很不解，因为按小时计的薪酬显然是下降了，他这么回复，在我们这个行业，朝九晚五让人惶恐不安。且不评价这句话的对错（我是反对盲目<code>996</code>的），饱和与否确实是评估工作是否靠谱的因素之一，一方面工作饱和说明团队业务不愁，能保证职业的安全和稳定，另一方面饱和的工作条件下更容易激发人的工作潜能。只有工作饱和了，才会想到如何去有效管理时间，才会去判断任务的轻重缓急，才会累积快速定位与解决bug或其他不可思议问题的经验，才会日思夜想怎么抓住核心的优化点快速出业绩。</p>
+<p>「方法论」是我们在晋升答辩中相当看重的一个能力。<strong>方法论就是当你阅尽千帆之后留下的套路，技术人有了方法论，好比是机关枪换了散弹枪，一枪可以解决好几个敌人</strong>。方法论的沉淀除了要有升维思考的意识，也取决于待解决的问题不可太窄、不可太浅、不可太偏运营。比如反欺诈的问题，从运营的角度切入固然可以找到许多有效的方法，然而长期做下去就会导致技术收敛在一个较窄的领域，不利于扩展职业选择的空间，但如果从数据的角度切入，可以尝试的方法就宽广很多，也有机会将其他领域的技术融会贯通。</p>
+<h2 id="有规模效应，技术选型有前瞻性"><a href="#有规模效应，技术选型有前瞻性" class="headerlink" title="有规模效应，技术选型有前瞻性"></a>有规模效应，技术选型有前瞻性</h2><p>有意义的经验我个人认为比平台的光环更有助于长远的职业发展。举个例子，我曾经在一家中型企业的数据中台部门工作过，当时从同事到领导都是泥腿子洗脚上田，从客户端到后台的背景都有，企业后期的发展也遭受了一些波折，中途不时有大牛加入又迅速离开，然而最终留守的兄弟们无论是留是走都有不错的机会，原因就是部门倾全力打造了一个面向信息流的推荐系统，而整个推荐系统所使用的技术虽然是从零到一搭起来的，但从一开始就锚定了业界最前沿的实践，得到第一手经验的候选人自然得到了其他优秀平台的追捧。</p>
+<p>这些候选人能得到充足的职场燃料，除了流量中心背后产生的规模效应，还得益于技术负责人选型时的前瞻性。当我刚从事技术工作的时候，有两位前辈对我影响最大，他们技术选型的偏好也南辕北辙，一位十分激进，业界任何新的算法或是框架都要刨根究底，一位却十分保守，可以将四五年前提出的技术落地得华丽实用且毫不过时。但如果问我的偏好，我倾向于<strong>技术主干的激进</strong>。倒不是说每篇轰动一时的Paper都要去跟进，但是要时刻跟进业界其他领先团队的经验，一旦工业界有成熟的应用，就认为这项技术被<code>merge</code>进了技术主干，必须去尝试在现有场景之中是否有收益，比如阿里的<code>Deep Interest Network</code>就是一个适合工业界点击率预估场景的算法，不追的话团队对技术前沿的敏感性是问题的。<strong>对技术人而言，做的事情有规模效应，有挑战难度，团队有技术前瞻性，就等同于有价值的经验，就是好工作的入围条件</strong>。</p>
+<h2 id="重视人的成长，而不是把人当做完成任务的工具"><a href="#重视人的成长，而不是把人当做完成任务的工具" class="headerlink" title="重视人的成长，而不是把人当做完成任务的工具"></a>重视人的成长，而不是把人当做完成任务的工具</h2><p>之前在<a href="https://mp.weixin.qq.com/s/0ND55eYjb5iInYAexB6xJg" target="_blank" rel="noopener">菜鸟工程师的超神之路 – 从校园到职场</a>有提到一个点，新人的一大误区是把学习当做工作的目标，因为公司支付你的薪水，并不是让你来这里学习，而是要为公司创造价值的。然而，我们也要避免掉入另一个极端，就是面向KPI而工作，更可怕的是一旦这种价值观上升为团队甚至公司的价值观，就会把人变成冷冰冰的工具看待，只为了「成事」而不顾「成人」。我们生在一个瞬息万变的时代，项目能不能成，受到内部外部复杂因素的综合影响，但优秀的团队往往屡败屡战越打越强，可以从失败中迅速成长，下次抓住一个好时机就搞定了。<strong>好工作意味着能把打造团队本身作为重点的项目去考虑</strong>。除了搞定项目，还会腾出时间做好文档沉淀、Code Review、技术分享、项目交流等有益于成员能力提升的事情。</p>
+<p>此外，我也会在意招聘时对方流露出来的温度感，至少有两次职场转换我有把直属领导的诚意纳入考量之中，这种温度感在冰山之下代表的是对打造优秀团队的热烈渴求，而不是谁来都一样，也往往说明团队在职业之内和职业之外建立持久关系的一种努力。将心比心当我在招聘时遇到优秀的候选人，我也会不厌其烦邀请他（她）加入我的团队，为他（她）的加盟争取允许范围内的一切条件。彼得·蒂尔谈到他早年在一家律师事务所的职业经历，同事个个都很出色，但之间的关系却异常淡薄，他只待了很短的时间就离开了团队，因为将时间浪费在不能长久合作的人身上得不偿失。铁打的营盘流水的兵，对于平均在职时间仅有1.47年的技术行业更是如此。职业早期的跳槽往往靠投简历或者猎头就能解决，越往高处走岗位对外开放的程度越低，往往仅在某些人脉网络之中流通，不是众所周知的大牛人物的话，就必须靠持久的关系来加成。<strong>好工作还意味着鼓励成员间建立持久关系的氛围</strong>。这不仅仅靠面聊、饭局或是团建就能做起来，更依赖于团队整体在追求卓越基础之上的充分沟通和相互信赖。</p>
+<p>当然，除了做职场转换时可以用这三个条件评估好坏，平时工作之中也不妨往可迁移的技能、有意义的经验、持久的关系三个方向多做积累。祝大家无论做任何的决定，都给自己的职场，加满油。</p>
 
       
     </div>
@@ -507,12 +445,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/卡方检验/" rel="tag"># 卡方检验</a>
-          
-        </div>
-      
 
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
@@ -534,8 +466,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/elasticsearch-http-basic-authentication.html" rel="next" title="为ElasticSearch添加HTTP基本认证">
-                <i class="fa fa-chevron-left"></i> 为ElasticSearch添加HTTP基本认证
+              <a href="/tech-writing.html" rel="next" title="技术人为什么该坚持写作？">
+                <i class="fa fa-chevron-left"></i> 技术人为什么该坚持写作？
               </a>
             
           </div>
@@ -543,10 +475,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/be-friend-of-time.html" rel="prev" title="心智养成，不争朝夕">
-                心智养成，不争朝夕 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -718,7 +646,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#无关性假设"><span class="nav-number">1.</span> <span class="nav-text">无关性假设</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#理论值四格表"><span class="nav-number">2.</span> <span class="nav-text">理论值四格表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#x2值的计算"><span class="nav-number">3.</span> <span class="nav-text">x2值的计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#卡方分布的临界值"><span class="nav-number">4.</span> <span class="nav-text">卡方分布的临界值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用场景"><span class="nav-number">5.</span> <span class="nav-text">应用场景</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#工作饱和而紧张，可以沉淀解决通用问题的方法论"><span class="nav-number">1.</span> <span class="nav-text">工作饱和而紧张，可以沉淀解决通用问题的方法论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有规模效应，技术选型有前瞻性"><span class="nav-number">2.</span> <span class="nav-text">有规模效应，技术选型有前瞻性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重视人的成长，而不是把人当做完成任务的工具"><span class="nav-number">3.</span> <span class="nav-text">重视人的成长，而不是把人当做完成任务的工具</span></a></li></ol></div>
             
 
           </div>
@@ -881,9 +809,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://guoze.me/chi-square.html';
-          this.page.identifier = 'chi-square.html';
-          this.page.title = '卡方检验原理及应用';
+          this.page.url = 'http://guoze.me/good-job.html';
+          this.page.identifier = 'good-job.html';
+          this.page.title = '怎样才算一份好工作？';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://2shou-1.disqus.com/embed.js';

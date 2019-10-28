@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://guoze.me/good-job.html</loc>
+    
+    <lastmod>2019-10-28T02:24:58.831Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://guoze.me/tech-writing.html</loc>
     
     <lastmod>2019-10-21T03:24:21.119Z</lastmod>
@@ -23,14 +30,14 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2019/10/10/algorithm-bubble/index.html</loc>
+    <loc>http://guoze.me/2019/09/26/data-science-future/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.967Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/2019/09/26/data-science-future/index.html</loc>
+    <loc>http://guoze.me/2019/10/10/algorithm-bubble/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.967Z</lastmod>
     
@@ -114,13 +121,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2018/03/14/blockchain-feeds/index.html</loc>
-    
-    <lastmod>2019-10-10T14:18:16.960Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://guoze.me/2018/03/10/zeng-guo-fan/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.960Z</lastmod>
@@ -129,6 +129,13 @@
   
   <url>
     <loc>http://guoze.me/2018/03/06/blockchain-scare/index.html</loc>
+    
+    <lastmod>2019-10-10T14:18:16.960Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2018/03/14/blockchain-feeds/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.960Z</lastmod>
     
@@ -149,14 +156,14 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2018/02/27/blockchain-big-dream/index.html</loc>
+    <loc>http://guoze.me/2018/02/11/ai/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.958Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/2018/02/11/ai/index.html</loc>
+    <loc>http://guoze.me/2018/02/27/blockchain-big-dream/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.958Z</lastmod>
     
@@ -170,13 +177,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2017/12/17/rabbit-on-waves/index.html</loc>
-    
-    <lastmod>2019-10-10T14:18:16.957Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://guoze.me/2017/12/18/youth-only-sequel/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.957Z</lastmod>
@@ -184,14 +184,21 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2015/01/08/scrapy-custom-exporter/index.html</loc>
+    <loc>http://guoze.me/2017/12/17/rabbit-on-waves/index.html</loc>
+    
+    <lastmod>2019-10-10T14:18:16.957Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2017/12/03/why-management-not-that-important/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.956Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/2017/12/03/why-management-not-that-important/index.html</loc>
+    <loc>http://guoze.me/2015/01/08/scrapy-custom-exporter/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.956Z</lastmod>
     
@@ -212,14 +219,14 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2014/12/29/libshorttext-setup-script/index.html</loc>
+    <loc>http://guoze.me/2014/04/12/elegance/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.954Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/2014/04/12/elegance/index.html</loc>
+    <loc>http://guoze.me/2014/12/29/libshorttext-setup-script/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.954Z</lastmod>
     
@@ -229,6 +236,13 @@
     <loc>http://guoze.me/2014/07/12/blog-rule/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.954Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/01/14/sae-tornado-experience/index.html</loc>
+    
+    <lastmod>2019-10-10T14:18:16.953Z</lastmod>
     
   </url>
   
@@ -247,20 +261,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2015/01/14/sae-tornado-experience/index.html</loc>
-    
-    <lastmod>2019-10-10T14:18:16.953Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/01/31/tornado-log-perday/index.html</loc>
-    
-    <lastmod>2019-10-10T14:18:16.952Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://guoze.me/2014/06/11/mongodb-capped-collection/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.952Z</lastmod>
@@ -275,14 +275,21 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2015/01/29/good-recommendation/index.html</loc>
+    <loc>http://guoze.me/2015/01/31/tornado-log-perday/index.html</loc>
+    
+    <lastmod>2019-10-10T14:18:16.952Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/03/10/logistic-regression-introduction/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.951Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/2015/03/10/logistic-regression-introduction/index.html</loc>
+    <loc>http://guoze.me/2015/01/29/good-recommendation/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.951Z</lastmod>
     
@@ -296,14 +303,14 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2017/07/11/recruitment-ad/index.html</loc>
+    <loc>http://guoze.me/2015/12/12/choose-startup/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.950Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/2015/12/12/choose-startup/index.html</loc>
+    <loc>http://guoze.me/2017/07/11/recruitment-ad/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.950Z</lastmod>
     
@@ -338,6 +345,13 @@
   </url>
   
   <url>
+    <loc>http://guoze.me/2015/01/04/python-quick-orm/index.html</loc>
+    
+    <lastmod>2019-10-10T14:18:16.947Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://guoze.me/2017/06/21/time-management-handbook/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.947Z</lastmod>
@@ -352,20 +366,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2015/01/04/python-quick-orm/index.html</loc>
-    
-    <lastmod>2019-10-10T14:18:16.947Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2017/02/25/the-future-of-data-industry/index.html</loc>
-    
-    <lastmod>2019-10-10T14:18:16.946Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://guoze.me/2016/02/21/zero-to-one/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.946Z</lastmod>
@@ -374,6 +374,13 @@
   
   <url>
     <loc>http://guoze.me/2015/09/24/be-friend-of-time/index.html</loc>
+    
+    <lastmod>2019-10-10T14:18:16.946Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2017/02/25/the-future-of-data-industry/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.946Z</lastmod>
     
@@ -394,13 +401,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2017/03/18/brief-history-of-humankind/index.html</loc>
-    
-    <lastmod>2019-10-10T14:18:16.944Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://guoze.me/2016/12/22/macbook-pro-experience/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.944Z</lastmod>
@@ -408,14 +408,21 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2016/10/24/engineering-culture/index.html</loc>
+    <loc>http://guoze.me/2017/03/18/brief-history-of-humankind/index.html</loc>
+    
+    <lastmod>2019-10-10T14:18:16.944Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2016/10/16/wechat-app/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.943Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/2016/10/16/wechat-app/index.html</loc>
+    <loc>http://guoze.me/2016/10/24/engineering-culture/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.943Z</lastmod>
     
@@ -457,13 +464,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2016/01/24/busy-programmer/index.html</loc>
-    
-    <lastmod>2019-10-10T14:18:16.939Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://guoze.me/2016/01/10/recommendation-zero-to-one/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.939Z</lastmod>
@@ -471,14 +471,21 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2015/12/20/goodbye-2015/index.html</loc>
+    <loc>http://guoze.me/2016/01/24/busy-programmer/index.html</loc>
+    
+    <lastmod>2019-10-10T14:18:16.939Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/12/12/matplotlib-par-chart/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.938Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/2015/12/12/matplotlib-par-chart/index.html</loc>
+    <loc>http://guoze.me/2015/12/20/goodbye-2015/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.938Z</lastmod>
     
@@ -562,14 +569,14 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2014/12/19/impala-compute-stats/index.html</loc>
+    <loc>http://guoze.me/2014/09/25/libshorttext-introduction/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.931Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/2014/09/25/libshorttext-introduction/index.html</loc>
+    <loc>http://guoze.me/2014/12/19/impala-compute-stats/index.html</loc>
     
     <lastmod>2019-10-10T14:18:16.931Z</lastmod>
     
@@ -709,14 +716,14 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/youth-only-sequel.html</loc>
+    <loc>http://guoze.me/youth-only.html</loc>
     
     <lastmod>2019-09-25T09:58:11.249Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/youth-only.html</loc>
+    <loc>http://guoze.me/youth-only-sequel.html</loc>
     
     <lastmod>2019-09-25T09:58:11.249Z</lastmod>
     
@@ -793,14 +800,14 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/svm-introduction.html</loc>
+    <loc>http://guoze.me/svm-knowledge.html</loc>
     
     <lastmod>2019-09-25T09:58:11.236Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/svm-knowledge.html</loc>
+    <loc>http://guoze.me/svm-introduction.html</loc>
     
     <lastmod>2019-09-25T09:58:11.236Z</lastmod>
     
@@ -814,14 +821,14 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/spark-dataframe.html</loc>
+    <loc>http://guoze.me/spark-log-extract.html</loc>
     
     <lastmod>2019-09-25T09:58:11.234Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/spark-log-extract.html</loc>
+    <loc>http://guoze.me/spark-dataframe.html</loc>
     
     <lastmod>2019-09-25T09:58:11.234Z</lastmod>
     
@@ -842,14 +849,14 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/scikit-learn-naive-bayes-classifier.html</loc>
+    <loc>http://guoze.me/sae-tornado-experience.html</loc>
     
     <lastmod>2019-09-25T09:58:11.231Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/sae-tornado-experience.html</loc>
+    <loc>http://guoze.me/scikit-learn-naive-bayes-classifier.html</loc>
     
     <lastmod>2019-09-25T09:58:11.231Z</lastmod>
     
@@ -870,14 +877,14 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/r-multi-ggplot.html</loc>
+    <loc>http://guoze.me/python-quick-orm.html</loc>
     
     <lastmod>2019-09-25T09:58:11.228Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/python-quick-orm.html</loc>
+    <loc>http://guoze.me/r-multi-ggplot.html</loc>
     
     <lastmod>2019-09-25T09:58:11.228Z</lastmod>
     
@@ -1073,13 +1080,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/elasticsearch-optimization.html</loc>
-    
-    <lastmod>2019-09-25T09:58:11.201Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://guoze.me/elasticsearch-http-basic-authentication.html</loc>
     
     <lastmod>2019-09-25T09:58:11.201Z</lastmod>
@@ -1087,14 +1087,21 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/data-geek.html</loc>
+    <loc>http://guoze.me/elasticsearch-optimization.html</loc>
+    
+    <lastmod>2019-09-25T09:58:11.201Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/crawler-attack-defense.html</loc>
     
     <lastmod>2019-09-25T09:58:11.198Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/crawler-attack-defense.html</loc>
+    <loc>http://guoze.me/data-geek.html</loc>
     
     <lastmod>2019-09-25T09:58:11.198Z</lastmod>
     
@@ -1115,14 +1122,14 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/blog-rule.html</loc>
+    <loc>http://guoze.me/blockchain-scare.html</loc>
     
     <lastmod>2019-09-25T09:58:11.194Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/blockchain-scare.html</loc>
+    <loc>http://guoze.me/blog-rule.html</loc>
     
     <lastmod>2019-09-25T09:58:11.194Z</lastmod>
     
@@ -1136,14 +1143,14 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/be-friend-of-time.html</loc>
+    <loc>http://guoze.me/blockchain-bat.html</loc>
     
     <lastmod>2019-09-25T09:58:11.190Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/blockchain-bat.html</loc>
+    <loc>http://guoze.me/be-friend-of-time.html</loc>
     
     <lastmod>2019-09-25T09:58:11.190Z</lastmod>
     
@@ -1164,14 +1171,14 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/categories/index.html</loc>
+    <loc>http://guoze.me/tags/index.html</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://guoze.me/tags/index.html</loc>
+    <loc>http://guoze.me/categories/index.html</loc>
     
     <lastmod>2017-07-01T15:34:53.000Z</lastmod>
     

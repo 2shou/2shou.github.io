@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>http://guoze.me/35-expired-p8.html</loc>
+    <lastmod>2019-11-06T04:24:18.197Z</lastmod>
+    <data>
+        <display>
+        <title>35岁不到P8，就成了明日黄花？</title>
+        <pubTime>2019-11-06T04:22:56.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="职业论" url="http://guoze.me/categories/career/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://guoze.me/good-job.html</loc>
     <lastmod>2019-10-28T02:24:58.831Z</lastmod>
     <data>
@@ -463,16 +481,16 @@
 
     
   <url>
-    <loc>http://guoze.me/youth-only.html</loc>
+    <loc>http://guoze.me/youth-only-sequel.html</loc>
     <lastmod>2019-09-25T09:58:11.249Z</lastmod>
     <data>
         <display>
-        <title>青春饭</title>
-        <pubTime>2016-06-26T01:47:38.000Z</pubTime>
+        <title>青春饭吃完以后</title>
+        <pubTime>2017-12-17T16:06:59.000Z</pubTime>
         
         <tag>程序员</tag>
          
-        <tag>职业发展</tag>
+        <tag>中年危机</tag>
          
          
            
@@ -485,16 +503,16 @@
 
     
   <url>
-    <loc>http://guoze.me/youth-only-sequel.html</loc>
+    <loc>http://guoze.me/youth-only.html</loc>
     <lastmod>2019-09-25T09:58:11.249Z</lastmod>
     <data>
         <display>
-        <title>青春饭吃完以后</title>
-        <pubTime>2017-12-17T16:06:59.000Z</pubTime>
+        <title>青春饭</title>
+        <pubTime>2016-06-26T01:47:38.000Z</pubTime>
         
         <tag>程序员</tag>
          
-        <tag>中年危机</tag>
+        <tag>职业发展</tag>
          
          
            
@@ -739,12 +757,12 @@
 
     
   <url>
-    <loc>http://guoze.me/svm-knowledge.html</loc>
+    <loc>http://guoze.me/svm-introduction.html</loc>
     <lastmod>2019-09-25T09:58:11.236Z</lastmod>
     <data>
         <display>
-        <title>SVM十问十答</title>
-        <pubTime>2014-11-26T15:20:12.000Z</pubTime>
+        <title>SVM原理简介：最大间隔分类器</title>
+        <pubTime>2014-07-14T05:06:11.000Z</pubTime>
         
         <tag>分类算法</tag>
          
@@ -763,12 +781,12 @@
 
     
   <url>
-    <loc>http://guoze.me/svm-introduction.html</loc>
+    <loc>http://guoze.me/svm-knowledge.html</loc>
     <lastmod>2019-09-25T09:58:11.236Z</lastmod>
     <data>
         <display>
-        <title>SVM原理简介：最大间隔分类器</title>
-        <pubTime>2014-07-14T05:06:11.000Z</pubTime>
+        <title>SVM十问十答</title>
+        <pubTime>2014-11-26T15:20:12.000Z</pubTime>
         
         <tag>分类算法</tag>
          
@@ -807,6 +825,30 @@
 
     
   <url>
+    <loc>http://guoze.me/spark-dataframe.html</loc>
+    <lastmod>2019-09-25T09:58:11.234Z</lastmod>
+    <data>
+        <display>
+        <title>Spark DataFrame小试牛刀</title>
+        <pubTime>2015-03-22T12:28:51.000Z</pubTime>
+        
+        <tag>MySQL</tag>
+         
+        <tag>Spark</tag>
+         
+        <tag>DataFrame</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据控" url="http://guoze.me/categories/data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://guoze.me/spark-log-extract.html</loc>
     <lastmod>2019-09-25T09:58:11.234Z</lastmod>
     <data>
@@ -821,30 +863,6 @@
         <tag>日志</tag>
          
         <tag>Scala</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据控" url="http://guoze.me/categories/data/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://guoze.me/spark-dataframe.html</loc>
-    <lastmod>2019-09-25T09:58:11.234Z</lastmod>
-    <data>
-        <display>
-        <title>Spark DataFrame小试牛刀</title>
-        <pubTime>2015-03-22T12:28:51.000Z</pubTime>
-        
-        <tag>MySQL</tag>
-         
-        <tag>Spark</tag>
-         
-        <tag>DataFrame</tag>
          
          
            
@@ -903,6 +921,30 @@
 
     
   <url>
+    <loc>http://guoze.me/scikit-learn-naive-bayes-classifier.html</loc>
+    <lastmod>2019-09-25T09:58:11.231Z</lastmod>
+    <data>
+        <display>
+        <title>用scikit-learn实现朴素贝叶斯分类器</title>
+        <pubTime>2014-06-05T14:50:19.000Z</pubTime>
+        
+        <tag>分类算法</tag>
+         
+        <tag>朴素贝叶斯</tag>
+         
+        <tag>scikit-learn</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据控" url="http://guoze.me/categories/data/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://guoze.me/sae-tornado-experience.html</loc>
     <lastmod>2019-09-25T09:58:11.231Z</lastmod>
     <data>
@@ -922,30 +964,6 @@
            
              
               <breadCrumb title="技术控" url="http://guoze.me/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://guoze.me/scikit-learn-naive-bayes-classifier.html</loc>
-    <lastmod>2019-09-25T09:58:11.231Z</lastmod>
-    <data>
-        <display>
-        <title>用scikit-learn实现朴素贝叶斯分类器</title>
-        <pubTime>2014-06-05T14:50:19.000Z</pubTime>
-        
-        <tag>分类算法</tag>
-         
-        <tag>朴素贝叶斯</tag>
-         
-        <tag>scikit-learn</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据控" url="http://guoze.me/categories/data/"/>
           
         </display>
     </data>
@@ -1043,6 +1061,28 @@
 
     
   <url>
+    <loc>http://guoze.me/programmer-pm-comunication.html</loc>
+    <lastmod>2019-09-25T09:58:11.227Z</lastmod>
+    <data>
+        <display>
+        <title>给程序员与产品经理的六个沟通锦囊</title>
+        <pubTime>2018-03-21T15:26:08.000Z</pubTime>
+        
+        <tag>程序员</tag>
+         
+        <tag>产品经理</tag>
+         
+         
+           
+             
+              <breadCrumb title="职业论" url="http://guoze.me/categories/career/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://guoze.me/python-phantomjs-crawler.html</loc>
     <lastmod>2019-09-25T09:58:11.227Z</lastmod>
     <data>
@@ -1060,28 +1100,6 @@
            
              
               <breadCrumb title="技术控" url="http://guoze.me/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://guoze.me/programmer-pm-comunication.html</loc>
-    <lastmod>2019-09-25T09:58:11.227Z</lastmod>
-    <data>
-        <display>
-        <title>给程序员与产品经理的六个沟通锦囊</title>
-        <pubTime>2018-03-21T15:26:08.000Z</pubTime>
-        
-        <tag>程序员</tag>
-         
-        <tag>产品经理</tag>
-         
-         
-           
-             
-              <breadCrumb title="职业论" url="http://guoze.me/categories/career/"/>
           
         </display>
     </data>
@@ -1171,28 +1189,6 @@
 
     
   <url>
-    <loc>http://guoze.me/matplotlib-par-chart.html</loc>
-    <lastmod>2019-09-25T09:58:11.222Z</lastmod>
-    <data>
-        <display>
-        <title>Python绘制精美图表之双柱形图</title>
-        <pubTime>2015-12-12T10:21:46.000Z</pubTime>
-        
-        <tag>matplotlib</tag>
-         
-        <tag>图表绘制</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术控" url="http://guoze.me/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://guoze.me/macbook-pro-experience.html</loc>
     <lastmod>2019-09-25T09:58:11.222Z</lastmod>
     <data>
@@ -1208,6 +1204,28 @@
            
              
               <breadCrumb title="产品控" url="http://guoze.me/categories/product/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://guoze.me/matplotlib-par-chart.html</loc>
+    <lastmod>2019-09-25T09:58:11.222Z</lastmod>
+    <data>
+        <display>
+        <title>Python绘制精美图表之双柱形图</title>
+        <pubTime>2015-12-12T10:21:46.000Z</pubTime>
+        
+        <tag>matplotlib</tag>
+         
+        <tag>图表绘制</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术控" url="http://guoze.me/categories/programming/"/>
           
         </display>
     </data>
@@ -1685,16 +1703,14 @@
 
     
   <url>
-    <loc>http://guoze.me/crawler-attack-defense.html</loc>
+    <loc>http://guoze.me/data-geek.html</loc>
     <lastmod>2019-09-25T09:58:11.198Z</lastmod>
     <data>
         <display>
-        <title>看不见的攻与防</title>
-        <pubTime>2016-05-14T14:51:34.000Z</pubTime>
+        <title>4个小例子告诉你：如何成为一名数据极客</title>
+        <pubTime>2015-12-12T10:17:17.000Z</pubTime>
         
-        <tag>爬虫</tag>
-         
-        <tag>反爬虫</tag>
+        <tag>大数据</tag>
          
          
            
@@ -1707,14 +1723,16 @@
 
     
   <url>
-    <loc>http://guoze.me/data-geek.html</loc>
+    <loc>http://guoze.me/crawler-attack-defense.html</loc>
     <lastmod>2019-09-25T09:58:11.198Z</lastmod>
     <data>
         <display>
-        <title>4个小例子告诉你：如何成为一名数据极客</title>
-        <pubTime>2015-12-12T10:17:17.000Z</pubTime>
+        <title>看不见的攻与防</title>
+        <pubTime>2016-05-14T14:51:34.000Z</pubTime>
         
-        <tag>大数据</tag>
+        <tag>爬虫</tag>
+         
+        <tag>反爬虫</tag>
          
          
            
@@ -1767,6 +1785,24 @@
 
     
   <url>
+    <loc>http://guoze.me/blog-rule.html</loc>
+    <lastmod>2019-09-25T09:58:11.194Z</lastmod>
+    <data>
+        <display>
+        <title>建造者说的博客原则</title>
+        <pubTime>2014-07-12T09:32:19.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="梦中语" url="http://guoze.me/categories/thinking/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://guoze.me/blockchain-scare.html</loc>
     <lastmod>2019-09-25T09:58:11.194Z</lastmod>
     <data>
@@ -1780,24 +1816,6 @@
            
              
               <breadCrumb title="区块链" url="http://guoze.me/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://guoze.me/blog-rule.html</loc>
-    <lastmod>2019-09-25T09:58:11.194Z</lastmod>
-    <data>
-        <display>
-        <title>建造者说的博客原则</title>
-        <pubTime>2014-07-12T09:32:19.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="梦中语" url="http://guoze.me/categories/thinking/"/>
           
         </display>
     </data>

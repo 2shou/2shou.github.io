@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="对于数据岗位的员工，互联网公司颇有些不同的称谓，像统计工程师、大数据工程师、数据分析师、算法工程师、数据科学家等，每一种之间的技能差距简直是风马牛不相及。但我觉得，数据岗位的需求千变万化，真正能通过数据解决问题的人，不仅要通晓两到三种岗位的技能，而且要深刻理解数据方法论，能将数据玩弄于鼓掌之中，这种人我称之为数据极客。好比武侠小说中的绝顶高手，杀人已不需要用剑，剑意就能杀人于无形。数据极客都需要具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="4个小例子告诉你：如何成为一名数据极客">
+<meta property="og:url" content="http://guoze.me/data-geek.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="对于数据岗位的员工，互联网公司颇有些不同的称谓，像统计工程师、大数据工程师、数据分析师、算法工程师、数据科学家等，每一种之间的技能差距简直是风马牛不相及。但我觉得，数据岗位的需求千变万化，真正能通过数据解决问题的人，不仅要通晓两到三种岗位的技能，而且要深刻理解数据方法论，能将数据玩弄于鼓掌之中，这种人我称之为数据极客。好比武侠小说中的绝顶高手，杀人已不需要用剑，剑意就能杀人于无形。数据极客都需要具">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2015-12-12T10:17:17.000Z">
+<meta property="article:modified_time" content="2019-09-25T09:58:11.000Z">
+<meta property="article:author" content="2shou">
+<meta property="article:tag" content="大数据">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://guoze.me/data-geek.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/data-geek.html","path":"data-geek.html","title":"4个小例子告诉你：如何成为一名数据极客"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>4个小例子告诉你：如何成为一名数据极客 | 建造者说</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%87%82%E5%BE%97%E5%88%9B%E9%80%A0%E6%95%B0%E6%8D%AE"><span class="nav-number">1.</span> <span class="nav-text">懂得创造数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%98%AF%E7%AB%8B%E4%BD%93%E7%9A%84"><span class="nav-number">2.</span> <span class="nav-text">数据是立体的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%8C%E6%81%B6%E6%8A%BD%E6%A0%B7"><span class="nav-number">3.</span> <span class="nav-text">厌恶抽样</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%96%84%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="nav-number">4.</span> <span class="nav-text">善用工具</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/data-geek.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="4个小例子告诉你：如何成为一名数据极客 | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          4个小例子告诉你：如何成为一名数据极客
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2015-12-12 18:17:17" itemprop="dateCreated datePublished" datetime="2015-12-12T18:17:17+08:00">2015-12-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2019-09-25 17:58:11" itemprop="dateModified" datetime="2019-09-25T17:58:11+08:00">2019-09-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/data/" itemprop="url" rel="index"><span itemprop="name">数据控</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>对于数据岗位的员工，互联网公司颇有些不同的称谓，像统计工程师、大数据工程师、数据分析师、算法工程师、数据科学家等，每一种之间的技能差距简直是风马牛不相及。但我觉得，数据岗位的需求千变万化，真正能通过数据解决问题的人，不仅要通晓两到三种岗位的技能，而且要深刻理解数据方法论，能将数据玩弄于鼓掌之中，这种人我称之为<code>数据极客</code>。好比武侠小说中的绝顶高手，杀人已不需要用剑，剑意就能杀人于无形。数据极客都需要具备哪些能力？懂数据的人会怎么去思考和解决问题？我想举我自身遇到的4个小例子来说明。</p>
+<span id="more"></span>
+
+<h1 id="懂得创造数据"><a href="#懂得创造数据" class="headerlink" title="懂得创造数据"></a>懂得创造数据</h1><p>在大部分人的常识里，数据是客观存在的，既不会递增，也不会消减。所有当他们绘制报表、展开分析、构建模型时，很容易遭遇的瓶颈是<code>没有数据</code>，俗话说，巧妇难为无米之炊。真实的状况却是：数据是无穷无尽的，哪怕有时我们与数据之间的距离很远，就像远在天边的繁星，「手可摘星辰」只是一个传说，但经过大气层的折射我们却能时刻感受到它们的光辉。不仅光会折射，数据同样也会折射。举一个小例子：</p>
+<blockquote>
+<p>实习生Q跑来问我：「Boss赶着要大厅发言的数据去对付投资人，但是后台碍于发言的数据量级太大，一直都没有保存，无论数据库还是日志系统都没有记录。」</p>
+<p>我想了一下，问：「客户端进入大厅页面的事件一直都有监控，可以用那个数据替代吗？」</p>
+<p>「但是这个数据并不精确，因为进入大厅的并不完全转化为发言。」</p>
+<p>「是的，虽然不十分精确，但可以暂时用这个数据近似。然后，好友添加的数据一定程度也能反映大厅发言的热度，因为之前的统计显示，70%的好友关系产生来自于大厅。哦，对了，你有没有关注大厅界面的发送按钮的事件统计？这会是一个更为精确的替代数据。」</p>
+</blockquote>
+<p>这就是一个数据有无到有被创造出来的例子。虽然原始数据没有保存，但是数据极客的任务就是通过其他可能被获取的数据逼近原始数据，从而还原一个较为真实的状况。如果没有数据能够成为一个罢工的借口，那么我相信恐怕90%的数据极客都得失业了。但反过来，如果不是对业务对数据的采集都了如指掌，同样没办法快速实现这种变数据的戏法。</p>
+<h1 id="数据是立体的"><a href="#数据是立体的" class="headerlink" title="数据是立体的"></a>数据是立体的</h1><p>20世纪初，毕加索兴起了立体主义的绘画潮流，追求以许多组合的碎片形态去描写对象物，并将其置于同一个画面之中，物体的各个角度交错叠放创造出了一个多维的迷人空间。这和理想的数据展示多么相似：客观存在的问题经过多维度的数据解读，被展现在一个二维的平面上，让读者即便只站在一个角度，也能看到这个问题在所有角度上的表现。再举一个小例子（是的，这个例子完全与数据岗位无关，是一个来自客户端工程师的困扰）：</p>
+<blockquote>
+<p>W是U公司负责海外业务的安卓工程师，最近盯的是视频播放的项目，有次闲聊的时候说起，最近做了好几个底层库的性能优化，但从指标上看却没有明显提升，每次向老大汇报的时候总是心虚。</p>
+<p>「性能优化的指标是怎么统计的？」</p>
+<p>「海外业务的网络状况普遍不好，所以我们最关注的是视频页面的加载时间，统计的是从页面打开到视频完全加载的时间差，取所有用户的均值。」</p>
+<p>「这个指标似乎不那么全面，如果一个用户等待的时间过长，他有可能提前关闭页面，是否有统计过关闭页面的数据？还有，看过这个时间差的分布状况么？如果性能优化有针对一些特殊的客户端（比如型号、CPU、内存），有没有看过特殊客户端下的指标有没有提升？」</p>
+<p>我默想W的下次汇报一定会大肆耀武扬威一番，嘿嘿。</p>
+</blockquote>
+<p>这就是数据的魔力所在。通过层层剖析，始终能找到与问题相关的有区分度的数据，再通过数据的变化去定位到问题的发生原因或者发展趋势，给出不容置疑的结论。所以，在解决任何问题之前（也不限于数据岗位），你都必须先构建起一套立体化的数据监控体系，来强有力的印证你的方案是有效的。</p>
+<h1 id="厌恶抽样"><a href="#厌恶抽样" class="headerlink" title="厌恶抽样"></a>厌恶抽样</h1><p>无论是做推荐系统、精准营销还是反欺诈，都会遇到一个现实的问题：如何检测一个模型的实际效果？在观察指标之余，抽取一小部分的标记用户，观察他们的行为模式，人为去验证这个模型的准确率，是一个必要的环节。但是抽样如果用得泛滥了，就不是补药而是毒药了。再举个小例子：</p>
+<blockquote>
+<p>G是团队的新人，有阵子我看他没日没夜的加班，忍不住过问了几句，看是不是最近业务上碰到了什么瓶颈。一问下来有点啼笑皆非：原来G正在负责一个反欺诈模型的建设，需要一些黑标签，他从所有用户中抽取了好几个特征用户群，然后从每个用户群中再抽样一批用户，通过日志观察是否有欺诈行为，这么一来就耗掉了两天的时间。</p>
+</blockquote>
+<p>抽样是一种从局部看整体的方法，在抽样之上，你还要有对整体的把控。比如像G的做法就不符合数据极客的行为指南，既然可以通过日志观察到用户的行为特征，你就应该先把这种行为特征转化为可用的统计指标（比如识别欺诈，完全可以用收益相关的指标），再计算这几个用户群的均值特征，这样对比下来一目了然，而且省时省力。</p>
+<h1 id="善用工具"><a href="#善用工具" class="headerlink" title="善用工具"></a>善用工具</h1><p>感谢谷歌创造了这个时代最廉价的<code>数据核武器</code> - Hadoop（当然，如果Spark的bug再少一些，我会考虑把AMPLab放到谷歌的前面），数据的规模对大部分企业而言已经是一个无需顾虑的问题。但是数据极客不会满足于会用工具的层次，理解工具的原理，灵活的使用工具，使工具变得更加顺手，才能真正达到「善」用工具的境界。再举一个小例子：</p>
+<blockquote>
+<p>Z博士刚毕业不久，一腔热血要把高大上的机器学习算法用到我们的推荐系统上，但是第一次的运算结果居然要8个小时才能跑完，远远达不到产品团队的更新要求。于是老大鼓动我去协助Z提升整个环节的效率，我们一起在白板上梳理了整个计算的流程，我发现有好几处都是浪费资源降低效率的做法：原始数据由单机做一次处理再上传到Hadoop、多个MapReduce其实可以合并为一个、甚至Hadoop的参数也可以根据机器的性能稍做调整：加大节点数、加大Map和Reduce环节的可用内存、添加压缩以减少节点间传输的时间。稍作改造，运算时间便只剩下了原来的四分之一。</p>
+</blockquote>
+<p>说到这里，你也许会觉得数据极客也没什么巧妙，他们的方法论，和一切工作的方法论没什么不同，都会要多用脑子、多用工具、多种角度看待问题。既然如此，我可要恭喜你，你已经完全懂得了数据的妙用，而我一直以为，懂点数据，会对人的工作和生活大有助益。</p>
+<blockquote>
+<p><strong>广告</strong>：2shou试用过国内外超过10个的主机服务商，Linode是综合评价最高的一个。如果你恰好需要云主机，<a target="_blank" rel="noopener" href="https://www.linode.com/?r=17162ba138024f02c4025b904db1f520077da915">这是一个邀请链接</a>，让你获得额外的10美元优惠。</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" rel="tag"># 大数据</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/choose-startup.html" rel="prev" title="馆中窥职：小公司没那么糟糕">
+                  <i class="fa fa-chevron-left"></i> 馆中窥职：小公司没那么糟糕
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/matplotlib-par-chart.html" rel="next" title="Python绘制精美图表之双柱形图">
+                  Python绘制精美图表之双柱形图 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

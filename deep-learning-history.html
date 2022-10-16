@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="今天农历初九，虐狗的情人节刚过，相信2shou的朋友们虽然到岗了，但身心还是维持在慵懒的假期状态。没事，这次我们不谈严肃的技术话题，2shou给你们讲一段机器学习领域横跨三十年的科技圈八卦史。  前阵有个热门的新闻爆出来：谷歌的人工智能程序5：0完胜欧洲围棋冠军，堪称计算机攻陷了人类智慧硕果仅存的殿堂。其实这是一则老消息，发生时间在去年10月份，至于为什么这时才爆出来，据说是Facebook刚对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="猴年一乐：深度学习八卦史">
+<meta property="og:url" content="http://guoze.me/deep-learning-history.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="今天农历初九，虐狗的情人节刚过，相信2shou的朋友们虽然到岗了，但身心还是维持在慵懒的假期状态。没事，这次我们不谈严肃的技术话题，2shou给你们讲一段机器学习领域横跨三十年的科技圈八卦史。  前阵有个热门的新闻爆出来：谷歌的人工智能程序5：0完胜欧洲围棋冠军，堪称计算机攻陷了人类智慧硕果仅存的殿堂。其实这是一则老消息，发生时间在去年10月份，至于为什么这时才爆出来，据说是Facebook刚对">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-02-15T09:24:20.000Z">
+<meta property="article:modified_time" content="2019-10-10T06:13:50.000Z">
+<meta property="article:author" content="2shou">
+<meta property="article:tag" content="深度学习">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://guoze.me/deep-learning-history.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/deep-learning-history.html","path":"deep-learning-history.html","title":"猴年一乐：深度学习八卦史"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>猴年一乐：深度学习八卦史 | 建造者说</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/deep-learning-history.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="猴年一乐：深度学习八卦史 | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          猴年一乐：深度学习八卦史
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2016-02-15 17:24:20" itemprop="dateCreated datePublished" datetime="2016-02-15T17:24:20+08:00">2016-02-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2019-10-10 14:13:50" itemprop="dateModified" datetime="2019-10-10T14:13:50+08:00">2019-10-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/data/" itemprop="url" rel="index"><span itemprop="name">数据控</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote>
+<p>今天农历初九，虐狗的情人节刚过，相信2shou的朋友们虽然到岗了，但身心还是维持在慵懒的假期状态。没事，这次我们不谈严肃的技术话题，2shou给你们讲一段机器学习领域横跨三十年的科技圈八卦史。</p>
+</blockquote>
+<p>前阵有个热门的新闻爆出来：谷歌的人工智能程序5：0完胜欧洲围棋冠军，堪称计算机攻陷了人类智慧硕果仅存的殿堂。其实这是一则老消息，发生时间在去年10月份，至于为什么这时才爆出来，据说是Facebook刚对外宣称要探索人工智能下围棋的领域，谷歌放个风让江湖上认清谁是真正的大佬。谷歌和Facebook的八卦容后再表，近两年人工智能领域发展飞速，全拜一种颠覆式思想的普及所赐：<strong>深度学习</strong>。而深度学习的普及，离不开一个人的功劳，这个号称<strong>黑暗中举着火炬的人</strong>，Yann Lecun，中文名燕乐存。</p>
+<span id="more"></span>
+
+<p>与大多数人的想象相反，深度学习的普及并不是一帆风顺春风得意水到渠成的，而燕乐存的故事更像是屌丝逆袭。深度学习所依附的神经网络技术起源于上世纪50年代，而燕乐存早在上世纪80年代就开始研究神经网络的相关技术，并且做出了远超过其他科学家的开创性贡献，也是把多层神经网络推进到深度学习概念的第一人。然而，受限于计算能力的落后，神经网络一直不是机器学习领域的主流，在学术界备受其他学派的打压，一度连文章都很难发表；在工程领域也没有体现出比其他算法更好的性能，长期被SVM吊打。</p>
+<p>机器学习发展的历史中有一个最为出名的赌局，打赌的两方分别是SVM的发明人Vapnik和他在贝尔实验室的老大Jackel，赌约的内容是截止到2000年，人们是否会认为神经网络比SVM有更好的性能，而见证人正是那时还籍籍无名的燕乐存。显然SVM大获全胜。</p>
+<p>曾经有位教授酒后吐真言，说了一句明白话，有人就有江湖，学术圈也不例外。机器学习的权威在2012年以前长期被其他学派所把持，大环境如此，燕乐存的团队必然过不上好日子，始终无法在顶级期刊上发表文章，自然吸引不到最聪明的那些学生。但是，三十年如一日，燕乐存从来没有随波逐流，丝毫不放弃对神经网络的研究，对深度学习的未来充满信心，对科研成果的要求精益求精（甚至发明了一种新的语言替代Python做数值计算），直到2012年发生的一个标志性事件，才彻底翻了身。</p>
+<p>这个标志性的事件，现在回头看也似乎是偶然，燕乐存导师Hinton的几个博士生在图片分类的竞赛ImageNet上爆冷击败了谷歌团队，在机器学习的业界炸开了锅（这个谷歌团队可不一般，云集了Andrew Ng和Jeff Dean等一班神人）。而偶然的是，Hinton的博士生用的正是燕乐存赖以成名的<strong>卷积神经网络</strong>，但是燕乐存组的成员死活没办法复制Hinton的结果，专门开会反思为什么过去能没有取得这样的成绩。好比一棵树长年不开花，同根的另一棵树却意外长出了丰硕的果实。</p>
+<p>至此深度学习垄断了所有人工智能的新闻报道，一下子燕乐存和他的学生们变得炙手可热，谷歌、Facebook、Twitter们重金收购他们建立的初创公司，只为购买这些深度学习专家的时间，陪互联网巨头的精英工程师们聊聊天，就这么诞生了10来个千万富翁。工业界的成功很快传到了学术界，惯于见风使舵的学者们一下子来了个180度大转变，现在是没有和深度学习沾上边的文章很难发表了。</p>
+<p>而这时我们的主人公燕乐存又在做什么？除了主导Facebook的AI实验室，他不断呼吁学术界对深度学习保持冷静，批判深度学习的泡沫繁荣，这反差令人唏嘘。</p>
+<p>从燕乐存的故事中我们能学习到什么？</p>
+<ol>
+<li>要坚持自己所选择的，不要随波逐流。虽然工业界的趋势演变远远快于学术界，难得需要你坚持一个不被认可的想法长达三十年，但是许多伟大的idea初期也是不被人看好的，所以坚持自己的判断同样重要。</li>
+<li>运气存在的基础是积累。风来了没有积累，只想着当风口上的猪也没用。深度学习浪潮兴起之时，获利最丰的只能是那些早就愿意在不被看好的神经网络领域深耕的学者们。</li>
+<li>一个事情的成果，做到符合人们的期望是不够的；只要远远超出人们的期望，甚至让所有人都大跌眼镜，才能收获俯首称臣的认可。如果没有在ImageNet上大比分击败谷歌的明星团队，深度学习也就没有今天的声名大噪。</li>
+</ol>
+<p>一篇八卦文，搏大家一乐而已，祝2shou的朋友们猴年快乐，开工大吉。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag"># 深度学习</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/busy-programmer.html" rel="prev" title="程序员你为什么这么忙？">
+                  <i class="fa fa-chevron-left"></i> 程序员你为什么这么忙？
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/zero-to-one.html" rel="next" title="从零到一，并不是大家理解的那样">
+                  从零到一，并不是大家理解的那样 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

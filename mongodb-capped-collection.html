@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="设计光年求职的职位存储时，选择了MongoDB的Capped Collection。出发点是：  阿里云最低配的机器只有512MB的内存，职位超4万后搜索的响应极速下降，有必要缩小数据的规模。 由于招聘职位是时效性很强的信息，定期删除时间较久远的记录是用户能够容忍的。 虽然TTL索引也能实现记录的自动删除，但之前的项目经验告诉我它的自动删除并不同时释放硬盘空间。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在MongoDB上踩过的坑（Capped Collection）">
+<meta property="og:url" content="http://guoze.me/mongodb-capped-collection.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="设计光年求职的职位存储时，选择了MongoDB的Capped Collection。出发点是：  阿里云最低配的机器只有512MB的内存，职位超4万后搜索的响应极速下降，有必要缩小数据的规模。 由于招聘职位是时效性很强的信息，定期删除时间较久远的记录是用户能够容忍的。 虽然TTL索引也能实现记录的自动删除，但之前的项目经验告诉我它的自动删除并不同时释放硬盘空间。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2014-06-11T15:38:15.000Z">
+<meta property="article:modified_time" content="2019-09-25T09:58:11.000Z">
+<meta property="article:author" content="2shou">
+<meta property="article:tag" content="MongoDB">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://guoze.me/mongodb-capped-collection.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/mongodb-capped-collection.html","path":"mongodb-capped-collection.html","title":"在MongoDB上踩过的坑（Capped Collection）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>在MongoDB上踩过的坑（Capped Collection） | 建造者说</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/mongodb-capped-collection.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="在MongoDB上踩过的坑（Capped Collection） | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在MongoDB上踩过的坑（Capped Collection）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2014-06-11 23:38:15" itemprop="dateCreated datePublished" datetime="2014-06-11T23:38:15+08:00">2014-06-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2019-09-25 17:58:11" itemprop="dateModified" datetime="2019-09-25T17:58:11+08:00">2019-09-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming/" itemprop="url" rel="index"><span itemprop="name">技术控</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>设计<a target="_blank" rel="noopener" href="http://www.hiqiuzhi.com/">光年求职</a>的职位存储时，选择了MongoDB的Capped Collection。出发点是：</p>
+<ol>
+<li>阿里云最低配的机器只有512MB的内存，职位超4万后搜索的响应极速下降，有必要缩小数据的规模。</li>
+<li>由于招聘职位是时效性很强的信息，定期删除时间较久远的记录是用户能够容忍的。</li>
+<li>虽然TTL索引也能实现记录的自动删除，但之前的项目经验告诉我它的自动删除并不同时释放硬盘空间。<span id="more"></span></li>
+</ol>
+<p>Capped Collection只能新建，MongoDB并不提供普通Collection到Capped Collection的转换指令。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="title function_">createCollection</span>(<span class="string">&quot;test&quot;</span>, &#123; <span class="attr">capped</span>: <span class="literal">true</span> &#125;)</span><br></pre></td></tr></table></figure>
+<p>如果想把普通Collection转变成Capped Collection，可通过<em>新建Capped Collection-&gt;拷贝旧Collection的数据-&gt;重命名覆盖旧Collection</em>实现，拷贝数据的指令稍微复杂了点：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.&lt;collection_name&gt;.<span class="title function_">find</span>().<span class="title function_">forEach</span>(<span class="keyword">function</span>(<span class="params">doc</span>)&#123; db.&lt;collection_name&gt;.<span class="title function_">insert</span>(doc); &#125;);</span><br></pre></td></tr></table></figure>
+<p>Capped Collection对性能的提升是显著的，即便除_id外不允许创建索引，搜索也普遍能在5s内返回。（光年求职并不是一个依赖搜索的应用）。<br>但是，转换没多久就出了个这么个事：由于被抓取页面的变化，导致好几条数据不完整，我通过Python脚本删除发现没有成功，于是到命令行下执行删除，返回：<em>can’t remove from a capped collection</em><br>这时查看MongoDB的文档才发现这么一条规则：</p>
+<blockquote>
+<p>You cannot delete documents from a capped collection. To remove all records from a capped collection, use the ‘emptycapped’ command. To remove the collection entirely, use the drop() method.</p>
+</blockquote>
+<p>意思是Capped Collection的文档不能单独被删除。灵机一动，不能删，那加个状态码通过服务器程序过滤行不行？</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.&lt;collection_name&gt;.<span class="title function_">update</span>(&#123;<span class="string">&quot;_id&quot;</span>: <span class="number">11</span> &#125;, &#123; <span class="string">&quot;$set&quot;</span>: new_job &#125;)</span><br></pre></td></tr></table></figure>
+<p>结果也执行失败，继续看MongoDB的文档，又发现一条规则：</p>
+<blockquote>
+<p>You can update documents in a collection after inserting them. However, these updates cannot cause the documents to grow. If the update operation causes the document to grow beyond their original size, the update operation will fail.</p>
+</blockquote>
+<p>意思就是文档的更新必须在不增加文档占用空间的前提下才能生效，比如减少字段或减少值的长度。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/MongoDB/" rel="tag"># MongoDB</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/scikit-learn-naive-bayes-classifier.html" rel="prev" title="用scikit-learn实现朴素贝叶斯分类器">
+                  <i class="fa fa-chevron-left"></i> 用scikit-learn实现朴素贝叶斯分类器
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/blog-rule.html" rel="next" title="建造者说的博客原则">
+                  建造者说的博客原则 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

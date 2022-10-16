@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="最近一个朋友刚结束了短暂的空降技术主管的生涯，饭局中忍不住吐槽：我几乎做到了老板要求我的一切，为什么下属们仍然认为我百无一用？我笑了笑，说这一点都不出奇，我刚毕业那阵儿，也常常觉得自己的主管百无一用。而我现在全力以赴的，也仅仅是避免成为一个百无一用的技术主管而已。 先讲个故事。  一群猴子在爬树，越是爬得高爬得快的猴子，它的红屁股就会被下面越多的猴子所看见，也就更容易被其他猴子所嘲笑，但是所有的猴">
+<meta property="og:type" content="article">
+<meta property="og:title" content="那个百无一用的技术主管">
+<meta property="og:url" content="http://guoze.me/tech-leader.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="最近一个朋友刚结束了短暂的空降技术主管的生涯，饭局中忍不住吐槽：我几乎做到了老板要求我的一切，为什么下属们仍然认为我百无一用？我笑了笑，说这一点都不出奇，我刚毕业那阵儿，也常常觉得自己的主管百无一用。而我现在全力以赴的，也仅仅是避免成为一个百无一用的技术主管而已。 先讲个故事。  一群猴子在爬树，越是爬得高爬得快的猴子，它的红屁股就会被下面越多的猴子所看见，也就更容易被其他猴子所嘲笑，但是所有的猴">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-09-26T08:02:14.000Z">
+<meta property="article:modified_time" content="2019-09-26T09:56:16.000Z">
+<meta property="article:author" content="2shou">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://guoze.me/tech-leader.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/tech-leader.html","path":"tech-leader.html","title":"那个百无一用的技术主管"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>那个百无一用的技术主管 | 建造者说</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/tech-leader.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="那个百无一用的技术主管 | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          那个百无一用的技术主管
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2019-09-26 16:02:14 / 修改时间：17:56:16" itemprop="dateCreated datePublished" datetime="2019-09-26T16:02:14+08:00">2019-09-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/career/" itemprop="url" rel="index"><span itemprop="name">职业论</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>最近一个朋友刚结束了短暂的空降技术主管的生涯，饭局中忍不住吐槽：我几乎做到了老板要求我的一切，为什么下属们仍然认为我百无一用？我笑了笑，说这一点都不出奇，我刚毕业那阵儿，也常常觉得自己的主管百无一用。而我现在全力以赴的，也仅仅是避免成为一个百无一用的技术主管而已。</p>
+<p>先讲个故事。</p>
+<blockquote>
+<p>一群猴子在爬树，越是爬得高爬得快的猴子，它的红屁股就会被下面越多的猴子所看见，也就更容易被其他猴子所嘲笑，但是所有的猴子屁股都是红的，其他猴子不被嘲笑，只是因为爬得慢屁股没有机会被看见而已。管理学把这个归纳为「红屁股效应」。</p>
+</blockquote>
+<span id="more"></span>
+
+
+<p>管理者身在聚光灯下，红屁股自然是分外耀眼。尤其是技术这门<code>Talk is cheap / Show me the code</code>的手艺，觉得头儿技术能力不如自己的，恐怕不在少数，手艺不如人，威望就更加难以建立。</p>
+<p>有人说：那我即便当了技术主管，也继续死磕手艺，代码量遥遥领先，这总镇得住了吧？</p>
+<p>来来往往见过这么多的技术主管，也仅有一位采取了这种策略，落地还算成功的，但也只能在5个人以下的小团队维持。</p>
+<p>团队一旦扩张，必然要分出大量的时间用于业务的梳理、团队的管理以及内外部的沟通，从而使管理者贡献代码的专注力下降，这也是为什么被选出的技术管理者往往是更有技术潜力的大咖，而管理干久了手艺的红屁股就露出来了的原因。</p>
+<p>不只一个人问过我一个有意思的问题：<strong>作为技术主管，安排多大比例的时间写代码合适？</strong></p>
+<p>我的回答和普遍的观点反着来：<strong>战争时代（项目紧急或者复杂）尽量少写，和平时代（项目不紧急或者稳定）尽量多写</strong>。</p>
+<p>项目紧急或者复杂，就意味着项目之中存在大量有待梳理与优化的点，意味着技术主管要投入更多的时间去整合资源、精简需求和迭代方案，个体的代码贡献与整体的效能提升相比，就显得没那么重要了。反而到了项目的稳定期，作为技术攻坚的带头人，引入业界前沿的技术、算法或者框架，让战争时代<em>Quick And Dirty</em>的方式和<em>不得不</em>情况下做出的妥协变得优雅又牢固，持续深挖团队的技术护城河，营造团队以精进技术为导向的氛围，培养各个方向顶尖的技术梯队，本来就是技术主管在和平年代最重要的使命。</p>
+<p>遇上和我一样爱偷懒的同学，追问就紧跟而来：<strong>如果一直是战争时代，是不是技术主管就可以一直少写代码甚至不写代码？</strong></p>
+<p>许多人的心中，技术的精进自古华山一条道，只有写代码。无可否认只有翻越每一处技术的险境，完成一个功能或者模块的上线，才能深入了解技术细节的方方面面。然而，对于技术主管，这显然不是最高效的精进技术的方式。<strong>最高效的学习方法，永远是通过别人学习</strong>。现今早就不是史玉柱一箱泡面闷出汉卡的时代了，不管是Review下属的代码，阅读顶会的Paper或者谷歌等巨头公司公布的技术方案，还是面对面扣细节的讨论一个技术方案，对于个人技术提升的帮助都要比闷头写代码价值要大。成为技术主管，意味着拥有了更宽广的技术触角，从只了解单一模块的技术细节，到需要了解上下游所有模块的关键技术细节。无论战争时代还是和平时代，技术的修行都至关重要，只是技术修行远不只写代码。</p>
+<p>当然，这个问题还隐含着另一层意思：<strong>技术主管是不是可以不是团队之中技术最强的那个人？</strong>对于这类送命题，我心里早有防范。</p>
+<p>回答之前，容我先卖个关子，我时常推荐一本十分实用质朴的小册子，给新晋技术主管的朋友，书名叫<code>10人以下小团队管理手册</code>，书中鲜明的提出一个观点：<strong>工作最拼的人不适合当主管！</strong>（至于为什么，请亲自到书中找答案）那么与之相对的是不是：<strong>技术最强的人不适合当主管？</strong></p>
+<p>这就要具体问题具体分析了。一提起<code>技术最强</code>的定义就够让人头疼了：是指技术的深度，还是指技术的广度？是能快速给出合格的技术选型，还是能快速整合最优技术选型的资源？是能给出效果最优的技术方案，还是给出成本最低产出最快的方案？是能写出整洁可维护、高效不粘人的代码，还是能一眼瞄过别人的代码，毫不费力指出关键优化点？我想每个技术人的答案都不一样，甚至每个业务根据所处的阶段，所需的技术主管类型也不一样。</p>
+<p>至少有一点我是肯定的：<strong>技术主管（不是技术总监）需要具备对项目执行的技术方案进行细节粒度把关的能力</strong>，技术主管不一定具备某项单点技术上团队最强的实力，却必须有团队最为宽广的技术视野。比如负责推荐的技术主管不一定精通各种排序算法，但他（她）对排序、召回、离线、近线等一系列模块的理解程度将直接决定了推荐的最终效果好坏。</p>
+<p>洋洋洒洒一大堆，好多人怕还是弄不明白技术主管究竟有什么用处，以我浅薄的理解，技术主管也是个兵，主要角色有这么三种，列举如下。</p>
+<ol>
+<li><strong>指导员</strong>。这种指导既可以是技术上的，也可以是业务上的。以实际场景为例：「喂 小王，KDD那篇阿里讲排序的论文你读过了没？我昨晚抽空看了下，对我们X系统的实用价值很大，你赶紧读一下，下午我们来讨论」「喂 小李，Y系统的近线模块内部知识平台有篇文章刚发出来，整体的设计与我们的需求特别匹配，快快调研一下」「喂 小张，你这个预测任务，我建议可以添加Z指标作为附加的标签，利用多目标学习提升性能，我周末跑了一版，性能有比较明显的提升，你可以继续跟进」，简直絮絮叨叨像个居委会大妈。遇上紧急情况，还可以抢过一把油腻的机械键盘来，啪啪啪，打个十环的靶。</li>
+<li><strong>政委</strong>。上至团队的使命传达（我信奉透明的工作方式，只要不是机密的，都应该向团队成员敞开），到个人技术成长或职业发展的困惑答疑，到考核晋升的结果同步，下至找不到女朋友的心理按摩，都是政委的分内事。没事谈谈心吃吃饭搞搞娱乐活动，谁会愿意和自己不喜欢的人工作呢？微软的纳德拉说过，<strong>文化是一家公司最重要的事情</strong>，那么小到一个团队，<strong>氛围就是最重要的事情</strong>。氛围搞好了，信任就起来了，大家能团结起来投入战斗，其他都是水到渠成。</li>
+<li><strong>参谋官</strong>。某公司内部划分了<code>TL</code>（Tech Lead）和<code>PL</code>（Project Lead）两条线，参谋官可以兼而有之，一个项目采取什么架构，哪些部分是第一期就必须上的功能，哪些部分可以降级，哪些部分可以用第三方的服务；产品需求的轻重缓急如何，哪些需求该马上做，哪些需求还得等外部资源到位，哪些需求产品经理还想不清楚得打回去，哪些困难得提前告知让合作方有心理预期。这些都是战场上生死存亡的大事，既要求参谋官的技术能力到位了，宏观的思考和认识也少不了。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/data-science-future.html" rel="prev" title="数据科学行业未来的几点预测">
+                  <i class="fa fa-chevron-left"></i> 数据科学行业未来的几点预测
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/hot-winter.html" rel="next" title="热情如火的冬天">
+                  热情如火的冬天 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

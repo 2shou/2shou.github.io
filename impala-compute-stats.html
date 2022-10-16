@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="「用户画像系统」项目迭代中用Impala逐步替换原有的Hive作为查询组件，速度有了脱胎换骨的飞跃。但在把原先按列存储的表转换成两个按行存储的表之后，联表查询的表现不那么给力了（原先对Hive的十倍速度优势变成了两倍）。 考虑到项目转用Impala是我的提议，调整存储结构也是我的提议，这个结果确实是个让我丢面子的事情，于是挽起袖子找优化查询的方案。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Impala的神奇指令「COMPUTE STATS」">
+<meta property="og:url" content="http://guoze.me/impala-compute-stats.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="「用户画像系统」项目迭代中用Impala逐步替换原有的Hive作为查询组件，速度有了脱胎换骨的飞跃。但在把原先按列存储的表转换成两个按行存储的表之后，联表查询的表现不那么给力了（原先对Hive的十倍速度优势变成了两倍）。 考虑到项目转用Impala是我的提议，调整存储结构也是我的提议，这个结果确实是个让我丢面子的事情，于是挽起袖子找优化查询的方案。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2014-12-19T07:32:31.000Z">
+<meta property="article:modified_time" content="2019-09-25T09:58:11.000Z">
+<meta property="article:author" content="2shou">
+<meta property="article:tag" content="Impala">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://guoze.me/impala-compute-stats.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/impala-compute-stats.html","path":"impala-compute-stats.html","title":"Impala的神奇指令「COMPUTE STATS」"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Impala的神奇指令「COMPUTE STATS」 | 建造者说</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text">优化前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BB%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">寻路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A5%9E%E5%A5%87%E6%8C%87%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">神奇指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E5%90%8E"><span class="nav-number">4.</span> <span class="nav-text">优化后</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%9E%90"><span class="nav-number">5.</span> <span class="nav-text">分析</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/impala-compute-stats.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Impala的神奇指令「COMPUTE STATS」 | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Impala的神奇指令「COMPUTE STATS」
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2014-12-19 15:32:31" itemprop="dateCreated datePublished" datetime="2014-12-19T15:32:31+08:00">2014-12-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2019-09-25 17:58:11" itemprop="dateModified" datetime="2019-09-25T17:58:11+08:00">2019-09-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/data/" itemprop="url" rel="index"><span itemprop="name">数据控</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>「用户画像系统」项目迭代中用Impala逐步替换原有的Hive作为查询组件，速度有了脱胎换骨的飞跃。但在把原先按列存储的表转换成两个按行存储的表之后，联表查询的表现不那么给力了（原先对Hive的十倍速度优势变成了两倍）。</p>
+<p>考虑到项目转用Impala是我的提议，调整存储结构也是我的提议，这个结果确实是个让我丢面子的事情，于是挽起袖子找优化查询的方案。</p>
+<span id="more"></span>
+
+<h2 id="优化前"><a href="#优化前" class="headerlink" title="优化前"></a>优化前</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Query: select count(a.sn) from usermodel_inter_total_label a join usermodel_inter_total_info b</span><br><span class="line">on a.sn = b.sn where a.log_date = &#x27;2014-12-15&#x27; and a.label = &#x27;porn&#x27; and a.heat &gt; 0.1 </span><br><span class="line">and b.log_date = &#x27;2014-12-15&#x27; and b.platform = &#x27;android&#x27;</span><br><span class="line"></span><br><span class="line">Returned 1 row(s) in 36.86s</span><br></pre></td></tr></table></figure>
+
+<h2 id="寻路"><a href="#寻路" class="headerlink" title="寻路"></a>寻路</h2><p>先不管三七二十一，按SQL调优的套路来，explain一下发现了一个很隐蔽的warning：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WARNING: The following tables are missing relevant table and/or column statistics.</span><br><span class="line">default.usermodel_inter_total_info, default.usermodel_inter_total_label</span><br></pre></td></tr></table></figure>
+
+<p>这种waring，不是处(pian)女(zhi)座(kuang)发现不了！<br>先不忙，记下来，网上找那坑爹的<a target="_blank" rel="noopener" href="http://www.cloudera.com/content/cloudera/en/documentation/cloudera-impala/v1/v1-1-1/Installing-and-Using-Impala/ciiu_performance.html">Tuning Impala Performance</a>文档看看（插个题外话，Impala的中文资料太寒酸了，做数据的矿工们已经全部投奔Spark阵营了么？），眼神掠过<strong>Column Statistics</strong>和<strong>Table Statistics</strong>的时候心里一凉，矿工的直觉告诉我「秘密就在这」！<br>大体意思就是通过预先分析表和列（对联表特别重要）的结构，并把这些信息保存到MetaStore，Impala查询时会利用这些信息优化查询的策略。<br>哟，这是个自动挡！<br>然后坑爹的文档就把我指到Hive的「ANALYZE TABLE」去了，试了半天Impala没反应啊，果然不是亲生兄弟~<br>祭出谷歌大法，噢，终于找到答案了，simple，naive！感觉找回了逝去的青春。</p>
+<h2 id="神奇指令"><a href="#神奇指令" class="headerlink" title="神奇指令"></a>神奇指令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">COMPUTE STATS usermodel_inter_total_info;</span><br><span class="line">COMPUTE STATS usermodel_inter_total_label;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="优化后"><a href="#优化后" class="headerlink" title="优化后"></a>优化后</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Query: select count(a.sn) from usermodel_inter_total_label a join usermodel_inter_total_info b</span><br><span class="line">on a.sn = b.sn where a.log_date = &#x27;2014-12-15&#x27; and a.label = &#x27;porn&#x27; and a.heat &gt; 0.1 </span><br><span class="line">and b.log_date = &#x27;2014-12-15&#x27; and b.platform = &#x27;android&#x27;</span><br><span class="line"></span><br><span class="line">Returned 1 row(s) in 3.15s</span><br></pre></td></tr></table></figure>
+
+<p><strong>Cool！10倍的提升，相对Hive20倍的提升，和单表查询一样的迅速！</strong></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>以前老师总说对待问题要知其然更要知其所以然，那时特反感这一句，人生苦短，除了要大干快上，还要及时行乐，哪来的时间去知道那么多道理。<br>好了离题了，让我做一回现象的搬运工，让更聪明的读者来为我们解释吧。<br><strong>「COMPUTE STATS」前</strong><br>指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show table stats usermodel_inter_total_label;</span><br></pre></td></tr></table></figure>
+<p>返回：</p>
+<table>
+<thead>
+<tr>
+<th>log_date</th>
+<th>#Rows</th>
+<th>#Files</th>
+<th>Size</th>
+<th>Bytes Cached</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2014-12-13</td>
+<td>-1</td>
+<td>15</td>
+<td>1.18GB</td>
+<td>NOT CACHED</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>2014-12-14</td>
+<td>-1</td>
+<td>3</td>
+<td>1.80GB</td>
+<td>NOT CACHED</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>2014-12-15</td>
+<td>-1</td>
+<td>4</td>
+<td>2.96GB</td>
+<td>NOT CACHED</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>-1</td>
+<td>22</td>
+<td>5.93GB</td>
+<td>0B</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show column stats usermodel_inter_total_label;</span><br></pre></td></tr></table></figure>
+<p>返回：</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>#Distinct Values</th>
+<th>#Nulls</th>
+<th>Max Size</th>
+<th>Avg Size</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sn</td>
+<td>STRING</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>label</td>
+<td>STRING</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>heat</td>
+<td>DOUBLE</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>active_record</td>
+<td>STRING</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>log_date</td>
+<td>STRING</td>
+<td>3</td>
+<td>0</td>
+<td>-1</td>
+<td>-1</td>
+</tr>
+</tbody></table>
+<p><strong>「COMPUTE STATS」后</strong><br>指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show table stats usermodel_inter_total_label;</span><br></pre></td></tr></table></figure>
+<p>返回：</p>
+<table>
+<thead>
+<tr>
+<th>log_date</th>
+<th>#Rows</th>
+<th>#Files</th>
+<th>Size</th>
+<th>Bytes Cached</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2014-12-13</td>
+<td>9498438</td>
+<td>2</td>
+<td>469.76MB</td>
+<td>NOT CACHED</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>2014-12-14</td>
+<td>17891595</td>
+<td>1</td>
+<td>893.44MB</td>
+<td>NOT CACHED</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>2014-12-15</td>
+<td>27885473</td>
+<td>2</td>
+<td>1.37GB</td>
+<td>NOT CACHED</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>55275506</td>
+<td>5</td>
+<td>2.71GB</td>
+<td>0B</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show column stats usermodel_inter_total_label;</span><br></pre></td></tr></table></figure>
+<p>返回：</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>#Distinct Values</th>
+<th>#Nulls</th>
+<th>Max Size</th>
+<th>Avg Size</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sn</td>
+<td>STRING</td>
+<td>13984716</td>
+<td>-1</td>
+<td>30</td>
+<td>24.0039005279541</td>
+</tr>
+<tr>
+<td>label</td>
+<td>STRING</td>
+<td>36</td>
+<td>-1</td>
+<td>13</td>
+<td>4.26140022277832</td>
+</tr>
+<tr>
+<td>heat</td>
+<td>DOUBLE</td>
+<td>382126</td>
+<td>-1</td>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr>
+<td>active_record</td>
+<td>STRING</td>
+<td>7</td>
+<td>-1</td>
+<td>3</td>
+<td>1.667400002479553</td>
+</tr>
+<tr>
+<td>log_date</td>
+<td>STRING</td>
+<td>3</td>
+<td>0</td>
+<td>-1</td>
+<td>-1</td>
+</tr>
+</tbody></table>
+<p>看来「COMPUTE STATS」的作用就是得出Impala原先不知道的值（-1）。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Impala/" rel="tag"># Impala</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/hive-async-python-client.html" rel="prev" title="Hive的Python异步客户端">
+                  <i class="fa fa-chevron-left"></i> Hive的Python异步客户端
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/libshorttext-setup-script.html" rel="next" title="LibShortText的安裝腳本">
+                  LibShortText的安裝腳本 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

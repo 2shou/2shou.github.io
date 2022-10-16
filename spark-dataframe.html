@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="三月中旬，Spark发布了最新的1.3.0版本，其中最重要的变化，便是DataFrame这个API的推出。DataFrame让Spark具备了处理大规模结构化数据的能力，在比原有的RDD转化方式易用的前提下，计算性能更还快了两倍。这一个小小的API，隐含着Spark希望大一统「大数据江湖」的野心和决心。DataFrame像是一条联结所有主流数据源并自动转化为可并行处理格式的水渠，通过它Spark能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spark DataFrame小试牛刀">
+<meta property="og:url" content="http://guoze.me/spark-dataframe.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="三月中旬，Spark发布了最新的1.3.0版本，其中最重要的变化，便是DataFrame这个API的推出。DataFrame让Spark具备了处理大规模结构化数据的能力，在比原有的RDD转化方式易用的前提下，计算性能更还快了两倍。这一个小小的API，隐含着Spark希望大一统「大数据江湖」的野心和决心。DataFrame像是一条联结所有主流数据源并自动转化为可并行处理格式的水渠，通过它Spark能">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2015-03-22T12:28:51.000Z">
+<meta property="article:modified_time" content="2019-09-25T09:58:11.000Z">
+<meta property="article:author" content="2shou">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="Spark">
+<meta property="article:tag" content="DataFrame">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://guoze.me/spark-dataframe.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/spark-dataframe.html","path":"spark-dataframe.html","title":"Spark DataFrame小试牛刀"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Spark DataFrame小试牛刀 | 建造者说</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.</span> <span class="nav-text">实例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL"><span class="nav-number">2.</span> <span class="nav-text">MySQL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hive"><span class="nav-number">3.</span> <span class="nav-text">Hive</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">4.</span> <span class="nav-text">结语</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/spark-dataframe.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Spark DataFrame小试牛刀 | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Spark DataFrame小试牛刀
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2015-03-22 20:28:51" itemprop="dateCreated datePublished" datetime="2015-03-22T20:28:51+08:00">2015-03-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2019-09-25 17:58:11" itemprop="dateModified" datetime="2019-09-25T17:58:11+08:00">2019-09-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/data/" itemprop="url" rel="index"><span itemprop="name">数据控</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>三月中旬，Spark发布了最新的1.3.0版本，其中最重要的变化，便是<code>DataFrame</code>这个API的推出。<code>DataFrame</code>让Spark具备了处理大规模结构化数据的能力，在比原有的RDD转化方式易用的前提下，计算性能更还快了两倍。这一个小小的API，隐含着Spark希望大一统「大数据江湖」的野心和决心。<code>DataFrame</code>像是一条联结所有主流数据源并自动转化为可并行处理格式的水渠，通过它Spark能取悦大数据生态链上的所有玩家，无论是善用R的数据科学家，惯用SQL的商业分析师，还是在意效率和实时性的统计工程师。</p>
+<span id="more"></span>
+<p>以一个常见的场景 – 日志解析为例，有时我们需要用到一些额外的结构化数据（比如做IP和地址的映射），通常这样的数据会存在MySQL，而访问的方式有两种：一是每个worker远程去检索数据库，弊端是耗费额外的网络I&#x2F;O资源；二是使用<code>JdbcRDD</code>的API转化为RDD格式，然后编写繁复的函数去实现检索，显然要写更多的代码。而现在，Spark提供了一种新的选择，一行代码就能实现从MySQL到<code>DataFrame</code>的转化，并且支持SQL查询。</p>
+<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><p>首先我们在本地放置了一个JSON文件，文件内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;name&quot;:&quot;Michael&quot;&#125;</span><br><span class="line">&#123;&quot;name&quot;:&quot;Andy&quot;, &quot;age&quot;:30&#125;</span><br><span class="line">&#123;&quot;name&quot;:&quot;Justin&quot;, &quot;age&quot;:19&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后我们进入<code>spark-shell</code>，控制台的提示说明Spark为我们创建了一个叫<code>sqlContext</code>的上下文，注意，它是<code>DataFrame</code>的起点。<br>接下来我们希望把本地的JSON文件转化为<code>DataFrame</code>：</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; <span class="keyword">val</span> df = sqlContext.jsonFile(<span class="string">&quot;/path/to/your/jsonfile&quot;</span>)</span><br><span class="line">df: org.apache.spark.sql.<span class="type">DataFrame</span> = [age: bigint, name: string]</span><br></pre></td></tr></table></figure>
+<p>从控制台的提示可以得知，我们成功创建了一个<code>DataFrame</code>的对象，包含<code>age</code>和<code>name</code>两个字段。<br>而<code>DataFrame</code>自带的玩法就多了：</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出表结构</span></span><br><span class="line">df.printSchema()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 选择所有年龄大于21岁的人，只保留name字段</span></span><br><span class="line">df.filter(df(<span class="string">&quot;age&quot;</span>) &gt; <span class="number">21</span>).select(<span class="string">&quot;name&quot;</span>).show()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 选择name，并把age字段自增</span></span><br><span class="line">df.select(<span class="string">&quot;name&quot;</span>, df(<span class="string">&quot;age&quot;</span>) + <span class="number">1</span>).show()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 按年龄分组计数</span></span><br><span class="line">df.groupBy(<span class="string">&quot;age&quot;</span>).count().show()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 左联表（注意是3个等号！）</span></span><br><span class="line">df.join(df2, df(<span class="string">&quot;name&quot;</span>) === df2(<span class="string">&quot;name&quot;</span>), <span class="string">&quot;left&quot;</span>).show()</span><br></pre></td></tr></table></figure>
+
+<p>此外，我们也可以把<code>DataFrame</code>对象转化为一个虚拟的表，然后用SQL语句查询，比如下面的命令就等同于<code>df.groupBy(&quot;age&quot;).count().show()</code>：</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df.registerTempTable(<span class="string">&quot;people&quot;</span>)</span><br><span class="line">sqlContext.sql(<span class="string">&quot;select age, count(*) from people group by age&quot;</span>).show()</span><br></pre></td></tr></table></figure>
+
+<p>当然，Python有同样丰富的API（由于最终都是转化为<code>JVM bytecode</code>执行，Python和Scala的效率是一样的），而且Python还提供了类<code>Pandas</code>的操作语法。关于Python的API，可以参考<a target="_blank" rel="noopener" href="http://www.csdn.net/article/2015-02-17/2823997">Spark新年福音：一个用于大规模数据科学的API——DataFrame</a>。</p>
+<h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><p>除了JSON之外，<code>DataFrame</code>现在已经能支持MySQL、Hive、HDFS、PostgreSQL等外部数据源，而对关系数据库的读取，是通过<code>jdbc</code>实现的。</p>
+<p>对于不同的关系数据库，必须在<code>SPARK_CLASSPATH</code>变量中加入对应connector的jar包，比如希望连接<code>MySQL</code>的话应该这么启动<code>spark-shell</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SPARK_CLASSPATH=mysql-connector-java-x.x.x-bin.jar spark-shell</span><br></pre></td></tr></table></figure>
+
+<p>下面要将一个MySQL表转化为<code>DataFrame</code>对象：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">val jdbcDF = sqlContext.load(&quot;jdbc&quot;, Map(&quot;url&quot; -&gt; &quot;jdbc:mysql://localhost:3306/your_database?user=your_user&amp;password=your_password&quot;, &quot;dbtable&quot; -&gt; &quot;your_table&quot;))</span><br></pre></td></tr></table></figure>
+
+<p>然后十八般武艺又可以派上用场了。</p>
+<h1 id="Hive"><a href="#Hive" class="headerlink" title="Hive"></a>Hive</h1><p>Spark提供了一个<code>HiveContext</code>的上下文，其实是<code>SQLContext</code>的一个子类，但从作用上来说，<code>sqlContext</code>也支持Hive数据源。只要在部署Spark的时候加入Hive选项，并把已有的<code>hive-site.xml</code>文件挪到<code>$SPARK_HOME/conf</code>路径下，我们就可以直接用Spark查询包含已有元数据的Hive表了：</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlContext.sql(<span class="string">&quot;select count(*) from hive_people&quot;</span>).show()</span><br></pre></td></tr></table></figure>
+
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>Spark的目标在于成为一个跨环境、跨语言、跨工具的大数据处理和分析平台。<code>DataFrame</code>的推出很好诠释了这一目标，从初步的使用来看确实很容易上手。随着性能和稳定性的持续优化，我相信某一天所有玩数据的人，都可以使用Spark作为惟一的平台入口。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+              <a href="/tags/Spark/" rel="tag"># Spark</a>
+              <a href="/tags/DataFrame/" rel="tag"># DataFrame</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/logistic-regression-introduction.html" rel="prev" title="逻辑回归碎碎念">
+                  <i class="fa fa-chevron-left"></i> 逻辑回归碎碎念
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/the-success-equation.html" rel="next" title="实力、运气与成功">
+                  实力、运气与成功 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

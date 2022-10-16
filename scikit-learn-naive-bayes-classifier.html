@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="朴素贝叶斯（Naive Bayes Classifier）是一种「天真」的算法（假定所有特征发生概率是独立的），同时也是一种简单有效的常用分类算法。关于它的原理，参见朴素贝叶斯分类器的应用。scikit-learn是一个广泛应用的机器学习Python库，它封装了包括朴素贝叶斯在内的若干基础算法。在这篇博客里，我们希望用朴素贝叶斯实现对短文本（新闻标题）的分类。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用scikit-learn实现朴素贝叶斯分类器">
+<meta property="og:url" content="http://guoze.me/scikit-learn-naive-bayes-classifier.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="朴素贝叶斯（Naive Bayes Classifier）是一种「天真」的算法（假定所有特征发生概率是独立的），同时也是一种简单有效的常用分类算法。关于它的原理，参见朴素贝叶斯分类器的应用。scikit-learn是一个广泛应用的机器学习Python库，它封装了包括朴素贝叶斯在内的若干基础算法。在这篇博客里，我们希望用朴素贝叶斯实现对短文本（新闻标题）的分类。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2014-06-05T14:50:19.000Z">
+<meta property="article:modified_time" content="2019-09-25T09:58:11.000Z">
+<meta property="article:author" content="2shou">
+<meta property="article:tag" content="分类算法">
+<meta property="article:tag" content="朴素贝叶斯">
+<meta property="article:tag" content="scikit-learn">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://guoze.me/scikit-learn-naive-bayes-classifier.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/scikit-learn-naive-bayes-classifier.html","path":"scikit-learn-naive-bayes-classifier.html","title":"用scikit-learn实现朴素贝叶斯分类器"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>用scikit-learn实现朴素贝叶斯分类器 | 建造者说</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/scikit-learn-naive-bayes-classifier.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="用scikit-learn实现朴素贝叶斯分类器 | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          用scikit-learn实现朴素贝叶斯分类器
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2014-06-05 22:50:19" itemprop="dateCreated datePublished" datetime="2014-06-05T22:50:19+08:00">2014-06-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2019-09-25 17:58:11" itemprop="dateModified" datetime="2019-09-25T17:58:11+08:00">2019-09-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/data/" itemprop="url" rel="index"><span itemprop="name">数据控</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>朴素贝叶斯（Naive Bayes Classifier）是一种「天真」的算法（假定所有特征发生概率是独立的），同时也是一种简单有效的常用分类算法。关于它的原理，参见<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2013/12/naive_bayes_classifier.html">朴素贝叶斯分类器的应用</a>。<br><a target="_blank" rel="noopener" href="http://scikit-learn.org/stable/">scikit-learn</a>是一个广泛应用的机器学习Python库，它封装了包括<a target="_blank" rel="noopener" href="http://scikit-learn.org/stable/modules/naive_bayes.html">朴素贝叶斯</a>在内的若干基础算法。在这篇博客里，我们希望用朴素贝叶斯实现对短文本（新闻标题）的分类。</p>
+<span id="more"></span>
+<p>朴素贝叶斯属于有监督分类，需要获取一批已标注的数据作为训练和测试分类器的样本。样本的获取，一般通过人工标注或网页抓取的方式。这里先准备好2w条已标注的新闻标题（<strong>共10个标签，每个标签下的样本是均衡的</strong>），并以3：1的比例切分训练集和测试集。文本的格式如下：</p>
+<blockquote>
+<p>娱乐\t组图：刘亦菲短裙秀腿 浓妆变冷艳时髦女</p>
+</blockquote>
+<p>其次，将短文本转化为一个多维向量，这涉及到两个问题：一是分词，由于scikit-learn内置的分词器并不支持中文，所以需要指定一个tokenizer（推荐<a target="_blank" rel="noopener" href="https://github.com/fxsjy/jieba">结巴分词</a>）；二是文本到向量的转化方法，考虑到后续可能加大训练集的数量，而短文本的特征相对稀疏，采用了内存占用率较低、仅计算词频的<code>HashingVectorizer</code>。</p>
+<p>这里要注意两点：</p>
+<ul>
+<li>测试集和训练集只有共用一个<code>vectorizer</code>才能共享<code>vocabulary</code>，避免特征表达不一致的问题。</li>
+<li><code>fit_transform</code>如果用<code>toarray()</code>转化为dense矩阵，计算至少慢两倍以上。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># non_negative=True -- 模型仅包含非负值</span></span><br><span class="line">vectorizer = HashingVectorizer(tokenizer=comma_tokenizer, non_negative=<span class="literal">True</span>)</span><br><span class="line">train_data = vectorizer.fit_transform(train_words)</span><br><span class="line">test_data = vectorizer.fit_transform(test_words)</span><br></pre></td></tr></table></figure>
+
+<p>然后，我们创建一个多项式的朴素贝叶斯分类器（适用于离散特征的分类），分别输入训练集的文本和标签（<strong>要求都为numpy矩阵</strong>）进行训练，训练好的分类器再用在测试集文本的分类，以检验分类器的性能。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># alpha -- 模型的平滑参数</span></span><br><span class="line">clf = MultinomialNB(alpha=<span class="number">0.01</span>)</span><br><span class="line">clf.fit(train_data, numpy.asarray(train_tags))</span><br><span class="line">pred = clf.predict(test_data)</span><br></pre></td></tr></table></figure>
+
+<p>最后，比较分类器的预测结果和测试集的真实标签，得到分类器的准确率和召回率。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m_precision = metrics.precision_score(actual, pred)</span><br><span class="line">m_recall = metrics.recall_score(actual, pred)</span><br></pre></td></tr></table></figure>
+
+<p>完整代码请见<a target="_blank" rel="noopener" href="https://gist.github.com/2shou/b8240ea53d22e1bb4d32">sci_classifier.py</a>。<br>从测试的结果来看，准确率和召回率均在8成以上，当然，分类器的性能也依赖于输入数据对应不同类别的可识别度是否足够强。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95/" rel="tag"># 分类算法</a>
+              <a href="/tags/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/" rel="tag"># 朴素贝叶斯</a>
+              <a href="/tags/scikit-learn/" rel="tag"># scikit-learn</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/elegance.html" rel="prev" title="论优雅">
+                  <i class="fa fa-chevron-left"></i> 论优雅
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/mongodb-capped-collection.html" rel="next" title="在MongoDB上踩过的坑（Capped Collection）">
+                  在MongoDB上踩过的坑（Capped Collection） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

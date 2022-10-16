@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="图表是比干巴巴的表格更直观的表达，简洁、有力。工作中经常遇到的场景是，有一些数值需要定时的监控，比如服务器的连接数、活跃用户数、点击某个按钮的人数，并且通过邮件或者网页展示出来。当我们想关注比数值本身更多的信息（像数值的变化、对比或异常），图表就非常有用了。把数值转化为图片要依赖第三方库的帮忙，在Python之中最好的图表库叫matplotlib。（一直觉得，Python最大的优势就是丰富的第三方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python绘制精美图表之双柱形图">
+<meta property="og:url" content="http://guoze.me/matplotlib-par-chart.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="图表是比干巴巴的表格更直观的表达，简洁、有力。工作中经常遇到的场景是，有一些数值需要定时的监控，比如服务器的连接数、活跃用户数、点击某个按钮的人数，并且通过邮件或者网页展示出来。当我们想关注比数值本身更多的信息（像数值的变化、对比或异常），图表就非常有用了。把数值转化为图片要依赖第三方库的帮忙，在Python之中最好的图表库叫matplotlib。（一直觉得，Python最大的优势就是丰富的第三方">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://guoze.me/images/matplotlib-par-chart.png">
+<meta property="article:published_time" content="2015-12-12T10:21:46.000Z">
+<meta property="article:modified_time" content="2019-09-25T09:58:11.000Z">
+<meta property="article:author" content="2shou">
+<meta property="article:tag" content="matplotlib">
+<meta property="article:tag" content="图表绘制">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://guoze.me/images/matplotlib-par-chart.png">
+
+
+<link rel="canonical" href="http://guoze.me/matplotlib-par-chart.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/matplotlib-par-chart.html","path":"matplotlib-par-chart.html","title":"Python绘制精美图表之双柱形图"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Python绘制精美图表之双柱形图 | 建造者说</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/matplotlib-par-chart.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Python绘制精美图表之双柱形图 | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Python绘制精美图表之双柱形图
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2015-12-12 18:21:46" itemprop="dateCreated datePublished" datetime="2015-12-12T18:21:46+08:00">2015-12-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2019-09-25 17:58:11" itemprop="dateModified" datetime="2019-09-25T17:58:11+08:00">2019-09-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming/" itemprop="url" rel="index"><span itemprop="name">技术控</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>图表是比干巴巴的表格更直观的表达，简洁、有力。工作中经常遇到的场景是，有一些数值需要定时的监控，比如服务器的连接数、活跃用户数、点击某个按钮的人数，并且通过邮件或者网页展示出来。当我们想关注比数值本身更多的信息（像数值的变化、对比或异常），图表就非常有用了。把数值转化为图片要依赖第三方库的帮忙，在Python之中最好的图表库叫<a target="_blank" rel="noopener" href="http://matplotlib.org/">matplotlib</a>。（一直觉得，Python最大的优势就是丰富的第三方库，让你能轻易实现各种需求）</p>
+<p><code>matplotlib</code>，顾名思义就是提供了一整套和<code>matlab</code>相似的API，它的文档相当完备，<a target="_blank" rel="noopener" href="http://matplotlib.org/gallery.html">示例页面</a>提供了上百个图表的入门代码，可以说只有你想不到的，没有它做不到的。</p>
+<span id="more"></span>
+
+<p>举个稍复杂的例子，小明和小红两个同学各有语文、数学、英语的课程成绩，用一个双柱形图输出各项成绩的对比：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python</span><br><span class="line"># coding: utf-8</span><br><span class="line"></span><br><span class="line">import matplotlib as mpl</span><br><span class="line">mpl.use(&#x27;Agg&#x27;)</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line"># 必须配置中文字体，否则会显示成方块</span><br><span class="line"># 注意所有希望图表显示的中文必须为unicode格式</span><br><span class="line">custom_font = mpl.font_manager.FontProperties(fname=&#x27;/Library/Fonts/华文细黑.ttf&#x27;)</span><br><span class="line"></span><br><span class="line">font_size = 10 # 字体大小</span><br><span class="line">fig_size = (8, 6) # 图表大小</span><br><span class="line"></span><br><span class="line">names = (u&#x27;小明&#x27;, u&#x27;小红&#x27;) # 姓名</span><br><span class="line">subjects = (u&#x27;语文&#x27;, u&#x27;数学&#x27;, u&#x27;英语&#x27;) # 科目</span><br><span class="line">scores = ((65, 90, 75), (85, 80, 90)) # 成绩</span><br><span class="line"></span><br><span class="line"># 更新字体大小</span><br><span class="line">mpl.rcParams[&#x27;font.size&#x27;] = font_size</span><br><span class="line"># 更新图表大小</span><br><span class="line">mpl.rcParams[&#x27;figure.figsize&#x27;] = fig_size</span><br><span class="line"># 设置柱形图宽度</span><br><span class="line">bar_width = 0.35</span><br><span class="line"></span><br><span class="line">index = np.arange(len(scores[0]))</span><br><span class="line"># 绘制「小明」的成绩</span><br><span class="line">rects1 = plt.bar(index, scores[0], bar_width, color=&#x27;#0072BC&#x27;, label=names[0])</span><br><span class="line"># 绘制「小红」的成绩</span><br><span class="line">rects2 = plt.bar(index + bar_width, scores[1], bar_width, color=&#x27;#ED1C24&#x27;, label=names[1])</span><br><span class="line"># X轴标题</span><br><span class="line">plt.xticks(index + bar_width, subjects, fontproperties=custom_font)</span><br><span class="line"># Y轴范围</span><br><span class="line">plt.ylim(ymax=100, ymin=0)</span><br><span class="line"># 图表标题</span><br><span class="line">plt.title(u&#x27;企鹅班同学成绩对比&#x27;, fontproperties=custom_font)</span><br><span class="line"># 图例显示在图表下方</span><br><span class="line">plt.legend(loc=&#x27;upper center&#x27;, bbox_to_anchor=(0.5, -0.03), fancybox=True, ncol=5, prop=custom_font)</span><br><span class="line"></span><br><span class="line"># 添加数据标签</span><br><span class="line">def add_labels(rects):</span><br><span class="line">    for rect in rects:</span><br><span class="line">        height = rect.get_height()</span><br><span class="line">        plt.text(rect.get_x() + rect.get_width() / 2, height, height, ha=&#x27;center&#x27;, va=&#x27;bottom&#x27;)</span><br><span class="line">        # 柱形图边缘用白色填充，纯粹为了美观</span><br><span class="line">        rect.set_edgecolor(&#x27;white&#x27;)</span><br><span class="line"></span><br><span class="line">add_labels(rects1)</span><br><span class="line">add_labels(rects2)</span><br><span class="line"></span><br><span class="line"># 图表输出到本地</span><br><span class="line">plt.savefig(&#x27;scores_par.png&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>最终图表显示如下：</p>
+<p><img src="/images/matplotlib-par-chart.png" alt="双柱形图 - 企鹅班同学成绩对比"></p>
+<p>小结一下，从上面的代码片段可以了解到：**<code>matplotlib</code>是一个自由度非常高的图表库，能够实现从颜色、字体等基础属性到图例、网格等图表属性的定制输出**。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/matplotlib/" rel="tag"># matplotlib</a>
+              <a href="/tags/%E5%9B%BE%E8%A1%A8%E7%BB%98%E5%88%B6/" rel="tag"># 图表绘制</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/data-geek.html" rel="prev" title="4个小例子告诉你：如何成为一名数据极客">
+                  <i class="fa fa-chevron-left"></i> 4个小例子告诉你：如何成为一名数据极客
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/goodbye-2015.html" rel="next" title="就这样，再见2015">
+                  就这样，再见2015 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

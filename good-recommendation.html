@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="我一直自诩是菜刀流的工程师，作为一个非科班出身的数据小码农，竟也操刀过三个推荐系统的项目了。这三个推荐系统，用户群不同，业务场景不同，连地域和文化也有些差别。所以近来总在琢磨，推荐系统的缘起千人千面，纷繁万变的细节当中，能不能汇聚出一些普遍共性？有没有一个普适的标准，回答什么是一个真正出色的推荐系统？有没有哪些不二法则，是构造一个推荐系统所不可或缺的？我希望迈出这一步，把之前想过的梗、跳过的坑以及">
+<meta property="og:type" content="article">
+<meta property="og:title" content="怎么做好一个推荐系统">
+<meta property="og:url" content="http://guoze.me/good-recommendation.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="我一直自诩是菜刀流的工程师，作为一个非科班出身的数据小码农，竟也操刀过三个推荐系统的项目了。这三个推荐系统，用户群不同，业务场景不同，连地域和文化也有些差别。所以近来总在琢磨，推荐系统的缘起千人千面，纷繁万变的细节当中，能不能汇聚出一些普遍共性？有没有一个普适的标准，回答什么是一个真正出色的推荐系统？有没有哪些不二法则，是构造一个推荐系统所不可或缺的？我希望迈出这一步，把之前想过的梗、跳过的坑以及">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2015-01-29T06:16:28.000Z">
+<meta property="article:modified_time" content="2019-09-25T09:58:11.000Z">
+<meta property="article:author" content="2shou">
+<meta property="article:tag" content="推荐系统">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://guoze.me/good-recommendation.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/good-recommendation.html","path":"good-recommendation.html","title":"怎么做好一个推荐系统"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>怎么做好一个推荐系统 | 建造者说</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%85%88%E5%86%B3%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">推荐系统的先决条件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E6%9C%89%E8%B6%B3%E5%A4%9F%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">1.1.</span> <span class="nav-text">要有足够的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E6%9C%89%E4%B8%B0%E5%AF%8C%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">1.2.</span> <span class="nav-text">要有丰富的内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E6%9C%89%E7%94%A8%E6%88%B7%E5%88%86%E4%BC%97"><span class="nav-number">1.3.</span> <span class="nav-text">要有用户分众</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">推荐系统的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%83%AD%E9%97%A8%E5%92%8C%E9%95%BF%E5%B0%BE%E7%9A%84%E7%9F%9B%E7%9B%BE"><span class="nav-number">2.1.</span> <span class="nav-text">热门和长尾的矛盾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E5%86%85%E5%AE%B9%E8%BF%98%E6%98%AF%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text">基于内容还是协同过滤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%9F%E6%A0%B7%E6%9C%AC%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.3.</span> <span class="nav-text">负样本的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%B7%E5%90%AF%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.4.</span> <span class="nav-text">冷启动的问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E6%96%BD"><span class="nav-number">3.</span> <span class="nav-text">推荐系统的实施</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%80%9F%E5%8A%A9%E6%9B%B4%E5%A4%9A%E4%BF%A1%E6%81%AF"><span class="nav-number">3.1.</span> <span class="nav-text">借助更多信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E6%95%B0%E6%8D%AE%E4%B9%8B%E9%97%B4%E7%9A%84%E7%9B%B8%E5%85%B3%E6%80%A7"><span class="nav-number">3.2.</span> <span class="nav-text">研究数据之间的相关性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%84%E6%B8%85%E4%BD%A0%E7%9A%84%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF"><span class="nav-number">3.3.</span> <span class="nav-text">弄清你的业务场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%A5%BD%E4%BD%A0%E7%9A%84%E7%9B%AE%E6%A0%87"><span class="nav-number">3.4.</span> <span class="nav-text">定义好你的目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%89%AF%E5%A5%BD%E7%9A%84%E5%BC%95%E5%AF%BC"><span class="nav-number">3.5.</span> <span class="nav-text">良好的引导</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B6%E9%9B%86%E6%9B%B4%E5%A4%9A%E5%8F%8D%E9%A6%88"><span class="nav-number">3.6.</span> <span class="nav-text">收集更多反馈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A6%BB%E7%BA%BF%E5%AE%9E%E9%AA%8C"><span class="nav-number">3.7.</span> <span class="nav-text">离线实验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%80%90%E5%BF%83"><span class="nav-number">3.8.</span> <span class="nav-text">耐心</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/good-recommendation.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="怎么做好一个推荐系统 | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          怎么做好一个推荐系统
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2015-01-29 14:16:28" itemprop="dateCreated datePublished" datetime="2015-01-29T14:16:28+08:00">2015-01-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2019-09-25 17:58:11" itemprop="dateModified" datetime="2019-09-25T17:58:11+08:00">2019-09-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/data/" itemprop="url" rel="index"><span itemprop="name">数据控</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>我一直自诩是菜刀流的工程师，作为一个非科班出身的数据小码农，竟也操刀过三个推荐系统的项目了。这三个推荐系统，用户群不同，业务场景不同，连地域和文化也有些差别。所以近来总在琢磨，推荐系统的缘起千人千面，纷繁万变的细节当中，能不能汇聚出一些普遍共性？有没有一个普适的标准，回答什么是一个真正出色的推荐系统？有没有哪些不二法则，是构造一个推荐系统所不可或缺的？我希望迈出这一步，把之前想过的梗、跳过的坑以及卑微的沉思亮出来，等待真正的高人点拨一二。</p>
+<span id="more"></span>
+
+<h1 id="推荐系统的先决条件"><a href="#推荐系统的先决条件" class="headerlink" title="推荐系统的先决条件"></a>推荐系统的先决条件</h1><p>这其实是最容易被忽视的一个问题。尤其在这几年<code>大数据</code>的概念炒得火热，推荐系统也就成了某些人眼中的仙丹妙药，不管三七二十一，先上了再说。在我看来，推荐系统至少需要评估下面三个可行性：</p>
+<h2 id="要有足够的数据"><a href="#要有足够的数据" class="headerlink" title="要有足够的数据"></a>要有足够的数据</h2><p>一种常见的错误思路是，我的社区不够活跃，上个用户推荐系统加强活跃吧。如果你抱着这样的想法，我只能恭喜你选择了一种艰苦卓绝的逻辑。推荐系统是数据挖掘的一种应用，而没有数据，通常都不会产生什么有价值的挖掘。</p>
+<h2 id="要有丰富的内容"><a href="#要有丰富的内容" class="headerlink" title="要有丰富的内容"></a>要有丰富的内容</h2><p>推荐系统起源于亚马逊的图书推荐。但有没有人细想过，为什么亚马逊是第一个吃螃蟹的人？因为贝佐斯把书店搬到网上后，他发现自己拥有了全世界最多的图书，在一家库存数百万种图书的虚拟书店里，你根本无法依赖任何一个店员帮你的顾客推荐新书。而另一种常见的错误思路是，在内容未丰富的前提下就急着上推荐系统。事实上，只有内容极大丰富的时候，才可能有被无用户差别排行榜埋没的优质内容，个性化需求才能体现出商业价值。如果你的内容在一万以下，我会建议你使用单一的热门排行榜；十万以下，我会建议你使用分类的热门排行榜，十万以上，才慢慢有推荐系统的可行性。</p>
+<h2 id="要有用户分众"><a href="#要有用户分众" class="headerlink" title="要有用户分众"></a>要有用户分众</h2><p>数据充分了、内容丰富了，还得掂量下用户的口味能不能产生足够的分众。推荐系统之所以在电商、音乐和社区等领域有成功的应用，最主要的因素是这类产品的用户有足够的分众。而越是大而全的领域，用户的分众越明显，推荐的效果越好。好比淘宝的推荐颇受赞赏，而唯品会的推荐多被吐槽，道理就在这儿。如果你说你正在做同志社区或情趣电商，我会心里一凉。</p>
+<h1 id="推荐系统的问题"><a href="#推荐系统的问题" class="headerlink" title="推荐系统的问题"></a>推荐系统的问题</h1><p>先决条件通过了，我们来讨论「术」的问题，你可以把这节的内容当作「跳坑实录」来读。</p>
+<h2 id="热门和长尾的矛盾"><a href="#热门和长尾的矛盾" class="headerlink" title="热门和长尾的矛盾"></a>热门和长尾的矛盾</h2><p>第三种错误的思路在于，推荐系统以提升点击率为目标，而往往横向对比之下，个性化推荐的指标往往不如热门排行榜。对此一小部分算法人员铤而走险，希望用热门混杂长尾的方法去得江山抱美人，而在我看来，推荐系统有且仅有一个目标，满足用户的个性化需求。至于你说点击不如推热门？那把排行榜留着呗，那才是赚点击率的地方。</p>
+<h2 id="基于内容还是协同过滤"><a href="#基于内容还是协同过滤" class="headerlink" title="基于内容还是协同过滤"></a>基于内容还是协同过滤</h2><p>推荐系统的本质在于加强联结，或者说，给用户源源不绝发现新东西的机会。所以协同过滤（或者往更宽泛的范围，矩阵分解也算）都是在利用联结的信息，从而取得比基于内容更好的推荐效果。但是，了解你所拥有的内容，作为辅助的算法，绝对能使推荐的质量大幅上升。但是算法人员面临的现状往往是，很难得到格式化的内容标签，一个可行的思路是，请用户来为内容打标签，参照豆瓣和淘宝。另一个决定选择的因素是数据特征，如果用户行为集中而稀疏，那么意味着你必须更多依赖内容的信息。</p>
+<h2 id="负样本的问题"><a href="#负样本的问题" class="headerlink" title="负样本的问题"></a>负样本的问题</h2><p>协同过滤是基于统计的算法，并不需要负样本的信息，但如果是基于机器学习的算法，训练的过程是需要负样本的。有的产品只有用户的隐反馈（比如播放、购买），即用户无法表达对一个内容的厌恶，那么你只有创造负样本了。在这一块，最好的思路是，选择热门的但用户没有行为的样本，因为热门的内容更有机会让用户看到，用户看到多次但没点击，那就更可能是不喜欢。</p>
+<h2 id="冷启动的问题"><a href="#冷启动的问题" class="headerlink" title="冷启动的问题"></a>冷启动的问题</h2><p>应对冷启动的策略要按照业务场景区分，如果是用户看了一个内容，要给他推荐其他的内容，那么可以利用内容特征的相似度；如果是对一个新用户推荐，条件允许的话，可以请用户表达自己的偏好，或者依赖社交网络的信息，实在不行，只能推热门了。</p>
+<h1 id="推荐系统的实施"><a href="#推荐系统的实施" class="headerlink" title="推荐系统的实施"></a>推荐系统的实施</h1><p>我希望把实施中的一些Keypoint单独罗列，大家都懂的东西，暂时不讲。</p>
+<h2 id="借助更多信息"><a href="#借助更多信息" class="headerlink" title="借助更多信息"></a>借助更多信息</h2><p>我的风格是做推荐之前一定要把产品用坏，来确定能获取到哪些用户行为和用户数据，能获取的尽量获取。比如，用QQ邮箱的和用Gmail邮箱的用户肯定有些不一样，对不？</p>
+<h2 id="研究数据之间的相关性"><a href="#研究数据之间的相关性" class="headerlink" title="研究数据之间的相关性"></a>研究数据之间的相关性</h2><p>这就是熵的概念。如果两个数据相关性是1，那么肯定有一个没什么用处。用好回归，你会少很多运算量。</p>
+<h2 id="弄清你的业务场景"><a href="#弄清你的业务场景" class="headerlink" title="弄清你的业务场景"></a>弄清你的业务场景</h2><p>有的人会把业务场景叫做「推荐的上下文」，事实上推荐算法的许多细节都会被业务场景影响，比如以物推物的场景就会更适合采用ItemBased，一个一个展现的可以考虑加入点随机性，首页推荐应该多放新品，等等。</p>
+<h2 id="定义好你的目标"><a href="#定义好你的目标" class="headerlink" title="定义好你的目标"></a>定义好你的目标</h2><p>我习惯了做事之前目标先行，目标错了跑得再快也没用。推荐算法的长期目标应该是提升用户的活跃（注意，不是活跃率），而对于短期指标，应该着重在几点：有没有更多的内容被发现？热门排行榜的更新是否加快？用户对于推荐的点击是否在一个比较活跃的水平（再次，我反对一概而论）？如果是UGC的产品，用户有没有因为更容易被发现而积极地上传内容？当然，这些指标都必须被量化。</p>
+<h2 id="良好的引导"><a href="#良好的引导" class="headerlink" title="良好的引导"></a>良好的引导</h2><p>记得之前去听百分点科技的演讲时，他们提到会有人专门去研究推荐系统的引导，甚至有时候引导比推荐的内容更重要，深有同感。这也是社交推荐为什么不需要什么模型却效果很好的原因。记住一点，如果推荐的区域有任何的图片或数字时，想办法让它们更有诱惑力。</p>
+<h2 id="收集更多反馈"><a href="#收集更多反馈" class="headerlink" title="收集更多反馈"></a>收集更多反馈</h2><p>推荐系统一前一后的数据流都不容轻视，我同样倾向于收集一切与推荐系统有关的数据，比如推荐区域的停留与点击、推荐内容的消费、连续点击推荐内容的链条等等。如果可能的话，请用户对你的推荐给予评价，这也能让你的推荐更有温度。</p>
+<h2 id="离线实验"><a href="#离线实验" class="headerlink" title="离线实验"></a>离线实验</h2><p>不要迷信离线实验的结果，通常和线上都会差很远。如果之前不存在推荐系统，那么用户很可能根本就没有机会接触到你推荐的内容，也就无从证实。</p>
+<h2 id="耐心"><a href="#耐心" class="headerlink" title="耐心"></a>耐心</h2><p>推荐系统并不是一个立竿见影的产品，上线之后多花点时间收集数据、调整参数、做更多的分组测试，更重要的是，让你的老板也有耐心。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" rel="tag"># 推荐系统</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/python-phantomjs-crawler.html" rel="prev" title="Python利用Phantomjs抓取渲染JS后的网页">
+                  <i class="fa fa-chevron-left"></i> Python利用Phantomjs抓取渲染JS后的网页
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/tornado-log-perday.html" rel="next" title="Tornado按天打印日志">
+                  Tornado按天打印日志 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

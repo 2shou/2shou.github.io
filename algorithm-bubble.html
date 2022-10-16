@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="新近组了个饭局，发现来的各大厂的算法leader，都一副萎靡不振的模样，一问，都忙着筛秋招的简历呢，今年这秋招，投算法的像雪片一样飞过来，大抵高校计算机类的导师，都纷纷转型深度学习了，而候选人也个个刷过比赛，不拿到前几名都不好意思说出来，算法原理更是倒背如流。于是算法岗的面试官都是筛简历筛到老眼昏花，来左边儿一起画个顶会，在你右边再画个Kaggle，繁重的业务之外，面试更是一场接一场，面人面得头痛">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法岗有没有泡沫">
+<meta property="og:url" content="http://guoze.me/algorithm-bubble.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="新近组了个饭局，发现来的各大厂的算法leader，都一副萎靡不振的模样，一问，都忙着筛秋招的简历呢，今年这秋招，投算法的像雪片一样飞过来，大抵高校计算机类的导师，都纷纷转型深度学习了，而候选人也个个刷过比赛，不拿到前几名都不好意思说出来，算法原理更是倒背如流。于是算法岗的面试官都是筛简历筛到老眼昏花，来左边儿一起画个顶会，在你右边再画个Kaggle，繁重的业务之外，面试更是一场接一场，面人面得头痛">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-10-10T06:11:34.000Z">
+<meta property="article:modified_time" content="2019-10-10T06:18:06.000Z">
+<meta property="article:author" content="2shou">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://guoze.me/algorithm-bubble.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/algorithm-bubble.html","path":"algorithm-bubble.html","title":"算法岗有没有泡沫"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>算法岗有没有泡沫 | 建造者说</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%9C%A8%E4%BA%91%E7%AB%AF%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BB%8D%E7%84%B6%E5%A4%84%E4%BA%8E%E8%BF%85%E9%80%9F%E5%A2%9E%E9%95%BF%E4%B9%8B%E4%B8%AD"><span class="nav-number">1.</span> <span class="nav-text">存储在云端的数据仍然处于迅速增长之中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%B2%97%E7%9A%84%E5%85%A5%E9%97%A8%E9%97%A8%E6%A7%9B%E6%9B%B4%E9%AB%98"><span class="nav-number">2.</span> <span class="nav-text">算法岗的入门门槛更高</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%B2%97%E7%9A%84%E6%88%90%E9%95%BF%E6%9B%B2%E7%BA%BF%E6%9B%B4%E9%99%A1%E5%B3%AD"><span class="nav-number">3.</span> <span class="nav-text">算法岗的成长曲线更陡峭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E5%A4%A7%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%A7%8B%EF%BC%8C%E5%B0%BD%E9%87%8F%E9%80%BC%E8%BF%91%E6%B5%81%E9%87%8F%E4%B8%AD%E5%BF%83"><span class="nav-number">4.</span> <span class="nav-text">从大平台开始，尽量逼近流量中心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E6%90%9C%E7%B4%A2%E6%88%96%E6%8E%A8%E8%8D%90%E7%AD%89%E4%B8%8E%E7%94%A8%E6%88%B7%E5%85%B3%E7%B3%BB%E6%9B%B4%E5%AF%86%E5%88%87%E7%9A%84%E9%A2%86%E5%9F%9F"><span class="nav-number">5.</span> <span class="nav-text">选择搜索或推荐等与用户关系更密切的领域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E6%9C%BA%E4%BC%9A%E7%9A%84%E8%AF%9D%E5%8E%BB%E5%81%9A%E5%9C%A8%E7%BA%BF%E7%AE%97%E6%B3%95%E5%90%A7%EF%BC%81"><span class="nav-number">6.</span> <span class="nav-text">有机会的话去做在线算法吧！</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/algorithm-bubble.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="算法岗有没有泡沫 | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          算法岗有没有泡沫
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2019-10-10 14:11:34 / 修改时间：14:18:06" itemprop="dateCreated datePublished" datetime="2019-10-10T14:11:34+08:00">2019-10-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/career/" itemprop="url" rel="index"><span itemprop="name">职业论</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>新近组了个饭局，发现来的各大厂的算法leader，都一副萎靡不振的模样，一问，都忙着筛秋招的简历呢，今年这秋招，投算法的像雪片一样飞过来，大抵高校计算机类的导师，都纷纷转型深度学习了，而候选人也个个刷过比赛，不拿到前几名都不好意思说出来，算法原理更是倒背如流。于是算法岗的面试官都是筛简历筛到老眼昏花，<em>来左边儿一起画个顶会，在你右边再画个Kaggle</em>，繁重的业务之外，面试更是一场接一场，面人面得头痛欲裂。</p>
+<p>有人说，这是算法岗的泡沫，一触即破，好比回溯几年前的客户端开发，随便上个培训班就可以收割offer了，等风潮一过铁定凉凉。</p>
+<p>面对层出不穷的劝退帖，我嘿然一笑，短期泡沫肯定是存在的，但是放长到十年维度的时间来看，投算法岗有没有问题？我觉得依然是应届生较好的一个选择，理由有三。</p>
+<span id="more"></span>
+
+<h2 id="存储在云端的数据仍然处于迅速增长之中"><a href="#存储在云端的数据仍然处于迅速增长之中" class="headerlink" title="存储在云端的数据仍然处于迅速增长之中"></a>存储在云端的数据仍然处于迅速增长之中</h2><p>算法的实质，无非就是更高效更精准的实现数据之间的匹配。AI爆火的根本原因，既不在于神经网络的崛起，也不在于分布式计算的普及，而是数据量的暴增使得依赖算法匹配数据成为一个划算的生意。放眼未来，虽然互联网人口的红利已经接近饱和，数据这个基础引擎仍然维持着超过50%的年增长率。这一方面得益于创造内容的门槛被极大拉低，另一方面也说明数据的价值得到了普遍的认同，对数据的收集和利用越发精细。数据越多，处理和提炼数据的复杂度就越高，自然会产生更多更大的算法需求。数据增长的引擎不熄火，持续有数据匹配的需求，就持续有算法岗的空缺。</p>
+<h2 id="算法岗的入门门槛更高"><a href="#算法岗的入门门槛更高" class="headerlink" title="算法岗的入门门槛更高"></a>算法岗的入门门槛更高</h2><p>算法工程师处在研发和研究两个领域的交叉点，难以想象有哪个技术岗位对于学术论文阅读的要求，可与算法岗相匹敌。哪怕撇开学历绩点、学术履历、实践经验等方面的硬性要求，公式的理解和推导仍然是顶级的智力游戏。这就决定了算法岗的入门门槛本来就相对要更高，而随着AI的爆火，越来越多的候选人涌入，算法岗的竞争残酷程度上升了好几个量级，前刷刷题背背西瓜书就能手抓一把好offer的时代一去不复返了。</p>
+<p><strong>但凡竞争激烈的岗位，哪怕不是最优的选择，也肯定是一个较好的选择</strong>。因为能跨越入门门槛的，本来就是智力和勤奋程度更出色的候选人，有机会和更聪明更努力的人一起工作，会对你的职业生涯有非常正向的推动。多年前做高考咨询，有位小朋友问我，A高校专业排名第三但分数较低，B高校专业排名第五但分数较高，该选哪个？我建议去B，因为录取分数决定了同学的智力与勤奋程度，而专业排名更多取决于实验室的研究实力，不是向着留校任教这条路没必要考虑。选择职业也是如此，从前最聪明的学生都在考CFA准备进投行咨询，现在最聪明的学生都在忙着神经网络调参打比赛，本质上是一样的。只要具备追逐泡沫的条件，就应该投身其中，因为全局最优对于应届生的阅历绝对是一个NP难问题，倒不如梯度下降法这类朴素的优化思路来得实际，找准一个方向，先做到极致。我见过顶会可以打牌但最终转型的美女产品经理，也见过连续Top绩效然后转岗做算法的后台开发，都不影响他们华丽转身之后大杀四方。</p>
+<h2 id="算法岗的成长曲线更陡峭"><a href="#算法岗的成长曲线更陡峭" class="headerlink" title="算法岗的成长曲线更陡峭"></a>算法岗的成长曲线更陡峭</h2><p>优秀的算法工程师，必须在数学、编程、数据分析、业务理解四个方面的能力沉淀上都不可有短板，挑战难度更大，学习曲线更陡峭。当然，更陡峭的成长曲线除了意味着只有极少数人能走到顶端，能独当一面的人才永远是一将难求，也意味着技术成长的上限更高周期更长，你不需要在步入职场的五到十年之后就遇到技术成长的瓶颈，只能依靠转管理来延长职业寿命，如果你愿意在技术领域持续精进，算法岗是一个非常好的方向。</p>
+<p>但是，对于有志于算法岗的应届生，我仍然有以下三个求职建议给你们：</p>
+<h2 id="从大平台开始，尽量逼近流量中心"><a href="#从大平台开始，尽量逼近流量中心" class="headerlink" title="从大平台开始，尽量逼近流量中心"></a>从大平台开始，尽量逼近流量中心</h2><p>许多年前互联网的江湖还是后台开发薪资最高，HR习惯用不同量级的DAU对应不同的薪资：千万级别的要比百万级别的差一截，亿级别的那就是江湖罕见的大牛了，如果有愿意动的都是抢着开价。后台开发的技术本身并不是什么奥秘，但随着用户数的上涨，再合理的架构也会遇到各种意料之外的挑战，而解决问题的方法往往充满灵光一现的巧妙，不经历是永远不会知道的。拥有市场上稀缺的经验，是一个职业履历的加分项。算法岗也是类似，你所服务的用户越多，分众越细，算法匹配能产生的额外价值越大；线上对资源和耗时的要求也更加严格，面临算法效果和算法性能的trade off也更加复杂。当选择offer的时候，不妨暂把薪资条件放一边，优先看哪个offer有机会（不一定是现在，也许是未来）去创造服务到更多用户的算法，为长远的职业发展构筑更坚实的基础。</p>
+<h2 id="选择搜索或推荐等与用户关系更密切的领域"><a href="#选择搜索或推荐等与用户关系更密切的领域" class="headerlink" title="选择搜索或推荐等与用户关系更密切的领域"></a>选择搜索或推荐等与用户关系更密切的领域</h2><p>深度学习这一轮的发展，是从图像和语音这类相对通用的领域发起的，面向通用领域的算法工程师，<code>算法味</code>会更浓一些，和学术研究挂钩更紧密一些，具体到工作内容，更多需要独自攻坚某个课题，和产品、运营横向打交道的机会少一些，发展空间偏纵向求深度，当然产出论文的机会更多。<strong>这类岗位更适合目标比较明确、能静下心花很长时间把一个问题搞深搞透的人</strong>。当然，对于算法岗的这一分支，我仍然觉得最合适的做法是先读取相应领域的博士，在学术界积累够做研究的方法论以后再到工业界来。此外，这一类岗位面向通用领域的算法岗，因为业务特殊性不显著，容易出现赢家通吃的局面，给小平台或小团队的生存空间很小，选择平台之时要更加谨慎。其实对于算法岗的候选人，更广袤的天地在于搜索或推荐等和用户息息相关的强业务领域。这类领域没有一招鲜的万金油方法，更多需要埋首于业务之中，从业务目标、数据、特征、算法、策略等多个维度找到最优的结合点，通过实验系统快速试错与提升指标。<strong>这才是大部分优秀算法工程师脱颖而出的残酷丛林，也是更适合普通人升级打怪的成长路径</strong>。</p>
+<h2 id="有机会的话去做在线算法吧！"><a href="#有机会的话去做在线算法吧！" class="headerlink" title="有机会的话去做在线算法吧！"></a>有机会的话去做在线算法吧！</h2><p><strong>在线算法是指它可以以序列化的方式处理输入，也就是说在开始时并不需要已经知道所有的输入</strong>。与离线算法相比，在线算法的链路更长，涉及到多个上下游模块的配合，对计算性能、抽象能力、数据一致性都提出了更高的要求。提供在线算法服务的过程中，需要和工程团队紧密配合，有机会感受到算法和工程在思维模式、能力栈之间的差异，找到算法和工程的最优平衡点，是一个项目能否成功的关键因素，而<strong>感受两种思维方式的碰撞，对算法工程师的工程能力和架构能力的成长大有助益</strong>。在线算法的另一挑战来自线上线下效果不一致的问题，离线AUC提升爆表，一上实验正向寥寥，一曲凉凉送给自己。在线算法牵涉的链路过长，排查起来异常费力，十分考验算法工程师的业务理解能力和问题Debug能力，对于从实验室的空中楼阁步入工业界的钢筋水泥的应届生来说，在线算法是一个能让你快速进入状态的领域。</p>
+<p>最后，祝大家在泡沫中玩得愉快。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/talent-limited-company.html" rel="prev" title="才华有限公司">
+                  <i class="fa fa-chevron-left"></i> 才华有限公司
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/tech-writing.html" rel="next" title="技术人为什么该坚持写作？">
+                  技术人为什么该坚持写作？ <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

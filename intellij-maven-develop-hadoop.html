@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":{"disqusjs":{"text":"Load Disqus","order":-1}},"activeClass":"disqusjs"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Hadoop开发中需要用到至少不下10个的依赖包，它们相互间的依赖关系比较复杂，不同版本的依赖关系也有所不同，而间接依赖导致的程序错误并不会在运行之前报错，因此确定适合一个版本的依赖包，会耗费相当多的时间。Maven是一个依赖管理和项目构建的工具，它利用惯例组织Java项目的结构，并允许通过简单的配置定义直接依赖，而直接依赖所需的其他依赖则会通过事先定义好的关系列表自动下载，大大节省了开发者本身的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建IntelliJ+Maven的Hadoop开发环境">
+<meta property="og:url" content="http://guoze.me/intellij-maven-develop-hadoop.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="Hadoop开发中需要用到至少不下10个的依赖包，它们相互间的依赖关系比较复杂，不同版本的依赖关系也有所不同，而间接依赖导致的程序错误并不会在运行之前报错，因此确定适合一个版本的依赖包，会耗费相当多的时间。Maven是一个依赖管理和项目构建的工具，它利用惯例组织Java项目的结构，并允许通过简单的配置定义直接依赖，而直接依赖所需的其他依赖则会通过事先定义好的关系列表自动下载，大大节省了开发者本身的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://guoze.me/images/maven-1.png">
+<meta property="og:image" content="http://guoze.me/images/maven-2.png">
+<meta property="og:image" content="http://guoze.me/images/maven-3.png">
+<meta property="og:image" content="http://guoze.me/images/maven-4.png">
+<meta property="og:image" content="http://guoze.me/images/maven-5.png">
+<meta property="og:image" content="http://guoze.me/images/maven-6.png">
+<meta property="article:published_time" content="2014-08-27T07:40:02.000Z">
+<meta property="article:modified_time" content="2019-09-25T09:58:11.000Z">
+<meta property="article:author" content="2shou">
+<meta property="article:tag" content="Maven">
+<meta property="article:tag" content="IntelliJ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://guoze.me/images/maven-1.png">
+
+
+<link rel="canonical" href="http://guoze.me/intellij-maven-develop-hadoop.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/intellij-maven-develop-hadoop.html","path":"intellij-maven-develop-hadoop.html","title":"搭建IntelliJ+Maven的Hadoop开发环境"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>搭建IntelliJ+Maven的Hadoop开发环境 | 建造者说</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54995139-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-54995139-1","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/intellij-maven-develop-hadoop.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="搭建IntelliJ+Maven的Hadoop开发环境 | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          搭建IntelliJ+Maven的Hadoop开发环境
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2014-08-27 15:40:02" itemprop="dateCreated datePublished" datetime="2014-08-27T15:40:02+08:00">2014-08-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2019-09-25 17:58:11" itemprop="dateModified" datetime="2019-09-25T17:58:11+08:00">2019-09-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming/" itemprop="url" rel="index"><span itemprop="name">技术控</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/intellij-maven-develop-hadoop.html#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="intellij-maven-develop-hadoop.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Hadoop开发中需要用到至少不下10个的依赖包，它们相互间的依赖关系比较复杂，不同版本的依赖关系也有所不同，而间接依赖导致的程序错误并不会在运行之前报错，因此确定适合一个版本的依赖包，会耗费相当多的时间。Maven是一个依赖管理和项目构建的工具，它利用惯例组织Java项目的结构，并允许通过简单的配置定义直接依赖，而直接依赖所需的其他依赖则会通过事先定义好的关系列表自动下载，大大节省了开发者本身的工作量。</p>
+<span id="more"></span>
+<p>使用Maven管理依赖，相比于下载到lib文件夹再导入项目，有以下优势：</p>
+<ul>
+<li>节省找寻合适依赖所需的时间</li>
+<li>便于依赖升级以适配不同的Hadoop版本</li>
+<li>依赖下载到本地库后可重复使用</li>
+<li>缩小版本管理的文件体积</li>
+</ul>
+<p>Maven在主流的Java IDE上都有插件，Eclipse可通过安装m2eclipse，但这里个人推荐与智能化程度更高、联网更迅速、体验更流畅的IntelliJ IDEA配合，以下就简要介绍IntelliJ IDEA如何使用Maven。（以IntelliJ IDEA 13为例，它自带了Maven的支持，无需安装插件）</p>
+<ol>
+<li><code>New Project -&gt; Maven</code>新建一个Maven项目，在属性栏填写GroupId（项目或组织的唯一标识）和ArtifactId（项目的通用名称）：<br><img src="/images/maven-1.png"></li>
+<li>Next之后填写项目名和项目位置：<br><img src="/images/maven-2.png"></li>
+<li>新建项目之后有弹窗提示，选择自动导入：<br><img src="/images/maven-3.png"></li>
+<li>项目生成后的架构是这样的，我们在src&#x2F;main&#x2F;java路径下写项目代码，pom.xml是项目统一的配置文件。<br><img src="/images/maven-4.png"></li>
+<li>因为我们线上用的是Cloudera的Hadoop版本，所以我们需要在pom.xml的project节点下添加一个CDH5的Maven远程依赖仓库（参考<a target="_blank" rel="noopener" href="http://www.cloudera.com/content/cloudera-content/cloudera-docs/CDH5/latest/CDH-Version-and-Packaging-Information/cdhvd_cdh5_maven_repo.html">Using the CDH 5 Maven Repository</a>)</li>
+<li>开发一个普通的Hadoop项目，我们一般需要hadoop-common、hadoop-core两组依赖；如果需要读取HDFS上的文件内容，则需要hadoop-hdfs和hadoop-client另外两组依赖；如果需要读取HBase的数据，则需要再加入hbase-client。（以上均为artifactId，以CDH5.1.0为例）</li>
+<li>IntelliJ IDEA提供了对pom文件非常智能的自动补全和实时查询功能：<br><img src="/images/maven-5.png"><br><img src="/images/maven-6.png"></li>
+<li><strong>Let’s Hadoop!</strong></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Maven/" rel="tag"># Maven</a>
+              <a href="/tags/IntelliJ/" rel="tag"># IntelliJ</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/svm-introduction.html" rel="prev" title="SVM原理简介：最大间隔分类器">
+                  <i class="fa fa-chevron-left"></i> SVM原理简介：最大间隔分类器
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/why-apache-spark-is-a-crossover-hit-for-data-scientists.html" rel="next" title="为什么Spark将成为数据科学家的统一平台">
+                  为什么Spark将成为数据科学家的统一平台 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-disqusjs">Load Disqus</a></li>
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane disqusjs" id="comment-disqusjs">
+              
+  <div class="comments disqusjs-container">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/disqusjs/3.0.2/styles/disqusjs.css" integrity="sha256-71XarXwNr1Td27HmZI9zjY+rMzRdush6/glo6VFXp7o=" crossorigin="anonymous">
+
+<script class="next-config" data-name="disqusjs" type="application/json">{"enable":true,"api":"https://disqus.skk.moe/disqus/","apikey":"tnBnPfPFNEkS8nU78nRpmP44Y6UqEZPI4bTNbub8xufAFTTn2ZHG2FmdmepiVLjp","shortname":"2shou-1","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/disqusjs/3.0.2/disqusjs.es2015.umd.min.js","integrity":"sha256-okP99ZQKVpIy7+NogAMpGlIQzJa9XKXhIJcFgdju5bU="}}</script>
+<script src="/js/third-party/comments/disqusjs.js"></script>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"2shou-1","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

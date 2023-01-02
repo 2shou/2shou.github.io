@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://guoze.me/eosio-dawn-3-0-now-available.html</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://guoze.me/youth-only-sequel.html</loc>
     
     <lastmod>2023-01-02</lastmod>
@@ -1083,15 +1092,6 @@
   
   <url>
     <loc>http://guoze.me/engineering-culture.html</loc>
-    
-    <lastmod>2019-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/eosio-dawn-3-0-now-available.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     

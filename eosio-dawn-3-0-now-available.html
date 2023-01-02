@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":{"disqusjs":{"text":"Load Disqus","order":-1}},"activeClass":"disqusjs"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="今天下午，BM在Medium宣布EOSIO Dawn 3.0正式发布，以下是2shou新鲜翻译的中文版。 本文共6515字，阅读约需20分钟">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【长文翻译】EOS Dawn 3.0上线，可支持百万吞吐量">
+<meta property="og:url" content="http://guoze.me/eosio-dawn-3-0-now-available.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="今天下午，BM在Medium宣布EOSIO Dawn 3.0正式发布，以下是2shou新鲜翻译的中文版。 本文共6515字，阅读约需20分钟">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-04-06T15:01:22.000Z">
+<meta property="article:modified_time" content="2023-01-02T03:31:49.675Z">
+<meta property="article:author" content="2shou">
+<meta property="article:tag" content="EOS">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://guoze.me/eosio-dawn-3-0-now-available.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/eosio-dawn-3-0-now-available.html","path":"eosio-dawn-3-0-now-available.html","title":"【长文翻译】EOS Dawn 3.0上线，可支持百万吞吐量"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【长文翻译】EOS Dawn 3.0上线，可支持百万吞吐量 | 建造者说</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54995139-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-54995139-1","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EOSIO-Dawn-3-0%E7%8E%B0%E5%B7%B2%E5%8F%91%E5%B8%83"><span class="nav-number">1.</span> <span class="nav-text">EOSIO Dawn 3.0现已发布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E6%89%A9%E5%B1%95%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">可扩展性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E9%93%BE%E9%80%9A%E4%BF%A1"><span class="nav-number">3.</span> <span class="nav-text">跨链通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%80%E7%96%8F%E5%8C%BA%E5%9D%97%E5%A4%B4%E9%AA%8C%E8%AF%81"><span class="nav-number">4.</span> <span class="nav-text">稀疏区块头验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E6%97%A0%E5%85%B3%E6%93%8D%E4%BD%9C"><span class="nav-number">5.</span> <span class="nav-text">上下文无关操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%9E%8B%E4%B8%8A%E4%B8%8B%E6%96%87%E6%97%A0%E5%85%B3%E5%86%85%E8%81%94%E6%93%8D%E4%BD%9C"><span class="nav-number">6.</span> <span class="nav-text">事件型上下文无关内联操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A4%E6%98%93%E5%8E%8B%E7%BC%A9"><span class="nav-number">7.</span> <span class="nav-text">交易压缩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%87%8A%E5%99%A8%E5%92%8CJIT%E7%BC%96%E8%AF%91"><span class="nav-number">8.</span> <span class="nav-text">解释器和JIT编译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%84%E6%BA%90%E6%B5%8B%E9%87%8F%E9%80%9F%E7%8E%87%E7%9A%84%E9%99%90%E5%88%B6"><span class="nav-number">9.</span> <span class="nav-text">资源测量速率的限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#500%E6%AF%AB%E7%A7%92%E5%87%BA%E5%9D%97%E9%97%B4%E9%9A%94%E5%92%8CBFT-DPOS"><span class="nav-number">10.</span> <span class="nav-text">500毫秒出块间隔和BFT DPOS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BIOS%E6%9E%B6%E6%9E%84"><span class="nav-number">11.</span> <span class="nav-text">BIOS架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E5%85%A8%E5%8A%9F%E8%83%BD"><span class="nav-number">12.</span> <span class="nav-text">安全功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E5%85%A8%E5%BB%B6%E8%BF%9F%E4%BA%A4%E6%98%93"><span class="nav-number">13.</span> <span class="nav-text">安全延迟交易</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E6%81%A2%E5%A4%8D"><span class="nav-number">14.</span> <span class="nav-text">忘记密码恢复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A4%E6%98%93%E6%8F%90%E6%A1%88%E7%B3%BB%E7%BB%9F"><span class="nav-number">15.</span> <span class="nav-text">交易提案系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8C%96%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91"><span class="nav-number">16.</span> <span class="nav-text">简化合约开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%94%AF%E6%8C%81"><span class="nav-number">17.</span> <span class="nav-text">浮点支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E6%94%AF%E6%8C%81"><span class="nav-number">18.</span> <span class="nav-text">C++标准模板库支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E6%97%B6%E4%BA%A4%E6%98%93"><span class="nav-number">19.</span> <span class="nav-text">定时交易</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E8%8C%83%E5%9B%B4%E6%A3%80%E6%B5%8B"><span class="nav-number">20.</span> <span class="nav-text">自动范围检测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E9%87%8D%E6%95%B0%E6%8D%AE%E5%BA%93API"><span class="nav-number">21.</span> <span class="nav-text">多重数据库API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%83%BD"><span class="nav-number">22.</span> <span class="nav-text">性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%B7%AE%E6%83%85%E5%86%B5-1000TPS"><span class="nav-number">22.1.</span> <span class="nav-text">最差情况 - 1000TPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E6%A1%88%E4%BE%8B-3000TPS"><span class="nav-number">22.2.</span> <span class="nav-text">平均案例 - 3000TPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E4%BD%B3%E6%A1%88%E4%BE%8B-6000TPS"><span class="nav-number">22.3.</span> <span class="nav-text">最佳案例 - 6000TPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%90%86%E8%AE%BA%E6%A1%88%E4%BE%8B-8000TPS"><span class="nav-number">22.4.</span> <span class="nav-text">理论案例 - 8000TPS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%8F%E7%A7%92%E6%97%A0%E9%99%90%E6%AC%A1%E4%BA%A4%E6%98%93"><span class="nav-number">23.</span> <span class="nav-text">每秒无限次交易</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AA%E6%9D%A5%E4%B9%8B%E8%B7%AF"><span class="nav-number">24.</span> <span class="nav-text">未来之路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">25.</span> <span class="nav-text">总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/eosio-dawn-3-0-now-available.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【长文翻译】EOS Dawn 3.0上线，可支持百万吞吐量 | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【长文翻译】EOS Dawn 3.0上线，可支持百万吞吐量
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-04-06 23:01:22" itemprop="dateCreated datePublished" datetime="2018-04-06T23:01:22+08:00">2018-04-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-01-02 11:31:49" itemprop="dateModified" datetime="2023-01-02T11:31:49+08:00">2023-01-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" itemprop="url" rel="index"><span itemprop="name">区块链</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/eosio-dawn-3-0-now-available.html#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="eosio-dawn-3-0-now-available.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>今天下午，BM在Medium宣布EOSIO Dawn 3.0正式发布，以下是2shou新鲜翻译的中文版。</p>
+<p><strong>本文共6515字，阅读约需20分钟</strong></p>
+<span id="more"></span>
+
+<h2 id="EOSIO-Dawn-3-0现已发布"><a href="#EOSIO-Dawn-3-0现已发布" class="headerlink" title="EOSIO Dawn 3.0现已发布"></a>EOSIO Dawn 3.0现已发布</h2><p>Block.one很高兴为大家推荐EOSIO Dawn 3.0第一个功能完整的预发布版本。该预发布版本代表了一个的里程碑，为2018年6月即将到来的EOSIO 1.0打下坚实基础。我们的全球开发团队一直在加班加点工作，使得EOSIO成为构建区块链应用程序的最强平台。自从EOSIO Dawn 2.0的发布以来已经有四个月了，有很多新的特性需要展示给大家。</p>
+<p>构建最先进的区块链架构是一个不断迭代的过程，随着不断学习而做出变化。Dawn 3.0中完成的许多功能在最初的EOSIO白皮书中都没有提及，但是在构建高性能、灵活且易于开发的平台的过程中我们发现了这些新的需求。</p>
+<h2 id="可扩展性"><a href="#可扩展性" class="headerlink" title="可扩展性"></a>可扩展性</h2><p>可扩展性意味着满足后续市场需求的扩展能力。我们的团队在每一步都将可扩展性融入到设计之中。也就是说，Dawn 3.0只实现了一小部分潜在的优化，使得EOSIO仍然有持续扩展的空间。EOSIO的设计将使得利用并行计算来提升吞吐量变得可行，而不需要做出硬件更改。</p>
+<h2 id="跨链通信"><a href="#跨链通信" class="headerlink" title="跨链通信"></a>跨链通信</h2><p>跨链通信是终极的可扩展性功能 - 我们的圣杯，就像业界一直在寻找的诸如侧链，Plasma和分片等方案。跨链通信使得一个区块链网络能够以可证实的安全方式，验证另一个区块链网络的事件真实性。它的目标是让跨链通信像智能合约之间的链内沟通一样安全，而我们已经实现了这一目标。</p>
+<p>从我们的角度，跨链通信只不过是实现轻客户端作为智能合约的功能。轻客户端可以验证区块链中的交易，而无需处理整个区块链。这反过来意味着需要建立一个有效而安全的轻客户端可验证的权益证明区块链网络。因此，轻客户端的验证必须纳入到最开始的协议设计之中，因为发布之后就很难再加进来。</p>
+<h2 id="稀疏区块头验证"><a href="#稀疏区块头验证" class="headerlink" title="稀疏区块头验证"></a>稀疏区块头验证</h2><p>传统的轻客户端需要下载所有区块头，然后基于这些区块头验证交易。现在EOSIO每秒生成两个区块，区块链每秒至少需要2个处理每个区块头的过程。这无法扩展到相对罕见的跨链通信的情况。为了解决这个问题，我们创造了第一个稀疏区块头验证的具备拜占庭容错能力的区块链。具体而言，只有控制超过2&#x2F;3的区块生产者（比如，21个中的15个以上），轻客户端才有可能被欺骗。其他情况下，轻客户端只需处理活跃的区块生产者更改的区块头，以及包含了相对跨链通信的区块头。</p>
+<h2 id="上下文无关操作"><a href="#上下文无关操作" class="headerlink" title="上下文无关操作"></a>上下文无关操作</h2><p>上下文无关操作是实现高效跨链通信的关键功能之一。它们是可以包含在交易中但不依赖于区块链状态的特殊操作，因此是「上下文无关」的。上下文无关操作的一个例子是验证Merkle证明或签名。由于这些计算是上下文无关的，得以进行并行的简单验证，得以在重放中修剪计算。</p>
+<p>每个上下文无关操作也代表一个可修剪的交易数据分片。这意味着可以修剪大型Merkle树，从而在区块链重放期间节省昂贵的计算。</p>
+<p>上下文无关操作除了使得我们能够并行化跨链通信相关的绝大部分开销，还能够并行化并简化需要大量算力的隐私技术，例如匿名交易、防弹技术（Bulletproofs）和zkSNARK（零知识证明）。</p>
+<p>为了激励使用上下文无关操作，生产者只允许在上下文无关操作发生的时候（而不是传统交易），向用户收取一小部分CPU算力。</p>
+<h2 id="事件型上下文无关内联操作"><a href="#事件型上下文无关内联操作" class="headerlink" title="事件型上下文无关内联操作"></a>事件型上下文无关内联操作</h2><p>EOSIO Dawn 2.0开发者寻找的功能之一是生成由外部来源处理的事件的有效方法。在以太坊，这些事件用于报告关于合同内部运作的结构化信息。通过增加上下文无关操作，我们也有可能做上下文无关的内联操作。内联操作是由合同代码生成并作为当前交易的一部分可执行的操作。一个上下文无关联的行为可以低成本的并行化处理。由于所有内联操作都包含在Merkle根节点中，因此可以将这些操作当做可证明的通知给外部服务和其他区块链网络。</p>
+<h2 id="交易压缩"><a href="#交易压缩" class="headerlink" title="交易压缩"></a>交易压缩</h2><p>有很多交易的数据可被压缩，其中最不可避免的例子是合约当中集成的WebAssembly代码，还有包括ABI规范和与账户&#x2F;合约关联的李嘉图合约，某些应用程序（如社交媒体）可能还希望在区块链中包含可压缩的UGC内容。</p>
+<p>通过利用交易压缩，区块链可以更有效地存储和传输大量交易，也让用户相对于不可压缩数据承担更小的成本。</p>
+<h2 id="解释器和JIT编译"><a href="#解释器和JIT编译" class="headerlink" title="解释器和JIT编译"></a>解释器和JIT编译</h2><p>相对Dawn 2.0，本次最大的变化之一就是WebAssembly运行环境的抽象。Dawn 3.0现在默认采用Binaryen WebAssembly解释器，而不是更快的Just-in-Time（JIT）编译器。这个决定会降低性能，但会增加稳定性和标准的一致性，同时允许我们在有需要时轻松更换更高性能的JIT环境。新的解释器也解决了我们面对Dawn 2.0所面临的最大挑战之一：编译一个智能合约所造成的延时。将来我们可以使用新的解释器来获得一个慢但较低延迟的新部署智能合约的执行过程，当同时在后台编译和优化智能合约。这种双重实现意味着我们所有的单元测试都针对编译和解释代码进行了测试，因此我们可以在部署混合方法之前发现潜在的非确定性或非标准的操作。</p>
+<h2 id="资源测量速率的限制"><a href="#资源测量速率的限制" class="headerlink" title="资源测量速率的限制"></a>资源测量速率的限制</h2><p>随着Dawn 3.0的发布，我们现在有一个全新的资源速率限制系统。也许最大的改变是引入了客观的指令计数算法。当我们着手构建EOSIO时，目标是完全采用主观限速和强制执行。然而我们发现，主观执行的成本几乎与更客观方法相同。所以我们现在采用了混合解决方案，其中用户需要为客观使用而付费，但区块生成者也会在合同中放置主观的挂钟时间限制。这种主观的限制防止了客观计费方式的滥用。</p>
+<p>我们采用这种方法的主要原因之一是允许单个交易执行需要比以前多得多的算力。从理论上讲，现在区块可以包含一个需要100毫秒运行的交易，而在旧模型下，每个交易都必须在1毫秒以内运行。</p>
+<p>限速的另一个变化是将限制与定义代币（Token）的需求区分开。这使得EOSIO可以用在没有使用Token的场景下，比如私有的经过授权的区块链之中使用。公共区块链可以采用系统合约，通过权益（staking）来实现限制。社区可以动态地决定如何分配资源，而与分配的实施方式无关。</p>
+<h2 id="500毫秒出块间隔和BFT-DPOS"><a href="#500毫秒出块间隔和BFT-DPOS" class="headerlink" title="500毫秒出块间隔和BFT DPOS"></a>500毫秒出块间隔和BFT DPOS</h2><p>随着Dawn 3.0的发布，我们已经可以从3秒的出块间隔升级到0.5秒的出块间隔，这大大缩短了确认之前的等待时间。通过与BFT DPOS（DPOS的拜占庭容错能力）结合使用时，交易可在1秒内不可逆转地得到确认。不可逆转确认之前的等待时间对区块链间的通信有重大影响，因为另一个区块链必须等待不可逆转确认之后才能汇聚来自外部区块链的证明。两个都是基于EOSIO的区块链应该能够在3秒内执行往返通信，对比以太坊的类似交流模式需要9分钟，比特币则需要3个多小时。</p>
+<p>BFT DPOS尚未实施，因为它是非硬分叉优化，我们将在发布EOSIO 1.0之前实施BFT DPOS。</p>
+<h2 id="BIOS架构"><a href="#BIOS架构" class="headerlink" title="BIOS架构"></a>BIOS架构</h2><p>BIOS架构是EOSIO Dawn 2.0最大的架构变化之一。在EOSIO Dawn 3.0下，绝大多数区块链的业务逻辑已经进入智能合约，可以由社区动态更新，而不需要硬分叉。一个简单的EOSIO区块链现在是一个单一的生产者、没有任何代币、投票或委托证明。核心区块链代码中唯一实现的是权限系统，它包括创建帐户、部署合同和强制执行资源配额的功能。一切需要区块链授权权益的证明（包括代币、投票、权益和资源分配）现在由基于Web Assembly的系统合同定义。</p>
+<p>借助这种新架构，我们能够将开发重点放在区块链静态的非WebAssembly部分。这些是事关稳定性的最关键部分，也最难升级。在发布EOSIO Dawn 3.0和EOSIO 1.0之间，我们将制定系统合同的最终细节，权益和投票。</p>
+<h2 id="安全功能"><a href="#安全功能" class="headerlink" title="安全功能"></a>安全功能</h2><p>安全对于任何计算系统都至关重要，我们设计EOSIO的初衷是成为市场上最安全的区块链。安全是一个多维的问题，必须考虑到黑客攻击、硬件故障、物理丢失和密码丢失的风险。物理钱包擅长防范黑客入侵，但如果验证失败，可能会将用户锁定在帐户外。此外，物理钱包的纸张备份可能会丢失或被盗。</p>
+<h2 id="安全延迟交易"><a href="#安全延迟交易" class="headerlink" title="安全延迟交易"></a>安全延迟交易</h2><p>EOSIO Dawn 3.0最重要的功能之一是增加了用户可配置的延迟以适应不同的操作。有了这种延迟，交易必须在区块链上广播几个小时或几天，然后才能应用。在这段延迟期间，用户可以重新设置权限更高的帐户，然后取消交易。与其他的区块链相比，这是一个重大的改进，因为其他的区块链那里用户不会知道自己已被黑客入侵，直到对此做任何事情都为时已晚。</p>
+<h2 id="忘记密码恢复"><a href="#忘记密码恢复" class="headerlink" title="忘记密码恢复"></a>忘记密码恢复</h2><p>每个帐户至少有两个权限级别：「所有者」和「活跃者」。所有者的许可级别应该是多重签名脚本的N of M机制，其中所有的N都包含所有者的私钥。任何时候如果活跃者密钥丢失或被盗，所有者权限都可以重置活跃者权限。</p>
+<p>如果您失去了所有者密钥，或者您的多重合作伙伴不合作，则帐户活跃者的权限可以在所有者权限闲置30天后请求重置所有者权限。而原先的所有者权限则有7天时间通过更新活跃者权限来重置这一请求。</p>
+<p>在此模式下，由一个或多个物理钱包控制的帐户所有者权限将可以安全地防止黑客攻击和设备故障。如果该设备是带有指纹或Face ID安全识别的iPhone，则攻击者需要强迫你的多重签名合作伙伴，或者窃取您的手机并获得指纹或脸部特征。理想情况下，您的多重签名合作伙伴也正在使用生物识别安全硬件设备。</p>
+<h2 id="交易提案系统"><a href="#交易提案系统" class="headerlink" title="交易提案系统"></a>交易提案系统</h2><p>用户可以在自己的时间独立添加和删除权限，而不必在传统交易时间窗口内收集所有签名，这使得多重签名更加容易。通过提案系统，任何人都可以提出交易，交易涉及的各方可以简单地批准。在添加您的批准和获得必要的门槛之间，您可以随时取消您的批准。</p>
+<p>为了实现这个系统，我们添加了新的API，允许合同评估一组帐户权限是否足以授权交易。这使我们可以通过部署新的WebAssembly来升级多重签名进程，而不需要使用硬分叉。</p>
+<h2 id="简化合约开发"><a href="#简化合约开发" class="headerlink" title="简化合约开发"></a>简化合约开发</h2><p>EOSIO的目标之一就是尽可能简化合约开发。如果开发者知道如何使用方法（Method）编写C++类，那么他们应该能够编写一个尽可能不复杂的智能合约。</p>
+<p>我们很高兴将我们的<code>hello world</code>合同简化为几行简单的代码，我们的工具链已自动生成了合约的ABI并将用户操作映射给您类上定义的方法。开发一个智能合约从未如此简单。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#<span class="meta">#<span class="keyword">include</span> <span class="string">&lt;eosiolib/eosio.hpp&gt;</span>    </span></span><br><span class="line"></span><br><span class="line">#<span class="meta">#<span class="keyword">include</span> <span class="string">&lt;eosiolib/print.hpp&gt;</span>    </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> eosio;    </span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">hello</span>:<span class="keyword">public</span> contract &#123;    </span><br><span class="line"></span><br><span class="line">    ​<span class="keyword">using</span> contract::contract;    </span><br><span class="line"></span><br><span class="line">    ​<span class="function"><span class="type">void</span> <span class="title">hi</span><span class="params">(name user)</span> </span>&#123;    </span><br><span class="line"></span><br><span class="line">    ​    ​<span class="built_in">print</span>(<span class="string">&quot;Hello, &quot;</span>, user);    </span><br><span class="line"></span><br><span class="line">    ​&#125;    </span><br><span class="line"></span><br><span class="line">&#125;;   </span><br><span class="line"></span><br><span class="line"><span class="built_in">EOSIO_ABI</span>(hello, (hi))    </span><br></pre></td></tr></table></figure>
+
+<h2 id="浮点支持"><a href="#浮点支持" class="headerlink" title="浮点支持"></a>浮点支持</h2><p>简化智能合约开发的一部分是使开发者所需的数学算法的实现变得更加容易。区块链开发最困难的一个点就是缺乏浮点数学和相关的能力，比如求根和三角函数。许多算法（如Bancor）在浮点数上实现起来要容易得多，而不是强迫所有计算进入容易出错和内存密集的定点数计算。</p>
+<p>我们通过WebAssembly集成一个软件浮点库，来避免硬件浮点的非确定性性质。有了软件浮点库，我们就可以获得确定性和开发简便性的好处，而且复杂情况下的成本不会高于定点数计算。在许多情况下，定点数计算比确定性浮点表示要么更容易出错，要么更耗费内存。</p>
+<h2 id="C-标准模板库支持"><a href="#C-标准模板库支持" class="headerlink" title="C++标准模板库支持"></a>C++标准模板库支持</h2><p>对于EOSIO Dawn 3.0，我们付出了巨大的努力来增加对大多数C++标准模板库的支持。这意味着开发人员可以使用他们熟悉的工具、库和算法，同时避免由于这些算法的非标准实现所导致的潜在报错。</p>
+<h2 id="定时交易"><a href="#定时交易" class="headerlink" title="定时交易"></a>定时交易</h2><p>对于定时交易的开发者，现在可以编写永久运营的合约了 - 只要合约具有足够的权限带宽。其他平台需要脱链解决方案才能在适当的时间唤醒合约。通过定时交易，我们可以提高效率和易用性，而无需开发人员托管自己的服务器以保持合约运行。</p>
+<h2 id="自动范围检测"><a href="#自动范围检测" class="headerlink" title="自动范围检测"></a>自动范围检测</h2><p>在EOSIO Dawn 2.0下，每个交易都需要声明它将访问的数据范围。这对开发人员来说很容易出错，也造成逻辑的冗余。在Dawn 3.0下，区块生产者负责确定访问哪些数据范围并解除冲突。这使得所有交易更小，并将调度开销移动到区块生产者，而不是将其推回给用户、开发者或完整节点上。</p>
+<h2 id="多重数据库API"><a href="#多重数据库API" class="headerlink" title="多重数据库API"></a>多重数据库API</h2><p>EOSIO Dawn 3.0引入了一个反射自<code>boost::multi_index_container</code>的新数据库API。此API支持按多个键排序的数据库表、查找记录、使用下限&#x2F;上限以及在数据库上前后翻页。这个新的API使用迭代器接口，可显著提高扫描表的性能。</p>
+<p>现在也可以在64位、128位、256位和512位整数以及64位浮点数（双精度）上使用索引。在发布EOSIO 1.0之前，将会添加对字符串索引的支持。这是灵活性和开发简便性的显著改进，这意味着现在可以在同一张表上拥有几乎无限数量的索引字段。</p>
+<h2 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h2><p>我们的团队一直密切关注着EOSIO在真实世界的表现，并对目前的结果非常满意。我们通过几种不同的配置对我们的软件进行了基准测试，以了解后续优化时性能的上限和下限。所有这些测试都假设代币传输在计算复杂度方面与比特币或Ethereum ERC20相当。</p>
+<h3 id="最差情况-1000TPS"><a href="#最差情况-1000TPS" class="headerlink" title="最差情况 - 1000TPS"></a>最差情况 - 1000TPS</h3><p>这是我们的基准性能，没有任何优化，使用运行具有单线程签名验证解释器的多节点网络就足以支持超过1000 TPS。</p>
+<h3 id="平均案例-3000TPS"><a href="#平均案例-3000TPS" class="headerlink" title="平均案例 - 3000TPS"></a>平均案例 - 3000TPS</h3><p>打开JIT编译器后，使用运行具有单线程签名验证解释器的多节点网络来维持3000TPS。</p>
+<h3 id="最佳案例-6000TPS"><a href="#最佳案例-6000TPS" class="headerlink" title="最佳案例 - 6000TPS"></a>最佳案例 - 6000TPS</h3><p>一旦实现了签名验证的并行化，由于并行化和签名数量的增加，我们可以假设挂壁时钟的每次签名延迟将接近0。现在可以通过禁用签名验证来模拟此环境，在这个假设下，我们可以用JIT编译器在多节点网络上达到6000 TPS。</p>
+<h3 id="理论案例-8000TPS"><a href="#理论案例-8000TPS" class="headerlink" title="理论案例 - 8000TPS"></a>理论案例 - 8000TPS</h3><p>如果我们从等式中删除网络代码，并只关注CPU在关闭签名验证和使用JIT编译器时能够执行的操作，那么我们可以达到每秒8000个单线程交易。要在单一区块链上获得更高的TPS，需要实现WebAssembly的并行化执行和更高级的调度程序。同样的场景，使用标准解释器而不是JIT，将得到2700TPS。这表明启用JIT编译器这个相对简单的改变将使我们的交易性能提高约3倍。测试是在MacBook 2.8Ghz i7上进行的。</p>
+<h2 id="每秒无限次交易"><a href="#每秒无限次交易" class="headerlink" title="每秒无限次交易"></a>每秒无限次交易</h2><p>TPS的定义就好比橙子比较苹果。通过跨链通信，我们可以根据需要在区块链之间分配工作量。代币可以可靠而安全地在不同的区块链之间传输。由于相同（或不同）的区块生产者并行化的运行1000条区块链，我们可以看到每秒数百万级别的交易。这正是其他区块链提出的理论扩展方案的实际实现。</p>
+<p>我们强烈鼓励基于EOSIO的公共网络的区块生产商根据需要运行尽可能多的区块链以满足用户需求。所有区块链都可以使用相同的代币作为权益和资源分配的基础。这将围绕单个代币创建最大可能的网络效应，并利用高市值资本化代币形成经济激励的信任和安全性。</p>
+<p>像交易所、货币和社交媒体这样的应用程序可以在许多并行链上平衡其负载。</p>
+<h2 id="未来之路"><a href="#未来之路" class="headerlink" title="未来之路"></a>未来之路</h2><p>EOSIO Dawn 3.0的重点在于核心平台的稳定性。在接下来的一个月中，我们将准备最终的系统合约，以实施所有权益、投票和治理机制，我们也将最终确定我们的代币标准。</p>
+<p>一旦系统合约成熟到让我们满意，我们将启动一个新的公共测试网络。在此之前，我们会大大简化搭建测试网络和开发应用程序的流程。在接下来的几周内，我们会关闭当前的公共测试网络，同时我们将准备新的测试网络以最大限度地减少开发人员的困惑。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>EOSIO Dawn 3.0是一个开发者版本，旨在通过稳定的API来实现「功能完备」。我们认为该平台现在已经足够稳定，可供认真的应用程序开发者开始构建应用程序。EOSIO已经变得比我们一年前所想象的更加强大和易用。</p>
+<p>我们的团队正在以创纪录的速度飞速成长。我们的代码库在过去的一个月内一直是Github十大最活跃的C ++代码库之一。为了EOSIO 1.0在六月份发布高质量的公开版本，一切都在稳步推进！</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/EOS/" rel="tag"># EOS</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/liubang-rule.html" rel="prev" title="老刘法则">
+                  <i class="fa fa-chevron-left"></i> 老刘法则
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/poisonous-chicken-soup.html" rel="next" title="喝一桶摩拜的毒鸡汤，你也不会有15亿">
+                  喝一桶摩拜的毒鸡汤，你也不会有15亿 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-disqusjs">Load Disqus</a></li>
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane disqusjs" id="comment-disqusjs">
+              
+  <div class="comments disqusjs-container">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/disqusjs/3.0.2/styles/disqusjs.css" integrity="sha256-71XarXwNr1Td27HmZI9zjY+rMzRdush6/glo6VFXp7o=" crossorigin="anonymous">
+
+<script class="next-config" data-name="disqusjs" type="application/json">{"enable":true,"api":"https://disqus.skk.moe/disqus/","apikey":"tnBnPfPFNEkS8nU78nRpmP44Y6UqEZPI4bTNbub8xufAFTTn2ZHG2FmdmepiVLjp","shortname":"2shou-1","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/disqusjs/3.0.2/disqusjs.es2015.umd.min.js","integrity":"sha256-okP99ZQKVpIy7+NogAMpGlIQzJa9XKXhIJcFgdju5bU="}}</script>
+<script src="/js/third-party/comments/disqusjs.js"></script>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"2shou-1","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

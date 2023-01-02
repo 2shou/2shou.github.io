@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":{"disqusjs":{"text":"Load Disqus","order":-1}},"activeClass":"disqusjs"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="近日公布的「北京市引进人才管理办法」其中有一条：  在本市行政区域内的高新技术企业、创新型总部企业、新型研发机构等科技创新主体中承担重要工作，近3年每年应税收入超过上一年度全市职工平均工资一定倍数的（企业注册在城六区和北京经济技术开发区的8倍，注册在本市其他区域的6倍），符合人才引进计划。  根据北京市前一季度的职工平均工资，也就是程序员年税前收入大约八十万、月税前收入达到大约七万，就可以取得在北">
+<meta property="og:type" content="article">
+<meta property="og:title" content="程序员如何才能月入七万？">
+<meta property="og:url" content="http://guoze.me/programmer-be-rich.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="近日公布的「北京市引进人才管理办法」其中有一条：  在本市行政区域内的高新技术企业、创新型总部企业、新型研发机构等科技创新主体中承担重要工作，近3年每年应税收入超过上一年度全市职工平均工资一定倍数的（企业注册在城六区和北京经济技术开发区的8倍，注册在本市其他区域的6倍），符合人才引进计划。  根据北京市前一季度的职工平均工资，也就是程序员年税前收入大约八十万、月税前收入达到大约七万，就可以取得在北">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-03-24T09:00:40.000Z">
+<meta property="article:modified_time" content="2019-09-25T09:58:11.000Z">
+<meta property="article:author" content="2shou">
+<meta property="article:tag" content="程序员">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://guoze.me/programmer-be-rich.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/programmer-be-rich.html","path":"programmer-be-rich.html","title":"程序员如何才能月入七万？"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>程序员如何才能月入七万？ | 建造者说</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54995139-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-54995139-1","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84%E4%B8%80%EF%BC%9A%E4%BB%A5%E6%8A%80%E6%9C%AF%E6%B7%B1%E5%BA%A6%E5%BB%BA%E7%AB%8B%E8%B6%85%E5%BC%BA%E5%A3%81%E5%9E%92"><span class="nav-number">1.</span> <span class="nav-text">路径一：以技术深度建立超强壁垒</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84%E4%BA%8C%EF%BC%9A%E5%8A%A0%E5%85%A5%E4%B8%80%E8%89%98%E7%81%AB%E7%AE%AD"><span class="nav-number">2.</span> <span class="nav-text">路径二：加入一艘火箭</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84%E4%B8%89%EF%BC%9A%E6%B2%BF%E7%9D%80%E5%A4%A7%E5%B9%B3%E5%8F%B0%E7%9A%84%E8%81%8C%E4%B8%9A%E8%B7%AF%E5%BE%84%E5%BE%80%E4%B8%8A%E7%88%AC"><span class="nav-number">3.</span> <span class="nav-text">路径三：沿着大平台的职业路径往上爬</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/programmer-be-rich.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="程序员如何才能月入七万？ | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          程序员如何才能月入七万？
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-03-24 17:00:40" itemprop="dateCreated datePublished" datetime="2018-03-24T17:00:40+08:00">2018-03-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2019-09-25 17:58:11" itemprop="dateModified" datetime="2019-09-25T17:58:11+08:00">2019-09-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/career/" itemprop="url" rel="index"><span itemprop="name">职业论</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/programmer-be-rich.html#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="programmer-be-rich.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>近日公布的「北京市引进人才管理办法」其中有一条：</p>
+<blockquote>
+<p>在本市行政区域内的高新技术企业、创新型总部企业、新型研发机构等科技创新主体中承担重要工作，近3年每年应税收入超过上一年度全市职工平均工资一定倍数的（企业注册在城六区和北京经济技术开发区的8倍，注册在本市其他区域的6倍），符合人才引进计划。</p>
+</blockquote>
+<p>根据北京市前一季度的职工平均工资，也就是程序员年税前收入大约八十万、月税前收入达到大约七万，就可以取得在北京的落户资格。</p>
+<p>其实从我有限的职业阅历出发，月入七万对一个程序员来说还真不是一个遥不可及的Mission Impossible，甚至规划得当，就是工作五到十年可以达成的小目标。通向月入七万的路径有三条，就以身边人的小故事来开启吧。</p>
+<span id="more"></span>
+
+<h1 id="路径一：以技术深度建立超强壁垒"><a href="#路径一：以技术深度建立超强壁垒" class="headerlink" title="路径一：以技术深度建立超强壁垒"></a>路径一：以技术深度建立超强壁垒</h1><p>两年前与一位也是搞机器学习的工程师（以下简称H）合租过，H之前拿到A厂某高P职位，目前折算的月收入估计至少是北京落户线的五倍了。H的经历非常具有代表性，硕士毕业即加入一家夕阳西下的国外大厂B，先做的是后台开发，工作五年之后年收入也就在三十万上下。这时H就开始主动寻求职业的变化，迈出的第一步就是<strong>到求职网站定位稀缺性最强薪酬最高的职位</strong>，这时机器学习开始落入H的视野，恰好B有个外派去<em>支援</em>西雅图某个算法团队的机会，H争取到了这个机会，充分利用了西雅图这段职业经历向机器学习的大牛们学习各种Data Trick，积累实战经验（当然也离不开私底下钻研算法原理的苦工），慢慢也可以接手算法调优的项目了。H出师之后，凭借海归大牛的背景跳槽到B厂担任一名技术leader，年收入转眼翻番再翻番，也是这段时间与我有了交集。</p>
+<p>与我合租的这段时间，我能明显感觉到H与平时接触到的技术leader不太一样：他不会花费很多时间埋头业务，也没有受周围加班文化的影响，每天七八点就下班回家，也很少看到他有什么社会活动。就是到家了也不闲着，要么是看各种业界顶尖的论文、要么是学习最新的深度学习框架、要么是到Kaggle上参加各类竞赛，H是我碰到的极少的工作十年仍然对前沿技术保持旺盛热情并且身体力行的人。</p>
+<p>总结H的月入七万经验，关键在于三点：</p>
+<ol>
+<li><strong>充分抓住了稀缺性的价值</strong>。机器学习作为一个对数学与计算机要求都极高的领域，本来就很少人能真正深入进去；而到海量数据的大厂参与机器学习的核心项目，更为后面跳槽形成了一个极具稀缺性的背书。</li>
+<li><strong>充分利用了大平台的资源</strong>。如果贸然想去外部找机器学习相关的职位，经历的匮乏会限制难以找到理想的条件，但如果是内部转岗从边缘职位做起，就有机会到核心项目去做机器学习的工作。</li>
+<li><strong>始终坚持了技术型的路线</strong>。大部分技术人一旦迈上管理岗位之后就会放弃对技术的钻研，醉心于业务视野的扩展和管理能力的培养。但H始终都在学习和实践最前沿的技术，这让他对技术的趋势保持敏感，而且也刚好赶上了人工智能的热潮，顺利实现了收入的翻番再翻番。</li>
+</ol>
+<h1 id="路径二：加入一艘火箭"><a href="#路径二：加入一艘火箭" class="headerlink" title="路径二：加入一艘火箭"></a>路径二：加入一艘火箭</h1><p>L是我研究生时代的挚友。L刚毕业时漂泊无定，发展前景比许多同学都要渺茫；后来听说跳到了一家小公司做开发，当时这家小公司的名号我们都叫不出来，现在却路人皆知。作为早期技术骨干的L，工作第三年年收入就突破了六位数，员工福利也不可谓不惊人，成了同学圈之中的小赢家。但是无论任何时间约他吃饭，总是匆匆忙忙来匆匆忙忙走，据说长期是两点下班，没办法，谁让L加入了一艘火箭呢？不奋力向前，就得让火箭抛下。</p>
+<p>总结L的月入七万经验，关键在于三点：</p>
+<ol>
+<li><strong>眼光好、胆识高、运气好</strong>。能够在早期就加入火箭的人，身上至少得有一点。</li>
+<li><strong>能吃苦</strong>。收入永远是对战功的回报，尤其是小团队，越拼搏回报越大。</li>
+<li><strong>纯粹做好技术</strong>。L的公司以人事斗争复杂闻名，离职率和员工福利一般惊人，L却待了五年，问他原因，回答就是<em>不想别的，只想做好技术</em>。</li>
+</ol>
+<h1 id="路径三：沿着大平台的职业路径往上爬"><a href="#路径三：沿着大平台的职业路径往上爬" class="headerlink" title="路径三：沿着大平台的职业路径往上爬"></a>路径三：沿着大平台的职业路径往上爬</h1><p>这是最平平无奇的路径，却是大多数程序员实现月入七万的最佳路径。K是我的高中同学，一毕业就加入BAT之一工作至今，各方面都不惊不乍：按时晋升、考核随大流、业务线一般，像极K的个性，那种聚会时寡言少语的群众演员。饭局间无意问起，K已经开始带团队了，收入也触摸到了北京落户线。</p>
+<p>总结K的月入七万经验，关键在于三点：</p>
+<ol>
+<li><strong>选对平台</strong>。<em>职业早期加入一家巨头始终是不会错的选择</em>。大公司舞台更大，只要乖乖沿着设定的路径走，个人能力和财务回报都会稳步提升。</li>
+<li><strong>转型管理</strong>。工作到了一定年限、技术到了一定级别之后转型做管理，等于是放大了你的能力，而公司一般对于承担管理职责的人也会有额外的奖励。</li>
+<li><strong>抵制诱惑</strong>。大公司的工程师不乏猎头的骚扰，过往的互联网创业浪潮拐走了太多「迷途的羊羔」，然而一个人要想靠工作月入七万，Package肯定有一部分来自于股票，而要明白，股票永远是对于你稳定性的奖励。</li>
+</ol>
+<p>还有其他剑走偏锋月入七万的（<em>炒房、炒股、炒币……</em>）暂且按下不表。</p>
+<p>其实从真实难易程度而言：2 &gt; 1 &gt; 3，但是赌性还是让我们始终想去加入一艘火箭，并且主动去传颂火箭人的传奇故事。</p>
+<p>真心期待各位早日到达小目标。:~~</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/" rel="tag"># 程序员</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/programmer-pm-comunication.html" rel="prev" title="给程序员与产品经理的六个沟通锦囊">
+                  <i class="fa fa-chevron-left"></i> 给程序员与产品经理的六个沟通锦囊
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/programmer-interview-tips.html" rel="next" title="菜鸟程序员的超神之路 -- 面试成功之道">
+                  菜鸟程序员的超神之路 -- 面试成功之道 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-disqusjs">Load Disqus</a></li>
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane disqusjs" id="comment-disqusjs">
+              
+  <div class="comments disqusjs-container">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/disqusjs/3.0.2/styles/disqusjs.css" integrity="sha256-71XarXwNr1Td27HmZI9zjY+rMzRdush6/glo6VFXp7o=" crossorigin="anonymous">
+
+<script class="next-config" data-name="disqusjs" type="application/json">{"enable":true,"api":"https://disqus.skk.moe/disqus/","apikey":"tnBnPfPFNEkS8nU78nRpmP44Y6UqEZPI4bTNbub8xufAFTTn2ZHG2FmdmepiVLjp","shortname":"2shou-1","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/disqusjs/3.0.2/disqusjs.es2015.umd.min.js","integrity":"sha256-okP99ZQKVpIy7+NogAMpGlIQzJa9XKXhIJcFgdju5bU="}}</script>
+<script src="/js/third-party/comments/disqusjs.js"></script>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"2shou-1","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

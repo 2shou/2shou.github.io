@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"guoze.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":{"disqusjs":{"text":"Load Disqus","order":-1}},"activeClass":"disqusjs"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="一年前我写过菜鸟程序员的超神之路 – 从校园到职场，承蒙不弃也从知乎骗了将近300赞，拖更一年姗姗来迟带来了超神系列的第二篇，算是补个前传。  近几年在鹅厂也算面试过不下100名的初级与中级程序员了，虽然他们背景不同性格迥异，甚至连面试岗位的要求也有差别，然而，成功通过者就没有共同点了吗？当然有，我总结为以下四点：对工作经历的充分掌控、对对知识的灵活理解、对问题的主动推进、对挑战的好奇进取。 以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="菜鸟程序员的超神之路 -- 面试成功之道">
+<meta property="og:url" content="http://guoze.me/programmer-interview-tips.html">
+<meta property="og:site_name" content="建造者说">
+<meta property="og:description" content="一年前我写过菜鸟程序员的超神之路 – 从校园到职场，承蒙不弃也从知乎骗了将近300赞，拖更一年姗姗来迟带来了超神系列的第二篇，算是补个前传。  近几年在鹅厂也算面试过不下100名的初级与中级程序员了，虽然他们背景不同性格迥异，甚至连面试岗位的要求也有差别，然而，成功通过者就没有共同点了吗？当然有，我总结为以下四点：对工作经历的充分掌控、对对知识的灵活理解、对问题的主动推进、对挑战的好奇进取。 以">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-04-02T12:57:47.000Z">
+<meta property="article:modified_time" content="2023-01-02T03:21:24.904Z">
+<meta property="article:author" content="2shou">
+<meta property="article:tag" content="程序员">
+<meta property="article:tag" content="面试">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://guoze.me/programmer-interview-tips.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://guoze.me/programmer-interview-tips.html","path":"programmer-interview-tips.html","title":"菜鸟程序员的超神之路 -- 面试成功之道"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>菜鸟程序员的超神之路 -- 面试成功之道 | 建造者说</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54995139-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-54995139-1","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="建造者说" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">建造者说</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">总在造着什么的路上</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%B9%E5%B7%A5%E4%BD%9C%E7%BB%8F%E5%8E%86%E7%9A%84%E5%85%85%E5%88%86%E6%8E%8C%E6%8E%A7"><span class="nav-number">1.</span> <span class="nav-text">对工作经历的充分掌控</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%B9%E7%9F%A5%E8%AF%86%E7%9A%84%E7%81%B5%E6%B4%BB%E7%90%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">对知识的灵活理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%B9%E9%97%AE%E9%A2%98%E7%9A%84%E4%B8%BB%E5%8A%A8%E6%8E%A8%E8%BF%9B"><span class="nav-number">3.</span> <span class="nav-text">对问题的主动推进</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%B9%E6%8C%91%E6%88%98%E7%9A%84%E5%A5%BD%E5%A5%87%E8%BF%9B%E5%8F%96"><span class="nav-number">4.</span> <span class="nav-text">对挑战的好奇进取</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">2shou</p>
+  <div class="site-description" itemprop="description">关于科技、人文与个人成长的小随笔</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">87</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://guoze.me/programmer-interview-tips.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="2shou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="建造者说">
+      <meta itemprop="description" content="关于科技、人文与个人成长的小随笔">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="菜鸟程序员的超神之路 -- 面试成功之道 | 建造者说">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          菜鸟程序员的超神之路 -- 面试成功之道
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-04-02 20:57:47" itemprop="dateCreated datePublished" datetime="2018-04-02T20:57:47+08:00">2018-04-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-01-02 11:21:24" itemprop="dateModified" datetime="2023-01-02T11:21:24+08:00">2023-01-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/career/" itemprop="url" rel="index"><span itemprop="name">职业论</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/programmer-interview-tips.html#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="programmer-interview-tips.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote>
+<p>一年前我写过<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/-oG6qh96dZx0usGnWrq_Bw">菜鸟程序员的超神之路 – 从校园到职场</a>，承蒙不弃也从知乎骗了将近300赞，拖更一年姗姗来迟带来了超神系列的第二篇，算是补个前传。</p>
+</blockquote>
+<p>近几年在鹅厂也算面试过不下100名的初级与中级程序员了，虽然他们背景不同性格迥异，甚至连面试岗位的要求也有差别，然而，成功通过者就没有共同点了吗？当然有，我总结为以下四点：<strong>对工作经历的充分掌控、对对知识的灵活理解、对问题的主动推进、对挑战的好奇进取</strong>。</p>
+<p>以下分点举例说明。</p>
+<span id="more"></span>
+
+<h1 id="对工作经历的充分掌控"><a href="#对工作经历的充分掌控" class="headerlink" title="对工作经历的充分掌控"></a>对工作经历的充分掌控</h1><blockquote>
+<p>小H是我的一名前同事兼好友，现在在某家云主机厂商负责业务安全策略，工作之中用到了大数据分析，但模型以入门级别为主（例如逻辑回归）；小H一直希望脱离「策略」的范畴迈向「算法」的世界，但是一直觉得现在的工作经历过分偏重业务而非算法，出去面试心底有点发虚。当我和小H聊到他们近期做的一个入侵检测业务，我说这就是一个典型的RNN（递归神经网络）和LSTM（长短期记忆模型、RNN的变种）的落地场景，为什么不去试试呢？</p>
+</blockquote>
+<p>对工作经历的掌控能力好的面试者，首先散发着由内而外的自信心。这种自信心并不是无根之木（也面试过对互联网数研岗位缺乏认识却自信爆棚的跨行业求职者，无一例外悲剧），它来源于：</p>
+<ol>
+<li><strong>能够清晰定义问题</strong>。比如讲明白文本相似度模型是用来解决话题聚合不收敛的问题，而不是一上场就balabala算法有多酷炫。</li>
+<li><strong>能够独立思考路径</strong>。比如引入条件随机场是因为它有助于词与词之间的前后关系映射，而不是微博大V刘知远说过这是最好的方法。</li>
+<li><strong>能够明确问题瓶颈</strong>。比如SVM（支持向量机）面对大规模数据集的训练效率问题会是瓶颈，能提到这点两眼放光就基本上没问题了，再想到与MapReduce的结合更是加分项。</li>
+<li><strong>能够尝试潜在路径</strong>。刚才小H就显然是个反面案例，哪怕神经网络并不在当前场景下最优，起码对前沿的方法的积极应用会让面试官给你的探索精神打个高分。<strong>没有low的业务，只有low的方法论和执行力</strong>。</li>
+</ol>
+<h1 id="对知识的灵活理解"><a href="#对知识的灵活理解" class="headerlink" title="对知识的灵活理解"></a>对知识的灵活理解</h1><blockquote>
+<p>小U算是在校学生当中机器学习知识较为扎实的那种了，无论是传统的机器学习还是新潮的深度学习，各种概念都是手到擒来。直到我问了一个看似简单的送命题：ROC和AUC分别是什么意思？趁着他再一次精准无误的命中答案，我又抛出了第二个问题，ROC和AUC相对于其他指标有什么区别？这时我能感觉到轻微的卡壳，那么我又抛出第三个问题，既然有准确率、召回率、F1 Score等指标描述一个模型的好坏，为什么还需要ROC或AUC？这时我开始发现小U开始顾左右而言他了。</p>
+</blockquote>
+<p>工作和学习之间最明显的区别就是，<strong>单纯掌握知识并不形成生产力，知识只有与实践结合才能有所用处</strong>。对知识的灵活理解，意味着当你面对一个具体的问题，你能自发与那些飘在天际的理论相互印证，然后大呼一声，哦，原来如此！所以在面试的准备环节，各个知识点最好都能通过实践印证一遍，哪怕只是一个很小的场景，关键是将知识与实践打通。</p>
+<h1 id="对问题的主动推进"><a href="#对问题的主动推进" class="headerlink" title="对问题的主动推进"></a>对问题的主动推进</h1><p>算法工程师这个岗位的特殊之处就在于，既不像埋首于论文堆的研究员也不像流连于代码架构的开发工程师，相比之下更加强调将前沿算法与业务场景灵活结合的能力。</p>
+<blockquote>
+<p>小G是极少的让我给出S评价的面试者。让我印象尤为深刻的是，小G作为某大厂一个入职不到两个月的新人实习生，负责一个通用分类组件的构建，实际承担的也是执行而非主导的角色，但却对该组件的业务需求和应用痛点了若指掌，甚至对每一痛点对应的算法优化方向也都提出了自己的见解。</p>
+</blockquote>
+<p>当我问小G为什么能在这么短的时间内积累到这么深入的业务认识，小G的回答是这样的：<strong>如果只是闷头优化算法而对业务需求不管不顾，那么哪怕算法做得再精美绝伦也不会产生任何的业务价值</strong>。所以他会利用一切正式和不正式的沟通机会去了解业务方的痛点，真正做到<strong>以终为始</strong>（参见<em>高效能人士的七个习惯</em>），结合业务需求给出算法优化方向的建议（<em>注意，是建议而已</em>）。</p>
+<p><strong>对问题的主动推进能力一直是我最为关注的软技能</strong>。优秀的团队总是那些每个人都有可能成为发动机的团队，我真心盼望能多招几个发动机。</p>
+<h1 id="对挑战的好奇进取"><a href="#对挑战的好奇进取" class="headerlink" title="对挑战的好奇进取"></a>对挑战的好奇进取</h1><blockquote>
+<p>X是三年前面试过的一位社招候选人，当时给的无论算法能力还是开发能力评价都是优秀，但是最后我却加了一个问号。这个问号来自于当我问他是否有什么问题要问我时，X表示没有问题。当我不厌其烦给他介绍我们团队的业务范围以及待解决问题之后，我发现X也没有任何的兴奋感，只有一些客套的应对。</p>
+<p>Y是同一时间面试的毕业生，由于我的惯例是会给面试者抛出一道海量数据排序的题目，要求直接在白纸上裸写代码。Y由于编程经验严重不足，这个环节显然难以完成，但是Y没有畏难情绪，通过提问和思考把问题一步步抽丝剥茧，最终在白纸上画出了解决问题的流程图。</p>
+</blockquote>
+<p>最终我们给X和Y同时发了offer，结局却有所不同：Y持续超出我们的预期，并取得了最高的考核绩效；X因为试用期表现低于预期只能让他遗憾离开了团队。这其实是三年以上工作经验候选人的普遍通病，就是<strong>容易被重复的工作磨平了好奇心和进取心，甘于去做一颗做普通的螺丝钉</strong>。而这种好奇与进取恰恰就是在职场能持续进步的根源，而反映到面试之中，就是：</p>
+<ul>
+<li>Tips A: <strong>如果你真的对一个岗位感兴趣，你就该通过一切渠道去了解公司、团队以及团队里的每个成员</strong></li>
+<li>Tips B: <strong>面试不等同于考试，遇到挑战不要站在问题的角度，而是应该站在你的角度，想你有什么方法和资源去解决问题</strong></li>
+</ul>
+<p>外界许多教新手程序员面试的攻略总是聚焦于基础和技能，但我想能从优秀的人之上再脱颖而出的，是一个人发自内心的爆发力，是一个人对待万事万物的方法论。希望以上的<strong>面试之道</strong>，能对你们有所启发。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/" rel="tag"># 程序员</a>
+              <a href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag"># 面试</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/programmer-be-rich.html" rel="prev" title="程序员如何才能月入七万？">
+                  <i class="fa fa-chevron-left"></i> 程序员如何才能月入七万？
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/liubang-rule.html" rel="next" title="老刘法则">
+                  老刘法则 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-disqusjs">Load Disqus</a></li>
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane disqusjs" id="comment-disqusjs">
+              
+  <div class="comments disqusjs">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2shou</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"2shou-1","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/disqusjs/3.0.2/styles/disqusjs.css" integrity="sha256-71XarXwNr1Td27HmZI9zjY+rMzRdush6/glo6VFXp7o=" crossorigin="anonymous">
+
+<script class="next-config" data-name="disqusjs" type="application/json">{"enable":true,"api":"https://disqus.skk.moe/disqus/","apikey":"tnBnPfPFNEkS8nU78nRpmP44Y6UqEZPI4bTNbub8xufAFTTn2ZHG2FmdmepiVLjp","shortname":"2shou-1","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/disqusjs/3.0.2/disqusjs.es2015.umd.min.js","integrity":"sha256-okP99ZQKVpIy7+NogAMpGlIQzJa9XKXhIJcFgdju5bU="}}</script>
+<script src="/js/third-party/comments/disqusjs.js"></script>
+
+</body>
+</html>

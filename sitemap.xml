@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://guoze.me/youth-only-sequel.html</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/programmer-pm-comunication.html</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/programmer-interview-tips.html</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/poisonous-chicken-soup.html</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://guoze.me/target-management.html</loc>
     
     <lastmod>2020-01-04</lastmod>
@@ -920,15 +956,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/poisonous-chicken-soup.html</loc>
-    
-    <lastmod>2019-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://guoze.me/blockchain-decentration.html</loc>
     
     <lastmod>2019-09-25</lastmod>
@@ -1262,24 +1289,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/programmer-interview-tips.html</loc>
-    
-    <lastmod>2019-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/programmer-pm-comunication.html</loc>
-    
-    <lastmod>2019-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://guoze.me/python-phantomjs-crawler.html</loc>
     
     <lastmod>2019-09-25</lastmod>
@@ -1488,15 +1497,6 @@
   
   <url>
     <loc>http://guoze.me/why-management-not-that-important.html</loc>
-    
-    <lastmod>2019-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/youth-only-sequel.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     

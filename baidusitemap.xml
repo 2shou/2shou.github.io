@@ -101,6 +101,10 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
+    <loc>http://guoze.me/blockchain-scare.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
     <loc>http://guoze.me/blog-rule.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
@@ -113,7 +117,7 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/blockchain-scare.html</loc>
+    <loc>http://guoze.me/data-geek.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -121,7 +125,11 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/data-geek.html</loc>
+    <loc>http://guoze.me/elasticsearch-http-basic-authentication.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
+    <loc>http://guoze.me/elasticsearch-optimization.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -137,14 +145,6 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/elasticsearch-optimization.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
-    <loc>http://guoze.me/elasticsearch-http-basic-authentication.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
     <loc>http://guoze.me/excellent-programmer.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
@@ -157,15 +157,15 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/hbase-observer-sync-elasticsearch.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
     <loc>http://guoze.me/goodbye-2015.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
     <loc>http://guoze.me/goodbye-2017.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
+    <loc>http://guoze.me/hbase-observer-sync-elasticsearch.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -189,19 +189,19 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/liubang-rule.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
-    <loc>http://guoze.me/logistic-regression-introduction.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
     <loc>http://guoze.me/intellij-maven-develop-hadoop.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
     <loc>http://guoze.me/libshorttext-setup-script.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
+    <loc>http://guoze.me/liubang-rule.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
+    <loc>http://guoze.me/logistic-regression-introduction.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -229,11 +229,7 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/python-quick-orm.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
-    <loc>http://guoze.me/python-phantomjs-crawler.html</loc>
+    <loc>http://guoze.me/programmer-interview-tips.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -241,7 +237,11 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/programmer-interview-tips.html</loc>
+    <loc>http://guoze.me/python-phantomjs-crawler.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
+    <loc>http://guoze.me/python-quick-orm.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -253,7 +253,7 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/scrapy-custom-exporter.html</loc>
+    <loc>http://guoze.me/recommendation-zero-to-one.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -261,15 +261,11 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/recommendation-zero-to-one.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
     <loc>http://guoze.me/scikit-learn-naive-bayes-classifier.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/spark-dataframe.html</loc>
+    <loc>http://guoze.me/scrapy-custom-exporter.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -281,11 +277,15 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/svm-introduction.html</loc>
+    <loc>http://guoze.me/spark-log-extract.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/spark-log-extract.html</loc>
+    <loc>http://guoze.me/spark-dataframe.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
+    <loc>http://guoze.me/svm-introduction.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -301,11 +301,15 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/the-success-equation.html</loc>
+    <loc>http://guoze.me/the-hard-thing-about-hard-things.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/the-hard-thing-about-hard-things.html</loc>
+    <loc>http://guoze.me/time-management-handbook.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
+    <loc>http://guoze.me/the-success-equation.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -321,19 +325,15 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/time-management-handbook.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
     <loc>http://guoze.me/why-apache-spark-is-a-crossover-hit-for-data-scientists.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/youth-only-sequel.html</loc>
+    <loc>http://guoze.me/why-management-not-that-important.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/why-management-not-that-important.html</loc>
+    <loc>http://guoze.me/youth-only-sequel.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>

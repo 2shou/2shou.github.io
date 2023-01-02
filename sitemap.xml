@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2014/07/14/svm-introduction/index.html</loc>
+    <loc>http://guoze.me/2017/06/27/silicon-valley-4-season/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2014/07/12/blog-rule/index.html</loc>
+    <loc>http://guoze.me/2017/12/17/rabbit-on-waves/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -83,7 +83,52 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2014/09/16/why-apache-spark-is-a-crossover-hit-for-data-scientists/index.html</loc>
+    <loc>http://guoze.me/2017/06/21/time-management-handbook/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2017/12/03/why-management-not-that-important/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2017/12/31/goodbye-2017/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2017/07/11/recruitment-ad/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2017/02/25/the-future-of-data-industry/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2017/12/18/youth-only-sequel/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -110,34 +155,16 @@
   </url>
   
   <url>
+    <loc>http://guoze.me/2014/07/14/svm-introduction/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://guoze.me/2017/03/18/brief-history-of-humankind/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2017/02/25/the-future-of-data-industry/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2014/09/25/libshorttext-introduction/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2014/12/17/supervisord-not-root/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -155,7 +182,25 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2014/12/19/impala-compute-stats/index.html</loc>
+    <loc>http://guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2014/07/12/blog-rule/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2014/06/11/mongodb-capped-collection/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -182,7 +227,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2017/06/21/time-management-handbook/index.html</loc>
+    <loc>http://guoze.me/2014/12/19/impala-compute-stats/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -191,7 +236,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2017/06/27/silicon-valley-4-season/index.html</loc>
+    <loc>http://guoze.me/2014/09/25/libshorttext-introduction/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -200,7 +245,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2018/02/11/ai/index.html</loc>
+    <loc>http://guoze.me/2018/03/06/blockchain-scare/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -209,61 +254,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2018/02/27/blockchain-big-dream/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2017/12/17/rabbit-on-waves/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2018/02/27/blockchain-decentration/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2014/06/11/mongodb-capped-collection/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2017/07/11/recruitment-ad/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2017/12/31/goodbye-2017/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2017/12/03/why-management-not-that-important/index.html</loc>
+    <loc>http://guoze.me/2014/09/16/why-apache-spark-is-a-crossover-hit-for-data-scientists/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -290,43 +281,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2018/03/06/blockchain-scare/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2018/03/18/blockchain-bat/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://guoze.me/2018/03/15/to-hawking/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2017/12/18/youth-only-sequel/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2018/03/21/programmer-pm-comunication/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -353,7 +308,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2018/04/08/poisonous-chicken-soup/index.html</loc>
+    <loc>http://guoze.me/2018/03/18/blockchain-bat/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -371,7 +326,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2014/06/05/scikit-learn-naive-bayes-classifier/index.html</loc>
+    <loc>http://guoze.me/2014/12/17/supervisord-not-root/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -380,16 +335,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2015/12/02/programmer-coffee/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2018/04/06/eosio-dawn-3-0-now-available/index.html</loc>
+    <loc>http://guoze.me/2018/02/11/ai/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -407,259 +353,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2015/12/12/matplotlib-par-chart/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/12/12/data-geek/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/12/20/goodbye-2015/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/12/12/choose-startup/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/12/27/large-scale-server/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/01/07/spark-log-extract/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/01/04/python-quick-orm/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/01/08/scrapy-custom-exporter/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/01/11/tgrocery-introduction/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/01/14/sae-tornado-experience/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/03/02/excellent-programmer/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/01/19/python-phantomjs-crawler/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/01/31/tornado-log-perday/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/03/22/spark-dataframe/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/01/29/good-recommendation/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/03/10/logistic-regression-introduction/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/09/07/chi-square/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/03/25/the-success-equation/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/04/04/elasticsearch-optimization/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/09/24/be-friend-of-time/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/05/14/the-hard-thing-about-hard-things/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2016/01/24/busy-programmer/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/05/28/elasticsearch-http-basic-authentication/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2015/04/23/hbase-observer-sync-elasticsearch/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2019/09/26/talent-limited-company/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2019/09/26/data-science-future/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2019/09/26/tech-leader/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2019/09/26/hot-winter/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2016/01/10/recommendation-zero-to-one/index.html</loc>
+    <loc>http://guoze.me/2018/04/06/eosio-dawn-3-0-now-available/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -677,7 +371,169 @@
   </url>
   
   <url>
+    <loc>http://guoze.me/2018/04/08/poisonous-chicken-soup/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2018/03/21/programmer-pm-comunication/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2016/05/14/crawler-attack-defense/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2018/02/27/blockchain-big-dream/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2018/02/27/blockchain-decentration/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2019/09/26/data-science-future/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2019/09/26/hot-winter/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2019/09/26/talent-limited-company/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2019/09/26/tech-leader/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2016/10/09/gear-vr-experience/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://guoze.me/2019/09/26/telent-limited-company/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2016/10/24/engineering-culture/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2016/03/09/r-multi-ggplot/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2016/02/21/zero-to-one/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2016/10/09/unsexy-apple/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2016/11/01/macbook-pro-2016/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2016/10/16/wechat-app/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2016/01/24/busy-programmer/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2016/01/10/recommendation-zero-to-one/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -704,7 +560,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2016/03/09/r-multi-ggplot/index.html</loc>
+    <loc>http://guoze.me/2016/06/26/how-to-google/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -722,15 +578,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2016/06/26/how-to-google/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://guoze.me/2016/06/26/youth-only/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
@@ -740,7 +587,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2016/05/14/crawler-attack-defense/index.html</loc>
+    <loc>http://guoze.me/2015/03/02/excellent-programmer/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -749,7 +596,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2016/02/21/zero-to-one/index.html</loc>
+    <loc>http://guoze.me/2015/03/10/logistic-regression-introduction/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -758,34 +605,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2016/11/01/macbook-pro-2016/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2016/10/09/gear-vr-experience/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2016/10/09/unsexy-apple/index.html</loc>
-    
-    <lastmod>2019-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/2016/10/24/engineering-culture/index.html</loc>
+    <loc>http://guoze.me/2015/03/25/the-success-equation/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -803,7 +623,187 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/2016/10/16/wechat-app/index.html</loc>
+    <loc>http://guoze.me/2015/04/04/elasticsearch-optimization/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/04/23/hbase-observer-sync-elasticsearch/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/01/08/scrapy-custom-exporter/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/01/07/spark-log-extract/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/01/11/tgrocery-introduction/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/01/14/sae-tornado-experience/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/01/29/good-recommendation/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/01/04/python-quick-orm/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/01/31/tornado-log-perday/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/09/24/be-friend-of-time/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/09/07/chi-square/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/03/22/spark-dataframe/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/01/19/python-phantomjs-crawler/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/05/28/elasticsearch-http-basic-authentication/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/12/02/programmer-coffee/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/12/12/choose-startup/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/12/12/data-geek/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/12/12/matplotlib-par-chart/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/12/20/goodbye-2015/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/12/27/large-scale-server/index.html</loc>
+    
+    <lastmod>2019-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/2015/05/14/the-hard-thing-about-hard-things/index.html</loc>
     
     <lastmod>2019-10-10</lastmod>
     
@@ -974,6 +974,15 @@
   </url>
   
   <url>
+    <loc>http://guoze.me/blockchain-scare.html</loc>
+    
+    <lastmod>2019-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://guoze.me/blog-rule.html</loc>
     
     <lastmod>2019-09-25</lastmod>
@@ -1001,7 +1010,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/blockchain-scare.html</loc>
+    <loc>http://guoze.me/data-geek.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1019,7 +1028,16 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/data-geek.html</loc>
+    <loc>http://guoze.me/elasticsearch-http-basic-authentication.html</loc>
+    
+    <lastmod>2019-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/elasticsearch-optimization.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1055,24 +1073,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/elasticsearch-optimization.html</loc>
-    
-    <lastmod>2019-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/elasticsearch-http-basic-authentication.html</loc>
-    
-    <lastmod>2019-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://guoze.me/excellent-programmer.html</loc>
     
     <lastmod>2019-09-25</lastmod>
@@ -1100,15 +1100,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/hbase-observer-sync-elasticsearch.html</loc>
-    
-    <lastmod>2019-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://guoze.me/goodbye-2015.html</loc>
     
     <lastmod>2019-09-25</lastmod>
@@ -1119,6 +1110,15 @@
   
   <url>
     <loc>http://guoze.me/goodbye-2017.html</loc>
+    
+    <lastmod>2019-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/hbase-observer-sync-elasticsearch.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1172,24 +1172,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/liubang-rule.html</loc>
-    
-    <lastmod>2019-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/logistic-regression-introduction.html</loc>
-    
-    <lastmod>2019-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://guoze.me/intellij-maven-develop-hadoop.html</loc>
     
     <lastmod>2019-09-25</lastmod>
@@ -1200,6 +1182,24 @@
   
   <url>
     <loc>http://guoze.me/libshorttext-setup-script.html</loc>
+    
+    <lastmod>2019-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/liubang-rule.html</loc>
+    
+    <lastmod>2019-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/logistic-regression-introduction.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1262,16 +1262,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/python-quick-orm.html</loc>
-    
-    <lastmod>2019-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/python-phantomjs-crawler.html</loc>
+    <loc>http://guoze.me/programmer-interview-tips.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1289,7 +1280,16 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/programmer-interview-tips.html</loc>
+    <loc>http://guoze.me/python-phantomjs-crawler.html</loc>
+    
+    <lastmod>2019-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/python-quick-orm.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1316,7 +1316,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/scrapy-custom-exporter.html</loc>
+    <loc>http://guoze.me/recommendation-zero-to-one.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1334,15 +1334,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/recommendation-zero-to-one.html</loc>
-    
-    <lastmod>2019-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://guoze.me/scikit-learn-naive-bayes-classifier.html</loc>
     
     <lastmod>2019-09-25</lastmod>
@@ -1352,7 +1343,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/spark-dataframe.html</loc>
+    <loc>http://guoze.me/scrapy-custom-exporter.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1379,7 +1370,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/svm-introduction.html</loc>
+    <loc>http://guoze.me/spark-log-extract.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1388,7 +1379,16 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/spark-log-extract.html</loc>
+    <loc>http://guoze.me/spark-dataframe.html</loc>
+    
+    <lastmod>2019-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/svm-introduction.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1424,7 +1424,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/the-success-equation.html</loc>
+    <loc>http://guoze.me/the-hard-thing-about-hard-things.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1433,7 +1433,16 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/the-hard-thing-about-hard-things.html</loc>
+    <loc>http://guoze.me/time-management-handbook.html</loc>
+    
+    <lastmod>2019-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/the-success-equation.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1469,15 +1478,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/time-management-handbook.html</loc>
-    
-    <lastmod>2019-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://guoze.me/why-apache-spark-is-a-crossover-hit-for-data-scientists.html</loc>
     
     <lastmod>2019-09-25</lastmod>
@@ -1487,7 +1487,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/youth-only-sequel.html</loc>
+    <loc>http://guoze.me/why-management-not-that-important.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1496,7 +1496,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/why-management-not-that-important.html</loc>
+    <loc>http://guoze.me/youth-only-sequel.html</loc>
     
     <lastmod>2019-09-25</lastmod>
     
@@ -1541,7 +1541,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/tags/index.html</loc>
+    <loc>http://guoze.me/categories/index.html</loc>
     
     <lastmod>2017-07-01</lastmod>
     
@@ -1550,7 +1550,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/categories/index.html</loc>
+    <loc>http://guoze.me/tags/index.html</loc>
     
     <lastmod>2017-07-01</lastmod>
     
@@ -1624,13 +1624,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/tags/%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://guoze.me/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1652,6 +1645,20 @@
   </url>
   
   <url>
+    <loc>http://guoze.me/tags/%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://guoze.me/tags/%E7%88%AC%E8%99%AB/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1666,7 +1673,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
+    <loc>http://guoze.me/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1680,35 +1687,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/tags/%E5%B7%A5%E7%A8%8B%E5%B8%88/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/tags/EOS/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://guoze.me/tags/ElasticSearch/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/tags/%E6%90%9C%E7%B4%A2/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1723,6 +1702,27 @@
   
   <url>
     <loc>http://guoze.me/tags/HTTP/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/tags/%E6%90%9C%E7%B4%A2/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/tags/%E5%B7%A5%E7%A8%8B%E5%B8%88/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/tags/EOS/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1764,6 +1764,20 @@
   </url>
   
   <url>
+    <loc>http://guoze.me/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/tags/2015/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://guoze.me/tags/HBase/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1779,20 +1793,6 @@
   
   <url>
     <loc>http://guoze.me/tags/Observer/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/tags/2015/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1890,6 +1890,20 @@
   </url>
   
   <url>
+    <loc>http://guoze.me/tags/Maven/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/tags/IntelliJ/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://guoze.me/tags/%E5%88%98%E9%82%A6/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1926,20 +1940,6 @@
   
   <url>
     <loc>http://guoze.me/tags/%E5%A4%9A%E5%85%83%E5%85%B1%E7%BA%BF%E6%80%A7/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/tags/Maven/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/tags/IntelliJ/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1988,21 +1988,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/tags/MySQL/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/tags/ORM/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/tags/Phantomjs/</loc>
+    <loc>http://guoze.me/tags/%E9%9D%A2%E8%AF%95/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2016,7 +2002,21 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/tags/%E9%9D%A2%E8%AF%95/</loc>
+    <loc>http://guoze.me/tags/Phantomjs/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/tags/MySQL/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/tags/ORM/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2058,13 +2058,6 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/tags/Scrapy/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://guoze.me/tags/Tornado/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -2100,14 +2093,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/tags/Spark/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/tags/DataFrame/</loc>
+    <loc>http://guoze.me/tags/Scrapy/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2128,6 +2114,13 @@
   </url>
   
   <url>
+    <loc>http://guoze.me/tags/Spark/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://guoze.me/tags/%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -2142,6 +2135,13 @@
   </url>
   
   <url>
+    <loc>http://guoze.me/tags/DataFrame/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://guoze.me/tags/%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -2150,6 +2150,13 @@
   
   <url>
     <loc>http://guoze.me/tags/TextGrocery/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://guoze.me/tags/%E5%88%9B%E4%B8%9A%E7%BB%B4%E8%89%B0/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2171,13 +2178,6 @@
   
   <url>
     <loc>http://guoze.me/tags/%E6%88%90%E5%8A%9F/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/tags/%E5%88%9B%E4%B8%9A%E7%BB%B4%E8%89%B0/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2219,6 +2219,13 @@
   </url>
   
   <url>
+    <loc>http://guoze.me/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2023-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://guoze.me/tags/%E5%BE%AE%E4%BF%A1/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -2240,7 +2247,7 @@
   </url>
   
   <url>
-    <loc>http://guoze.me/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <loc>http://guoze.me/tags/%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2248,13 +2255,6 @@
   
   <url>
     <loc>http://guoze.me/tags/%E4%B8%AD%E5%B9%B4%E5%8D%B1%E6%9C%BA/</loc>
-    <lastmod>2023-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://guoze.me/tags/%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2023-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -117,11 +117,11 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/blog-rule.html</loc>
+    <loc>http://guoze.me/blockchain-scare.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/blockchain-scare.html</loc>
+    <loc>http://guoze.me/blog-rule.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -173,11 +173,11 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/hbase-observer-sync-elasticsearch.html</loc>
+    <loc>http://guoze.me/goodbye-2017.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/goodbye-2017.html</loc>
+    <loc>http://guoze.me/hbase-observer-sync-elasticsearch.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -193,10 +193,6 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/libshorttext-introduction.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
     <loc>http://guoze.me/intellij-maven-develop-hadoop.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
@@ -205,7 +201,7 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/libshorttext-setup-script.html</loc>
+    <loc>http://guoze.me/libshorttext-introduction.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -217,15 +213,15 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/macbook-pro-experience.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
     <loc>http://guoze.me/macbook-pro-2016.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/matplotlib-par-chart.html</loc>
+    <loc>http://guoze.me/macbook-pro-experience.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
+    <loc>http://guoze.me/libshorttext-setup-script.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -233,7 +229,15 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
+    <loc>http://guoze.me/matplotlib-par-chart.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
     <loc>http://guoze.me/programmer-coffee.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
+    <loc>http://guoze.me/python-phantomjs-crawler.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -245,15 +249,11 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/python-phantomjs-crawler.html</loc>
+    <loc>http://guoze.me/rabbit-on-waves.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
     <loc>http://guoze.me/r-multi-ggplot.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
-    <loc>http://guoze.me/rabbit-on-waves.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -265,6 +265,10 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
+    <loc>http://guoze.me/silicon-valley-4-season.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
     <loc>http://guoze.me/scikit-learn-naive-bayes-classifier.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
@@ -273,19 +277,15 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/silicon-valley-4-season.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
     <loc>http://guoze.me/spark-dataframe.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/spark-log-extract.html</loc>
+    <loc>http://guoze.me/supervisord-not-root.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/supervisord-not-root.html</loc>
+    <loc>http://guoze.me/spark-log-extract.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -297,7 +297,7 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/tgrocery-introduction.html</loc>
+    <loc>http://guoze.me/the-hard-thing-about-hard-things.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -305,15 +305,11 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/the-hard-thing-about-hard-things.html</loc>
+    <loc>http://guoze.me/tgrocery-introduction.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
     <loc>http://guoze.me/the-success-equation.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
-    <loc>http://guoze.me/unsexy-apple.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -325,7 +321,7 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/wechat-app.html</loc>
+    <loc>http://guoze.me/unsexy-apple.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
@@ -333,19 +329,23 @@
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/why-management-not-that-important.html</loc>
-    <lastmod>2019-09-25</lastmod>
-  </url>
-  <url>
     <loc>http://guoze.me/youth-only.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
-    <loc>http://guoze.me/zeng-guo-fan.html</loc>
+    <loc>http://guoze.me/why-management-not-that-important.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
+    <loc>http://guoze.me/wechat-app.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
   <url>
     <loc>http://guoze.me/zero-to-one.html</loc>
+    <lastmod>2019-09-25</lastmod>
+  </url>
+  <url>
+    <loc>http://guoze.me/zeng-guo-fan.html</loc>
     <lastmod>2019-09-25</lastmod>
   </url>
 </urlset> 
